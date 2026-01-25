@@ -96,10 +96,6 @@
             background: rgba(255,255,255,0.08);
             border-radius: 12px;
             padding: 10px;
-            display: flex;
-            flex-direction: column;
-            overflow: hidden;
-            min-height: 0;
         }
         .question-type {
             display: inline-block;
@@ -118,7 +114,7 @@
             margin-bottom: 8px;
             flex-shrink: 0;
         }
-        .answers { display: flex; flex-direction: column; gap: 5px; flex: 1; overflow-y: auto; }
+        .answers { display: flex; flex-direction: column; gap: 5px; }
         .answer {
             background: rgba(255,255,255,0.05);
             border: 2px solid rgba(255,255,255,0.1);
@@ -404,9 +400,14 @@
         .stat-label { font-size: 0.65em; color: #888; margin-top: 2px; }
         #chapter-selection { flex: 1; display: flex; flex-direction: column; overflow: hidden; }
         #chapter-selection.hidden { display: none; }
-        #question-container { flex: 1; display: flex; flex-direction: column; min-height: 0; }
-        #question-container .question-card { flex: 1; min-height: 0; }
-        #question-container .answers { flex: 1; min-height: 0; overflow-y: auto; -webkit-overflow-scrolling: touch; }
+        #question-container {
+            flex: 1;
+            overflow-y: auto;
+            -webkit-overflow-scrolling: touch;
+            background: rgba(255,255,255,0.08);
+            border-radius: 12px;
+            padding: 10px;
+        }
     </style>
 </head>
 <body>
@@ -600,19 +601,17 @@
         document.getElementById('progress-fill').style.width = `${((currentQuestion) / currentChapter.questions.length) * 100}%`;
         const container = document.getElementById('question-container');
         container.innerHTML = `
-            <div class="question-card">
-                <div class="question-text">${q.q}</div>
-                <div class="answers">
-                    ${q.answers.map((a, i) => `
-                        <div class="answer" data-index="${i}" onclick="toggleAnswer(${i})">
-                            <div class="checkbox"></div>
-                            <div class="answer-content">
-                                <div class="answer-text">${a.text}</div>
-                                <div class="answer-feedback">${a.feedback}</div>
-                            </div>
+            <div class="question-text">${q.q}</div>
+            <div class="answers">
+                ${q.answers.map((a, i) => `
+                    <div class="answer" data-index="${i}" onclick="toggleAnswer(${i})">
+                        <div class="checkbox"></div>
+                        <div class="answer-content">
+                            <div class="answer-text">${a.text}</div>
+                            <div class="answer-feedback">${a.feedback}</div>
                         </div>
-                    `).join('')}
-                </div>
+                    </div>
+                `).join('')}
             </div>
             <div class="btn-row">
                 <button class="btn btn-primary" id="check-btn" onclick="checkAnswer()" disabled>Pruefen</button>
