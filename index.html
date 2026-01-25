@@ -64,26 +64,26 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            margin-bottom: 6px;
-            gap: 8px;
+            margin-bottom: 4px;
+            gap: 6px;
         }
         .back-btn {
             background: rgba(255,255,255,0.1);
             border: none;
             color: #fff;
-            padding: 6px 12px;
+            padding: 5px 10px;
             border-radius: 6px;
             cursor: pointer;
-            font-size: 0.85em;
+            font-size: 0.8em;
         }
         .back-btn:hover { background: rgba(255,255,255,0.2); }
-        .progress-info { color: #aaa; font-size: 0.85em; }
+        .progress-info { color: #aaa; font-size: 0.8em; }
         .progress-bar {
             width: 100%;
-            height: 4px;
+            height: 3px;
             background: rgba(255,255,255,0.1);
-            border-radius: 4px;
-            margin-bottom: 8px;
+            border-radius: 3px;
+            margin-bottom: 6px;
             overflow: hidden;
         }
         .progress-fill {
@@ -95,11 +95,11 @@
         .question-card {
             background: rgba(255,255,255,0.08);
             border-radius: 12px;
-            padding: 12px;
-            flex: 1;
+            padding: 10px;
             display: flex;
             flex-direction: column;
             overflow: hidden;
+            min-height: 0;
         }
         .question-type {
             display: inline-block;
@@ -113,21 +113,23 @@
         }
         .question-type.single { background: #4fc3f7; }
         .question-text {
-            font-size: 0.95em;
-            line-height: 1.35;
-            margin-bottom: 10px;
+            font-size: 0.9em;
+            line-height: 1.3;
+            margin-bottom: 8px;
+            flex-shrink: 0;
         }
-        .answers { display: flex; flex-direction: column; gap: 6px; flex: 1; overflow-y: auto; }
+        .answers { display: flex; flex-direction: column; gap: 5px; flex: 1; overflow-y: auto; }
         .answer {
             background: rgba(255,255,255,0.05);
             border: 2px solid rgba(255,255,255,0.1);
             border-radius: 8px;
-            padding: 8px 10px;
+            padding: 6px 8px;
             cursor: pointer;
             transition: all 0.2s ease;
             display: flex;
             align-items: flex-start;
-            gap: 8px;
+            gap: 6px;
+            flex-shrink: 0;
         }
         .answer:hover:not(.disabled) {
             background: rgba(255,255,255,0.1);
@@ -153,29 +155,29 @@
         }
         .answer.disabled { cursor: default; }
         .checkbox {
-            width: 18px;
-            height: 18px;
+            width: 16px;
+            height: 16px;
             border: 2px solid rgba(255,255,255,0.3);
             border-radius: 4px;
             flex-shrink: 0;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 11px;
+            font-size: 10px;
         }
         .answer.selected .checkbox { border-color: #4fc3f7; background: #4fc3f7; color: #000; }
         .answer.correct .checkbox { border-color: #00e676; background: #00e676; color: #000; }
         .answer.correct.missed .checkbox { border-color: #ffd54f; background: transparent; color: #ffd54f; border-style: dashed; }
         .answer.wrong .checkbox { border-color: #ff5252; background: #ff5252; color: #fff; }
         .answer-content { flex: 1; }
-        .answer-text { font-size: 0.85em; line-height: 1.3; }
+        .answer-text { font-size: 0.8em; line-height: 1.25; }
         .answer-feedback {
-            margin-top: 4px;
-            padding: 4px 8px;
+            margin-top: 3px;
+            padding: 3px 6px;
             border-radius: 4px;
-            font-size: 0.75em;
+            font-size: 0.7em;
             display: none;
-            line-height: 1.3;
+            line-height: 1.25;
         }
         .answer.correct .answer-feedback {
             display: block;
@@ -195,14 +197,15 @@
         .btn-row {
             display: flex;
             gap: 8px;
-            margin-top: 10px;
+            margin-top: 8px;
             flex-shrink: 0;
+            padding-bottom: env(safe-area-inset-bottom, 0);
         }
         .btn {
-            padding: 10px 20px;
+            padding: 8px 16px;
             border: none;
             border-radius: 8px;
-            font-size: 0.9em;
+            font-size: 0.85em;
             cursor: pointer;
             transition: all 0.2s ease;
             font-weight: 600;
@@ -401,9 +404,9 @@
         .stat-label { font-size: 0.65em; color: #888; margin-top: 2px; }
         #chapter-selection { flex: 1; display: flex; flex-direction: column; overflow: hidden; }
         #chapter-selection.hidden { display: none; }
-        #question-container { flex: 1; display: flex; flex-direction: column; overflow: hidden; }
-        #question-container .question-card { flex: 1; overflow: hidden; }
-        #question-container .question-card .answers { max-height: none; }
+        #question-container { flex: 1; display: flex; flex-direction: column; min-height: 0; }
+        #question-container .question-card { flex: 1; min-height: 0; }
+        #question-container .answers { flex: 1; min-height: 0; overflow-y: auto; -webkit-overflow-scrolling: touch; }
     </style>
 </head>
 <body>
