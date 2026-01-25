@@ -1,0 +1,2058 @@
+const chapters = {
+    "kapitel4": {
+        title: "Kapitel 4 - Kontext der Organisation",
+        questions: [
+            {q: "Was versteht die ISO 9001 unter dem Kontext der Organisation?", answers: [
+                {text: "Die internen und externen Themen, die den Zweck und die strategische Ausrichtung beeinflussen", correct: true, feedback: "Richtig!"},
+                {text: "Die Marktposition der Organisation", correct: false, feedback: "FALSCH: Marktposition ist nur EIN Teilaspekt des externen Kontexts."},
+                {text: "Die wirtschaftliche Lage des Unternehmens", correct: false, feedback: "FALSCH: Wirtschaftliche Lage greift zu kurz - Kontext umfasst viel mehr (Kultur, Technologie, Recht etc.)"},
+                {text: "Die Faktoren, die die Faehigkeit beeinflussen, beabsichtigte Ergebnisse zu erzielen", correct: true, feedback: "Richtig!"}
+            ]},
+            {q: "Welche internen Themen koennen im Sinne von Kapitel 4.1 relevant sein?", answers: [
+                {text: "Unternehmenskultur", correct: true, feedback: "Richtig!"},
+                {text: "Organisationsstruktur", correct: true, feedback: "Richtig!"},
+                {text: "Gesetzliche Anforderungen", correct: false, feedback: "FALSCH: Gesetzliche Anforderungen kommen von AUSSEN (Behoerden, Staat) und sind daher EXTERNE Themen!"},
+                {text: "Verfuegbare Ressourcen", correct: true, feedback: "Richtig!"}
+            ]},
+            {q: "Welche externen Themen koennen den Kontext der Organisation beeinflussen?", answers: [
+                {text: "Technologische Entwicklungen", correct: true, feedback: "Richtig!"},
+                {text: "Gesetzliche und behoerdliche Anforderungen", correct: true, feedback: "Richtig!"},
+                {text: "Mitarbeiterqualifikationen", correct: false, feedback: "FALSCH: Mitarbeiterqualifikationen sind INTERN - die eigenen MA gehoeren zur Organisation!"},
+                {text: "Markt- und Wettbewerbsbedingungen", correct: true, feedback: "Richtig!"}
+            ]},
+            {q: "Was fordert die ISO 9001 in Bezug auf den Kontext der Organisation?", answers: [
+                {text: "Der Kontext muss bestimmt werden", correct: true, feedback: "Richtig!"},
+                {text: "Der Kontext muss dokumentiert sein", correct: false, feedback: "FALSCH: Dokumentation ist NICHT explizit gefordert - die Norm sagt nur 'bestimmen'."},
+                {text: "Der Kontext muss ueberwacht und ueberprueft werden", correct: true, feedback: "Richtig!"},
+                {text: "Der Kontext muss jaehrlich aktualisiert werden", correct: false, feedback: "FALSCH: 'Jaehrlich' ist eine Erfindung - die Norm nennt keine festen Intervalle!"}
+            ]},
+            {q: "Was versteht die ISO 9001 unter interessierten Parteien?", answers: [
+                {text: "Organisationen oder Personen, die Entscheidungen der Organisation beeinflussen koennen", correct: true, feedback: "Richtig!"},
+                {text: "Organisationen oder Personen, die von Entscheidungen der Organisation betroffen sind", correct: true, feedback: "Richtig!"},
+                {text: "Ausschliesslich Kunden und Lieferanten", correct: false, feedback: "FALSCH: 'Ausschliesslich' ist zu eng! Auch Behoerden, Mitarbeiter, Eigentuemer etc. koennen interessierte Parteien sein."},
+                {text: "Organisationen oder Personen mit relevanten Anforderungen an das QMS", correct: true, feedback: "Richtig!"}
+            ]},
+            {q: "Welche Anforderungen an interessierte Parteien sind normkonform?", answers: [
+                {text: "Relevante interessierte Parteien muessen bestimmt werden", correct: true, feedback: "Richtig!"},
+                {text: "Alle interessierten Parteien muessen beruecksichtigt werden", correct: false, feedback: "FALSCH: Die Norm sagt 'RELEVANTE', nicht 'ALLE'!"},
+                {text: "Anforderungen relevanter interessierter Parteien muessen bestimmt werden", correct: true, feedback: "Richtig!"},
+                {text: "Anforderungen muessen regelmaessig ueberprueft werden", correct: true, feedback: "Richtig!"}
+            ]},
+            {q: "Welche interessierten Parteien sind typischerweise relevant?", answers: [
+                {text: "Kunden", correct: true, feedback: "Richtig!"},
+                {text: "Lieferanten", correct: true, feedback: "Richtig!"},
+                {text: "Gesetzgeber und Behoerden", correct: true, feedback: "Richtig!"},
+                {text: "Wettbewerber", correct: false, feedback: "FALSCH: Wettbewerber haben normalerweise keine direkten Anforderungen an das QMS."}
+            ]},
+            {q: "Was fordert Kapitel 4.2 im Hinblick auf Anforderungen interessierter Parteien?", answers: [
+                {text: "Relevante Anforderungen muessen bestimmt werden", correct: true, feedback: "Richtig!"},
+                {text: "Alle Anforderungen muessen erfuellt werden", correct: false, feedback: "FALSCH: Nur RELEVANTE Anforderungen erfuellen!"},
+                {text: "Anforderungen muessen ueberwacht und ueberprueft werden", correct: true, feedback: "Richtig!"},
+                {text: "Anforderungen muessen dokumentiert sein", correct: false, feedback: "FALSCH: Dokumentation ist nicht explizit gefordert."}
+            ]},
+            {q: "Was beschreibt der Anwendungsbereich des Qualitaetsmanagementsystems?", answers: [
+                {text: "Die Grenzen und Anwendbarkeit des QMS", correct: true, feedback: "Richtig!"},
+                {text: "Die organisatorische Aufbauorganisation", correct: false, feedback: "FALSCH: Aufbauorganisation ist kein Bestandteil des Anwendungsbereichs."},
+                {text: "Die Produkte und Dienstleistungen der Organisation", correct: true, feedback: "Richtig!"},
+                {text: "Die Standorte der Organisation", correct: false, feedback: "FALSCH: Standorte gehoeren nur dazu, wenn sie im Anwendungsbereich enthalten sind."}
+            ]},
+            {q: "Welche Aussagen zum Anwendungsbereich des QMS sind richtig?", answers: [
+                {text: "Der Anwendungsbereich muss als dokumentierte Information verfuegbar sein", correct: true, feedback: "Richtig!"},
+                {text: "Anforderungen der Norm duerfen ausgeschlossen werden", correct: true, feedback: "Richtig!"},
+                {text: "Ausschluesse duerfen die Konformitaet von Produkten und Dienstleistungen nicht beeintraechtigen", correct: true, feedback: "Richtig!"},
+                {text: "Der Anwendungsbereich muss exakt der Normstruktur folgen", correct: false, feedback: "FALSCH: Die Organisation kann den Anwendungsbereich FREI strukturieren!"}
+            ]},
+            {q: "Welche Normanforderungen duerfen ausgeschlossen werden?", answers: [
+                {text: "Anforderungen aus Kapitel 4", correct: false, feedback: "FALSCH: Kapitel 4, 5 und 6 duerfen NIEMALS ausgeschlossen werden!"},
+                {text: "Anforderungen, die aufgrund der Art der Produkte und Dienstleistungen nicht anwendbar sind", correct: true, feedback: "Richtig!"},
+                {text: "Anforderungen, deren Ausschluss begruendet ist", correct: true, feedback: "Richtig!"},
+                {text: "Anforderungen, die die Konformitaet nicht beeinflussen", correct: true, feedback: "Richtig!"}
+            ]},
+            {q: "Was fordert ISO 9001 Kapitel 4.4 in Bezug auf Prozesse?", answers: [
+                {text: "Prozesse muessen bestimmt werden", correct: true, feedback: "Richtig!"},
+                {text: "Wechselwirkungen der Prozesse muessen bestimmt werden", correct: true, feedback: "Richtig!"},
+                {text: "Prozesse muessen dokumentiert werden", correct: false, feedback: "FALSCH: Die Norm fordert NICHT, dass alle Prozesse dokumentiert werden! Nur 'soweit erforderlich'."},
+                {text: "Kriterien und Methoden zur Prozesssteuerung muessen festgelegt werden", correct: true, feedback: "Richtig!"}
+            ]},
+            {q: "Welche Elemente gehoeren zur Bestimmung von Prozessen?", answers: [
+                {text: "Eingaben und Ergebnisse", correct: true, feedback: "Richtig!"},
+                {text: "Reihenfolge und Wechselwirkungen", correct: true, feedback: "Richtig!"},
+                {text: "Verantwortlichkeiten und Befugnisse", correct: true, feedback: "Richtig!"},
+                {text: "Detaillierte Arbeitsanweisungen", correct: false, feedback: "FALSCH: 'Detaillierte' Arbeitsanweisungen sind NICHT gefordert."}
+            ]},
+            {q: "Was fordert die Norm hinsichtlich der Prozessueberwachung?", answers: [
+                {text: "Prozesse muessen ueberwacht werden", correct: true, feedback: "Richtig!"},
+                {text: "Prozesse muessen gemessen werden", correct: true, feedback: "Richtig!"},
+                {text: "Geeignete Methoden muessen bestimmt werden", correct: true, feedback: "Richtig!"},
+                {text: "Alle Prozesse muessen permanent gemessen werden", correct: false, feedback: "FALSCH: 'Permanent' und 'alle' steht NICHT in der Norm!"}
+            ]},
+            {q: "Welche Anforderungen gelten fuer Ressourcen im Rahmen der Prozesse?", answers: [
+                {text: "Erforderliche Ressourcen muessen bestimmt werden", correct: true, feedback: "Richtig!"},
+                {text: "Ressourcen muessen dokumentiert werden", correct: false, feedback: "FALSCH: Dokumentation nicht pauschal gefordert."},
+                {text: "Ressourcen muessen bereitgestellt werden", correct: true, feedback: "Richtig!"},
+                {text: "Ressourcen muessen jaehrlich ueberprueft werden", correct: false, feedback: "FALSCH: 'Jaehrlich' ist erfunden - die Norm nennt keine festen Zeitintervalle!"}
+            ]},
+            {q: "Welche Rolle spielen Risiken und Chancen im Prozessansatz?", answers: [
+                {text: "Risiken und Chancen muessen im Zusammenhang mit Prozessen bestimmt werden", correct: true, feedback: "Richtig!"},
+                {text: "Risiken muessen vollstaendig dokumentiert werden", correct: false, feedback: "FALSCH: 'Vollstaendig dokumentieren' fordert die Norm NICHT."},
+                {text: "Massnahmen zum Umgang mit Risiken und Chancen muessen geplant werden", correct: true, feedback: "Richtig!"},
+                {text: "Risiken ersetzen die Prozessueberwachung", correct: false, feedback: "FALSCH: Risiken ERGAENZEN die Ueberwachung, sie ersetzen sie nicht!"}
+            ]},
+            {q: "Welche Aussagen zur Aufrechterhaltung des QMS sind richtig?", answers: [
+                {text: "Das QMS muss eingefuehrt werden", correct: true, feedback: "Richtig!"},
+                {text: "Das QMS muss aufrechterhalten werden", correct: true, feedback: "Richtig!"},
+                {text: "Das QMS muss fortlaufend verbessert werden", correct: true, feedback: "Richtig!"},
+                {text: "Das QMS muss zertifiziert sein", correct: false, feedback: "FALSCH: Zertifizierung ist FREIWILLIG! Die Norm fordert ein funktionierendes QMS, keine Zertifizierung."}
+            ]},
+            {q: "Was bedeutet Wirksamkeit im Sinne des QMS?", answers: [
+                {text: "Erreichen der beabsichtigten Ergebnisse", correct: true, feedback: "Richtig! Das ist die ISO 9000 Definition."},
+                {text: "Einhaltung aller internen Regelungen", correct: false, feedback: "FALSCH: Regelungen einhalten ist Konformitaet, nicht Wirksamkeit."},
+                {text: "Konformitaet mit Kundenanforderungen", correct: false, feedback: "FALSCH: Kundenkonformitaet ist ein Teilziel."},
+                {text: "Wirtschaftlicher Erfolg der Organisation", correct: false, feedback: "FALSCH: Wirtschaftserfolg ist Effizienz, nicht Wirksamkeit."}
+            ]},
+            {q: "Welche Aussagen zur Dokumentation in Kapitel 4 sind richtig?", answers: [
+                {text: "Der Anwendungsbereich muss dokumentiert sein", correct: true, feedback: "Richtig!"},
+                {text: "Prozesse muessen dokumentiert sein", correct: false, feedback: "FALSCH: NICHT alle Prozesse dokumentieren - nur soweit erforderlich."},
+                {text: "Informationen zur Prozesssteuerung muessen verfuegbar sein", correct: true, feedback: "Richtig!"},
+                {text: "Die Norm fordert ein QM-Handbuch", correct: false, feedback: "FALSCH: QM-Handbuch ist seit 2015 NICHT mehr gefordert!"}
+            ]},
+            {q: "Welche Zielsetzung verfolgt Kapitel 4 der ISO 9001 hauptsaechlich?", answers: [
+                {text: "Verstaendnis des organisatorischen Umfelds", correct: true, feedback: "Richtig!"},
+                {text: "Festlegung der Fuehrungsverantwortung", correct: false, feedback: "FALSCH: Fuehrung wird in Kapitel 5 behandelt, nicht Kapitel 4."},
+                {text: "Aufbau einer stabilen Grundlage fuer das QMS", correct: true, feedback: "Richtig!"},
+                {text: "Erfuellung aller Kundenanforderungen", correct: false, feedback: "FALSCH: Kundenanforderungen werden in Kapitel 8 behandelt."}
+            ]},
+            {q: "Welche Aussagen zur regelmaessigen Ueberpruefung des Kontextes sind richtig?", answers: [
+                {text: "Der Kontext muss regelmaessig ueberwacht werden", correct: true, feedback: "Richtig!"},
+                {text: "Der Kontext muss regelmaessig ueberprueft werden", correct: true, feedback: "Richtig!"},
+                {text: "Die Norm fordert eine jaehrliche Kontextanalyse", correct: false, feedback: "FALSCH: 'Jaehrlich' steht NIRGENDS in der Norm!"},
+                {text: "Aenderungen des Kontextes koennen Auswirkungen auf das QMS haben", correct: true, feedback: "Richtig!"}
+            ]},
+            {q: "Welche Beziehung besteht zwischen Kontext und Risiken/Chancen?", answers: [
+                {text: "Der Kontext liefert Eingaben zur Bestimmung von Risiken und Chancen", correct: true, feedback: "Richtig!"},
+                {text: "Risiken und Chancen sind unabhaengig vom Kontext zu betrachten", correct: false, feedback: "FALSCH: Sie sind eng verknuepft! Aus dem Kontext ERGEBEN sich Risiken."},
+                {text: "Aenderungen im Kontext koennen neue Risiken oder Chancen erzeugen", correct: true, feedback: "Richtig!"},
+                {text: "Risiken ersetzen die Kontextanalyse", correct: false, feedback: "FALSCH: Beide sind noetig, keins ersetzt das andere."}
+            ]},
+            {q: "Welche Aussagen zur Bestimmung interessierter Parteien sind normkonform?", answers: [
+                {text: "Die Organisation bestimmt selbst, welche Parteien relevant sind", correct: true, feedback: "Richtig!"},
+                {text: "Alle Stakeholder muessen beruecksichtigt werden", correct: false, feedback: "FALSCH: Nur RELEVANTE, nicht alle!"},
+                {text: "Relevanz ergibt sich aus Einfluss auf die Faehigkeit, konforme Produkte bereitzustellen", correct: true, feedback: "Richtig!"},
+                {text: "Interessierte Parteien sind identisch mit Kunden", correct: false, feedback: "FALSCH: Kunden sind nur EINE von vielen interessierten Parteien."}
+            ]},
+            {q: "Welche Informationen zum Anwendungsbereich muessen enthalten sein?", answers: [
+                {text: "Die Grenzen des QMS", correct: true, feedback: "Richtig!"},
+                {text: "Die Anwendbarkeit des QMS", correct: true, feedback: "Richtig!"},
+                {text: "Begruendungen fuer nicht anwendbare Anforderungen", correct: true, feedback: "Richtig!"},
+                {text: "Eine detaillierte Beschreibung aller Prozesse", correct: false, feedback: "FALSCH: Der Anwendungsbereich nennt nur WAS enthalten ist, nicht WIE die Prozesse funktionieren."}
+            ]},
+            {q: "Welche Aussagen zu dokumentierten Informationen in Kapitel 4 sind richtig?", answers: [
+                {text: "Der Anwendungsbereich muss als dokumentierte Information verfuegbar sein", correct: true, feedback: "Richtig!"},
+                {text: "Die Prozesslandschaft muss zwingend dokumentiert sein", correct: false, feedback: "FALSCH: 'Zwingend' ist falsch - die Form ist frei waehlbar."},
+                {text: "Informationen zur Prozesssteuerung muessen verfuegbar sein", correct: true, feedback: "Richtig!"},
+                {text: "Die Norm fordert ein Qualitaetsmanagementhandbuch", correct: false, feedback: "FALSCH: QM-Handbuch wurde 2015 aus der Norm GESTRICHEN!"}
+            ]},
+            {q: "Welche Analysemethode ist zur Bestimmung externer Themen nach Kapitel 4.1 geeignet?", answers: [
+                {text: "PESTEL-Analyse (Political, Economic, Social, Technological, Environmental, Legal)", correct: true, feedback: "Richtig!"},
+                {text: "SWOT-Analyse", correct: true, feedback: "Richtig!"},
+                {text: "Organigramm-Analyse", correct: false, feedback: "FALSCH: Ein Organigramm zeigt nur die INTERNE Struktur, nicht externe Themen!"},
+                {text: "Stakeholder-Analyse", correct: true, feedback: "Richtig!"}
+            ]},
+            {q: "Welche Faktoren werden in einer SWOT-Analyse betrachtet?", answers: [
+                {text: "Staerken (Strengths) - intern", correct: true, feedback: "Richtig!"},
+                {text: "Schwaechen (Weaknesses) - intern", correct: true, feedback: "Richtig!"},
+                {text: "Chancen (Opportunities) - extern", correct: true, feedback: "Richtig!"},
+                {text: "Risiken (Threats) - extern", correct: true, feedback: "Richtig! ALLE 4 sind korrekt!"}
+            ]},
+            {q: "Was ist ein Turtle-Diagramm?", answers: [
+                {text: "Eine Methode zur Prozessvisualisierung", correct: true, feedback: "Richtig!"},
+                {text: "Ein Werkzeug zur Darstellung von Prozesselementen (Eingaben, Ausgaben, Ressourcen, Methoden, Kennzahlen, Verantwortliche)", correct: true, feedback: "Richtig!"},
+                {text: "Ein Ersatz fuer die Prozesslandkarte", correct: false, feedback: "FALSCH: Turtle ERGAENZT die Prozesslandkarte, ersetzt sie aber nicht."},
+                {text: "Eine Methode zur Auditplanung", correct: false, feedback: "FALSCH: Primaer fuer Prozessanalyse, nicht Audits."}
+            ]},
+            {q: "Was bedeutet dokumentierte Information aufrechterhalten im Sinne der ISO 9001?", answers: [
+                {text: "Dokumente aktuell halten (Vorgabedokumente wie Anweisungen, Richtlinien)", correct: true, feedback: "Richtig! 'Aufrechterhalten' = Vorgaben aktuell halten."},
+                {text: "Dokumente archivieren", correct: false, feedback: "FALSCH: Das ist 'AUFBEWAHREN', nicht aufrechterhalten!"},
+                {text: "Nachweise aufbewahren", correct: false, feedback: "FALSCH: Das ist 'AUFBEWAHREN'!"},
+                {text: "Dokumente an Mitarbeiter verteilen", correct: false, feedback: "FALSCH: Das ist keine Normdefinition."}
+            ]},
+            {q: "Was bedeutet dokumentierte Information aufbewahren im Sinne der ISO 9001?", answers: [
+                {text: "Dokumente aktuell halten", correct: false, feedback: "FALSCH: Das ist 'AUFRECHTERHALTEN'!"},
+                {text: "Nachweise/Aufzeichnungen archivieren (z.B. Pruefprotokolle, Auditberichte)", correct: true, feedback: "Richtig! 'Aufbewahren' = Nachweise archivieren."},
+                {text: "Vorgabedokumente erstellen", correct: false, feedback: "FALSCH: Das ist keine Normdefinition fuer diesen Begriff."},
+                {text: "Dokumente vor unbefugtem Zugriff schuetzen", correct: false, feedback: "FALSCH: Das ist keine Normdefinition fuer diesen Begriff."}
+            ]},
+            {q: "Welche Prozessarten werden im QMS typischerweise unterschieden?", answers: [
+                {text: "Fuehrungsprozesse (Managementprozesse)", correct: true, feedback: "Richtig!"},
+                {text: "Kernprozesse (Wertschoepfungsprozesse)", correct: true, feedback: "Richtig!"},
+                {text: "Unterstuetzungsprozesse (Stuetzprozesse)", correct: true, feedback: "Richtig!"},
+                {text: "Kontrollprozesse", correct: false, feedback: "FALSCH: 'Kontrollprozesse' ist keine gaengige Kategorie!"}
+            ]},
+            {q: "Was zeigt eine Prozesslandkarte?", answers: [
+                {text: "Die Uebersicht aller Prozesse der Organisation", correct: true, feedback: "Richtig!"},
+                {text: "Die Wechselwirkungen zwischen den Prozessen", correct: true, feedback: "Richtig!"},
+                {text: "Detaillierte Arbeitsanweisungen fuer jeden Prozess", correct: false, feedback: "FALSCH: Die Prozesslandkarte zeigt die UEBERSICHT, nicht die Details!"},
+                {text: "Die Zuordnung zu Fuehrungs-, Kern- und Unterstuetzungsprozessen", correct: true, feedback: "Richtig!"}
+            ]},
+            {q: "Welche Kennzahlen sind zur Prozessbewertung nach ISO 9001 geeignet?", answers: [
+                {text: "Durchlaufzeit eines Prozesses", correct: true, feedback: "Richtig!"},
+                {text: "Fehlerquote / Ausschussrate", correct: true, feedback: "Richtig!"},
+                {text: "Kundenzufriedenheit", correct: true, feedback: "Richtig!"},
+                {text: "Boersenkurs des Unternehmens", correct: false, feedback: "FALSCH: Der Boersenkurs ist KEINE Prozesskennzahl!"}
+            ]},
+            {q: "Welche interessierten Parteien hat typischerweise ein produzierendes Unternehmen?", answers: [
+                {text: "Kunden und Endverbraucher", correct: true, feedback: "Richtig!"},
+                {text: "Lieferanten und externe Dienstleister", correct: true, feedback: "Richtig!"},
+                {text: "Mitarbeiter und Gewerkschaften", correct: true, feedback: "Richtig!"},
+                {text: "Behoerden (Gewerbeaufsicht, Umweltamt) und Gesetzgeber", correct: true, feedback: "Richtig! ALLE sind interessierte Parteien."}
+            ]},
+            {q: "Was ist die High Level Structure (HLS)?", answers: [
+                {text: "Eine einheitliche Grundstruktur fuer alle ISO-Managementsystemnormen", correct: true, feedback: "Richtig!"},
+                {text: "Die Kapitelstruktur 1-10, die ISO 9001, 14001, 45001 etc. gemeinsam haben", correct: true, feedback: "Richtig!"},
+                {text: "Eine Vorgabe nur fuer die ISO 9001", correct: false, feedback: "FALSCH: Die HLS gilt fuer ALLE ISO-Managementsystemnormen!"},
+                {text: "Sie erleichtert die Integration mehrerer Managementsysteme", correct: true, feedback: "Richtig!"}
+            ]}
+        ]
+    },
+    "kapitel5": {
+        title: "Kapitel 5 - Fuehrung",
+        questions: [
+            {q: "Wer traegt die Gesamtverantwortung fuer die Wirksamkeit des QMS?", answers: [
+                {text: "Der Qualitaetsmanagementbeauftragte", correct: false, feedback: "FALSCH: Der QMB unterstuetzt nur, traegt aber nicht die Gesamtverantwortung!"},
+                {text: "Die oberste Leitung", correct: true, feedback: "Richtig!"},
+                {text: "Die Qualitaetsabteilung", correct: false, feedback: "FALSCH: Die Q-Abteilung ist ausfuehrend, nicht verantwortlich."},
+                {text: "Jeder einzelne Mitarbeiter", correct: false, feedback: "FALSCH: MA tragen Teilverantwortung, aber nicht die GESAMT-Verantwortung."}
+            ]},
+            {q: "Welche Aufgaben hat die oberste Leitung bezueglich des QMS?", answers: [
+                {text: "Rechenschaftspflicht fuer die Wirksamkeit des QMS uebernehmen", correct: true, feedback: "Richtig!"},
+                {text: "Die Qualitaetspolitik festlegen", correct: true, feedback: "Richtig!"},
+                {text: "Alle internen Audits persoenlich durchfuehren", correct: false, feedback: "FALSCH: Die oberste Leitung muss Audits NICHT selbst durchfuehren!"},
+                {text: "Die Verfuegbarkeit der erforderlichen Ressourcen sicherstellen", correct: true, feedback: "Richtig!"}
+            ]},
+            {q: "Was bedeutet Rechenschaftspflicht der obersten Leitung?", answers: [
+                {text: "Sie muss das QMS selbst dokumentieren", correct: false, feedback: "FALSCH: Dokumentieren koennen andere - aber die VERANTWORTUNG bleibt oben!"},
+                {text: "Sie traegt die Verantwortung fuer die Ergebnisse des QMS", correct: true, feedback: "Richtig!"},
+                {text: "Sie kann die Verantwortung nicht delegieren", correct: true, feedback: "Richtig!"},
+                {text: "Sie muss bei Audits persoenlich anwesend sein", correct: false, feedback: "FALSCH: Persoenliche Anwesenheit bei Audits ist NICHT gefordert."}
+            ]},
+            {q: "Die oberste Leitung muss sicherstellen, dass das QMS...", answers: [
+                {text: "in die Geschaeftsprozesse integriert wird", correct: true, feedback: "Richtig!"},
+                {text: "als separate Einheit neben dem Tagesgeschaeft existiert", correct: false, feedback: "FALSCH: Das QMS soll INTEGRIERT sein, nicht separat!"},
+                {text: "die beabsichtigten Ergebnisse erreicht", correct: true, feedback: "Richtig!"},
+                {text: "von einem externen Berater gesteuert wird", correct: false, feedback: "FALSCH: Die Steuerung liegt INTERN bei der obersten Leitung."}
+            ]},
+            {q: "Was muss die oberste Leitung in Bezug auf Personen im QMS tun?", answers: [
+                {text: "Personen anleiten und unterstuetzen", correct: true, feedback: "Richtig!"},
+                {text: "Alle Mitarbeiter selbst schulen", correct: false, feedback: "FALSCH: Die oberste Leitung muss NICHT selbst schulen!"},
+                {text: "Personen zu Beitraegen zur Wirksamkeit des QMS anregen", correct: true, feedback: "Richtig!"},
+                {text: "Die Verbesserung foerdern", correct: true, feedback: "Richtig!"}
+            ]},
+            {q: "Wie soll die oberste Leitung andere Fuehrungskraefte unterstuetzen?", answers: [
+                {text: "Deren Fuehrungsrolle in deren Verantwortungsbereichen unterstuetzen", correct: true, feedback: "Richtig!"},
+                {text: "Alle Entscheidungen fuer sie treffen", correct: false, feedback: "FALSCH: Fuehrungskraefte sollen EIGENE Entscheidungen treffen!"},
+                {text: "Ihnen keine eigene Verantwortung uebertragen", correct: false, feedback: "FALSCH: Verantwortung MUSS delegiert werden!"},
+                {text: "Fuehrung als gemeinsame Aufgabe verstehen", correct: true, feedback: "Richtig!"}
+            ]},
+            {q: "Was fordert die Norm bezueglich Kundenorientierung von der obersten Leitung?", answers: [
+                {text: "Kundenanforderungen werden ermittelt und erfuellt", correct: true, feedback: "Richtig!"},
+                {text: "Nur schriftliche Kundenanforderungen beruecksichtigen", correct: false, feedback: "FALSCH: ALLE Kundenanforderungen zaehlen - auch muendliche, implizite und gesetzliche!"},
+                {text: "Risiken und Chancen, die die Konformitaet beeinflussen, werden bestimmt", correct: true, feedback: "Richtig!"},
+                {text: "Der Fokus auf Erhoehung der Kundenzufriedenheit wird aufrechterhalten", correct: true, feedback: "Richtig!"}
+            ]},
+            {q: "Welche Anforderungen muessen neben Kundenanforderungen beruecksichtigt werden?", answers: [
+                {text: "Gesetzliche Anforderungen", correct: true, feedback: "Richtig!"},
+                {text: "Behoerdliche Anforderungen", correct: true, feedback: "Richtig!"},
+                {text: "Anforderungen der Wettbewerber", correct: false, feedback: "FALSCH: Wettbewerber stellen keine ANFORDERUNGEN an das Unternehmen!"},
+                {text: "Anforderungen, die die Organisation selbst festlegt", correct: true, feedback: "Richtig!"}
+            ]},
+            {q: "Kundenorientierung nach ISO 9001:2015 bedeutet...", answers: [
+                {text: "nur die Erfuellung von Kundenanforderungen", correct: false, feedback: "FALSCH: 'Nur erfuellen' reicht nicht - das Ziel ist ERHOEHUNG der Zufriedenheit!"},
+                {text: "die Erhoehung der Kundenzufriedenheit als Schwerpunkt", correct: true, feedback: "Richtig!"},
+                {text: "ausschliesslich die Bearbeitung von Reklamationen", correct: false, feedback: "FALSCH: Reklamationen sind reaktiv - Kundenorientierung ist PROAKTIV!"},
+                {text: "das Verstehen aktueller UND zukuenftiger Kundenbeduerfnisse", correct: true, feedback: "Richtig!"}
+            ]},
+            {q: "Wer ist verantwortlich fuer die Festlegung der Qualitaetspolitik?", answers: [
+                {text: "Der Qualitaetsmanagementbeauftragte", correct: false, feedback: "FALSCH: Der QMB kann unterstuetzen, aber die VERANTWORTUNG liegt bei der obersten Leitung!"},
+                {text: "Die oberste Leitung", correct: true, feedback: "Richtig!"},
+                {text: "Die Qualitaetsabteilung", correct: false, feedback: "FALSCH: Q-Abteilung ist ausfuehrend."},
+                {text: "Ein externer Berater", correct: false, feedback: "FALSCH: Externe koennen beraten, aber nicht verantwortlich sein."}
+            ]},
+            {q: "Die Qualitaetspolitik muss...", answers: [
+                {text: "fuer den Zweck und Kontext der Organisation angemessen sein", correct: true, feedback: "Richtig!"},
+                {text: "einen Rahmen zum Festlegen von Qualitaetszielen bieten", correct: true, feedback: "Richtig!"},
+                {text: "eine Verpflichtung zur Erfuellung zutreffender Anforderungen enthalten", correct: true, feedback: "Richtig!"},
+                {text: "jaehrlich komplett neu geschrieben werden", correct: false, feedback: "FALSCH: Die Q-Politik muss NICHT jaehrlich neu geschrieben werden!"}
+            ]},
+            {q: "Welche Verpflichtungen muss die Qualitaetspolitik enthalten?", answers: [
+                {text: "Verpflichtung zur Erfuellung zutreffender Anforderungen", correct: true, feedback: "Richtig!"},
+                {text: "Verpflichtung zur fortlaufenden Verbesserung des QMS", correct: true, feedback: "Richtig!"},
+                {text: "Verpflichtung zur Gewinnmaximierung", correct: false, feedback: "FALSCH: Gewinnmaximierung ist KEIN Norminhalt!"},
+                {text: "Verpflichtung zur Kundenzufriedenheit", correct: false, feedback: "FALSCH: Kundenzufriedenheit ist Ziel, aber keine explizit geforderte VERPFLICHTUNG in der Politik."}
+            ]},
+            {q: "Was bedeutet 'Rahmen fuer Qualitaetsziele' in der Q-Politik?", answers: [
+                {text: "Die Q-Politik gibt die Richtung vor, aus der Q-Ziele abgeleitet werden", correct: true, feedback: "Richtig!"},
+                {text: "Die Q-Politik muss alle Q-Ziele konkret benennen", correct: false, feedback: "FALSCH: Die Politik gibt den RAHMEN, nicht die konkreten Ziele!"},
+                {text: "Q-Ziele muessen zur Q-Politik passen", correct: true, feedback: "Richtig!"},
+                {text: "Die Q-Politik ersetzt die Q-Ziele", correct: false, feedback: "FALSCH: Politik und Ziele sind BEIDE noetig!"}
+            ]},
+            {q: "Welche Aussagen zur Bekanntmachung der Q-Politik sind richtig?", answers: [
+                {text: "Sie muss als dokumentierte Information verfuegbar sein", correct: true, feedback: "Richtig!"},
+                {text: "Sie muss innerhalb der Organisation bekannt gemacht werden", correct: true, feedback: "Richtig!"},
+                {text: "Sie muss allen Mitarbeitern als Papierdokument ausgehaendigt werden", correct: false, feedback: "FALSCH: Die FORM ist frei waehlbar! Papier, Intranet, Aushang - alles erlaubt."},
+                {text: "Sie muss fuer relevante interessierte Parteien verfuegbar sein", correct: true, feedback: "Richtig!"}
+            ]},
+            {q: "Die Qualitaetspolitik muss verstanden und angewendet werden. Was bedeutet das?", answers: [
+                {text: "Mitarbeiter muessen die Q-Politik woertlich auswendig kennen", correct: false, feedback: "FALSCH: Auswendiglernen ist NICHT gefordert - VERSTEHEN ist wichtiger!"},
+                {text: "Mitarbeiter muessen wissen, wie sie zur Q-Politik beitragen", correct: true, feedback: "Richtig!"},
+                {text: "Die Q-Politik muss im Arbeitsalltag gelebt werden", correct: true, feedback: "Richtig!"},
+                {text: "Nur Fuehrungskraefte muessen die Q-Politik kennen", correct: false, feedback: "FALSCH: ALLE relevanten Personen muessen sie kennen!"}
+            ]},
+            {q: "Wann muss die Qualitaetspolitik ueberprueft werden?", answers: [
+                {text: "Einmal jaehrlich verpflichtend", correct: false, feedback: "FALSCH: 'Jaehrlich' steht NICHT in der Norm!"},
+                {text: "Bei der Managementbewertung auf fortlaufende Eignung", correct: true, feedback: "Richtig!"},
+                {text: "Bei wesentlichen Aenderungen des Kontexts", correct: true, feedback: "Richtig!"},
+                {text: "Nur wenn der Zertifizierer es fordert", correct: false, feedback: "FALSCH: Die Organisation entscheidet selbst!"}
+            ]},
+            {q: "Was fordert die ISO 9001:2015 bezueglich des QMB?", answers: [
+                {text: "Ein QMB muss explizit benannt werden", correct: false, feedback: "FALSCH seit 2015: Der Begriff 'QMB' wurde GESTRICHEN!"},
+                {text: "Der QMB muss Mitglied der obersten Leitung sein", correct: false, feedback: "FALSCH: Es gibt keine Vorgabe mehr zur Person."},
+                {text: "Die Funktion QMB ist nicht mehr explizit gefordert", correct: true, feedback: "Richtig!"},
+                {text: "Die Verantwortlichkeiten muessen dennoch zugewiesen werden", correct: true, feedback: "Richtig!"}
+            ]},
+            {q: "Welche Verantwortlichkeiten muessen laut Kapitel 5.3 zugewiesen werden?", answers: [
+                {text: "Sicherstellen, dass das QMS die Anforderungen der Norm erfuellt", correct: true, feedback: "Richtig!"},
+                {text: "Sicherstellen, dass Prozesse die beabsichtigten Ergebnisse liefern", correct: true, feedback: "Richtig!"},
+                {text: "Berichten ueber die Leistung des QMS an die oberste Leitung", correct: true, feedback: "Richtig!"},
+                {text: "Alle Dokumente persoenlich freigeben", correct: false, feedback: "FALSCH: Dokumentenfreigabe kann delegiert werden!"}
+            ]},
+            {q: "Der GF eines Unternehmens mit 5 Mitarbeitern moechte die QM-Verantwortung selbst uebernehmen. Ist das normkonform?", answers: [
+                {text: "Nein, es muss immer ein separater QMB benannt werden", correct: false, feedback: "FALSCH: Seit 2015 ist kein separater QMB mehr gefordert!"},
+                {text: "Ja, das ist zulaessig", correct: true, feedback: "Richtig!"},
+                {text: "Nur mit Genehmigung der Zertifizierungsstelle", correct: false, feedback: "FALSCH: Die Organisation entscheidet selbst."},
+                {text: "Ja, besonders in kleinen Organisationen ist das ueblich", correct: true, feedback: "Richtig!"}
+            ]},
+            {q: "Was ist der Unterschied zwischen Verantwortung und Befugnis?", answers: [
+                {text: "Verantwortung = Pflicht, fuer Ergebnisse einzustehen", correct: true, feedback: "Richtig!"},
+                {text: "Befugnis = Recht, Entscheidungen zu treffen", correct: true, feedback: "Richtig!"},
+                {text: "Beide Begriffe sind identisch", correct: false, feedback: "FALSCH: Verantwortung = MUESSEN, Befugnis = DUERFEN!"},
+                {text: "Verantwortung kann ohne Befugnis nicht wahrgenommen werden", correct: true, feedback: "Richtig!"}
+            ]},
+            {q: "Verantwortlichkeiten und Befugnisse muessen...", answers: [
+                {text: "von der obersten Leitung zugewiesen werden", correct: true, feedback: "Richtig!"},
+                {text: "innerhalb der Organisation bekannt gemacht werden", correct: true, feedback: "Richtig!"},
+                {text: "in einem Organigramm dargestellt werden", correct: false, feedback: "FALSCH: Ein Organigramm ist NICHT vorgeschrieben!"},
+                {text: "fuer relevante Rollen festgelegt werden", correct: true, feedback: "Richtig!"}
+            ]},
+            {q: "Wer muss ueber die Leistung des QMS an die oberste Leitung berichten?", answers: [
+                {text: "Nur der externe Auditor", correct: false, feedback: "FALSCH: Externe Auditoren berichten ueber AUDITERGEBNISSE, nicht laufend ueber QMS-Leistung."},
+                {text: "Die Person(en), der/denen diese Verantwortung zugewiesen wurde", correct: true, feedback: "Richtig!"},
+                {text: "Ausschliesslich der Qualitaetsmanagementbeauftragte", correct: false, feedback: "FALSCH: 'QMB' ist seit 2015 nicht mehr gefordert."},
+                {text: "Jeder Mitarbeiter direkt", correct: false, feedback: "FALSCH: Das waere unpraktikabel."}
+            ]},
+            {q: "Was gehoert zur Foerderung der Kundenorientierung in der gesamten Organisation?", answers: [
+                {text: "Ist Aufgabe der obersten Leitung", correct: true, feedback: "Richtig!"},
+                {text: "Ist nur Aufgabe des Vertriebs", correct: false, feedback: "FALSCH: Kundenorientierung muss in der GESAMTEN Organisation gelebt werden!"},
+                {text: "Muss sicherstellen, dass Kundenanforderungen verstanden werden", correct: true, feedback: "Richtig!"},
+                {text: "Betrifft alle Ebenen und Bereiche", correct: true, feedback: "Richtig!"}
+            ]},
+            {q: "Die oberste Leitung muss die Bedeutung welcher Aspekte vermitteln?", answers: [
+                {text: "Eines wirksamen QMS", correct: true, feedback: "Richtig!"},
+                {text: "Der Erfuellung von QMS-Anforderungen", correct: true, feedback: "Richtig!"},
+                {text: "Der Gewinnmaximierung", correct: false, feedback: "FALSCH: Gewinnmaximierung ist KEIN Norminhalt!"},
+                {text: "Der Einhaltung gesetzlicher Anforderungen", correct: false, feedback: "FALSCH: Hier fragt die Norm spezifisch nach QMS-Bedeutung."}
+            ]},
+            {q: "Welche Aussagen zur Fuehrung nach ISO 9001:2015 sind richtig?", answers: [
+                {text: "Fuehrung ist ein eigener QM-Grundsatz", correct: true, feedback: "Richtig!"},
+                {text: "Die oberste Leitung kann alle Aufgaben an den QMB delegieren", correct: false, feedback: "FALSCH: Die RECHENSCHAFTSPFLICHT kann NICHT delegiert werden!"},
+                {text: "Fuehrung bedeutet Vorbild sein und Richtung vorgeben", correct: true, feedback: "Richtig!"},
+                {text: "Die oberste Leitung muss aktiv eingebunden sein", correct: true, feedback: "Richtig!"}
+            ]},
+            {q: "Wie muss die oberste Leitung den Prozessansatz foerdern?", answers: [
+                {text: "Indem sie Prozesse und deren Wechselwirkungen versteht", correct: true, feedback: "Richtig!"},
+                {text: "Indem sie alle Prozesse selbst dokumentiert", correct: false, feedback: "FALSCH: Die oberste Leitung muss Prozesse NICHT selbst dokumentieren!"},
+                {text: "Indem sie prozessorientiertes Denken in der Organisation verankert", correct: true, feedback: "Richtig!"},
+                {text: "Indem sie die Prozessverantwortlichen unterstuetzt", correct: true, feedback: "Richtig!"}
+            ]},
+            {q: "Was bedeutet 'risikobasiertes Denken foerdern' als Fuehrungsaufgabe?", answers: [
+                {text: "Bewusstsein schaffen, dass Risiken bei allen Entscheidungen beruecksichtigt werden", correct: true, feedback: "Richtig!"},
+                {text: "Eine vollstaendige Risikodatenbank aufbauen", correct: false, feedback: "FALSCH: Eine 'vollstaendige Risikodatenbank' fordert die Norm NICHT!"},
+                {text: "Chancen als positive Risiken erkennen und nutzen", correct: true, feedback: "Richtig!"},
+                {text: "Nur die Risiken betrachten, die der Zertifizierer vorgibt", correct: false, feedback: "FALSCH: Die Organisation bestimmt selbst ihre Risiken!"}
+            ]},
+            {q: "Was muss bei Aenderungen am QMS sichergestellt werden?", answers: [
+                {text: "Die Integritaet des QMS wird aufrechterhalten", correct: true, feedback: "Richtig!"},
+                {text: "Jede Aenderung muss vom Zertifizierer genehmigt werden", correct: false, feedback: "FALSCH: Der Zertifizierer muss Aenderungen NICHT vorab genehmigen!"},
+                {text: "Aenderungen werden geplant und systematisch umgesetzt", correct: true, feedback: "Richtig!"},
+                {text: "Das QMS bleibt auch waehrend der Aenderung funktionsfaehig", correct: true, feedback: "Richtig!"}
+            ]},
+            {q: "Fuehrung ist einer der 7 QM-Grundsaetze. Was bedeutet das konkret?", answers: [
+                {text: "Fuehrungskraefte schaffen einheitliche Ausrichtung und Zielsetzung", correct: true, feedback: "Richtig!"},
+                {text: "Fuehrung ist nur Aufgabe der obersten Leitung", correct: false, feedback: "FALSCH: Fuehrung betrifft ALLE Fuehrungsebenen!"},
+                {text: "Fuehrungskraefte schaffen Bedingungen, unter denen MA sich engagieren", correct: true, feedback: "Richtig!"},
+                {text: "Fuehrung ist die Basis fuer ein erfolgreiches QMS", correct: true, feedback: "Richtig!"}
+            ]},
+            {q: "Welche Elemente muss eine normkonforme Qualitaetspolitik MINDESTENS enthalten?", answers: [
+                {text: "Angemessenheit fuer Zweck und Kontext der Organisation", correct: true, feedback: "Richtig!"},
+                {text: "Konkrete Umsatzziele und Gewinnmargen", correct: false, feedback: "FALSCH: Umsatzziele sind KEINE Normanforderungen!"},
+                {text: "Rahmen fuer das Festlegen von Qualitaetszielen", correct: true, feedback: "Richtig!"},
+                {text: "Verpflichtung zur Anforderungserfuellung und fortlaufenden Verbesserung", correct: true, feedback: "Richtig!"}
+            ]}
+        ]
+    },
+    "kapitel6": {
+        title: "Kapitel 6 - Planung",
+        questions: [
+            {q: "Worauf muss die Organisation bei der Planung des QMS Bezug nehmen?", answers: [
+                {text: "Auf den Kontext der Organisation (Kapitel 4.1)", correct: true, feedback: "Richtig!"},
+                {text: "Auf die interessierten Parteien (Kapitel 4.2)", correct: true, feedback: "Richtig!"},
+                {text: "Auf die Gewinnerwartungen der Eigentuemer", correct: false, feedback: "FALSCH: Gewinnerwartungen sind KEIN Norminhalt!"},
+                {text: "Auf den Anwendungsbereich des QMS", correct: true, feedback: "Richtig!"}
+            ]},
+            {q: "Warum muessen Risiken und Chancen bestimmt werden?", answers: [
+                {text: "Um sicherzustellen, dass das QMS seine beabsichtigten Ergebnisse erreichen kann", correct: true, feedback: "Richtig!"},
+                {text: "Um unerwuenschte Auswirkungen zu verhindern oder zu verringern", correct: true, feedback: "Richtig!"},
+                {text: "Um eine Risikodatenbank fuer den Zertifizierer zu erstellen", correct: false, feedback: "FALSCH: Eine Risikodatenbank ist NICHT gefordert!"},
+                {text: "Um fortlaufende Verbesserung zu erreichen", correct: true, feedback: "Richtig!"}
+            ]},
+            {q: "Was versteht die ISO 9001:2015 unter 'Risiko'?", answers: [
+                {text: "Auswirkung von Ungewissheit", correct: true, feedback: "Richtig!"},
+                {text: "Nur negative Abweichungen", correct: false, feedback: "FALSCH: Risiko ist NICHT nur negativ!"},
+                {text: "Kann positiv oder negativ sein", correct: true, feedback: "Richtig!"},
+                {text: "Immer eine Bedrohung", correct: false, feedback: "FALSCH: Risiko ist NICHT immer eine Bedrohung!"}
+            ]},
+            {q: "Was ist der Unterschied zwischen Risiko und Chance?", answers: [
+                {text: "Risiko ist immer negativ, Chance immer positiv", correct: false, feedback: "FALSCH: Risiko ist NICHT immer negativ!"},
+                {text: "Chance ist ein positiver Effekt von Ungewissheit", correct: true, feedback: "Richtig!"},
+                {text: "Beide sind Auswirkungen von Ungewissheit", correct: true, feedback: "Richtig!"},
+                {text: "Die Norm behandelt beides gemeinsam", correct: true, feedback: "Richtig!"}
+            ]},
+            {q: "Welche Eingaben fliessen in die Bestimmung von Risiken und Chancen ein?", answers: [
+                {text: "Ergebnisse der Kontextanalyse (4.1)", correct: true, feedback: "Richtig!"},
+                {text: "Anforderungen interessierter Parteien (4.2)", correct: true, feedback: "Richtig!"},
+                {text: "Historische Verkaufszahlen", correct: false, feedback: "FALSCH: Historische Verkaufszahlen sind KEINE direkte Eingabe!"},
+                {text: "Der Anwendungsbereich des QMS (4.3)", correct: true, feedback: "Richtig!"}
+            ]},
+            {q: "Fordert die ISO 9001:2015 ein formelles Risikomanagement?", answers: [
+                {text: "Ja, nach ISO 31000", correct: false, feedback: "FALSCH: Die ISO 9001 fordert KEIN formelles Risikomanagement nach ISO 31000!"},
+                {text: "Nein, nur risikobasiertes Denken", correct: true, feedback: "Richtig!"},
+                {text: "Die Methode ist freigestellt", correct: true, feedback: "Richtig!"},
+                {text: "Ja, mit dokumentierter Risikomatrix", correct: false, feedback: "FALSCH: KEINE dokumentierte Risikomatrix gefordert!"}
+            ]},
+            {q: "Welche Massnahmen muessen fuer Risiken und Chancen geplant werden?", answers: [
+                {text: "Massnahmen zum Umgang mit Risiken und Chancen", correct: true, feedback: "Richtig!"},
+                {text: "Integration der Massnahmen in QMS-Prozesse", correct: true, feedback: "Richtig!"},
+                {text: "Eliminierung aller Risiken", correct: false, feedback: "FALSCH: Alle Risiken zu ELIMINIEREN ist unrealistisch und NICHT gefordert!"},
+                {text: "Bewertung der Wirksamkeit der Massnahmen", correct: true, feedback: "Richtig!"}
+            ]},
+            {q: "Welche Strategien gibt es zum Umgang mit Risiken?", answers: [
+                {text: "Vermeiden (Risikoquelle beseitigen)", correct: true, feedback: "Richtig!"},
+                {text: "Verringern (Wahrscheinlichkeit oder Auswirkung reduzieren)", correct: true, feedback: "Richtig!"},
+                {text: "Ignorieren (Risiko nicht beachten)", correct: false, feedback: "FALSCH: Ignorieren ist KEINE akzeptable Strategie!"},
+                {text: "Uebernehmen/Akzeptieren (bewusst eingehen)", correct: true, feedback: "Richtig!"}
+            ]},
+            {q: "Wie sollen Chancen behandelt werden?", answers: [
+                {text: "Chancen identifizieren und nutzen", correct: true, feedback: "Richtig!"},
+                {text: "Chancen haben im QMS keine Bedeutung", correct: false, feedback: "FALSCH: Chancen sind im QMS SEHR wichtig!"},
+                {text: "Neue Produkte/Dienstleistungen entwickeln", correct: true, feedback: "Richtig!"},
+                {text: "Neue Maerkte erschliessen", correct: true, feedback: "Richtig!"}
+            ]},
+            {q: "Muessen Risiken und Chancen dokumentiert werden?", answers: [
+                {text: "Ja, in einer vorgeschriebenen Risikomatrix", correct: false, feedback: "FALSCH: Eine Risikomatrix ist NICHT vorgeschrieben!"},
+                {text: "Nein, es gibt keine explizite Dokumentationspflicht", correct: true, feedback: "Richtig!"},
+                {text: "Die Organisation entscheidet selbst ueber Art und Umfang", correct: true, feedback: "Richtig!"},
+                {text: "Nur fuer Auditzwecke", correct: false, feedback: "FALSCH: Dokumentation dient der Organisation selbst."}
+            ]},
+            {q: "Wann muessen Risiken und Chancen neu bewertet werden?", answers: [
+                {text: "Bei Aenderungen des Kontexts", correct: true, feedback: "Richtig!"},
+                {text: "Einmal jaehrlich verpflichtend", correct: false, feedback: "FALSCH: 'Jaehrlich' steht NICHT in der Norm!"},
+                {text: "Bei Aenderungen an Produkten/Dienstleistungen", correct: true, feedback: "Richtig!"},
+                {text: "Im Rahmen der Managementbewertung", correct: true, feedback: "Richtig!"}
+            ]},
+            {q: "Risikobasiertes Denken ersetzt...", answers: [
+                {text: "die Vorbeugungsmassnahmen der ISO 9001:2008", correct: true, feedback: "Richtig!"},
+                {text: "die Korrekturmassnahmen", correct: false, feedback: "FALSCH: Korrekturmassnahmen gibt es weiterhin!"},
+                {text: "das interne Audit", correct: false, feedback: "FALSCH: Interne Audits sind weiterhin gefordert!"},
+                {text: "nichts, es ist eine neue Ergaenzung", correct: false, feedback: "FALSCH: Es ERSETZT die frueheren 'Vorbeugungsmassnahmen'."}
+            ]},
+            {q: "Der Begriff 'Vorbeugungsmassnahme' existiert in der ISO 9001:2015...", answers: [
+                {text: "als eigenes Kapitel", correct: false, feedback: "FALSCH: Es gibt KEIN eigenes Kapitel mehr!"},
+                {text: "nicht mehr als eigenstaendiger Begriff", correct: true, feedback: "Richtig!"},
+                {text: "wurde durch risikobasiertes Denken ersetzt", correct: true, feedback: "Richtig!"},
+                {text: "ist identisch mit Korrekturmassnahme", correct: false, feedback: "FALSCH: Vorbeugung und Korrektur sind NICHT identisch!"}
+            ]},
+            {q: "Fuer welche Ebenen muessen Qualitaetsziele festgelegt werden?", answers: [
+                {text: "Fuer relevante Funktionen", correct: true, feedback: "Richtig!"},
+                {text: "Fuer relevante Ebenen", correct: true, feedback: "Richtig!"},
+                {text: "Fuer relevante Prozesse", correct: true, feedback: "Richtig!"},
+                {text: "Nur auf Unternehmensebene", correct: false, feedback: "FALSCH: Q-Ziele nur auf Unternehmensebene reicht NICHT!"}
+            ]},
+            {q: "Qualitaetsziele muessen im Einklang stehen mit...", answers: [
+                {text: "der Qualitaetspolitik", correct: true, feedback: "Richtig!"},
+                {text: "den Umsatzzielen", correct: false, feedback: "FALSCH: Umsatzziele sind KEIN Norminhalt!"},
+                {text: "den Kundenanforderungen", correct: true, feedback: "Richtig!"},
+                {text: "den Zielen der Wettbewerber", correct: false, feedback: "FALSCH: Wettbewerberziele sind irrelevant!"}
+            ]},
+            {q: "Welche Eigenschaften muessen Qualitaetsziele haben?", answers: [
+                {text: "Messbar", correct: true, feedback: "Richtig!"},
+                {text: "Ueberwachbar", correct: true, feedback: "Richtig!"},
+                {text: "Allgemein und flexibel formuliert", correct: false, feedback: "FALSCH: Q-Ziele sollen NICHT allgemein sein! Sie muessen MESSBAR und konkret sein!"},
+                {text: "Kommuniziert werden", correct: true, feedback: "Richtig!"}
+            ]},
+            {q: "Was bedeutet 'messbar' bei Qualitaetszielen?", answers: [
+                {text: "Es muss eine Kennzahl oder ein Kriterium geben", correct: true, feedback: "Richtig!"},
+                {text: "Jedes Ziel braucht einen numerischen Wert", correct: false, feedback: "FALSCH: Nicht JEDES Ziel braucht eine Zahl!"},
+                {text: "Der Zielerreichungsgrad muss ueberpruefbar sein", correct: true, feedback: "Richtig!"},
+                {text: "Nur quantitative Ziele sind erlaubt", correct: false, feedback: "FALSCH: Auch qualitative Ziele sind erlaubt!"}
+            ]},
+            {q: "Welche Planungsaspekte sind fuer Qualitaetsziele erforderlich?", answers: [
+                {text: "Was getan wird", correct: true, feedback: "Richtig!"},
+                {text: "Welche Ressourcen benoetigt werden", correct: true, feedback: "Richtig!"},
+                {text: "Wer verantwortlich ist", correct: true, feedback: "Richtig!"},
+                {text: "Wie die Ergebnisse bewertet werden", correct: true, feedback: "Richtig! ALLE sind korrekt!"}
+            ]},
+            {q: "Wann muessen Qualitaetsziele aktualisiert werden?", answers: [
+                {text: "Bei Aenderungen der Qualitaetspolitik", correct: true, feedback: "Richtig!"},
+                {text: "Jaehrlich zum Jahreswechsel", correct: false, feedback: "FALSCH: 'Jaehrlich zum Jahreswechsel' steht NICHT in der Norm!"},
+                {text: "Bei Aenderungen des Kontexts", correct: true, feedback: "Richtig!"},
+                {text: "Bei Bedarf (wenn zutreffend)", correct: true, feedback: "Richtig!"}
+            ]},
+            {q: "Muessen Qualitaetsziele dokumentiert werden?", answers: [
+                {text: "Ja, als dokumentierte Information aufrechterhalten", correct: true, feedback: "Richtig!"},
+                {text: "Nein, muendliche Vereinbarungen reichen", correct: false, feedback: "FALSCH: Muendliche Vereinbarungen reichen NICHT!"},
+                {text: "Die Norm fordert explizit Dokumentation", correct: true, feedback: "Richtig!"},
+                {text: "Nur wenn der Zertifizierer es verlangt", correct: false, feedback: "FALSCH: Es ist Normforderung!"}
+            ]},
+            {q: "Was ist das SMART-Prinzip fuer Ziele?", answers: [
+                {text: "Spezifisch, Messbar, Akzeptiert/Attraktiv, Realistisch, Terminiert", correct: true, feedback: "Richtig!"},
+                {text: "Eine Normforderung der ISO 9001", correct: false, feedback: "FALSCH: SMART ist KEINE explizite Normforderung!"},
+                {text: "Ein bewaehrtes Hilfsmittel zur Zielformulierung", correct: true, feedback: "Richtig!"},
+                {text: "Bedeutet, dass alle Ziele digital erfasst werden", correct: false, feedback: "FALSCH: SMART hat nichts mit digitaler Erfassung zu tun."}
+            ]},
+            {q: "Ein Qualitaetsziel lautet: 'Wir wollen besser werden'. Ist das normkonform?", answers: [
+                {text: "Ja, es drueckt Verbesserungswillen aus", correct: false, feedback: "FALSCH: Der Wille allein reicht NICHT!"},
+                {text: "Nein, es ist nicht messbar", correct: true, feedback: "Richtig!"},
+                {text: "Nein, es fehlt ein konkreter Bezug", correct: true, feedback: "Richtig!"},
+                {text: "Ja, wenn die Mitarbeiter es verstehen", correct: false, feedback: "FALSCH: Das Ziel muss MESSBAR sein!"}
+            ]},
+            {q: "Welches ist ein normkonformes Qualitaetsziel?", answers: [
+                {text: "'Kundenzufriedenheit steigern'", correct: false, feedback: "FALSCH: Nicht messbar - um wieviel, bis wann?"},
+                {text: "'Reklamationsquote bis 31.12. um 10% senken'", correct: true, feedback: "Richtig!"},
+                {text: "'Wir wollen die Besten sein'", correct: false, feedback: "FALSCH: 'Die Besten' ist nicht messbar!"},
+                {text: "'Liefertreue auf 98% bis Q2 erhoehen'", correct: true, feedback: "Richtig!"}
+            ]},
+            {q: "Was muss bei geplanten Aenderungen am QMS beruecksichtigt werden?", answers: [
+                {text: "Der Zweck der Aenderung und moegliche Konsequenzen", correct: true, feedback: "Richtig!"},
+                {text: "Die Integritaet des QMS", correct: true, feedback: "Richtig!"},
+                {text: "Die Genehmigung durch den Zertifizierer", correct: false, feedback: "FALSCH: Der Zertifizierer muss NICHT vorab genehmigen!"},
+                {text: "Die Verfuegbarkeit von Ressourcen", correct: true, feedback: "Richtig!"}
+            ]},
+            {q: "Welche Aspekte muessen bei QMS-Aenderungen geplant werden?", answers: [
+                {text: "Zweck der Aenderung", correct: true, feedback: "Richtig!"},
+                {text: "Moegliche Konsequenzen", correct: true, feedback: "Richtig!"},
+                {text: "Zuweisung von Verantwortlichkeiten", correct: true, feedback: "Richtig!"},
+                {text: "Automatische Information des TUeV", correct: false, feedback: "FALSCH: Den TUeV automatisch zu informieren ist NICHT gefordert!"}
+            ]},
+            {q: "Was bedeutet 'Integritaet des QMS' bei Aenderungen?", answers: [
+                {text: "Das QMS bleibt als Ganzes funktionsfaehig", correct: true, feedback: "Richtig!"},
+                {text: "Aenderungen duerfen das System nicht beschaedigen", correct: true, feedback: "Richtig!"},
+                {text: "Wechselwirkungen zwischen Prozessen werden beruecksichtigt", correct: true, feedback: "Richtig!"},
+                {text: "Das QMS wird nach jeder Aenderung neu zertifiziert", correct: false, feedback: "FALSCH: Neuzertifizierung ist NICHT noetig!"}
+            ]},
+            {q: "Wer ist fuer die Planung von Aenderungen verantwortlich?", answers: [
+                {text: "Die oberste Leitung traegt die Gesamtverantwortung", correct: true, feedback: "Richtig!"},
+                {text: "Der Zertifizierer plant alle Aenderungen", correct: false, feedback: "FALSCH: Der Zertifizierer plant KEINE Aenderungen!"},
+                {text: "Die Organisation selbst", correct: true, feedback: "Richtig!"},
+                {text: "Die jeweils zustaendigen Verantwortlichen", correct: true, feedback: "Richtig!"}
+            ]},
+            {q: "Was sind typische Ausloeser fuer QMS-Aenderungen?", answers: [
+                {text: "Neue gesetzliche Anforderungen", correct: true, feedback: "Richtig!"},
+                {text: "Ergebnisse von Audits", correct: true, feedback: "Richtig!"},
+                {text: "Aenderungen im Kontext der Organisation", correct: true, feedback: "Richtig!"},
+                {text: "Wunsch des Wettbewerbs", correct: false, feedback: "FALSCH: Der Wettbewerb hat keinen Einfluss auf das QMS!"}
+            ]},
+            {q: "Wie haengen Risiken/Chancen und Qualitaetsziele zusammen?", answers: [
+                {text: "Q-Ziele koennen Massnahmen zu Risiken/Chancen sein", correct: true, feedback: "Richtig!"},
+                {text: "Sie sind voellig unabhaengig voneinander", correct: false, feedback: "FALSCH: Sie sind eng verknuepft!"},
+                {text: "Risiken koennen die Erreichung von Q-Zielen gefaehrden", correct: true, feedback: "Richtig!"},
+                {text: "Chancen koennen zu neuen Q-Zielen fuehren", correct: true, feedback: "Richtig!"}
+            ]},
+            {q: "Die ISO 9001:2015 fordert einen 'risikobasierten Ansatz'. Was bedeutet das?", answers: [
+                {text: "Risiken werden bei allen Entscheidungen beruecksichtigt", correct: true, feedback: "Richtig!"},
+                {text: "Ein zertifiziertes Risikomanagementsystem ist Pflicht", correct: false, feedback: "FALSCH: Ein zertifiziertes Risikomanagementsystem ist NICHT Pflicht!"},
+                {text: "Praevention statt Reaktion", correct: true, feedback: "Richtig!"},
+                {text: "Risiken sind im gesamten QMS zu betrachten", correct: true, feedback: "Richtig!"}
+            ]},
+            {q: "Was ist eine Risikomatrix?", answers: [
+                {text: "Ein von der ISO 9001 gefordertes Dokument", correct: false, feedback: "FALSCH: Die Risikomatrix ist NICHT von der Norm gefordert!"},
+                {text: "Ein Werkzeug zur Visualisierung von Risiken", correct: true, feedback: "Richtig!"},
+                {text: "Stellt Eintrittswahrscheinlichkeit und Auswirkung dar", correct: true, feedback: "Richtig!"},
+                {text: "Eine moegliche, aber nicht vorgeschriebene Methode", correct: true, feedback: "Richtig!"}
+            ]},
+            {q: "Ein Unternehmen hat keine dokumentierten Risiken. Ist das ein Auditfehler?", answers: [
+                {text: "Ja, immer", correct: false, feedback: "FALSCH: Keine Dokumentation ist NICHT automatisch ein Fehler!"},
+                {text: "Nein, wenn risikobasiertes Denken nachweisbar gelebt wird", correct: true, feedback: "Richtig!"},
+                {text: "Dokumentation ist nicht explizit gefordert", correct: true, feedback: "Richtig!"},
+                {text: "Ja, der Zertifizierer verlangt Dokumente", correct: false, feedback: "FALSCH: Der Auditor prueft das Verstaendnis und die Umsetzung."}
+            ]},
+            {q: "Was ist der Unterschied zwischen Qualitaetspolitik und Qualitaetszielen?", answers: [
+                {text: "Die Politik gibt die Richtung vor, Ziele sind konkret und messbar", correct: true, feedback: "Richtig!"},
+                {text: "Politik und Ziele sind identisch", correct: false, feedback: "FALSCH: Sie sind NICHT identisch!"},
+                {text: "Ziele werden aus der Politik abgeleitet", correct: true, feedback: "Richtig!"},
+                {text: "Die Politik ist abstrakt, Ziele sind operativ", correct: true, feedback: "Richtig!"}
+            ]},
+            {q: "Ein Produktionsunternehmen identifiziert das Risiko 'Lieferantenausfall'. Welche Massnahmen waeren geeignet?", answers: [
+                {text: "Zweiten Lieferanten qualifizieren", correct: true, feedback: "Richtig!"},
+                {text: "Sicherheitsbestand erhoehen", correct: true, feedback: "Richtig!"},
+                {text: "Risiko ignorieren und hoffen", correct: false, feedback: "FALSCH: Ignorieren ist KEINE Strategie!"},
+                {text: "Versicherung abschliessen (Uebertragen)", correct: true, feedback: "Richtig!"}
+            ]},
+            {q: "Welche Aussagen zum Zusammenhang zwischen Kap. 4 und Kap. 6 sind richtig?", answers: [
+                {text: "Die Kontextanalyse (4.1) liefert Eingaben fuer Risiken/Chancen (6.1)", correct: true, feedback: "Richtig!"},
+                {text: "Interessierte Parteien (4.2) sind eine Quelle fuer Risiken/Chancen", correct: true, feedback: "Richtig!"},
+                {text: "Kap. 4 und Kap. 6 sind voellig unabhaengig", correct: false, feedback: "FALSCH: Die Planung MUSS auf dem Kontext aufbauen!"},
+                {text: "Der Anwendungsbereich (4.3) beeinflusst, welche Risiken relevant sind", correct: true, feedback: "Richtig!"}
+            ]},
+            {q: "Was bedeutet 'Massnahmen muessen proportional zu moeglichen Auswirkungen sein'?", answers: [
+                {text: "Hohe Risiken erfordern umfangreichere Massnahmen", correct: true, feedback: "Richtig!"},
+                {text: "Jedes Risiko braucht die gleiche Massnahme", correct: false, feedback: "FALSCH: Die Norm fordert Proportionalitaet!"},
+                {text: "Der Aufwand muss im Verhaeltnis zum Nutzen stehen", correct: true, feedback: "Richtig!"},
+                {text: "Kleine Risiken koennen mit einfachen Massnahmen behandelt werden", correct: true, feedback: "Richtig!"}
+            ]},
+            {q: "Warum muessen Q-Ziele fuer die Konformitaet von Produkten/DL relevant sein?", answers: [
+                {text: "Damit die Ziele einen Bezug zur Kernaufgabe des QMS haben", correct: true, feedback: "Richtig!"},
+                {text: "Q-Ziele duerfen auch reine Finanzziele sein", correct: false, feedback: "FALSCH: Reine Finanzziele sind KEINE Q-Ziele!"},
+                {text: "Nur so tragen sie zur Kundenzufriedenheit bei", correct: true, feedback: "Richtig!"},
+                {text: "Die Norm fordert diesen Zusammenhang explizit", correct: true, feedback: "Richtig!"}
+            ]},
+            {q: "Ein Unternehmen erkennt die Chance 'Neue Technologie am Markt'. Wie sollte es reagieren?", answers: [
+                {text: "Pruefen, ob die Technologie Prozesse verbessern kann", correct: true, feedback: "Richtig!"},
+                {text: "Abwarten, bis Wettbewerber sie nutzen", correct: false, feedback: "FALSCH: Abwarten ist KEINE proaktive Chancennutzung!"},
+                {text: "Pilotprojekt starten, um Nutzen zu evaluieren", correct: true, feedback: "Richtig!"},
+                {text: "Die Chance als Q-Ziel formulieren", correct: true, feedback: "Richtig!"}
+            ]},
+            {q: "Wie haengt der PDCA-Zyklus mit Risiken und Chancen zusammen?", answers: [
+                {text: "PLAN: Risiken/Chancen identifizieren und Massnahmen planen", correct: true, feedback: "Richtig!"},
+                {text: "DO: Massnahmen umsetzen", correct: true, feedback: "Richtig!"},
+                {text: "CHECK: Wirksamkeit der Massnahmen bewerten", correct: true, feedback: "Richtig!"},
+                {text: "ACT: Bei Bedarf nachsteuern", correct: true, feedback: "Richtig! ALLE sind korrekt!"}
+            ]},
+            {q: "Was bedeutet 'Kaskadierung' von Qualitaetszielen?", answers: [
+                {text: "Unternehmensziele werden auf Abteilungen heruntergebrochen", correct: true, feedback: "Richtig!"},
+                {text: "Jede Ebene hat eigene Ziele, die zu den uebergeordneten beitragen", correct: true, feedback: "Richtig!"},
+                {text: "Alle Ebenen haben identische Ziele", correct: false, feedback: "FALSCH: Die Ziele sind NICHT identisch auf allen Ebenen!"},
+                {text: "Ziele werden von oben nach unten konsistent abgeleitet", correct: true, feedback: "Richtig!"}
+            ]}
+        ]
+    },
+    "kapitel7": {
+        title: "Kapitel 7 - Unterstuetzung",
+        questions: [
+            {q: "Was muss die Organisation hinsichtlich Ressourcen bestimmen und bereitstellen?", answers: [
+                {text: "Ressourcen fuer Einfuehrung, Aufrechterhaltung und Verbesserung des QMS", correct: true, feedback: "Richtig!"},
+                {text: "Nur finanzielle Ressourcen", correct: false, feedback: "FALSCH: Die Norm spricht NICHT nur von finanziellen Ressourcen! Ressourcen umfassen: Personen, Infrastruktur, Prozessumgebung, Messmittel, Wissen etc."},
+                {text: "Ressourcen unter Beruecksichtigung vorhandener interner Ressourcen", correct: true, feedback: "Richtig!"},
+                {text: "Ressourcen unter Beruecksichtigung extern zu beziehender Ressourcen", correct: true, feedback: "Richtig!"}
+            ]},
+            {q: "Bei der Ressourcenplanung muss die Organisation beruecksichtigen...", answers: [
+                {text: "die Faehigkeiten und Grenzen vorhandener interner Ressourcen", correct: true, feedback: "Richtig!"},
+                {text: "nur die Kosten", correct: false, feedback: "FALSCH: Kosten sind wichtig, aber die Norm fokussiert auf FAEHIGKEITEN und GRENZEN!"},
+                {text: "was von externen Anbietern bezogen werden muss", correct: true, feedback: "Richtig!"},
+                {text: "die Wuensche der Mitarbeiter", correct: false, feedback: "FALSCH: Mitarbeiterwuensche sind kein Norminhalt - relevant ist die Eignung der Ressourcen."}
+            ]},
+            {q: "Was fordert die Norm bezueglich Personen?", answers: [
+                {text: "Bestimmung der erforderlichen Personen", correct: true, feedback: "Richtig!"},
+                {text: "Bereitstellung der erforderlichen Personen", correct: true, feedback: "Richtig!"},
+                {text: "Mindestens 10 Mitarbeiter", correct: false, feedback: "FALSCH: Die Norm nennt KEINE Mindestanzahl! Auch ein Ein-Personen-Unternehmen kann zertifiziert werden."},
+                {text: "Personen fuer wirksame Umsetzung und Steuerung der Prozesse", correct: true, feedback: "Richtig!"}
+            ]},
+            {q: "Was gehoert zur Infrastruktur im Sinne der ISO 9001?", answers: [
+                {text: "Gebaeude und zugehoerige Versorgungseinrichtungen", correct: true, feedback: "Richtig!"},
+                {text: "Ausruestung (Hardware, Software)", correct: true, feedback: "Richtig!"},
+                {text: "Transportmittel", correct: true, feedback: "Richtig!"},
+                {text: "Organisationskultur", correct: false, feedback: "FALSCH: Organisationskultur ist KEINE Infrastruktur! Infrastruktur = physische/technische Einrichtungen."}
+            ]},
+            {q: "Die Infrastruktur muss...", answers: [
+                {text: "bestimmt werden", correct: true, feedback: "Richtig!"},
+                {text: "bereitgestellt werden", correct: true, feedback: "Richtig!"},
+                {text: "instand gehalten werden", correct: true, feedback: "Richtig!"},
+                {text: "jaehrlich komplett erneuert werden", correct: false, feedback: "FALSCH: Jaehrliche Erneuerung ist NICHT gefordert! Die Infrastruktur muss funktionsfaehig sein."}
+            ]},
+            {q: "Was versteht die Norm unter 'Prozessumgebung'?", answers: [
+                {text: "Die Umgebung, die fuer die Durchfuehrung von Prozessen erforderlich ist", correct: true, feedback: "Richtig!"},
+                {text: "Nur die Raumtemperatur", correct: false, feedback: "FALSCH: Temperatur ist nur EIN Faktor! Prozessumgebung umfasst auch Licht, Hygiene, Laerm, Ergonomie etc."},
+                {text: "Kombination aus menschlichen und physikalischen Faktoren", correct: true, feedback: "Richtig!"},
+                {text: "Die IT-Systemlandschaft", correct: false, feedback: "FALSCH: IT-Systeme gehoeren zur Infrastruktur (7.1.3), nicht zur Prozessumgebung."}
+            ]},
+            {q: "Welche Faktoren koennen zur Prozessumgebung gehoeren?", answers: [
+                {text: "Soziale Faktoren (z.B. stressfrei, konfliktarm)", correct: true, feedback: "Richtig!"},
+                {text: "Psychologische Faktoren (z.B. Motivation)", correct: true, feedback: "Richtig!"},
+                {text: "Physikalische Faktoren (z.B. Temperatur, Licht, Hygiene)", correct: true, feedback: "Richtig!"},
+                {text: "Finanzielle Faktoren (z.B. Gehalt)", correct: false, feedback: "FALSCH: Gehalt ist KEIN Teil der Prozessumgebung!"}
+            ]},
+            {q: "Wann sind Ressourcen zur Ueberwachung und Messung erforderlich?", answers: [
+                {text: "Immer", correct: false, feedback: "FALSCH: NICHT immer - nur wenn Messung zur Konformitaetsverifizierung noetig ist!"},
+                {text: "Wenn Ueberwachung/Messung zur Verifizierung der Konformitaet eingesetzt wird", correct: true, feedback: "Richtig!"},
+                {text: "Nur bei Serienproduktion", correct: false, feedback: "FALSCH: Gilt fuer alle Organisationen, nicht nur Serienproduktion."},
+                {text: "Um die Gueltigkeit der Ergebnisse sicherzustellen", correct: true, feedback: "Richtig!"}
+            ]},
+            {q: "Was muss bezueglich Messmittel sichergestellt werden?", answers: [
+                {text: "Eignung fuer die Art der Ueberwachung/Messung", correct: true, feedback: "Richtig!"},
+                {text: "Alle Messmittel muessen extern kalibriert werden", correct: false, feedback: "FALSCH: NICHT alle Messmittel muessen EXTERN kalibriert werden! Interne Kalibrierung ist zulaessig."},
+                {text: "Instandhaltung zur Eignung", correct: true, feedback: "Richtig!"},
+                {text: "Dokumentierte Information als Nachweis der Eignung", correct: true, feedback: "Richtig!"}
+            ]},
+            {q: "Was bedeutet 'metrologische Rueckfuehrbarkeit'?", answers: [
+                {text: "Messergebnisse sind auf nationale/internationale Normale zurueckfuehrbar", correct: true, feedback: "Richtig!"},
+                {text: "Man kann nachvollziehen, wer gemessen hat", correct: false, feedback: "FALSCH: Das ist Dokumentation, nicht Rueckfuehrbarkeit!"},
+                {text: "Die Kalibrierung erfolgt durch eine ununterbrochene Kette von Vergleichen", correct: true, feedback: "Richtig!"},
+                {text: "Jedes Messmittel muss beim Hersteller kalibriert werden", correct: false, feedback: "FALSCH: Nicht beim HERSTELLER - bei einem akkreditierten Labor oder mit rueckfuehrbaren Normalen."}
+            ]},
+            {q: "Wann ist metrologische Rueckfuehrbarkeit gefordert?", answers: [
+                {text: "Immer fuer alle Messmittel", correct: false, feedback: "FALSCH: NICHT immer fuer alle! Nur wenn es eine Anforderung ist oder als wesentlich angesehen wird."},
+                {text: "Wenn es eine Anforderung ist (gesetzlich, vom Kunden, von der Organisation)", correct: true, feedback: "Richtig!"},
+                {text: "Wenn sie als wesentlich angesehen wird", correct: true, feedback: "Richtig!"},
+                {text: "Nur bei sicherheitsrelevanten Messungen", correct: false, feedback: "FALSCH: Nicht nur bei sicherheitsrelevanten - die Organisation entscheidet."}
+            ]},
+            {q: "Was muss bei Messmitteln dokumentiert werden?", answers: [
+                {text: "Nachweis der Eignung fuer den Verwendungszweck", correct: true, feedback: "Richtig!"},
+                {text: "Kalibrierungs- oder Verifizierungsstatus", correct: true, feedback: "Richtig!"},
+                {text: "Das Herstellerlogo", correct: false, feedback: "FALSCH: Das Herstellerlogo ist KEIN Dokumentationsinhalt!"},
+                {text: "Schutz vor Verstellung oder Beschaedigung", correct: false, feedback: "FALSCH: Schutz ist eine Handlung, keine dokumentierte Information."}
+            ]},
+            {q: "Ein Messmittel wird als 'nicht konform' erkannt. Was muss geprueft werden?", answers: [
+                {text: "Ob fruehere Messergebnisse ungueltig sind", correct: true, feedback: "Richtig!"},
+                {text: "Ob Korrekturmassnahmen erforderlich sind", correct: true, feedback: "Richtig!"},
+                {text: "Das Messmittel muss sofort entsorgt werden", correct: false, feedback: "FALSCH: Sofortige Entsorgung ist NICHT gefordert! Das Messmittel kann repariert oder neu kalibriert werden."},
+                {text: "Ob betroffene Produkte zurueckgerufen werden muessen", correct: true, feedback: "Richtig!"}
+            ]},
+            {q: "Was ist 'Wissen der Organisation' im Sinne der ISO 9001:2015?", answers: [
+                {text: "Wissen, das fuer die Durchfuehrung der Prozesse erforderlich ist", correct: true, feedback: "Richtig!"},
+                {text: "Nur dokumentierte Verfahrensanweisungen", correct: false, feedback: "FALSCH: Wissen ist NICHT nur in Dokumenten! Es umfasst auch Erfahrungswissen, Know-how, implizites Wissen."},
+                {text: "Wissen, das fuer die Konformitaet von Produkten/Dienstleistungen erforderlich ist", correct: true, feedback: "Richtig!"},
+                {text: "Wissen, das auf Erfahrung basiert", correct: true, feedback: "Richtig!"}
+            ]},
+            {q: "Welche Quellen fuer organisationales Wissen nennt die Norm?", answers: [
+                {text: "Interne Quellen (z.B. Erfahrung, Lessons Learned)", correct: true, feedback: "Richtig!"},
+                {text: "Externe Quellen (z.B. Normen, Konferenzen, Kunden)", correct: true, feedback: "Richtig!"},
+                {text: "Nur Fachliteratur", correct: false, feedback: "FALSCH: Fachliteratur ist nur EINE externe Quelle!"},
+                {text: "Geistiges Eigentum der Organisation", correct: true, feedback: "Richtig!"}
+            ]},
+            {q: "Was muss mit dem Wissen der Organisation geschehen?", answers: [
+                {text: "Es muss bestimmt werden", correct: true, feedback: "Richtig!"},
+                {text: "Es muss aufrechterhalten werden", correct: true, feedback: "Richtig!"},
+                {text: "Es muss in erforderlichem Umfang verfuegbar gemacht werden", correct: true, feedback: "Richtig!"},
+                {text: "Es muss vollstaendig in einem Wiki dokumentiert werden", correct: false, feedback: "FALSCH: Ein Wiki ist NICHT vorgeschrieben! Die Form der Wissensspeicherung ist freigestellt."}
+            ]},
+            {q: "Warum ist 'Wissen der Organisation' ein neues Thema in der ISO 9001:2015?", answers: [
+                {text: "Um Wissensverlust bei Personalwechsel zu verhindern", correct: true, feedback: "Richtig!"},
+                {text: "Weil die alte Norm es vergessen hatte", correct: false, feedback: "FALSCH: Es wurde nicht 'vergessen' - es ist eine NEUE Anforderung als Reaktion auf den demographischen Wandel."},
+                {text: "Um veraendertem Bedarf und Trends zu begegnen", correct: true, feedback: "Richtig!"},
+                {text: "Um Wissensmanagement zu foerdern", correct: true, feedback: "Richtig!"}
+            ]},
+            {q: "Was ist Kompetenz im Sinne der ISO 9001?", answers: [
+                {text: "Die Faehigkeit, Wissen und Fertigkeiten anzuwenden", correct: true, feedback: "Richtig!"},
+                {text: "Nur formale Ausbildung", correct: false, feedback: "FALSCH: Kompetenz ist MEHR als formale Ausbildung! Sie kann durch Ausbildung, Schulung, Erfahrung erworben werden."},
+                {text: "Um beabsichtigte Ergebnisse zu erzielen", correct: true, feedback: "Richtig!"},
+                {text: "Gleichbedeutend mit Berufserfahrung", correct: false, feedback: "FALSCH: Berufserfahrung allein reicht nicht - man muss auch ANWENDEN koennen."}
+            ]},
+            {q: "Fuer wen muss die Kompetenz sichergestellt werden?", answers: [
+                {text: "Fuer Personen unter Aufsicht der Organisation, die die QMS-Leistung beeinflussen", correct: true, feedback: "Richtig!"},
+                {text: "Nur fuer fest angestellte Mitarbeiter", correct: false, feedback: "FALSCH: NICHT nur Festangestellte! Auch Zeitarbeiter, Praktikanten, externe Dienstleister unter Aufsicht."},
+                {text: "Fuer alle Personen, die taetig sind", correct: false, feedback: "FALSCH: Nicht ALLE Personen - nur die, deren Taetigkeit die QMS-Leistung beeinflusst."},
+                {text: "Fuer externe Dienstleister, die unter Aufsicht arbeiten", correct: true, feedback: "Richtig!"}
+            ]},
+            {q: "Wie kann Kompetenz erworben werden?", answers: [
+                {text: "Durch Ausbildung", correct: true, feedback: "Richtig!"},
+                {text: "Durch Schulung", correct: true, feedback: "Richtig!"},
+                {text: "Durch Erfahrung", correct: true, feedback: "Richtig!"},
+                {text: "Nur durch Universitaetsstudium", correct: false, feedback: "FALSCH: Ein Universitaetsstudium ist NICHT zwingend! Die Norm akzeptiert verschiedene Wege."}
+            ]},
+            {q: "Welche Massnahmen koennen ergriffen werden, wenn Kompetenz fehlt?", answers: [
+                {text: "Schulung der vorhandenen Personen", correct: true, feedback: "Richtig!"},
+                {text: "Mentoring oder Coaching", correct: true, feedback: "Richtig!"},
+                {text: "Neuzuweisung (andere Aufgaben)", correct: true, feedback: "Richtig!"},
+                {text: "Einstellung oder Beauftragung kompetenter Personen", correct: true, feedback: "Richtig! ALLE sind moeglich!"}
+            ]},
+            {q: "Muss die Wirksamkeit von Kompetenz-Massnahmen bewertet werden?", answers: [
+                {text: "Nein, nur die Durchfuehrung zaehlt", correct: false, feedback: "FALSCH: Durchfuehrung allein reicht NICHT! Man muss pruefen, ob die Schulung GEWIRKT hat."},
+                {text: "Ja, die Norm fordert die Bewertung der Wirksamkeit", correct: true, feedback: "Richtig!"},
+                {text: "Nur wenn der Zertifizierer es verlangt", correct: false, feedback: "FALSCH: Es ist Normforderung, nicht Zertifiziererwunsch."},
+                {text: "Ja, um sicherzustellen, dass die Massnahme den gewuenschten Erfolg bringt", correct: true, feedback: "Richtig!"}
+            ]},
+            {q: "Welche dokumentierten Informationen sind fuer Kompetenz gefordert?", answers: [
+                {text: "Nachweise der Kompetenz als dokumentierte Information aufbewahren", correct: true, feedback: "Richtig!"},
+                {text: "Alle Schulungszertifikate muessen 10 Jahre aufbewahrt werden", correct: false, feedback: "FALSCH: 10 Jahre Aufbewahrung ist NICHT vorgeschrieben!"},
+                {text: "Kompetenzmatrix ist vorgeschrieben", correct: false, feedback: "FALSCH: Eine Kompetenzmatrix ist hilfreich, aber NICHT vorgeschrieben."},
+                {text: "Nachweise koennen Zeugnisse, Zertifikate, Beurteilungen etc. sein", correct: true, feedback: "Richtig!"}
+            ]},
+            {q: "Wofuer muessen Personen ein Bewusstsein haben?", answers: [
+                {text: "Fuer die Qualitaetspolitik", correct: true, feedback: "Richtig!"},
+                {text: "Fuer relevante Qualitaetsziele", correct: true, feedback: "Richtig!"},
+                {text: "Fuer ihren Beitrag zur Wirksamkeit des QMS", correct: true, feedback: "Richtig!"},
+                {text: "Fuer alle internen Prozesse im Detail", correct: false, feedback: "FALSCH: Nicht ALLE Prozesse im Detail! Mitarbeiter muessen wissen, wie SIE zur Qualitaet beitragen."}
+            ]},
+            {q: "Mitarbeiter muessen sich bewusst sein ueber...", answers: [
+                {text: "die Vorteile einer verbesserten Leistung", correct: true, feedback: "Richtig!"},
+                {text: "die Folgen einer Nichterfuellung von QMS-Anforderungen", correct: true, feedback: "Richtig!"},
+                {text: "die Gehaelter ihrer Kollegen", correct: false, feedback: "FALSCH: Gehaelter sind KEIN QMS-Thema!"},
+                {text: "ihren persoenlichen Beitrag zum QMS", correct: true, feedback: "Richtig!"}
+            ]},
+            {q: "Was ist der Unterschied zwischen Kompetenz und Bewusstsein?", answers: [
+                {text: "Kompetenz = Faehigkeit (Koennen)", correct: true, feedback: "Richtig!"},
+                {text: "Bewusstsein = Verstehen der Bedeutung (Wollen/Verstehen)", correct: true, feedback: "Richtig!"},
+                {text: "Beide Begriffe sind identisch", correct: false, feedback: "FALSCH: Die Begriffe sind NICHT identisch! Kompetenz = KOENNEN, Bewusstsein = VERSTEHEN."},
+                {text: "Kompetenz ohne Bewusstsein fuehrt zu Fehlern", correct: true, feedback: "Richtig!"}
+            ]},
+            {q: "Was muss bei der internen und externen Kommunikation festgelegt werden?", answers: [
+                {text: "Worueber kommuniziert wird", correct: true, feedback: "Richtig!"},
+                {text: "Wann kommuniziert wird", correct: true, feedback: "Richtig!"},
+                {text: "Mit wem kommuniziert wird", correct: true, feedback: "Richtig!"},
+                {text: "Wie oft taegliche Meetings stattfinden", correct: false, feedback: "FALSCH: Die Haeufigkeit von Meetings ist NICHT vorgeschrieben!"}
+            ]},
+            {q: "Welche Aspekte gehoeren zur Kommunikationsplanung nach ISO 9001?", answers: [
+                {text: "Worueber (Inhalt)", correct: true, feedback: "Richtig!"},
+                {text: "Wann (Zeitpunkt)", correct: true, feedback: "Richtig!"},
+                {text: "Mit wem (Zielgruppe)", correct: true, feedback: "Richtig!"},
+                {text: "Wie (Methode) und Wer (Verantwortlicher)", correct: true, feedback: "Richtig! ALLE sind gefordert."}
+            ]},
+            {q: "Was ersetzt der Begriff 'dokumentierte Information' in der ISO 9001:2015?", answers: [
+                {text: "Dokumente und Aufzeichnungen", correct: true, feedback: "Richtig!"},
+                {text: "QM-Handbuch", correct: false, feedback: "FALSCH: QM-Handbuch ist ein Beispiel, aber NICHT das, was ersetzt wurde!"},
+                {text: "Verfahrensanweisungen", correct: false, feedback: "FALSCH: Verfahrensanweisungen sind ein Beispiel, nicht der ersetzte Begriff."},
+                {text: "Qualitaetspolitik", correct: false, feedback: "FALSCH: Die Q-Politik ist weiterhin ein eigenstaendiger Begriff."}
+            ]},
+            {q: "Welche dokumentierte Information fordert die Norm?", answers: [
+                {text: "Von der Norm geforderte dokumentierte Information", correct: true, feedback: "Richtig!"},
+                {text: "Von der Organisation als notwendig erachtete dokumentierte Information", correct: true, feedback: "Richtig!"},
+                {text: "Ein QM-Handbuch", correct: false, feedback: "FALSCH: Ein QM-Handbuch ist seit 2015 NICHT mehr gefordert!"},
+                {text: "Mindestens 50 Verfahrensanweisungen", correct: false, feedback: "FALSCH: Es gibt KEINE Mindestzahl an Verfahrensanweisungen!"}
+            ]},
+            {q: "Was bedeutet 'dokumentierte Information aufrechterhalten'?", answers: [
+                {text: "Vorgabedokumente aktuell halten", correct: true, feedback: "Richtig!"},
+                {text: "Dokumente archivieren", correct: false, feedback: "FALSCH: Das ist 'AUFBEWAHREN', nicht 'aufrechterhalten'!"},
+                {text: "Betrifft z.B. Verfahrensanweisungen, Arbeitsanweisungen, Q-Politik", correct: true, feedback: "Richtig!"},
+                {text: "Nachweise aufbewahren", correct: false, feedback: "FALSCH: Das ist 'AUFBEWAHREN'!"}
+            ]},
+            {q: "Was bedeutet 'dokumentierte Information aufbewahren'?", answers: [
+                {text: "Nachweisdokumente archivieren", correct: true, feedback: "Richtig!"},
+                {text: "Dokumente aktuell halten", correct: false, feedback: "FALSCH: Das ist 'AUFRECHTERHALTEN'!"},
+                {text: "Betrifft z.B. Pruefprotokolle, Auditberichte, Schulungsnachweise", correct: true, feedback: "Richtig!"},
+                {text: "Vorgabedokumente erstellen", correct: false, feedback: "FALSCH: Das ist keine Normdefinition fuer diesen Begriff."}
+            ]},
+            {q: "Welche Anforderungen gelten fuer das Erstellen und Aktualisieren dokumentierter Information?", answers: [
+                {text: "Angemessene Kennzeichnung und Beschreibung", correct: true, feedback: "Richtig!"},
+                {text: "Angemessenes Format und Medium", correct: true, feedback: "Richtig!"},
+                {text: "Alle Dokumente muessen als PDF vorliegen", correct: false, feedback: "FALSCH: PDF ist NICHT vorgeschrieben! Das Format ist frei waehlbar."},
+                {text: "Pruefung und Genehmigung auf Eignung und Angemessenheit", correct: true, feedback: "Richtig!"}
+            ]},
+            {q: "Was muss bei der Lenkung dokumentierter Information sichergestellt werden?", answers: [
+                {text: "Verfuegbarkeit und Eignung am Ort der Verwendung", correct: true, feedback: "Richtig!"},
+                {text: "Angemessener Schutz", correct: true, feedback: "Richtig!"},
+                {text: "Alle Dokumente muessen passwortgeschuetzt sein", correct: false, feedback: "FALSCH: Passwortschutz ist NICHT vorgeschrieben!"},
+                {text: "Verteilung, Zugriff, Auffindung und Verwendung", correct: true, feedback: "Richtig!"}
+            ]},
+            {q: "Welche Aktivitaeten gehoeren zur Lenkung dokumentierter Information?", answers: [
+                {text: "Verteilung und Zugriff", correct: true, feedback: "Richtig!"},
+                {text: "Ablage und Aufbewahrung", correct: true, feedback: "Richtig!"},
+                {text: "Schutz (z.B. vor Verlust der Vertraulichkeit)", correct: true, feedback: "Richtig!"},
+                {text: "Aufbewahrungsfristen und Vernichtung", correct: true, feedback: "Richtig! ALLE sind gefordert."}
+            ]},
+            {q: "Wie muss mit dokumentierter Information externen Ursprungs umgegangen werden?", answers: [
+                {text: "Sie muss gekennzeichnet werden", correct: true, feedback: "Richtig!"},
+                {text: "Sie ist von der Lenkung ausgenommen", correct: false, feedback: "FALSCH: Externe Dokumente sind NICHT ausgenommen!"},
+                {text: "Ihre Lenkung muss gesteuert werden", correct: true, feedback: "Richtig!"},
+                {text: "Sie darf nicht im QMS verwendet werden", correct: false, feedback: "FALSCH: Sie duerfen verwendet werden - Normen, Kundenspezifikationen sind externe Dokumente!"}
+            ]},
+            {q: "Ein Mitarbeiter findet eine veraltete Arbeitsanweisung am Arbeitsplatz. Was ist das Problem?", answers: [
+                {text: "Die Lenkung dokumentierter Information funktioniert nicht", correct: true, feedback: "Richtig!"},
+                {text: "Es ist kein Problem, Hauptsache er arbeitet", correct: false, feedback: "FALSCH: Es IST ein Problem! Veraltete Dokumente koennen zu Fehlern fuehren."},
+                {text: "Veraltete Dokumente koennen zu Fehlern fuehren", correct: true, feedback: "Richtig!"},
+                {text: "Es fehlt der Schutz vor unbeabsichtigter Verwendung ungueltiger Dokumente", correct: true, feedback: "Richtig!"}
+            ]},
+            {q: "Ein Unternehmen hat erfahrene Mitarbeiter, die bald in Rente gehen. Welches Normkapitel ist relevant?", answers: [
+                {text: "7.1.6 Wissen der Organisation", correct: true, feedback: "Richtig!"},
+                {text: "7.2 Kompetenz", correct: true, feedback: "Richtig!"},
+                {text: "Kein Kapitel, das ist kein QMS-Thema", correct: false, feedback: "FALSCH: Wissensverlust ist SEHR WOHL ein QMS-Thema!"},
+                {text: "Massnahmen gegen Wissensverlust sollten geplant werden", correct: true, feedback: "Richtig!"}
+            ]},
+            {q: "Was ist der Unterschied zwischen Kalibrierung und Verifizierung von Messmitteln?", answers: [
+                {text: "Kalibrierung bestimmt die Abweichung zum Normal", correct: true, feedback: "Richtig!"},
+                {text: "Verifizierung prueft, ob Anforderungen erfuellt sind", correct: true, feedback: "Richtig!"},
+                {text: "Beide Begriffe sind identisch", correct: false, feedback: "FALSCH: Die Begriffe sind NICHT identisch!"},
+                {text: "Kalibrierung kann eine Justierung beinhalten", correct: true, feedback: "Richtig!"}
+            ]},
+            {q: "Welche Aussagen zur Schulungsplanung sind richtig?", answers: [
+                {text: "Schulungsbedarf muss ermittelt werden", correct: true, feedback: "Richtig!"},
+                {text: "Alle Mitarbeiter muessen jaehrlich geschult werden", correct: false, feedback: "FALSCH: 'Jaehrlich' ist NICHT vorgeschrieben!"},
+                {text: "Die Wirksamkeit der Schulung muss bewertet werden", correct: true, feedback: "Richtig!"},
+                {text: "Schulungsnachweise muessen aufbewahrt werden", correct: true, feedback: "Richtig!"}
+            ]},
+            {q: "Ein Handwerker arbeitet seit 20 Jahren ohne formale Ausbildung. Ist er kompetent im Sinne der Norm?", answers: [
+                {text: "Nein, er braucht ein Zertifikat", correct: false, feedback: "FALSCH: Ein Zertifikat ist NICHT zwingend! Die Norm akzeptiert Erfahrung als Kompetenznachweis."},
+                {text: "Ja, wenn er die Faehigkeit hat, die Anforderungen zu erfuellen", correct: true, feedback: "Richtig!"},
+                {text: "Kompetenz kann durch Erfahrung erworben werden", correct: true, feedback: "Richtig!"},
+                {text: "Die Organisation muss seine Kompetenz bewerten und nachweisen", correct: true, feedback: "Richtig!"}
+            ]},
+            {q: "Welche Infrastruktur kann fuer ein Softwareunternehmen relevant sein?", answers: [
+                {text: "Server und Netzwerk", correct: true, feedback: "Richtig!"},
+                {text: "Entwicklungswerkzeuge (IDEs, Compiler)", correct: true, feedback: "Richtig!"},
+                {text: "Kuehlschmiede", correct: false, feedback: "FALSCH: Eine Kuehlschmiede ist fuer ein Softwareunternehmen NICHT relevant!"},
+                {text: "Bueroarbeitsplaetze", correct: true, feedback: "Richtig!"}
+            ]},
+            {q: "Was ist bei der Prozessumgebung eines Reinraums zu beachten?", answers: [
+                {text: "Temperatur und Luftfeuchtigkeit", correct: true, feedback: "Richtig!"},
+                {text: "Partikelanzahl", correct: true, feedback: "Richtig!"},
+                {text: "Zugangskontrollen", correct: true, feedback: "Richtig!"},
+                {text: "Die Wandfarbe nach Geschmack der Mitarbeiter", correct: false, feedback: "FALSCH: Wandfarbe nach Geschmack ist KEIN Prozessumgebungsfaktor!"}
+            ]},
+            {q: "Welche Dokumente sind typische Beispiele fuer 'aufrechterhalten'?", answers: [
+                {text: "Qualitaetspolitik", correct: true, feedback: "Richtig!"},
+                {text: "Pruefprotokoll", correct: false, feedback: "FALSCH: Pruefprotokolle sind NACHWEISE - sie werden AUFBEWAHRT!"},
+                {text: "Verfahrensanweisungen", correct: true, feedback: "Richtig!"},
+                {text: "Auditbericht", correct: false, feedback: "FALSCH: Auditberichte sind NACHWEISE - sie werden AUFBEWAHRT!"}
+            ]},
+            {q: "Welche Dokumente sind typische Beispiele fuer 'aufbewahren'?", answers: [
+                {text: "Arbeitsanweisung", correct: false, feedback: "FALSCH: Eine Arbeitsanweisung ist ein Vorgabedokument - sie wird AUFRECHTERHALTEN!"},
+                {text: "Kalibrierprotokoll", correct: true, feedback: "Richtig!"},
+                {text: "Schulungsnachweis", correct: true, feedback: "Richtig!"},
+                {text: "Reklamationsbericht", correct: true, feedback: "Richtig!"}
+            ]},
+            {q: "Was muss die Organisation tun, wenn sich der Wissensbedarf aendert?", answers: [
+                {text: "Pruefen, wie zusaetzliches Wissen erworben werden kann", correct: true, feedback: "Richtig!"},
+                {text: "Nichts, vorhandenes Wissen reicht immer", correct: false, feedback: "FALSCH: Vorhandenes Wissen reicht NICHT immer!"},
+                {text: "Externe Quellen nutzen (Schulungen, Konferenzen, Experten)", correct: true, feedback: "Richtig!"},
+                {text: "Wissen durch Einstellung neuer Mitarbeiter beschaffen", correct: true, feedback: "Richtig!"}
+            ]},
+            {q: "Was bedeutet 'Ueberwachung von Aenderungen' bei dokumentierter Information?", answers: [
+                {text: "Aenderungen muessen nachvollziehbar sein (Versionshistorie)", correct: true, feedback: "Richtig!"},
+                {text: "Jede Aenderung muss vom GF genehmigt werden", correct: false, feedback: "FALSCH: NICHT jede Aenderung muss vom GF genehmigt werden! Die Genehmigung kann delegiert werden."},
+                {text: "Der aktuelle Revisionsstand muss erkennbar sein", correct: true, feedback: "Richtig!"},
+                {text: "Aenderungen gegenueber der Vorgaengerversion sollten identifizierbar sein", correct: true, feedback: "Richtig!"}
+            ]},
+            {q: "Was gehoert zur Informations- und Kommunikationstechnologie (IKT) als Infrastruktur?", answers: [
+                {text: "Hardware (Server, PCs, Netzwerkkomponenten)", correct: true, feedback: "Richtig!"},
+                {text: "Software (ERP, CAD, Office)", correct: true, feedback: "Richtig!"},
+                {text: "Kommunikationssysteme (E-Mail, Telefon)", correct: true, feedback: "Richtig!"},
+                {text: "Die Faehigkeiten der IT-Mitarbeiter", correct: false, feedback: "FALSCH: Faehigkeiten der Mitarbeiter sind KOMPETENZ (7.2), nicht Infrastruktur!"}
+            ]},
+            {q: "Wie wird die Lesbarkeit dokumentierter Information langfristig sichergestellt?", answers: [
+                {text: "Durch geeignete Speichermedien und -formate", correct: true, feedback: "Richtig!"},
+                {text: "Durch regelmaessige Migration auf aktuelle Systeme", correct: true, feedback: "Richtig!"},
+                {text: "Lesbarkeit ist kein Thema der Norm", correct: false, feedback: "FALSCH: Lesbarkeit IST ein Thema! Die Norm fordert Schutz vor 'Verlust der Lesbarkeit'."},
+                {text: "Durch Schutz vor Verfall (z.B. bei Papier) oder Datenverlust", correct: true, feedback: "Richtig!"}
+            ]},
+            {q: "Wer ist fuer die Kompetenz von externen Mitarbeitern (z.B. Zeitarbeiter, Subunternehmer) verantwortlich?", answers: [
+                {text: "Nur der externe Dienstleister selbst", correct: false, feedback: "FALSCH: NICHT nur der Dienstleister! Die Organisation traegt Mitverantwortung fuer Personen unter ihrer Aufsicht."},
+                {text: "Die Organisation, wenn sie unter deren Aufsicht taetig sind", correct: true, feedback: "Richtig!"},
+                {text: "Die Organisation muss die Kompetenz sicherstellen oder verifizieren", correct: true, feedback: "Richtig!"},
+                {text: "Externe sind von den Kompetenzanforderungen ausgenommen", correct: false, feedback: "FALSCH: Externe sind NICHT ausgenommen - ihre Arbeit beeinflusst die Qualitaet genauso!"}
+            ]}
+        ]
+    },
+    "kapitel8": {
+        title: "Kapitel 8 - Betrieb",
+        questions: [
+            {q: "Was muss die Organisation fuer die Produktrealisierung planen und steuern?", answers: [
+                {text: "Prozesse zur Erfuellung der Anforderungen", correct: true, feedback: "Richtig!"},
+                {text: "Nur die Endkontrolle", correct: false, feedback: "FALSCH: Nur Endkontrolle reicht NICHT! Die Norm fordert Planung und Steuerung des GESAMTEN Realisierungsprozesses."},
+                {text: "Massnahmen zum Umgang mit Risiken und Chancen (aus Kap. 6)", correct: true, feedback: "Richtig!"},
+                {text: "Prozesse zur Bereitstellung von Produkten und Dienstleistungen", correct: true, feedback: "Richtig!"}
+            ]},
+            {q: "Die betriebliche Planung muss welche Aspekte festlegen?", answers: [
+                {text: "Anforderungen an Produkte und Dienstleistungen", correct: true, feedback: "Richtig!"},
+                {text: "Kriterien fuer Prozesse und Abnahme", correct: true, feedback: "Richtig!"},
+                {text: "Die Gehaelter der Produktionsmitarbeiter", correct: false, feedback: "FALSCH: Gehaelter sind KEIN Bestandteil der betrieblichen Planung nach ISO 9001!"},
+                {text: "Erforderliche Ressourcen", correct: true, feedback: "Richtig!"}
+            ]},
+            {q: "Ausgegliederte Prozesse muessen...", answers: [
+                {text: "nicht gesteuert werden, da extern", correct: false, feedback: "FALSCH: Ausgegliederte Prozesse muessen SEHR WOHL gesteuert werden!"},
+                {text: "gesteuert werden gemaess Kapitel 8.4", correct: true, feedback: "Richtig!"},
+                {text: "in den Anwendungsbereich des QMS einbezogen sein", correct: true, feedback: "Richtig!"},
+                {text: "vollstaendig intern durchgefuehrt werden", correct: false, feedback: "FALSCH: Sie duerfen extern sein, aber die STEUERUNG bleibt bei der Organisation."}
+            ]},
+            {q: "Was muss bei geplanten Aenderungen an der Produktion beachtet werden?", answers: [
+                {text: "Aenderungen muessen gesteuert werden", correct: true, feedback: "Richtig!"},
+                {text: "Aenderungen koennen ohne Pruefung umgesetzt werden", correct: false, feedback: "FALSCH: Aenderungen OHNE Pruefung sind riskant!"},
+                {text: "Folgen unbeabsichtigter Aenderungen muessen bewertet werden", correct: true, feedback: "Richtig!"},
+                {text: "Massnahmen zur Minderung negativer Auswirkungen ergreifen", correct: true, feedback: "Richtig!"}
+            ]},
+            {q: "Was gehoert zur Kommunikation mit Kunden?", answers: [
+                {text: "Informationen ueber Produkte und Dienstleistungen", correct: true, feedback: "Richtig!"},
+                {text: "Anfragen, Vertraege, Auftragsbearbeitung", correct: true, feedback: "Richtig!"},
+                {text: "Nur schriftliche Kommunikation", correct: false, feedback: "FALSCH: NICHT nur schriftlich! Kundenkommunikation kann muendlich, telefonisch, per E-Mail etc. erfolgen."},
+                {text: "Rueckmeldungen einschliesslich Reklamationen", correct: true, feedback: "Richtig!"}
+            ]},
+            {q: "Welche Aspekte gehoeren zur Kundenkommunikation nach ISO 9001?", answers: [
+                {text: "Umgang mit Kundeneigentum", correct: true, feedback: "Richtig!"},
+                {text: "Notfallmassnahmen (wenn zutreffend)", correct: true, feedback: "Richtig!"},
+                {text: "Private Gespraeche mit Kunden", correct: false, feedback: "FALSCH: Private Gespraeche sind KEIN Norminhalt!"},
+                {text: "Spezifische Anforderungen an Massnahmen", correct: true, feedback: "Richtig!"}
+            ]},
+            {q: "Welche Anforderungen an Produkte/DL muessen bestimmt werden?", answers: [
+                {text: "Vom Kunden festgelegte Anforderungen", correct: true, feedback: "Richtig!"},
+                {text: "Nicht vom Kunden angegebene, aber notwendige Anforderungen", correct: true, feedback: "Richtig!"},
+                {text: "Nur muendlich geaeusserte Wuensche", correct: false, feedback: "FALSCH: Nicht NUR muendliche! Alle Anforderungen zaehlen."},
+                {text: "Gesetzliche und behoerdliche Anforderungen", correct: true, feedback: "Richtig!"}
+            ]},
+            {q: "Was sind 'nicht angegebene, aber notwendige' Anforderungen?", answers: [
+                {text: "Anforderungen, die der Kunde als selbstverstaendlich voraussetzt", correct: true, feedback: "Richtig!"},
+                {text: "Nur was im Vertrag steht", correct: false, feedback: "FALSCH: Es geht um MEHR als den Vertrag!"},
+                {text: "Zum Beispiel: Ein Auto muss bremsen koennen", correct: true, feedback: "Richtig!"},
+                {text: "Implizite Anforderungen aus dem Verwendungszweck", correct: true, feedback: "Richtig!"}
+            ]},
+            {q: "Wann muss die Ueberpruefung der Anforderungen erfolgen?", answers: [
+                {text: "Vor der Zusage zur Lieferung", correct: true, feedback: "Richtig!"},
+                {text: "Nach der Lieferung", correct: false, feedback: "FALSCH: NACH der Lieferung ist zu spaet!"},
+                {text: "Vor Abgabe eines Angebots", correct: true, feedback: "Richtig!"},
+                {text: "Vor Annahme eines Auftrags", correct: true, feedback: "Richtig!"}
+            ]},
+            {q: "Was muss bei der Ueberpruefung der Anforderungen sichergestellt werden?", answers: [
+                {text: "Anforderungen sind vollstaendig definiert", correct: true, feedback: "Richtig!"},
+                {text: "Abweichungen zum Angebot sind geklaert", correct: true, feedback: "Richtig!"},
+                {text: "Die Organisation kann die Anforderungen erfuellen", correct: true, feedback: "Richtig!"},
+                {text: "Der Kunde hat immer Recht", correct: false, feedback: "FALSCH: 'Kunde hat immer Recht' ist KEIN Norminhalt!"}
+            ]},
+            {q: "Muss die Ueberpruefung der Anforderungen dokumentiert werden?", answers: [
+                {text: "Ja, die Ergebnisse muessen als dokumentierte Information aufbewahrt werden", correct: true, feedback: "Richtig!"},
+                {text: "Nein, muendliche Absprachen reichen", correct: false, feedback: "FALSCH: Muendliche Absprachen allein reichen NICHT!"},
+                {text: "Nur bei Sonderanfertigungen", correct: false, feedback: "FALSCH: Gilt fuer ALLE Auftraege!"},
+                {text: "Auch neue oder geaenderte Anforderungen muessen dokumentiert werden", correct: true, feedback: "Richtig!"}
+            ]},
+            {q: "Was muss bei Aenderungen an Anforderungen geschehen?", answers: [
+                {text: "Dokumentierte Information muss geaendert werden", correct: true, feedback: "Richtig!"},
+                {text: "Betroffene Personen muessen informiert werden", correct: true, feedback: "Richtig!"},
+                {text: "Aenderungen koennen ignoriert werden", correct: false, feedback: "FALSCH: Aenderungen duerfen NICHT ignoriert werden!"},
+                {text: "Relevante Dokumente muessen angepasst werden", correct: true, feedback: "Richtig!"}
+            ]},
+            {q: "Wann darf das Kapitel 8.3 (Entwicklung) ausgeschlossen werden?", answers: [
+                {text: "Immer, wenn das Unternehmen es wuenscht", correct: false, feedback: "FALSCH: Ein Ausschluss nach Wunsch ist NICHT erlaubt!"},
+                {text: "Nur wenn die Organisation keine eigene Entwicklung durchfuehrt", correct: true, feedback: "Richtig!"},
+                {text: "Der Ausschluss muss begruendet werden", correct: true, feedback: "Richtig!"},
+                {text: "Wenn Kunden die Entwicklung vorgeben", correct: false, feedback: "FALSCH: Auch bei Kundenvorgaben kann eigene Entwicklung noetig sein."}
+            ]},
+            {q: "Was ist der Unterschied zwischen Entwicklung und Konstruktion?", answers: [
+                {text: "Die Norm unterscheidet nicht - beides faellt unter 8.3", correct: true, feedback: "Richtig!"},
+                {text: "Konstruktion ist ein Teil der Entwicklung", correct: true, feedback: "Richtig!"},
+                {text: "Entwicklung umfasst auch Dienstleistungsentwicklung", correct: true, feedback: "Richtig!"},
+                {text: "Konstruktion betrifft nur mechanische Teile", correct: false, feedback: "FALSCH: Konstruktion ist NICHT auf mechanische Teile beschraenkt!"}
+            ]},
+            {q: "Was muss bei der Entwicklungsplanung beruecksichtigt werden?", answers: [
+                {text: "Art, Dauer und Komplexitaet der Entwicklung", correct: true, feedback: "Richtig!"},
+                {text: "Erforderliche Phasen und Pruefungen", correct: true, feedback: "Richtig!"},
+                {text: "Nur das Endprodukt", correct: false, feedback: "FALSCH: Nicht nur das Endprodukt zaehlt!"},
+                {text: "Verantwortlichkeiten und Befugnisse", correct: true, feedback: "Richtig!"}
+            ]},
+            {q: "Welche Entwicklungseingaben muessen bestimmt werden?", answers: [
+                {text: "Funktions- und Leistungsanforderungen", correct: true, feedback: "Richtig!"},
+                {text: "Gesetzliche und behoerdliche Anforderungen", correct: true, feedback: "Richtig!"},
+                {text: "Die Lieblingsfarbe des Entwicklers", correct: false, feedback: "FALSCH: Persoenliche Vorlieben sind KEINE Entwicklungseingaben!"},
+                {text: "Informationen aus frueheren Entwicklungen", correct: true, feedback: "Richtig!"}
+            ]},
+            {q: "Die Entwicklungseingaben muessen...", answers: [
+                {text: "fuer den Entwicklungszweck angemessen sein", correct: true, feedback: "Richtig!"},
+                {text: "vollstaendig und eindeutig sein", correct: true, feedback: "Richtig!"},
+                {text: "muendlich besprochen werden, dann reicht das", correct: false, feedback: "FALSCH: Muendliche Besprechung reicht NICHT!"},
+                {text: "widerspruchsfrei sein", correct: true, feedback: "Richtig!"}
+            ]},
+            {q: "Was muss waehrend der Entwicklung durchgefuehrt werden?", answers: [
+                {text: "Entwicklungsbewertungen (Reviews)", correct: true, feedback: "Richtig!"},
+                {text: "Verifizierung", correct: true, feedback: "Richtig!"},
+                {text: "Validierung", correct: true, feedback: "Richtig!"},
+                {text: "Nur eine Endkontrolle", correct: false, feedback: "FALSCH: Nur Endkontrolle reicht NICHT!"}
+            ]},
+            {q: "Was ist der Unterschied zwischen Verifizierung und Validierung?", answers: [
+                {text: "Verifizierung: Wurde richtig gebaut? (Eingaben erfuellt?)", correct: true, feedback: "Richtig!"},
+                {text: "Validierung: Wurde das Richtige gebaut? (Verwendungszweck erfuellt?)", correct: true, feedback: "Richtig!"},
+                {text: "Beide Begriffe sind identisch", correct: false, feedback: "FALSCH: Die Begriffe sind NICHT identisch!"},
+                {text: "Validierung erfolgt oft beim/mit dem Kunden", correct: true, feedback: "Richtig!"}
+            ]},
+            {q: "Was muessen Entwicklungsergebnisse erfuellen?", answers: [
+                {text: "Die Anforderungen aus den Entwicklungseingaben", correct: true, feedback: "Richtig!"},
+                {text: "Sie muessen fuer nachfolgende Prozesse geeignet sein", correct: true, feedback: "Richtig!"},
+                {text: "Sie muessen vom Entwickler unterschrieben sein", correct: false, feedback: "FALSCH: Unterschrift des Entwicklers ist NICHT explizit gefordert!"},
+                {text: "Anforderungen an Ueberwachung, Messung und Abnahmekriterien enthalten", correct: true, feedback: "Richtig!"}
+            ]},
+            {q: "Entwicklungsergebnisse muessen welche Eigenschaften haben?", answers: [
+                {text: "Merkmale fuer sichere und bestimmungsgemaesse Verwendung festlegen", correct: true, feedback: "Richtig!"},
+                {text: "Moeglichst allgemein formuliert sein", correct: false, feedback: "FALSCH: Entwicklungsergebnisse sollen NICHT allgemein sein!"},
+                {text: "Fuer Produktion/Dienstleistungserbringung geeignet sein", correct: true, feedback: "Richtig!"},
+                {text: "Pruef- und Abnahmekriterien enthalten oder darauf verweisen", correct: true, feedback: "Richtig!"}
+            ]},
+            {q: "Wann muessen Entwicklungsaenderungen gesteuert werden?", answers: [
+                {text: "Nur bei grossen Aenderungen", correct: false, feedback: "FALSCH: NICHT nur bei grossen Aenderungen! ALLE Aenderungen muessen gesteuert werden."},
+                {text: "Bei allen Aenderungen waehrend oder nach der Entwicklung", correct: true, feedback: "Richtig!"},
+                {text: "Um nachteilige Auswirkungen zu verhindern", correct: true, feedback: "Richtig!"},
+                {text: "Aenderungen muessen bewertet, verifiziert und validiert werden", correct: true, feedback: "Richtig!"}
+            ]},
+            {q: "Welche dokumentierte Information ist fuer die Entwicklung gefordert?", answers: [
+                {text: "Entwicklungseingaben", correct: true, feedback: "Richtig!"},
+                {text: "Ergebnisse von Reviews, Verifizierung, Validierung", correct: true, feedback: "Richtig!"},
+                {text: "Alle E-Mails des Entwicklungsteams", correct: false, feedback: "FALSCH: ALLE E-Mails aufzubewahren ist NICHT gefordert!"},
+                {text: "Entwicklungsaenderungen und Genehmigungen", correct: true, feedback: "Richtig!"}
+            ]},
+            {q: "Wann gelten die Anforderungen an externe Anbieter (8.4)?", answers: [
+                {text: "Nur bei Materiallieferanten", correct: false, feedback: "FALSCH: Nicht NUR Materiallieferanten! 8.4 gilt fuer alle externen Anbieter."},
+                {text: "Bei Produkten/DL von externen Anbietern fuer eigene Produkte/DL", correct: true, feedback: "Richtig!"},
+                {text: "Bei Prozessen, die an externe Anbieter ausgegliedert werden", correct: true, feedback: "Richtig!"},
+                {text: "Bei Produkten/DL, die direkt an Kunden geliefert werden", correct: true, feedback: "Richtig!"}
+            ]},
+            {q: "Was muss fuer externe Anbieter festgelegt werden?", answers: [
+                {text: "Kriterien fuer Auswahl und Bewertung", correct: true, feedback: "Richtig!"},
+                {text: "Kriterien fuer Leistungsueberwachung", correct: true, feedback: "Richtig!"},
+                {text: "Der guenstigste Preis als einziges Kriterium", correct: false, feedback: "FALSCH: Der Preis allein ist NICHT ausreichend!"},
+                {text: "Kriterien fuer Neubewertung", correct: true, feedback: "Richtig!"}
+            ]},
+            {q: "Was ist eine Lieferantenbewertung?", answers: [
+                {text: "Einmalige Pruefung vor der ersten Bestellung", correct: false, feedback: "FALSCH: NICHT nur einmalig! Die Norm fordert Auswahl, Ueberwachung UND Neubewertung."},
+                {text: "Regelmaessige Bewertung der Lieferantenleistung", correct: true, feedback: "Richtig!"},
+                {text: "Nur die Wareneingangspruefung", correct: false, feedback: "FALSCH: Wareneingangspruefung ist nur ein Teil."},
+                {text: "Bewertung nach Kriterien wie Qualitaet, Termintreue, Reaktion", correct: true, feedback: "Richtig!"}
+            ]},
+            {q: "Was bestimmt Art und Umfang der Steuerung externer Anbieter?", answers: [
+                {text: "Die moegliche Auswirkung auf die Konformitaet", correct: true, feedback: "Richtig!"},
+                {text: "Immer maximale Kontrolle", correct: false, feedback: "FALSCH: NICHT immer maximale Kontrolle! Die Steuerung muss ANGEMESSEN sein."},
+                {text: "Die Wirksamkeit der Steuerung durch den externen Anbieter", correct: true, feedback: "Richtig!"},
+                {text: "Die Bedeutung des zugekauften Produkts/der DL", correct: true, feedback: "Richtig!"}
+            ]},
+            {q: "Welche Massnahmen zur Steuerung externer Anbieter sind moeglich?", answers: [
+                {text: "Wareneingangspruefung", correct: true, feedback: "Richtig!"},
+                {text: "Lieferantenaudits", correct: true, feedback: "Richtig!"},
+                {text: "Keine Pruefung, da der Lieferant verantwortlich ist", correct: false, feedback: "FALSCH: 'Keine Pruefung' ist NICHT akzeptabel!"},
+                {text: "Ueberwachung der Lieferantenleistung", correct: true, feedback: "Richtig!"}
+            ]},
+            {q: "Was muss externen Anbietern mitgeteilt werden?", answers: [
+                {text: "Anforderungen an Produkte/DL/Prozesse", correct: true, feedback: "Richtig!"},
+                {text: "Anforderungen an Kompetenz und Qualifikation", correct: true, feedback: "Richtig!"},
+                {text: "Das komplette QM-Handbuch der Organisation", correct: false, feedback: "FALSCH: Das KOMPLETTE QM-Handbuch ist NICHT noetig!"},
+                {text: "Anforderungen an Verifizierung/Validierung durch die Organisation", correct: true, feedback: "Richtig!"}
+            ]},
+            {q: "Wann kann auf Wareneingangspruefung verzichtet werden?", answers: [
+                {text: "Nie, sie ist immer Pflicht", correct: false, feedback: "FALSCH: Wareneingangspruefung ist NICHT immer Pflicht!"},
+                {text: "Wenn der Lieferant nachweislich zuverlaessig ist", correct: true, feedback: "Richtig!"},
+                {text: "Bei entsprechender Risikobetrachtung", correct: true, feedback: "Richtig!"},
+                {text: "Wenn der Lieferant zertifiziert ist und regelmaessig auditiert wird", correct: true, feedback: "Richtig!"}
+            ]},
+            {q: "Was ist ein ausgelagerter Prozess?", answers: [
+                {text: "Ein Prozess, den die Organisation selbst durchfuehren koennte", correct: true, feedback: "Richtig!"},
+                {text: "Jeder Zukauf von Material", correct: false, feedback: "FALSCH: Nicht JEDER Zukauf ist ein ausgelagerter Prozess!"},
+                {text: "Ein Prozess, der von einem externen Anbieter durchgefuehrt wird", correct: true, feedback: "Richtig!"},
+                {text: "Ein Prozess, der im Anwendungsbereich des QMS liegt, aber extern erfolgt", correct: true, feedback: "Richtig!"}
+            ]},
+            {q: "Was sind 'beherrschte Bedingungen' fuer die Produktion/DL-Erbringung?", answers: [
+                {text: "Verfuegbarkeit dokumentierter Information zu Merkmalen und Ergebnissen", correct: true, feedback: "Richtig!"},
+                {text: "Verfuegbarkeit geeigneter Ressourcen zur Ueberwachung/Messung", correct: true, feedback: "Richtig!"},
+                {text: "Spontane Produktion ohne Vorgaben", correct: false, feedback: "FALSCH: Spontane Produktion ohne Vorgaben ist NICHT beherrscht!"},
+                {text: "Einsatz geeigneter Infrastruktur und Prozessumgebung", correct: true, feedback: "Richtig!"}
+            ]},
+            {q: "Welche weiteren beherrschten Bedingungen fordert die Norm?", answers: [
+                {text: "Einsatz kompetenter Personen", correct: true, feedback: "Richtig!"},
+                {text: "Validierung von Prozessen, deren Ergebnis nicht verifiziert werden kann", correct: true, feedback: "Richtig!"},
+                {text: "Arbeiten nach Gefuehl und Erfahrung ohne Dokumentation", correct: false, feedback: "FALSCH: 'Nach Gefuehl' ist NICHT beherrscht!"},
+                {text: "Massnahmen zur Verhinderung menschlicher Fehler", correct: true, feedback: "Richtig!"}
+            ]},
+            {q: "Was sind 'spezielle Prozesse' (Prozessvalidierung)?", answers: [
+                {text: "Prozesse, deren Ergebnis erst beim Kunden sichtbar wird", correct: true, feedback: "Richtig!"},
+                {text: "Prozesse, bei denen das Ergebnis nicht durch Messung verifiziert werden kann", correct: true, feedback: "Richtig!"},
+                {text: "Alle Produktionsprozesse", correct: false, feedback: "FALSCH: NICHT alle Produktionsprozesse!"},
+                {text: "Beispiele: Schweissen, Kleben, Loeten, Sterilisieren", correct: true, feedback: "Richtig!"}
+            ]},
+            {q: "Wann ist Kennzeichnung von Produkten erforderlich?", answers: [
+                {text: "Immer bei allen Produkten", correct: false, feedback: "FALSCH: NICHT immer bei allen! Die Organisation entscheidet basierend auf Anforderungen."},
+                {text: "Wenn es notwendig ist, die Konformitaet sicherzustellen", correct: true, feedback: "Richtig!"},
+                {text: "Um den Status bezueglich Ueberwachung/Messung zu erkennen", correct: true, feedback: "Richtig!"},
+                {text: "Wenn Rueckverfolgbarkeit gefordert ist", correct: true, feedback: "Richtig!"}
+            ]},
+            {q: "Wann ist Rueckverfolgbarkeit gefordert?", answers: [
+                {text: "Immer", correct: false, feedback: "FALSCH: NICHT immer! Rueckverfolgbarkeit ist nur gefordert, wenn es eine Anforderung gibt."},
+                {text: "Wenn es eine Anforderung ist (Kunde, Gesetz, Organisation)", correct: true, feedback: "Richtig!"},
+                {text: "Nur bei Lebensmitteln und Medizinprodukten", correct: false, feedback: "FALSCH: Nicht nur bei Lebensmitteln/Medizin!"},
+                {text: "Wenn die Organisation es als notwendig erachtet", correct: true, feedback: "Richtig!"}
+            ]},
+            {q: "Was ist Kundeneigentum im Sinne der Norm?", answers: [
+                {text: "Nur Material, das der Kunde beistellt", correct: false, feedback: "FALSCH: NICHT nur Material! Kundeneigentum umfasst auch Werkzeuge, geistiges Eigentum und personenbezogene Daten."},
+                {text: "Material, Bauteile oder Werkzeuge des Kunden", correct: true, feedback: "Richtig!"},
+                {text: "Geistiges Eigentum (Zeichnungen, Spezifikationen)", correct: true, feedback: "Richtig!"},
+                {text: "Personenbezogene Daten des Kunden", correct: true, feedback: "Richtig!"}
+            ]},
+            {q: "Was muss mit Kundeneigentum geschehen?", answers: [
+                {text: "Kennzeichnen", correct: true, feedback: "Richtig!"},
+                {text: "Schuetzen", correct: true, feedback: "Richtig!"},
+                {text: "Kann beliebig verwendet werden", correct: false, feedback: "FALSCH: Kundeneigentum kann NICHT beliebig verwendet werden!"},
+                {text: "Bei Verlust oder Beschaedigung dem Kunden berichten", correct: true, feedback: "Richtig!"}
+            ]},
+            {q: "Was bedeutet 'Erhaltung' von Produkten?", answers: [
+                {text: "Schutz waehrend Produktion und Lieferung", correct: true, feedback: "Richtig!"},
+                {text: "Kennzeichnung, Handhabung, Verpackung", correct: true, feedback: "Richtig!"},
+                {text: "Produkte muessen ewig halten", correct: false, feedback: "FALSCH: 'Ewig halten' ist NICHT gemeint!"},
+                {text: "Lagerung und Transport", correct: true, feedback: "Richtig!"}
+            ]},
+            {q: "Was sind Taetigkeiten nach der Lieferung?", answers: [
+                {text: "Garantieleistungen", correct: true, feedback: "Richtig!"},
+                {text: "Wartung und Instandhaltung", correct: true, feedback: "Richtig!"},
+                {text: "Nur wenn vertraglich vereinbart", correct: false, feedback: "FALSCH: Nicht NUR wenn vertraglich vereinbart! Auch gesetzliche Anforderungen gehoeren dazu."},
+                {text: "Entsorgung und Recycling", correct: true, feedback: "Richtig!"}
+            ]},
+            {q: "Welche Aspekte muessen bei Taetigkeiten nach Lieferung beruecksichtigt werden?", answers: [
+                {text: "Gesetzliche und behoerdliche Anforderungen", correct: true, feedback: "Richtig!"},
+                {text: "Moegliche unerwuenschte Folgen der Produkte/DL", correct: true, feedback: "Richtig!"},
+                {text: "Nur die Wuensche des Vertriebs", correct: false, feedback: "FALSCH: Vertriebswuensche allein sind NICHT massgeblich!"},
+                {text: "Kundenrueckmeldungen", correct: true, feedback: "Richtig!"}
+            ]},
+            {q: "Was muss bei Aenderungen in der Produktion/DL-Erbringung getan werden?", answers: [
+                {text: "Aenderungen ueberpruefen und steuern", correct: true, feedback: "Richtig!"},
+                {text: "Aenderungen koennen ohne Pruefung umgesetzt werden", correct: false, feedback: "FALSCH: Aenderungen OHNE Pruefung sind riskant!"},
+                {text: "Ergebnisse dokumentieren (Wer hat genehmigt? Welche Massnahmen?)", correct: true, feedback: "Richtig!"},
+                {text: "Sicherstellen, dass Konformitaet erhalten bleibt", correct: true, feedback: "Richtig!"}
+            ]},
+            {q: "Wann muessen Produkte/DL freigegeben werden?", answers: [
+                {text: "Nach Abschluss aller geplanten Pruefungen", correct: true, feedback: "Richtig!"},
+                {text: "Automatisch nach der Produktion", correct: false, feedback: "FALSCH: NICHT automatisch! Die Freigabe erfordert eine aktive Entscheidung."},
+                {text: "Wenn die Anforderungen erfuellt sind", correct: true, feedback: "Richtig!"},
+                {text: "Vor Lieferung an den Kunden", correct: true, feedback: "Richtig!"}
+            ]},
+            {q: "Welche dokumentierte Information ist zur Freigabe erforderlich?", answers: [
+                {text: "Nachweis der Erfuellung der Abnahmekriterien", correct: true, feedback: "Richtig!"},
+                {text: "Rueckverfolgbarkeit zur freigebenden Person", correct: true, feedback: "Richtig!"},
+                {text: "Nur ein muendliches OK", correct: false, feedback: "FALSCH: Ein muendliches OK reicht NICHT!"},
+                {text: "Dokumentation der durchgefuehrten Pruefungen", correct: true, feedback: "Richtig!"}
+            ]},
+            {q: "Was ist eine Sonderfreigabe?", answers: [
+                {text: "Freigabe eines Produkts, das nicht alle Anforderungen erfuellt", correct: true, feedback: "Richtig!"},
+                {text: "Die normale Freigabe nach Pruefung", correct: false, feedback: "FALSCH: Sonderfreigabe ist NICHT die normale Freigabe!"},
+                {text: "Muss vom Kunden oder zustaendiger Stelle genehmigt werden", correct: true, feedback: "Richtig!"},
+                {text: "Auch Abweichgenehmigung oder Konzession genannt", correct: true, feedback: "Richtig!"}
+            ]},
+            {q: "Wer darf eine Sonderfreigabe erteilen?", answers: [
+                {text: "Jeder Mitarbeiter", correct: false, feedback: "FALSCH: NICHT jeder Mitarbeiter! Sonderfreigaben erfordern besondere Befugnis."},
+                {text: "Der Kunde (wenn das Produkt an ihn geht)", correct: true, feedback: "Richtig!"},
+                {text: "Eine zustaendige Stelle innerhalb der Organisation", correct: true, feedback: "Richtig!"},
+                {text: "Die befugte Person gemaess Festlegung", correct: true, feedback: "Richtig!"}
+            ]},
+            {q: "Was muss mit nichtkonformen Produkten/DL-Ergebnissen geschehen?", answers: [
+                {text: "Sie muessen gekennzeichnet werden", correct: true, feedback: "Richtig!"},
+                {text: "Sie muessen gesteuert werden", correct: true, feedback: "Richtig!"},
+                {text: "Sie koennen einfach weiterverarbeitet werden", correct: false, feedback: "FALSCH: Einfache Weiterverarbeitung ist NICHT erlaubt!"},
+                {text: "Unbeabsichtigte Verwendung oder Lieferung muss verhindert werden", correct: true, feedback: "Richtig!"}
+            ]},
+            {q: "Welche Moeglichkeiten gibt es im Umgang mit nichtkonformen Produkten?", answers: [
+                {text: "Korrektur (Nacharbeit)", correct: true, feedback: "Richtig!"},
+                {text: "Aussonderung, Sperrung, Rueckgabe, Lieferstopp", correct: true, feedback: "Richtig!"},
+                {text: "Immer verschrotten", correct: false, feedback: "FALSCH: NICHT immer verschrotten! Es gibt mehrere Optionen."},
+                {text: "Sonderfreigabe (Kunden informieren)", correct: true, feedback: "Richtig!"}
+            ]},
+            {q: "Was ist bei Korrektur (Nacharbeit) zu beachten?", answers: [
+                {text: "Nach der Korrektur ist erneute Verifizierung erforderlich", correct: true, feedback: "Richtig!"},
+                {text: "Nachgearbeitete Produkte sind automatisch konform", correct: false, feedback: "FALSCH: NICHT automatisch konform! Nach Nacharbeit muss GEPRUEFT werden."},
+                {text: "Die Konformitaet muss erneut nachgewiesen werden", correct: true, feedback: "Richtig!"},
+                {text: "Nur die korrigierten Merkmale werden geprueft", correct: false, feedback: "FALSCH: Manchmal muss mehr geprueft werden, wenn Wechselwirkungen moeglich sind."}
+            ]},
+            {q: "Was muss bei nichtkonformen Ergebnissen dokumentiert werden?", answers: [
+                {text: "Die Nichtkonformitaet selbst", correct: true, feedback: "Richtig!"},
+                {text: "Die ergriffenen Massnahmen", correct: true, feedback: "Richtig!"},
+                {text: "Nur bei Kundenbeschwerden", correct: false, feedback: "FALSCH: NICHT nur bei Kundenbeschwerden! Jede Nichtkonformitaet muss dokumentiert werden."},
+                {text: "Erhaltene Sonderfreigaben", correct: true, feedback: "Richtig!"}
+            ]},
+            {q: "Was ist der Unterschied zwischen Korrektur und Korrekturmassnahme?", answers: [
+                {text: "Korrektur beseitigt die Nichtkonformitaet (Symptom)", correct: true, feedback: "Richtig!"},
+                {text: "Korrekturmassnahme beseitigt die Ursache", correct: true, feedback: "Richtig!"},
+                {text: "Beide Begriffe sind identisch", correct: false, feedback: "FALSCH: Die Begriffe sind NICHT identisch!"},
+                {text: "Korrektur: Produkt reparieren. Korrekturmassnahme: Prozess verbessern", correct: true, feedback: "Richtig!"}
+            ]},
+            {q: "Ein Kunde aendert seinen Auftrag nach Produktionsbeginn. Was ist zu tun?", answers: [
+                {text: "Aenderung ablehnen, da Produktion laeuft", correct: false, feedback: "FALSCH: Aenderungen pauschal abzulehnen ist KEINE gute Praxis!"},
+                {text: "Machbarkeit pruefen und Aenderung dokumentieren", correct: true, feedback: "Richtig!"},
+                {text: "Betroffene Bereiche informieren", correct: true, feedback: "Richtig!"},
+                {text: "Auswirkungen auf Kosten, Termine, Qualitaet bewerten", correct: true, feedback: "Richtig!"}
+            ]},
+            {q: "Ein Lieferant liefert wiederholt mangelhafte Ware. Welche Massnahmen sind moeglich?", answers: [
+                {text: "Verstaerkte Wareneingangspruefung", correct: true, feedback: "Richtig!"},
+                {text: "Lieferantenaudit durchfuehren", correct: true, feedback: "Richtig!"},
+                {text: "Nichts, der Lieferant ist autonom", correct: false, feedback: "FALSCH: Die Organisation muss handeln!"},
+                {text: "Lieferantenentwicklung oder Lieferantenwechsel", correct: true, feedback: "Richtig!"}
+            ]},
+            {q: "Was ist ein Produktionslenkungsplan (Control Plan)?", answers: [
+                {text: "Ein von der ISO 9001 gefordertes Dokument", correct: false, feedback: "FALSCH: Ein Control Plan ist NICHT explizit von ISO 9001 gefordert!"},
+                {text: "Ein Hilfsmittel zur Planung von Pruefungen und Kontrollen", correct: true, feedback: "Richtig!"},
+                {text: "Beschreibt was, wie, wann und womit geprueft wird", correct: true, feedback: "Richtig!"},
+                {text: "Besonders in der Automobilindustrie verbreitet", correct: true, feedback: "Richtig!"}
+            ]},
+            {q: "Ein Medizinprodukt muss rueckverfolgbar sein. Welche Informationen sind typisch?", answers: [
+                {text: "Chargennummer/Seriennummer", correct: true, feedback: "Richtig!"},
+                {text: "Verwendete Materialien und Lieferanten", correct: true, feedback: "Richtig!"},
+                {text: "Nur das Produktionsdatum", correct: false, feedback: "FALSCH: Nur das Datum reicht NICHT fuer volle Rueckverfolgbarkeit!"},
+                {text: "Beteiligte Mitarbeiter und Maschinen", correct: true, feedback: "Richtig!"}
+            ]},
+            {q: "Welche eigenen Anforderungen kann die Organisation an Produkte/DL stellen?", answers: [
+                {text: "Anforderungen, die ueber Kundenwuensche hinausgehen", correct: true, feedback: "Richtig!"},
+                {text: "Keine, nur Kundenanforderungen zaehlen", correct: false, feedback: "FALSCH: Die Norm erlaubt ausdruecklich EIGENE Anforderungen!"},
+                {text: "Qualitaetsstandards, die das Unternehmen sich selbst setzt", correct: true, feedback: "Richtig!"},
+                {text: "Markenversprechen oder Unternehmensphilosophie", correct: true, feedback: "Richtig!"}
+            ]},
+            {q: "Wie muessen Schnittstellen zwischen Entwicklungsbeteiligten gesteuert werden?", answers: [
+                {text: "Gar nicht, jeder arbeitet autonom", correct: false, feedback: "FALSCH: Autonomes Arbeiten ohne Abstimmung fuehrt zu Fehlern!"},
+                {text: "Durch klare Kommunikationsregeln", correct: true, feedback: "Richtig!"},
+                {text: "Durch Definition von Verantwortlichkeiten an den Schnittstellen", correct: true, feedback: "Richtig!"},
+                {text: "Durch regelmaessigen Informationsaustausch", correct: true, feedback: "Richtig!"}
+            ]},
+            {q: "Wann sollten Kunden oder Anwender in die Entwicklung einbezogen werden?", answers: [
+                {text: "Nie, Entwicklung ist intern", correct: false, feedback: "FALSCH: Kundeneinbeziehung kann SEHR wichtig sein!"},
+                {text: "Bei der Validierung (Erfuellt es den Verwendungszweck?)", correct: true, feedback: "Richtig!"},
+                {text: "Wenn ihre Einbeziehung fuer erfolgreiche Entwicklung noetig ist", correct: true, feedback: "Richtig!"},
+                {text: "Bei der Definition der Anforderungen", correct: true, feedback: "Richtig!"}
+            ]},
+            {q: "Warum muessen 'moegliche Folgen von Fehlern' als Entwicklungseingabe beruecksichtigt werden?", answers: [
+                {text: "Um kritische Merkmale zu identifizieren", correct: true, feedback: "Richtig!"},
+                {text: "Das ist keine Normforderung", correct: false, feedback: "FALSCH: Es IST eine Normforderung in 8.3.3 e)!"},
+                {text: "Um Risiken frueh zu erkennen und zu minimieren", correct: true, feedback: "Richtig!"},
+                {text: "Um angemessene Pruefungen und Sicherheitsmerkmale zu planen", correct: true, feedback: "Richtig!"}
+            ]},
+            {q: "Welche dokumentierte Information ist fuer Lieferantenbewertungen gefordert?", answers: [
+                {text: "Ergebnisse der Bewertungen muessen aufbewahrt werden", correct: true, feedback: "Richtig!"},
+                {text: "Keine, muendliche Einschaetzung reicht", correct: false, feedback: "FALSCH: Muendliche Einschaetzung reicht NICHT!"},
+                {text: "Ergebnisse der Leistungsueberwachung", correct: true, feedback: "Richtig!"},
+                {text: "Ergebnisse der Neubewertungen", correct: true, feedback: "Richtig!"}
+            ]},
+            {q: "Was bedeutet 'Wechselwirkungen mit der Organisation' bei externen Anbietern?", answers: [
+                {text: "Der Lieferant arbeitet voellig unabhaengig", correct: false, feedback: "FALSCH: Voellig unabhaengig waere KEINE Wechselwirkung!"},
+                {text: "Steuerung der Zusammenarbeit und Kommunikation", correct: true, feedback: "Richtig!"},
+                {text: "Abstimmung bei Prozessen, die ineinandergreifen", correct: true, feedback: "Richtig!"},
+                {text: "Z.B. gemeinsame Qualitaetspruefungen oder Freigabeprozesse", correct: true, feedback: "Richtig!"}
+            ]}
+        ]
+    },
+    "kapitel9": {
+        title: "Kapitel 9 - Bewertung der Leistung",
+        questions: [
+            {q: "Was muss die Organisation bezueglich Ueberwachung und Messung bestimmen?", answers: [
+                {text: "Was ueberwacht und gemessen werden muss", correct: true, feedback: "Richtig!"},
+                {text: "Welche Methoden anzuwenden sind", correct: true, feedback: "Richtig!"},
+                {text: "Nur die Endpruefung am Produkt", correct: false, feedback: "FALSCH: NICHT nur Endpruefung! Die Norm fordert Ueberwachung des gesamten QMS."},
+                {text: "Wann ueberwacht und gemessen werden muss", correct: true, feedback: "Richtig!"}
+            ]},
+            {q: "Wann muessen Ergebnisse der Ueberwachung und Messung bewertet werden?", answers: [
+                {text: "Nur am Jahresende", correct: false, feedback: "FALSCH: Nicht NUR am Jahresende! Die Organisation legt die Intervalle selbst fest."},
+                {text: "Die Organisation muss festlegen, wann bewertet wird", correct: true, feedback: "Richtig!"},
+                {text: "Die Ergebnisse muessen analysiert und bewertet werden", correct: true, feedback: "Richtig!"},
+                {text: "Nie, nur Daten sammeln reicht", correct: false, feedback: "FALSCH: Daten sammeln allein ist wertlos - sie muessen BEWERTET werden!"}
+            ]},
+            {q: "Welche dokumentierte Information ist fuer Ueberwachung/Messung gefordert?", answers: [
+                {text: "Nachweise der Ergebnisse muessen aufbewahrt werden", correct: true, feedback: "Richtig!"},
+                {text: "Keine Dokumentation erforderlich", correct: false, feedback: "FALSCH: Dokumentation IST erforderlich!"},
+                {text: "Die Ergebnisse dienen als Nachweis fuer Leistung und Wirksamkeit", correct: true, feedback: "Richtig!"},
+                {text: "Nur bei Reklamationen dokumentieren", correct: false, feedback: "FALSCH: Nicht nur bei Reklamationen!"}
+            ]},
+            {q: "Was muss bezueglich Kundenzufriedenheit ueberwacht werden?", answers: [
+                {text: "Die Wahrnehmung der Kunden", correct: true, feedback: "Richtig!"},
+                {text: "Der Grad, zu dem Erwartungen erfuellt wurden", correct: true, feedback: "Richtig!"},
+                {text: "Nur schriftliche Beschwerden", correct: false, feedback: "FALSCH: NICHT nur schriftliche Beschwerden!"},
+                {text: "Ob Kundenbeduerfnisse und -erwartungen erfuellt wurden", correct: true, feedback: "Richtig!"}
+            ]},
+            {q: "Welche Methoden zur Ermittlung der Kundenzufriedenheit nennt die Norm als Beispiele?", answers: [
+                {text: "Kundenbefragungen", correct: true, feedback: "Richtig!"},
+                {text: "Rueckmeldungen zu Produkten/DL", correct: true, feedback: "Richtig!"},
+                {text: "Nur persoenliche Gespraeche", correct: false, feedback: "FALSCH: NICHT nur persoenliche Gespraeche!"},
+                {text: "Analyse von Marktanteilen", correct: true, feedback: "Richtig!"}
+            ]},
+            {q: "Welche weiteren Methoden zur Kundenzufriedenheitsermittlung sind moeglich?", answers: [
+                {text: "Analyse von Garantieanspruechen", correct: true, feedback: "Richtig!"},
+                {text: "Treffen mit Kunden", correct: true, feedback: "Richtig!"},
+                {text: "Telepathie", correct: false, feedback: "FALSCH: Telepathie ist keine anerkannte Methode!"},
+                {text: "Haendlerberichte", correct: true, feedback: "Richtig!"}
+            ]},
+            {q: "Ist ein jaehrlicher Kundenzufriedenheitsfragebogen ausreichend?", answers: [
+                {text: "Ja, das reicht immer", correct: false, feedback: "FALSCH: Ein Fragebogen reicht NICHT immer!"},
+                {text: "Nicht unbedingt, es kommt auf die Branche und Kundenbeziehung an", correct: true, feedback: "Richtig!"},
+                {text: "Die Methoden muessen zur Organisation passen", correct: true, feedback: "Richtig!"},
+                {text: "Andere Methoden koennen ergaenzend oder alternativ genutzt werden", correct: true, feedback: "Richtig!"}
+            ]},
+            {q: "Was muss bei der Analyse und Bewertung betrachtet werden?", answers: [
+                {text: "Konformitaet von Produkten und Dienstleistungen", correct: true, feedback: "Richtig!"},
+                {text: "Grad der Kundenzufriedenheit", correct: true, feedback: "Richtig!"},
+                {text: "Nur negative Ergebnisse", correct: false, feedback: "FALSCH: NICHT nur negative Ergebnisse!"},
+                {text: "Leistung und Wirksamkeit des QMS", correct: true, feedback: "Richtig!"}
+            ]},
+            {q: "Welche weiteren Aspekte muessen analysiert werden?", answers: [
+                {text: "Ob die Planung wirksam umgesetzt wurde", correct: true, feedback: "Richtig!"},
+                {text: "Wirksamkeit der Massnahmen zu Risiken/Chancen", correct: true, feedback: "Richtig!"},
+                {text: "Das Privatvermoegen der Geschaeftsfuehrung", correct: false, feedback: "FALSCH: Das Privatvermoegen ist KEIN QMS-Thema!"},
+                {text: "Leistung externer Anbieter", correct: true, feedback: "Richtig!"}
+            ]},
+            {q: "Was ist das Ziel der Analyse und Bewertung?", answers: [
+                {text: "Verbesserungsbedarf erkennen", correct: true, feedback: "Richtig!"},
+                {text: "Nur Fehler dokumentieren", correct: false, feedback: "FALSCH: Nicht NUR Fehler dokumentieren!"},
+                {text: "Eignung und Wirksamkeit des QMS bewerten", correct: true, feedback: "Richtig!"},
+                {text: "Grundlage fuer Entscheidungen schaffen", correct: true, feedback: "Richtig!"}
+            ]},
+            {q: "In welchen Abstaenden muessen interne Audits durchgefuehrt werden?", answers: [
+                {text: "Genau einmal pro Jahr", correct: false, feedback: "FALSCH: 'Einmal pro Jahr' ist NICHT vorgeschrieben!"},
+                {text: "In geplanten Abstaenden", correct: true, feedback: "Richtig!"},
+                {text: "Die Organisation legt die Intervalle selbst fest", correct: true, feedback: "Richtig!"},
+                {text: "Nur wenn der Zertifizierer es fordert", correct: false, feedback: "FALSCH: Der Zertifizierer gibt das nicht vor."}
+            ]},
+            {q: "Was muss das interne Audit pruefen?", answers: [
+                {text: "Ob das QMS die eigenen Anforderungen der Organisation erfuellt", correct: true, feedback: "Richtig!"},
+                {text: "Ob das QMS die Anforderungen der ISO 9001 erfuellt", correct: true, feedback: "Richtig!"},
+                {text: "Nur ob Dokumente vorhanden sind", correct: false, feedback: "FALSCH: Nicht NUR Dokumente pruefen!"},
+                {text: "Ob das QMS wirksam verwirklicht und aufrechterhalten wird", correct: true, feedback: "Richtig!"}
+            ]},
+            {q: "Was muss bei der Auditplanung beruecksichtigt werden?", answers: [
+                {text: "Bedeutung der betroffenen Prozesse", correct: true, feedback: "Richtig!"},
+                {text: "Aenderungen mit Einfluss auf die Organisation", correct: true, feedback: "Richtig!"},
+                {text: "Alle Bereiche gleich oft auditieren", correct: false, feedback: "FALSCH: NICHT alle Bereiche gleich oft! Kritische Prozesse sollten haeufiger auditiert werden."},
+                {text: "Ergebnisse frueherer Audits", correct: true, feedback: "Richtig!"}
+            ]},
+            {q: "Was gehoert zu einem Auditprogramm?", answers: [
+                {text: "Festlegung von Auditkriterien und Umfang", correct: true, feedback: "Richtig!"},
+                {text: "Auswahl der Auditoren", correct: true, feedback: "Richtig!"},
+                {text: "Beliebige Durchfuehrung ohne Plan", correct: false, feedback: "FALSCH: Beliebige Durchfuehrung ist NICHT akzeptabel!"},
+                {text: "Sicherstellung der Objektivitaet und Unparteilichkeit", correct: true, feedback: "Richtig!"}
+            ]},
+            {q: "Wer darf interne Audits durchfuehren?", answers: [
+                {text: "Nur externe Zertifizierer", correct: false, feedback: "FALSCH: Interne Audits werden INTERN durchgefuehrt!"},
+                {text: "Interne Mitarbeiter mit Auditorenkompetenz", correct: true, feedback: "Richtig!"},
+                {text: "Auditoren muessen unabhaengig vom auditierten Bereich sein", correct: true, feedback: "Richtig!"},
+                {text: "Der Bereichsleiter seinen eigenen Bereich", correct: false, feedback: "FALSCH: Man darf seinen EIGENEN Bereich NICHT auditieren!"}
+            ]},
+            {q: "Was bedeutet 'Objektivitaet und Unparteilichkeit' bei Auditoren?", answers: [
+                {text: "Der Auditor darf keine persoenlichen Interessen haben", correct: true, feedback: "Richtig!"},
+                {text: "Der Auditor darf seinen eigenen Arbeitsbereich auditieren", correct: false, feedback: "FALSCH: EIGENEN Bereich auditieren ist NICHT objektiv!"},
+                {text: "Der Auditor muss unabhaengig vom auditierten Bereich sein", correct: true, feedback: "Richtig!"},
+                {text: "Der Auditor bewertet sachlich anhand von Kriterien", correct: true, feedback: "Richtig!"}
+            ]},
+            {q: "Was muss nach einem internen Audit geschehen?", answers: [
+                {text: "Ergebnisse an relevantes Management berichten", correct: true, feedback: "Richtig!"},
+                {text: "Nichts, das Audit ist abgeschlossen", correct: false, feedback: "FALSCH: Nach dem Audit ist NICHT Schluss!"},
+                {text: "Erforderliche Korrekturen und Korrekturmassnahmen durchfuehren", correct: true, feedback: "Richtig!"},
+                {text: "Ergebnisse dokumentieren", correct: true, feedback: "Richtig!"}
+            ]},
+            {q: "Welche dokumentierte Information ist fuer Audits gefordert?", answers: [
+                {text: "Nachweis der Umsetzung des Auditprogramms", correct: true, feedback: "Richtig!"},
+                {text: "Keine, muendliche Berichte reichen", correct: false, feedback: "FALSCH: Muendliche Berichte reichen NICHT!"},
+                {text: "Auditergebnisse", correct: true, feedback: "Richtig!"},
+                {text: "Auditberichte", correct: true, feedback: "Richtig!"}
+            ]},
+            {q: "Was ist der Unterschied zwischen Auditfeststellung und Auditergebnis?", answers: [
+                {text: "Feststellung = Einzelbeobachtung", correct: true, feedback: "Richtig!"},
+                {text: "Ergebnis = Gesamtbewertung des Audits", correct: true, feedback: "Richtig!"},
+                {text: "Beide Begriffe sind identisch", correct: false, feedback: "FALSCH: Die Begriffe sind NICHT identisch!"},
+                {text: "Feststellungen koennen positiv oder negativ sein", correct: true, feedback: "Richtig!"}
+            ]},
+            {q: "Was ist eine Nichtkonformitaet im Audit?", answers: [
+                {text: "Nichterfuellung einer Anforderung", correct: true, feedback: "Richtig!"},
+                {text: "Jede kleine Verbesserungsmoeglichkeit", correct: false, feedback: "FALSCH: Nicht JEDE Verbesserungsmoeglichkeit ist eine Nichtkonformitaet!"},
+                {text: "Abweichung von Norm, Vorgaben oder Kundenanforderungen", correct: true, feedback: "Richtig!"},
+                {text: "Kann durch objektiven Nachweis belegt werden", correct: true, feedback: "Richtig!"}
+            ]},
+            {q: "Wer fuehrt die Managementbewertung durch?", answers: [
+                {text: "Der Qualitaetsbeauftragte allein", correct: false, feedback: "FALSCH: Der QMB kann vorbereiten, aber die BEWERTUNG macht die oberste Leitung!"},
+                {text: "Die oberste Leitung", correct: true, feedback: "Richtig!"},
+                {text: "Ein externes Beratungsunternehmen", correct: false, feedback: "FALSCH: Externe koennen unterstuetzen, aber nicht die Verantwortung uebernehmen."},
+                {text: "Kann an das mittlere Management delegiert werden", correct: false, feedback: "FALSCH: NICHT delegierbar - ist Fuehrungsaufgabe!"}
+            ]},
+            {q: "In welchen Abstaenden muss die Managementbewertung stattfinden?", answers: [
+                {text: "Genau einmal pro Jahr", correct: false, feedback: "FALSCH: 'Einmal pro Jahr' steht NICHT in der Norm!"},
+                {text: "In geplanten Abstaenden", correct: true, feedback: "Richtig!"},
+                {text: "Die Organisation legt die Intervalle fest", correct: true, feedback: "Richtig!"},
+                {text: "Nur vor Zertifizierungsaudits", correct: false, feedback: "FALSCH: NICHT nur vor Audits!"}
+            ]},
+            {q: "Was ist der Zweck der Managementbewertung?", answers: [
+                {text: "Sicherstellen der fortdauernden Eignung des QMS", correct: true, feedback: "Richtig!"},
+                {text: "Nur Fehler auflisten", correct: false, feedback: "FALSCH: NICHT nur Fehler auflisten! Die Managementbewertung ist STRATEGISCH."},
+                {text: "Sicherstellen der Angemessenheit und Wirksamkeit", correct: true, feedback: "Richtig!"},
+                {text: "Strategische Ausrichtung mit dem QMS abstimmen", correct: true, feedback: "Richtig!"}
+            ]},
+            {q: "Welche Eingaben muss die Managementbewertung beruecksichtigen?", answers: [
+                {text: "Status von Massnahmen frueherer Managementbewertungen", correct: true, feedback: "Richtig!"},
+                {text: "Aenderungen bei externen/internen Themen", correct: true, feedback: "Richtig!"},
+                {text: "Das Wetter am Bewertungstag", correct: false, feedback: "FALSCH: Das Wetter ist KEIN Eingabethema!"},
+                {text: "Informationen ueber die QMS-Leistung", correct: true, feedback: "Richtig!"}
+            ]},
+            {q: "Welche QMS-Leistungsinformationen sind Eingaben der Managementbewertung?", answers: [
+                {text: "Kundenzufriedenheit und Rueckmeldungen interessierter Parteien", correct: true, feedback: "Richtig!"},
+                {text: "Erreichung der Qualitaetsziele", correct: true, feedback: "Richtig!"},
+                {text: "Nur positive Ergebnisse", correct: false, feedback: "FALSCH: NICHT nur positive Ergebnisse!"},
+                {text: "Prozessleistung und Produktkonformitaet", correct: true, feedback: "Richtig!"}
+            ]},
+            {q: "Welche weiteren Eingaben fordert die Norm fuer die Managementbewertung?", answers: [
+                {text: "Ergebnisse von Audits", correct: true, feedback: "Richtig!"},
+                {text: "Leistung externer Anbieter", correct: true, feedback: "Richtig!"},
+                {text: "Das Jahreshoroskop", correct: false, feedback: "FALSCH: Das Jahreshoroskop ist KEIN Norminhalt!"},
+                {text: "Nichtkonformitaeten und Korrekturmassnahmen", correct: true, feedback: "Richtig!"}
+            ]},
+            {q: "Welche Eingaben zu Risiken und Verbesserung sind gefordert?", answers: [
+                {text: "Wirksamkeit der Massnahmen zu Risiken und Chancen", correct: true, feedback: "Richtig!"},
+                {text: "Moeglichkeiten zur Verbesserung", correct: true, feedback: "Richtig!"},
+                {text: "Angemessenheit der Ressourcen", correct: true, feedback: "Richtig!"},
+                {text: "Risiken werden in der Managementbewertung nicht betrachtet", correct: false, feedback: "FALSCH: Risiken werden SEHR WOHL betrachtet!"}
+            ]},
+            {q: "Was muessen die Ergebnisse der Managementbewertung enthalten?", answers: [
+                {text: "Entscheidungen zu Verbesserungsmoeglichkeiten", correct: true, feedback: "Richtig!"},
+                {text: "Nur eine Zusammenfassung fuer den Zertifizierer", correct: false, feedback: "FALSCH: Die Managementbewertung ist NICHT fuer den Zertifizierer!"},
+                {text: "Entscheidungen zu Aenderungsbedarf am QMS", correct: true, feedback: "Richtig!"},
+                {text: "Ressourcenbedarf", correct: true, feedback: "Richtig!"}
+            ]},
+            {q: "Muessen die Ergebnisse der Managementbewertung dokumentiert werden?", answers: [
+                {text: "Nein, muendliche Absprachen reichen", correct: false, feedback: "FALSCH: Muendlich reicht NICHT!"},
+                {text: "Ja, als dokumentierte Information aufbewahren", correct: true, feedback: "Richtig!"},
+                {text: "Nur die Teilnehmerliste", correct: false, feedback: "FALSCH: Nur Teilnehmerliste reicht NICHT!"},
+                {text: "Die Norm fordert den Nachweis der Ergebnisse", correct: true, feedback: "Richtig!"}
+            ]},
+            {q: "Ein Unternehmen fuehrt die Managementbewertung nur muendlich durch. Ist das normkonform?", answers: [
+                {text: "Ja, die Form ist freigestellt", correct: false, feedback: "FALSCH: Die Form ist NICHT voellig frei!"},
+                {text: "Nein, dokumentierte Information ist gefordert", correct: true, feedback: "Richtig!"},
+                {text: "Die Ergebnisse muessen nachvollziehbar sein", correct: true, feedback: "Richtig!"},
+                {text: "Muendliche Besprechung ist ok, aber Dokumentation der Ergebnisse ist Pflicht", correct: true, feedback: "Richtig!"}
+            ]},
+            {q: "Wie haengen internes Audit und Managementbewertung zusammen?", answers: [
+                {text: "Auditergebnisse sind Eingabe fuer die Managementbewertung", correct: true, feedback: "Richtig!"},
+                {text: "Sie sind voellig unabhaengig", correct: false, feedback: "FALSCH: Sie sind NICHT unabhaengig!"},
+                {text: "Die Managementbewertung bewertet die Wirksamkeit des Auditprogramms", correct: true, feedback: "Richtig!"},
+                {text: "Beide sind Teil des 'Check' im PDCA-Zyklus", correct: true, feedback: "Richtig!"}
+            ]},
+            {q: "Was ist ein Auditprogramm?", answers: [
+                {text: "Ein einzelner Auditbericht", correct: false, feedback: "FALSCH: Das Auditprogramm ist NICHT ein einzelner Bericht!"},
+                {text: "Die Gesamtheit aller geplanten Audits fuer einen Zeitraum", correct: true, feedback: "Richtig!"},
+                {text: "Enthaelt Ziele, Umfang, Ressourcen, Zeitplan", correct: true, feedback: "Richtig!"},
+                {text: "Beruecksichtigt Risiken und Prioritaeten", correct: true, feedback: "Richtig!"}
+            ]},
+            {q: "Wer ist fuer das Auditprogramm verantwortlich?", answers: [
+                {text: "Jeder Auditor selbst", correct: false, feedback: "FALSCH: Nicht jeder Auditor selbst - es braucht eine KOORDINATION!"},
+                {text: "Die oberste Leitung muss es genehmigen", correct: true, feedback: "Richtig!"},
+                {text: "Eine benannte verantwortliche Person", correct: true, feedback: "Richtig!"},
+                {text: "Der externe Zertifizierer", correct: false, feedback: "FALSCH: Der Zertifizierer macht das EXTERNE Audit, nicht das interne Programm."}
+            ]},
+            {q: "Was ist der Unterschied zwischen internem Audit und Zertifizierungsaudit?", answers: [
+                {text: "Internes Audit wird von der Organisation selbst durchgefuehrt", correct: true, feedback: "Richtig!"},
+                {text: "Zertifizierungsaudit wird von einer externen Stelle durchgefuehrt", correct: true, feedback: "Richtig!"},
+                {text: "Beide haben den gleichen Zweck", correct: false, feedback: "FALSCH: Der Zweck ist NICHT gleich!"},
+                {text: "Internes Audit dient der eigenen Verbesserung", correct: true, feedback: "Richtig!"}
+            ]},
+            {q: "Wie oft sollte ein vollstaendiger Auditzyklus alle QMS-Bereiche abdecken?", answers: [
+                {text: "Die Norm schreibt keinen festen Zyklus vor", correct: true, feedback: "Richtig!"},
+                {text: "Typischerweise innerhalb von 1-3 Jahren", correct: true, feedback: "Richtig!"},
+                {text: "Jeder Bereich muss monatlich auditiert werden", correct: false, feedback: "FALSCH: Monatlich ist NICHT gefordert!"},
+                {text: "Die Organisation legt den Zyklus risikobasiert fest", correct: true, feedback: "Richtig!"}
+            ]},
+            {q: "Was sind typische Kennzahlen zur QMS-Leistungsbewertung?", answers: [
+                {text: "Reklamationsquote", correct: true, feedback: "Richtig!"},
+                {text: "Liefertreue", correct: true, feedback: "Richtig!"},
+                {text: "Das Alter der Mitarbeiter", correct: false, feedback: "FALSCH: Das Alter der Mitarbeiter ist KEINE QMS-Kennzahl!"},
+                {text: "Ausschussquote", correct: true, feedback: "Richtig!"}
+            ]},
+            {q: "Ein Auditor findet eine Abweichung. Was ist korrekt?", answers: [
+                {text: "Er dokumentiert die Feststellung mit objektivem Nachweis", correct: true, feedback: "Richtig!"},
+                {text: "Er korrigiert den Fehler selbst", correct: false, feedback: "FALSCH: Der Auditor korrigiert NICHT selbst!"},
+                {text: "Er bespricht die Feststellung mit dem Auditierten", correct: true, feedback: "Richtig!"},
+                {text: "Er fordert Massnahmen vom Verantwortlichen", correct: true, feedback: "Richtig!"}
+            ]},
+            {q: "Was ist ein Auditkriterium?", answers: [
+                {text: "Die Referenz, gegen die geprueft wird", correct: true, feedback: "Richtig!"},
+                {text: "Die persoenliche Meinung des Auditors", correct: false, feedback: "FALSCH: Die persoenliche Meinung ist KEIN Kriterium!"},
+                {text: "Z.B. die ISO 9001, interne Vorgaben, Kundenanforderungen", correct: true, feedback: "Richtig!"},
+                {text: "Muss vor dem Audit festgelegt werden", correct: true, feedback: "Richtig!"}
+            ]},
+            {q: "Welche Kompetenzen braucht ein interner Auditor?", answers: [
+                {text: "Kenntnis der ISO 9001", correct: true, feedback: "Richtig!"},
+                {text: "Audittechniken (Fragetechniken, Dokumentation)", correct: true, feedback: "Richtig!"},
+                {text: "Muss ein externes Auditorzertifikat haben", correct: false, feedback: "FALSCH: Ein EXTERNES Zertifikat ist NICHT gefordert!"},
+                {text: "Kenntnis der zu auditierenden Prozesse", correct: true, feedback: "Richtig!"}
+            ]},
+            {q: "Was passiert, wenn die Managementbewertung Ressourcenmangel feststellt?", answers: [
+                {text: "Nichts, es ist nur eine Feststellung", correct: false, feedback: "FALSCH: Es bleibt NICHT bei der Feststellung!"},
+                {text: "Die oberste Leitung muss entscheiden, ob Ressourcen bereitgestellt werden", correct: true, feedback: "Richtig!"},
+                {text: "Das Ergebnis 'Ressourcenbedarf' muss dokumentiert werden", correct: true, feedback: "Richtig!"},
+                {text: "Massnahmen zur Ressourcenbeschaffung sollten festgelegt werden", correct: true, feedback: "Richtig!"}
+            ]},
+            {q: "Was bedeutet 'Informationen einholen, ueberwachen und ueberpruefen' bei Kundenzufriedenheit?", answers: [
+                {text: "Einholen: Daten aktiv sammeln (Befragungen, Feedback)", correct: true, feedback: "Richtig!"},
+                {text: "Ueberwachen: Daten kontinuierlich beobachten und auswerten", correct: true, feedback: "Richtig!"},
+                {text: "Eine einmalige Befragung reicht aus", correct: false, feedback: "FALSCH: Einmalig reicht NICHT!"},
+                {text: "Ueberpruefen: Bewerten, ob Massnahmen zur Verbesserung noetig sind", correct: true, feedback: "Richtig!"}
+            ]},
+            {q: "Welche Ueberwachungs- und Messergebnisse sind Eingabe der Managementbewertung?", answers: [
+                {text: "Ergebnisse der Prozessueberwachung", correct: true, feedback: "Richtig!"},
+                {text: "Nur die Ergebnisse externer Audits", correct: false, feedback: "FALSCH: NICHT nur externe Audits!"},
+                {text: "Ergebnisse der Produktpruefungen", correct: true, feedback: "Richtig!"},
+                {text: "Alle relevanten Messergebnisse zur QMS-Leistung", correct: true, feedback: "Richtig!"}
+            ]},
+            {q: "Welche Rolle spielen Trends bei der Analyse und Bewertung?", answers: [
+                {text: "Trends zeigen Entwicklungen ueber die Zeit", correct: true, feedback: "Richtig!"},
+                {text: "Trends sind unwichtig, nur Einzelwerte zaehlen", correct: false, feedback: "FALSCH: Trends sind SEHR wichtig!"},
+                {text: "Negative Trends erfordern fruehzeitige Massnahmen", correct: true, feedback: "Richtig!"},
+                {text: "Positive Trends zeigen Wirksamkeit von Verbesserungen", correct: true, feedback: "Richtig!"}
+            ]},
+            {q: "Duerfen interne Audits ohne Vorankuendigung durchgefuehrt werden?", answers: [
+                {text: "Nein, Audits muessen immer angekuendigt werden", correct: false, feedback: "FALSCH: Ankuendigung ist NICHT vorgeschrieben!"},
+                {text: "Ja, die Norm schreibt keine Ankuendigung vor", correct: true, feedback: "Richtig!"},
+                {text: "Unangekuendigte Audits koennen sinnvoll sein (z.B. bei Verdacht)", correct: true, feedback: "Richtig!"},
+                {text: "Die Organisation legt selbst fest, wie Audits angekuendigt werden", correct: true, feedback: "Richtig!"}
+            ]},
+            {q: "Kann die Managementbewertung auf mehrere Termine aufgeteilt werden?", answers: [
+                {text: "Nein, sie muss an einem Tag stattfinden", correct: false, feedback: "FALSCH: Die Norm fordert KEINEN Einzeltermin!"},
+                {text: "Ja, wenn alle Eingaben im Zyklus behandelt werden", correct: true, feedback: "Richtig!"},
+                {text: "Manche Themen koennen in regelmaessigen Meetings behandelt werden", correct: true, feedback: "Richtig!"},
+                {text: "Die Gesamtbewertung muss aber zusammengefuehrt werden", correct: true, feedback: "Richtig!"}
+            ]}
+        ]
+    },
+    "kapitel10": {
+        title: "Kapitel 10 - Verbesserung",
+        questions: [
+            {q: "Was muss die Organisation bezueglich Verbesserung tun?", answers: [
+                {text: "Verbesserungsmoeglichkeiten bestimmen und auswaehlen", correct: true, feedback: "Richtig!"},
+                {text: "Nur auf Beschwerden reagieren", correct: false, feedback: "FALSCH: NICHT nur auf Beschwerden reagieren! Verbesserung ist PROAKTIV - Chancen suchen, nicht nur Probleme loesen."},
+                {text: "Notwendige Massnahmen ergreifen, um Kundenanforderungen zu erfuellen", correct: true, feedback: "Richtig!"},
+                {text: "Kundenzufriedenheit erhoehen", correct: true, feedback: "Richtig!"}
+            ]},
+            {q: "Welche Aspekte umfasst die Verbesserung nach ISO 9001?", answers: [
+                {text: "Produkte und Dienstleistungen verbessern", correct: true, feedback: "Richtig!"},
+                {text: "Unerwuenschte Auswirkungen korrigieren, verhindern, verringern", correct: true, feedback: "Richtig!"},
+                {text: "Nur Kostensenkung", correct: false, feedback: "FALSCH: Verbesserung ist NICHT nur Kostensenkung! Es geht um Qualitaet, Kundenzufriedenheit, Prozessleistung, Wirksamkeit."},
+                {text: "Leistung und Wirksamkeit des QMS verbessern", correct: true, feedback: "Richtig!"}
+            ]},
+            {q: "Welche Beispiele fuer Verbesserung nennt die Norm?", answers: [
+                {text: "Korrektur", correct: true, feedback: "Richtig!"},
+                {text: "Fortlaufende Verbesserung (KVP)", correct: true, feedback: "Richtig!"},
+                {text: "Nur radikale Innovationen", correct: false, feedback: "FALSCH: NICHT nur radikale Innovationen! Die Norm nennt verschiedene Verbesserungsarten: kleine Schritte (KVP), Korrekturen, aber AUCH grosse Spruenge."},
+                {text: "Sprunghafte Aenderung, Innovation, Reorganisation", correct: true, feedback: "Richtig!"}
+            ]},
+            {q: "Was muss bei einer Nichtkonformitaet (einschliesslich Reklamationen) geschehen?", answers: [
+                {text: "Darauf reagieren und Massnahmen zur Steuerung ergreifen", correct: true, feedback: "Richtig!"},
+                {text: "Die Nichtkonformitaet ignorieren", correct: false, feedback: "FALSCH: Ignorieren ist KEINE Option! Jede Nichtkonformitaet erfordert Reaktion."},
+                {text: "Massnahmen zur Korrektur ergreifen", correct: true, feedback: "Richtig!"},
+                {text: "Mit den Folgen und Auswirkungen umgehen", correct: true, feedback: "Richtig!"}
+            ]},
+            {q: "Was ist der erste Schritt nach Erkennen einer Nichtkonformitaet?", answers: [
+                {text: "Sofort die Ursache analysieren", correct: false, feedback: "FALSCH: Ursachenanalyse kommt SPAETER! Zuerst muss der akute Fehler korrigiert werden."},
+                {text: "Darauf reagieren und korrigieren (Fehler beseitigen)", correct: true, feedback: "Richtig!"},
+                {text: "Einen Bericht schreiben", correct: false, feedback: "FALSCH: Der Bericht kommt spaeter - zuerst handeln!"},
+                {text: "Die Auswirkungen begrenzen", correct: true, feedback: "Richtig!"}
+            ]},
+            {q: "Was muss nach der Korrektur einer Nichtkonformitaet getan werden?", answers: [
+                {text: "Die Notwendigkeit von Korrekturmassnahmen bewerten", correct: true, feedback: "Richtig!"},
+                {text: "Die Nichtkonformitaet ueberpruefen (Ursachenanalyse)", correct: true, feedback: "Richtig!"},
+                {text: "Nichts, mit der Korrektur ist alles erledigt", correct: false, feedback: "FALSCH: Mit der Korrektur ist NICHT alles erledigt! Die URSACHE muss analysiert werden."},
+                {text: "Pruefen, ob aehnliche Nichtkonformitaeten existieren koennten", correct: true, feedback: "Richtig!"}
+            ]},
+            {q: "Was ist der Unterschied zwischen Korrektur und Korrekturmassnahme?", answers: [
+                {text: "Korrektur beseitigt den Fehler (Symptom)", correct: true, feedback: "Richtig!"},
+                {text: "Korrekturmassnahme beseitigt die Ursache", correct: true, feedback: "Richtig!"},
+                {text: "Beide Begriffe sind identisch", correct: false, feedback: "FALSCH: Die Begriffe sind NICHT identisch! Korrektur = Fehler reparieren, Korrekturmassnahme = Ursache beseitigen."},
+                {text: "Korrekturmassnahme verhindert Wiederholung", correct: true, feedback: "Richtig!"}
+            ]},
+            {q: "Was gehoert zur Ursachenanalyse bei Nichtkonformitaeten?", answers: [
+                {text: "Die Nichtkonformitaet ueberpruefen", correct: true, feedback: "Richtig!"},
+                {text: "Die Ursachen bestimmen", correct: true, feedback: "Richtig!"},
+                {text: "Raten, was die Ursache sein koennte", correct: false, feedback: "FALSCH: RATEN ist keine Ursachenanalyse! Es braucht systematische Methoden."},
+                {text: "Pruefen, ob aehnliche Nichtkonformitaeten existieren oder auftreten koennten", correct: true, feedback: "Richtig!"}
+            ]},
+            {q: "Welche Methoden zur Ursachenanalyse gibt es?", answers: [
+                {text: "5-Why-Methode (5x Warum fragen)", correct: true, feedback: "Richtig!"},
+                {text: "Ishikawa-Diagramm (Fischgraete)", correct: true, feedback: "Richtig!"},
+                {text: "Wuerfeln", correct: false, feedback: "FALSCH: Wuerfeln ist KEINE anerkannte Methode! Ursachenanalyse erfordert systematische Werkzeuge."},
+                {text: "Fehlerbaumanalyse", correct: true, feedback: "Richtig!"}
+            ]},
+            {q: "Wann sind Korrekturmassnahmen erforderlich?", answers: [
+                {text: "Bei jeder Nichtkonformitaet automatisch", correct: false, feedback: "FALSCH: NICHT automatisch bei jeder NK! Manchmal reicht Korrektur, wenn es ein Einzelfall ist."},
+                {text: "Wenn die Ursachenanalyse zeigt, dass Wiederholung moeglich ist", correct: true, feedback: "Richtig!"},
+                {text: "Proportional zur Auswirkung der Nichtkonformitaet", correct: true, feedback: "Richtig!"},
+                {text: "Nur bei Kundenreklamationen", correct: false, feedback: "FALSCH: Nicht NUR bei Reklamationen - auch interne NK koennen Korrekturmassnahmen erfordern."}
+            ]},
+            {q: "Was bedeutet 'Korrekturmassnahmen muessen den Auswirkungen angemessen sein'?", answers: [
+                {text: "Kleine Fehler erfordern kleine Massnahmen", correct: true, feedback: "Richtig!"},
+                {text: "Der Aufwand muss im Verhaeltnis zum Risiko stehen", correct: true, feedback: "Richtig!"},
+                {text: "Jeder Fehler erfordert die gleiche Massnahme", correct: false, feedback: "FALSCH: NICHT jeder Fehler braucht die gleiche Massnahme!"},
+                {text: "Kritische Fehler erfordern umfangreichere Massnahmen", correct: true, feedback: "Richtig!"}
+            ]},
+            {q: "Was muss nach Umsetzung einer Korrekturmassnahme getan werden?", answers: [
+                {text: "Die Wirksamkeit der Korrekturmassnahme ueberpruefen", correct: true, feedback: "Richtig!"},
+                {text: "Nichts, die Massnahme wirkt automatisch", correct: false, feedback: "FALSCH: Massnahmen wirken NICHT automatisch! Man muss PRUEFEN, ob die Ursache beseitigt wurde."},
+                {text: "Dokumentieren, ob die Massnahme erfolgreich war", correct: true, feedback: "Richtig!"},
+                {text: "Bei Unwirksamkeit: neue Massnahme festlegen", correct: true, feedback: "Richtig!"}
+            ]},
+            {q: "Muessen Risiken und Chancen bei Korrekturmassnahmen aktualisiert werden?", answers: [
+                {text: "Nein, Risiken haben damit nichts zu tun", correct: false, feedback: "FALSCH: Risiken HABEN damit zu tun! Eine Nichtkonformitaet kann ein bisher unbekanntes Risiko aufzeigen."},
+                {text: "Ja, falls erforderlich", correct: true, feedback: "Richtig!"},
+                {text: "Neue Erkenntnisse koennen neue Risiken aufzeigen", correct: true, feedback: "Richtig!"},
+                {text: "Wirksame Massnahmen koennen Risiken reduzieren", correct: true, feedback: "Richtig!"}
+            ]},
+            {q: "Muessen Aenderungen am QMS aufgrund von Korrekturmassnahmen vorgenommen werden?", answers: [
+                {text: "Nie, das QMS bleibt unveraendert", correct: false, feedback: "FALSCH: Das QMS kann und muss sich AENDERN, wenn Korrekturmassnahmen das erfordern!"},
+                {text: "Falls erforderlich, ja", correct: true, feedback: "Richtig!"},
+                {text: "Korrekturmassnahmen koennen Prozessaenderungen erfordern", correct: true, feedback: "Richtig!"},
+                {text: "Dokumentierte Verfahren muessen ggf. angepasst werden", correct: true, feedback: "Richtig!"}
+            ]},
+            {q: "Welche dokumentierte Information ist fuer Nichtkonformitaeten gefordert?", answers: [
+                {text: "Art der Nichtkonformitaet", correct: true, feedback: "Richtig!"},
+                {text: "Ergriffene Massnahmen", correct: true, feedback: "Richtig!"},
+                {text: "Nur muendliche Mitteilung an den Vorgesetzten", correct: false, feedback: "FALSCH: Muendliche Mitteilung reicht NICHT! Nichtkonformitaeten muessen dokumentiert werden."},
+                {text: "Ergebnisse von Korrekturmassnahmen", correct: true, feedback: "Richtig!"}
+            ]},
+            {q: "Eine Reklamation trifft ein. Was muss getan werden?", answers: [
+                {text: "Die Reklamation ist eine Nichtkonformitaet", correct: true, feedback: "Richtig!"},
+                {text: "Zunaechst den Kunden zufriedenstellen (Korrektur)", correct: true, feedback: "Richtig!"},
+                {text: "Die Reklamation ignorieren, wenn der Kunde uebertreibt", correct: false, feedback: "FALSCH: Reklamationen NIEMALS ignorieren! Jede Reklamation ist eine Chance zur Verbesserung."},
+                {text: "Ursache analysieren und Wiederholung verhindern", correct: true, feedback: "Richtig!"}
+            ]},
+            {q: "Was ist fortlaufende Verbesserung?", answers: [
+                {text: "Einmalige Verbesserungsprojekte", correct: false, feedback: "FALSCH: NICHT nur einmalige Projekte! Fortlaufend bedeutet: immer wieder, kontinuierlich, dauerhaft."},
+                {text: "Wiederkehrende Taetigkeit zur Leistungssteigerung", correct: true, feedback: "Richtig!"},
+                {text: "Kontinuierlicher Verbesserungsprozess (KVP)", correct: true, feedback: "Richtig!"},
+                {text: "Staendiges Streben nach Verbesserung", correct: true, feedback: "Richtig!"}
+            ]},
+            {q: "Was muss die Organisation bezueglich fortlaufender Verbesserung tun?", answers: [
+                {text: "Eignung, Angemessenheit und Wirksamkeit des QMS verbessern", correct: true, feedback: "Richtig!"},
+                {text: "Nur verbessern, wenn Kunden es fordern", correct: false, feedback: "FALSCH: NICHT nur wenn Kunden es fordern! Verbesserung ist Selbstverpflichtung der Organisation."},
+                {text: "Ergebnisse der Analyse und Bewertung beruecksichtigen", correct: true, feedback: "Richtig!"},
+                {text: "Ergebnisse der Managementbewertung beruecksichtigen", correct: true, feedback: "Richtig!"}
+            ]},
+            {q: "Welche Eingaben dienen der fortlaufenden Verbesserung?", answers: [
+                {text: "Ergebnisse der Datenanalyse (9.1.3)", correct: true, feedback: "Richtig!"},
+                {text: "Auditergebnisse", correct: true, feedback: "Richtig!"},
+                {text: "Zufaellige Ideen ohne Datengrundlage", correct: false, feedback: "FALSCH: Zufaellige Ideen sind keine systematische Grundlage! Verbesserung basiert auf DATEN."},
+                {text: "Ergebnisse der Managementbewertung", correct: true, feedback: "Richtig!"}
+            ]},
+            {q: "Was ist der PDCA-Zyklus?", answers: [
+                {text: "Plan-Do-Check-Act", correct: true, feedback: "Richtig!"},
+                {text: "Ein einmaliger Durchlauf", correct: false, feedback: "FALSCH: PDCA ist KEIN einmaliger Durchlauf! Der Zyklus dreht sich immer weiter."},
+                {text: "Planen-Umsetzen-Pruefen-Handeln", correct: true, feedback: "Richtig!"},
+                {text: "Grundlage fuer fortlaufende Verbesserung", correct: true, feedback: "Richtig!"}
+            ]},
+            {q: "Welche QM-Grundsaetze unterstuetzen die Verbesserung?", answers: [
+                {text: "Verbesserung ist selbst ein QM-Grundsatz", correct: true, feedback: "Richtig!"},
+                {text: "Faktengestuetzte Entscheidungsfindung", correct: true, feedback: "Richtig!"},
+                {text: "Kundenorientierung", correct: true, feedback: "Richtig!"},
+                {text: "Keiner, Verbesserung ist unabhaengig", correct: false, feedback: "FALSCH: Verbesserung ist NICHT unabhaengig! Sie ist einer der 7 QM-Grundsaetze."}
+            ]},
+            {q: "Ein Mitarbeiter hat eine Verbesserungsidee. Wie sollte die Organisation damit umgehen?", answers: [
+                {text: "Ideen ignorieren, nur Fuehrungskraefte haben gute Ideen", correct: false, feedback: "FALSCH: Mitarbeiterideen sind WERTVOLL! Sie kennen die Prozesse am besten."},
+                {text: "Ein System zur Erfassung und Bewertung von Ideen haben", correct: true, feedback: "Richtig!"},
+                {text: "Mitarbeiter zur Einreichung von Verbesserungsvorschlaegen ermutigen", correct: true, feedback: "Richtig!"},
+                {text: "Gute Ideen umsetzen und Feedback geben", correct: true, feedback: "Richtig!"}
+            ]},
+            {q: "Was ist der Unterschied zwischen Korrekturmassnahme und Verbesserung?", answers: [
+                {text: "Korrekturmassnahme reagiert auf einen Fehler", correct: true, feedback: "Richtig!"},
+                {text: "Verbesserung ist proaktiv (ohne vorherigen Fehler)", correct: true, feedback: "Richtig!"},
+                {text: "Beide sind identisch", correct: false, feedback: "FALSCH: Sie sind NICHT identisch! Korrekturmassnahme = REAKTIV, Verbesserung = PROAKTIV."},
+                {text: "Korrekturmassnahme: Problem loesen. Verbesserung: besser werden", correct: true, feedback: "Richtig!"}
+            ]},
+            {q: "Welche Aussagen zur fortlaufenden Verbesserung sind richtig?", answers: [
+                {text: "Kleine Schritte sind genauso wichtig wie grosse Spruenge", correct: true, feedback: "Richtig!"},
+                {text: "Verbesserung ist nur Aufgabe der Qualitaetsabteilung", correct: false, feedback: "FALSCH: Verbesserung ist NICHT nur Q-Abteilungssache! Jeder Mitarbeiter kann beitragen."},
+                {text: "Jeder Mitarbeiter kann zur Verbesserung beitragen", correct: true, feedback: "Richtig!"},
+                {text: "Verbesserung ist ein QM-Grundsatz der ISO 9000", correct: true, feedback: "Richtig!"}
+            ]},
+            {q: "Wie haengen die Kapitel 9 und 10 zusammen?", answers: [
+                {text: "Kapitel 9 liefert Daten, Kapitel 10 nutzt sie zur Verbesserung", correct: true, feedback: "Richtig!"},
+                {text: "Sie sind voellig unabhaengig", correct: false, feedback: "FALSCH: Sie sind NICHT unabhaengig! Kap. 9 (Check) liefert Erkenntnisse, Kap. 10 (Act) setzt Verbesserungen um."},
+                {text: "Analyse (9.1.3) zeigt Verbesserungsbedarf (10)", correct: true, feedback: "Richtig!"},
+                {text: "Managementbewertung (9.3) fuehrt zu Verbesserungsentscheidungen (10)", correct: true, feedback: "Richtig!"}
+            ]},
+            {q: "Was ist der Unterschied zwischen Sofortmassnahme und Korrekturmassnahme?", answers: [
+                {text: "Sofortmassnahme = schnelle Reaktion zur Schadensbegrenzung", correct: true, feedback: "Richtig!"},
+                {text: "Korrekturmassnahme = nachhaltige Beseitigung der Ursache", correct: true, feedback: "Richtig!"},
+                {text: "Beide Begriffe sind identisch", correct: false, feedback: "FALSCH: Die Begriffe sind NICHT identisch! Sofortmassnahme = SCHNELL handeln, Korrekturmassnahme = URSACHE beseitigen."},
+                {text: "Sofortmassnahme: Produkt retten. Korrekturmassnahme: Prozess verbessern", correct: true, feedback: "Richtig!"}
+            ]},
+            {q: "Was ist ein 8D-Report?", answers: [
+                {text: "Eine strukturierte Methode zur Problemloesung in 8 Schritten", correct: true, feedback: "Richtig!"},
+                {text: "Ein von der ISO 9001 vorgeschriebenes Dokument", correct: false, feedback: "FALSCH: Der 8D-Report ist NICHT von ISO 9001 vorgeschrieben! Er ist eine bewaehrte METHODE."},
+                {text: "Enthaelt: Team bilden, Problem beschreiben, Sofortmassnahme, Ursache, Korrekturmassnahme, Wirksamkeit, Vorbeugung, Abschluss", correct: true, feedback: "Richtig!"},
+                {text: "Besonders in der Automobilindustrie verbreitet", correct: true, feedback: "Richtig!"}
+            ]},
+            {q: "Wie helfen Fehlersammelliste und Paretoanalyse bei der Verbesserung?", answers: [
+                {text: "Fehlersammelliste erfasst systematisch alle Fehler", correct: true, feedback: "Richtig!"},
+                {text: "Paretoanalyse zeigt: 80% der Probleme kommen von 20% der Ursachen", correct: true, feedback: "Richtig!"},
+                {text: "Man sollte alle Fehler gleichzeitig bearbeiten", correct: false, feedback: "FALSCH: NICHT alle gleichzeitig! Das Pareto-Prinzip hilft zu PRIORISIEREN."},
+                {text: "Priorisierung: Zuerst die haeufigsten/teuersten Fehler angehen", correct: true, feedback: "Richtig!"}
+            ]},
+            {q: "Was ist Benchmarking als Verbesserungsmethode?", answers: [
+                {text: "Vergleich mit den Besten der Branche", correct: true, feedback: "Richtig!"},
+                {text: "Nur interne Vergleiche zwischen Abteilungen", correct: false, feedback: "FALSCH: Nicht NUR interne Vergleiche! Der groesste Nutzen liegt im EXTERNEN Vergleich."},
+                {text: "Lernen von Best Practices anderer Organisationen", correct: true, feedback: "Richtig!"},
+                {text: "Identifikation von Verbesserungspotenzialen durch Vergleich", correct: true, feedback: "Richtig!"}
+            ]},
+            {q: "Was ist der Unterschied zwischen Kaizen und Innovation?", answers: [
+                {text: "Kaizen = viele kleine Verbesserungsschritte", correct: true, feedback: "Richtig!"},
+                {text: "Innovation = grosse sprunghafte Veraenderung", correct: true, feedback: "Richtig!"},
+                {text: "Beide Ansaetze schliessen sich aus", correct: false, feedback: "FALSCH: Sie schliessen sich NICHT aus! Kaizen und Innovation ergaenzen sich."},
+                {text: "Ein gutes QMS nutzt BEIDE Ansaetze", correct: true, feedback: "Richtig!"}
+            ]}
+        ]
+    },
+    "pruefungsblock1": {
+        title: "Pruefungsblock 1 - TUeV-Niveau Simulation",
+        questions: [
+            {q: "Die Organisation muss die interessierten Parteien bestimmen, die fuer das QMS relevant sind. Welche Aussage ist normativ KORREKT?", answers: [
+                {text: "Alle interessierten Parteien muessen beruecksichtigt werden", correct: false, feedback: "FALSCH: Nicht ALLE, nur die RELEVANTEN! Die Norm sagt 'relevant fuer das QMS'."},
+                {text: "Nur die RELEVANTEN interessierten Parteien muessen bestimmt werden", correct: true, feedback: "Richtig!"},
+                {text: "Interessierte Parteien sind ausschliesslich Kunden und Lieferanten", correct: false, feedback: "FALSCH: Auch Behoerden, Mitarbeiter, Gesellschaft etc. koennen relevant sein."},
+                {text: "Die Anforderungen relevanter interessierter Parteien muessen bestimmt werden", correct: true, feedback: "Richtig!"}
+            ]},
+            {q: "Der Anwendungsbereich des QMS muss als dokumentierte Information verfuegbar sein. Welche Anforderung ist dabei NICHT zutreffend?", answers: [
+                {text: "Die Produkte und Dienstleistungen muessen genannt werden", correct: true, feedback: "Richtig!"},
+                {text: "Begruendungen fuer nicht anwendbare Anforderungen muessen enthalten sein", correct: true, feedback: "Richtig!"},
+                {text: "Die Anzahl der Mitarbeiter muss dokumentiert sein", correct: false, feedback: "FALSCH: Die Mitarbeiterzahl ist KEINE Normforderung fuer den Anwendungsbereich!"},
+                {text: "Der Anwendungsbereich muss die Grenzen des QMS beschreiben", correct: true, feedback: "Richtig!"}
+            ]},
+            {q: "Kapitel 4.4 fordert, dass die Organisation ihr QMS einschliesslich der Prozesse festlegen muss. Welche Aussagen sind normativ korrekt?", answers: [
+                {text: "Die Abfolge und Wechselwirkung der Prozesse muessen bestimmt werden", correct: true, feedback: "Richtig!"},
+                {text: "Fuer jeden Prozess muss ein eigenes Dokument erstellt werden", correct: false, feedback: "FALSCH: Die Norm fordert KEIN eigenes Dokument pro Prozess! Die Dokumentationsform ist freigestellt."},
+                {text: "Kriterien und Methoden zur Sicherstellung der Wirksamkeit muessen festgelegt werden", correct: true, feedback: "Richtig!"},
+                {text: "Prozessverantwortlichkeiten und Befugnisse muessen zugewiesen werden", correct: true, feedback: "Richtig!"}
+            ]},
+            {q: "Bei der Bestimmung des Kontexts muss die Organisation externe Themen ueberwachen und ueberpruefen. Welches ist ein EXTERNES Thema?", answers: [
+                {text: "Kompetenz der Mitarbeiter", correct: false, feedback: "FALSCH: Kompetenz der Mitarbeiter ist ein INTERNES Thema!"},
+                {text: "Technologischer Wandel in der Branche", correct: true, feedback: "Richtig!"},
+                {text: "Organisationskultur", correct: false, feedback: "FALSCH: Organisationskultur ist ein INTERNES Thema!"},
+                {text: "Interne Kommunikationswege", correct: false, feedback: "FALSCH: Interne Kommunikationswege sind ein INTERNES Thema!"}
+            ]},
+            {q: "Die dokumentierte Information zum Anwendungsbereich muss aufrechterhalten werden. Was bedeutet 'aufrechterhalten' normativ?", answers: [
+                {text: "Als Nachweis archivieren", correct: false, feedback: "FALSCH: Das ist 'AUFBEWAHREN', nicht aufrechterhalten!"},
+                {text: "Aktuell halten und bei Bedarf anpassen", correct: true, feedback: "Richtig!"},
+                {text: "Mindestens 10 Jahre aufbewahren", correct: false, feedback: "FALSCH: 10 Jahre ist keine Normforderung."},
+                {text: "Vorgabedokumente pflegen und aktualisieren", correct: true, feedback: "Richtig!"}
+            ]},
+            {q: "Die oberste Leitung muss Rechenschaftspflicht fuer die Wirksamkeit des QMS uebernehmen. Was bedeutet das normativ?", answers: [
+                {text: "Die Verantwortung kann vollstaendig an den QMB delegiert werden", correct: false, feedback: "FALSCH: Rechenschaftspflicht kann NICHT delegiert werden! Aufgaben ja, Verantwortung nein."},
+                {text: "Die oberste Leitung bleibt verantwortlich, auch wenn Aufgaben delegiert werden", correct: true, feedback: "Richtig!"},
+                {text: "Die oberste Leitung muss alle Audits persoenlich durchfuehren", correct: false, feedback: "FALSCH: Persoenliche Audit-Durchfuehrung ist nicht gefordert."},
+                {text: "Die Rechenschaftspflicht ist nicht delegierbar", correct: true, feedback: "Richtig!"}
+            ]},
+            {q: "Die Qualitaetspolitik muss bestimmte Anforderungen erfuellen. Welche Aussage ist NICHT korrekt?", answers: [
+                {text: "Sie muss als dokumentierte Information verfuegbar sein", correct: true, feedback: "Richtig!"},
+                {text: "Sie muss jaehrlich komplett neu erstellt werden", correct: false, feedback: "FALSCH: Jaehrliche Neuerstellung ist NICHT gefordert! Die Q-Politik wird bei Bedarf angepasst."},
+                {text: "Sie muss eine Verpflichtung zur fortlaufenden Verbesserung enthalten", correct: true, feedback: "Richtig!"},
+                {text: "Sie muss fuer interessierte Parteien verfuegbar sein", correct: true, feedback: "Richtig!"}
+            ]},
+            {q: "Kapitel 5.3 fordert die Zuweisung von Verantwortlichkeiten und Befugnissen. Welche Aussage zur Rolle des QMB ist normativ korrekt?", answers: [
+                {text: "Der QMB muss Mitglied der obersten Leitung sein", correct: false, feedback: "FALSCH: Keine Vorgabe mehr zur Person!"},
+                {text: "Die Benennung eines QMB ist seit ISO 9001:2015 nicht mehr explizit gefordert", correct: true, feedback: "Richtig!"},
+                {text: "Die Verantwortlichkeiten des frueheren QMB muessen dennoch zugewiesen werden", correct: true, feedback: "Richtig!"},
+                {text: "Ein externer Berater kann dauerhaft als QMB fungieren", correct: false, feedback: "FALSCH: Die Organisation muss die Verantwortung INTERN wahrnehmen."}
+            ]},
+            {q: "Die oberste Leitung muss die Kundenorientierung foerdern. In welchem Kapitel wird die MESSUNG der Kundenzufriedenheit gefordert?", answers: [
+                {text: "Kapitel 5.1.2", correct: false, feedback: "FALSCH: Kap. 5.1.2 fordert FOERDERUNG der Kundenorientierung (Fuehrungsaufgabe)."},
+                {text: "Kapitel 7.2", correct: false, feedback: "FALSCH: Kap. 7.2 ist Kompetenz."},
+                {text: "Kapitel 9.1.2", correct: true, feedback: "Richtig!"},
+                {text: "Kapitel 10.1", correct: false, feedback: "FALSCH: Kap. 10.1 ist Verbesserung."}
+            ]},
+            {q: "Welche Verpflichtungen muss die Qualitaetspolitik laut Norm MINDESTENS enthalten?", answers: [
+                {text: "Verpflichtung zur Erfuellung zutreffender Anforderungen", correct: true, feedback: "Richtig!"},
+                {text: "Verpflichtung zur fortlaufenden Verbesserung des QMS", correct: true, feedback: "Richtig!"},
+                {text: "Verpflichtung zur Gewinnmaximierung", correct: false, feedback: "FALSCH: Gewinnmaximierung ist KEIN Norminhalt!"},
+                {text: "Verpflichtung zur Zertifizierung", correct: false, feedback: "FALSCH: Zertifizierung ist FREIWILLIG, keine Normforderung."}
+            ]},
+            {q: "Die Norm fordert die Bestimmung von Risiken und Chancen. Welche Aussage ist normativ KORREKT?", answers: [
+                {text: "Ein formelles Risikomanagement nach ISO 31000 ist Pflicht", correct: false, feedback: "FALSCH: ISO 31000 ist NICHT Pflicht!"},
+                {text: "Eine dokumentierte Risikomatrix ist zwingend erforderlich", correct: false, feedback: "FALSCH: Keine Risikomatrix vorgeschrieben!"},
+                {text: "Die Methode zur Risikobetrachtung ist freigestellt", correct: true, feedback: "Richtig!"},
+                {text: "Risikobasiertes Denken ersetzt die frueheren Vorbeugungsmassnahmen", correct: true, feedback: "Richtig!"}
+            ]},
+            {q: "Qualitaetsziele muessen bestimmte Eigenschaften haben. Welche Eigenschaft ist NICHT normativ gefordert?", answers: [
+                {text: "Messbar", correct: true, feedback: "Richtig!"},
+                {text: "Ueberwacht", correct: true, feedback: "Richtig!"},
+                {text: "Jaehrlich neu festgelegt", correct: false, feedback: "FALSCH: 'Jaehrlich' steht NICHT in der Norm! Q-Ziele werden bei Bedarf aktualisiert."},
+                {text: "Im Einklang mit der Qualitaetspolitik", correct: true, feedback: "Richtig!"}
+            ]},
+            {q: "Fuer Qualitaetsziele muss die Planung bestimmte Aspekte umfassen. Welche sind normativ gefordert?", answers: [
+                {text: "Was getan wird", correct: true, feedback: "Richtig!"},
+                {text: "Wer verantwortlich ist", correct: true, feedback: "Richtig!"},
+                {text: "Welche Ressourcen erforderlich sind", correct: true, feedback: "Richtig!"},
+                {text: "Wie die Ergebnisse bewertet werden", correct: true, feedback: "Richtig!"}
+            ]},
+            {q: "Ein Risiko wird definiert als 'Auswirkung von Ungewissheit'. Welche Aussage ist normativ korrekt?", answers: [
+                {text: "Risiko kann nur negative Auswirkungen haben", correct: false, feedback: "FALSCH: Risiko ist NICHT nur negativ!"},
+                {text: "Risiko kann positiv oder negativ sein", correct: true, feedback: "Richtig!"},
+                {text: "Positive Auswirkungen werden als Chancen bezeichnet", correct: true, feedback: "Richtig!"},
+                {text: "Risiken und Chancen werden getrennt in unterschiedlichen Kapiteln behandelt", correct: false, feedback: "FALSCH: Risiken und Chancen werden GEMEINSAM in Kap. 6.1 behandelt."}
+            ]},
+            {q: "Bei geplanten Aenderungen am QMS muss die Organisation bestimmte Aspekte beruecksichtigen. Welcher gehoert NICHT dazu?", answers: [
+                {text: "Zweck der Aenderung", correct: true, feedback: "Richtig!"},
+                {text: "Moegliche Konsequenzen", correct: true, feedback: "Richtig!"},
+                {text: "Vorab-Genehmigung durch die Zertifizierungsstelle", correct: false, feedback: "FALSCH: Der Zertifizierer muss Aenderungen NICHT vorab genehmigen!"},
+                {text: "Verfuegbarkeit von Ressourcen", correct: true, feedback: "Richtig!"}
+            ]},
+            {q: "Die dokumentierte Information ueber Qualitaetsziele muss...", answers: [
+                {text: "aufrechterhalten werden", correct: true, feedback: "Richtig!"},
+                {text: "aufbewahrt werden", correct: false, feedback: "FALSCH: Q-Ziele werden AUFRECHTERHALTEN (Vorgabe), nicht aufbewahrt (Nachweis)!"},
+                {text: "monatlich aktualisiert werden", correct: false, feedback: "FALSCH: Monatlich ist keine Normforderung."},
+                {text: "vom Zertifizierer freigegeben werden", correct: false, feedback: "FALSCH: Der Zertifizierer gibt Q-Ziele nicht frei."}
+            ]},
+            {q: "Die Norm fordert die Bestimmung und Bereitstellung von Ressourcen. Welche gehoeren NICHT zu den in Kapitel 7.1 genannten Ressourcenarten?", answers: [
+                {text: "Personen", correct: true, feedback: "Richtig!"},
+                {text: "Finanzielle Mittel", correct: false, feedback: "FALSCH: Finanzielle Mittel werden in Kap. 7.1 NICHT explizit genannt!"},
+                {text: "Infrastruktur", correct: true, feedback: "Richtig!"},
+                {text: "Wissen der Organisation", correct: true, feedback: "Richtig!"}
+            ]},
+            {q: "Metrologische Rueckfuehrbarkeit von Messmitteln ist gefordert, wenn...", answers: [
+                {text: "es immer fuer alle Messmittel gilt", correct: false, feedback: "FALSCH: NICHT immer fuer alle!"},
+                {text: "es eine Anforderung ist", correct: true, feedback: "Richtig!"},
+                {text: "es als wesentlich fuer das Vertrauen in Messergebnisse angesehen wird", correct: true, feedback: "Richtig!"},
+                {text: "der Zertifizierer es verlangt", correct: false, feedback: "FALSCH: Der Zertifizierer bestimmt nicht die Anforderungen."}
+            ]},
+            {q: "Wissen der Organisation (7.1.6) ist eine neue Anforderung seit ISO 9001:2015. Welche Aussage ist NICHT korrekt?", answers: [
+                {text: "Wissen muss bestimmt werden", correct: true, feedback: "Richtig!"},
+                {text: "Wissen muss vollstaendig in einem Wiki dokumentiert werden", correct: false, feedback: "FALSCH: Ein Wiki ist NICHT vorgeschrieben! Die Dokumentationsform ist freigestellt."},
+                {text: "Wissen muss aufrechterhalten werden", correct: true, feedback: "Richtig!"},
+                {text: "Bei Aenderungsbedarf muss zusaetzliches Wissen erworben werden", correct: true, feedback: "Richtig!"}
+            ]},
+            {q: "Kompetenz kann durch verschiedene Wege erworben werden. Welche nennt die Norm?", answers: [
+                {text: "Ausbildung", correct: true, feedback: "Richtig!"},
+                {text: "Schulung", correct: true, feedback: "Richtig!"},
+                {text: "Nur Universitaetsstudium", correct: false, feedback: "FALSCH: Universitaetsstudium ist NICHT zwingend! Die Norm akzeptiert alle Wege gleichwertig."},
+                {text: "Erfahrung", correct: true, feedback: "Richtig!"}
+            ]},
+            {q: "Das Bewusstsein der Mitarbeiter (7.3) muss sich auf bestimmte Aspekte erstrecken. Welcher gehoert NICHT dazu?", answers: [
+                {text: "Die Qualitaetspolitik", correct: true, feedback: "Richtig!"},
+                {text: "Relevante Qualitaetsziele", correct: true, feedback: "Richtig!"},
+                {text: "Die Gehaelter der Kollegen", correct: false, feedback: "FALSCH: Gehaelter sind KEIN QMS-Thema!"},
+                {text: "Die Folgen bei Nichterfuellung von QMS-Anforderungen", correct: true, feedback: "Richtig!"}
+            ]},
+            {q: "Der Begriff 'dokumentierte Information' ersetzt in der ISO 9001:2015...", answers: [
+                {text: "nur den Begriff 'Dokumente'", correct: false, feedback: "FALSCH: Unvollstaendig!"},
+                {text: "nur den Begriff 'Aufzeichnungen'", correct: false, feedback: "FALSCH: Unvollstaendig!"},
+                {text: "die Begriffe 'Dokumente' und 'Aufzeichnungen'", correct: true, feedback: "Richtig!"},
+                {text: "den Begriff 'QM-Handbuch'", correct: false, feedback: "FALSCH: QM-Handbuch ist keine Begriffskategorie."}
+            ]},
+            {q: "Dokumentierte Information muss 'aufbewahrt' werden. Welche Dokumente fallen typischerweise darunter?", answers: [
+                {text: "Arbeitsanweisungen", correct: false, feedback: "FALSCH: Arbeitsanweisungen sind VORGABEN - sie werden AUFRECHTERHALTEN, nicht aufbewahrt!"},
+                {text: "Kalibrierprotokolle", correct: true, feedback: "Richtig!"},
+                {text: "Schulungsnachweise", correct: true, feedback: "Richtig!"},
+                {text: "Auditberichte", correct: true, feedback: "Richtig!"}
+            ]},
+            {q: "Die Kommunikation (7.4) muss bestimmte Aspekte festlegen. Welche sind normativ gefordert?", answers: [
+                {text: "Worueber kommuniziert wird", correct: true, feedback: "Richtig!"},
+                {text: "Wann kommuniziert wird", correct: true, feedback: "Richtig!"},
+                {text: "Die Anzahl der taeglichen Meetings", correct: false, feedback: "FALSCH: Meeting-Frequenz ist NICHT vorgeschrieben!"},
+                {text: "Wer kommuniziert", correct: true, feedback: "Richtig!"}
+            ]},
+            {q: "Die Ueberpruefung der Anforderungen an Produkte/DL muss VOR welchem Zeitpunkt erfolgen?", answers: [
+                {text: "Nach der Lieferung", correct: false, feedback: "FALSCH: Nach der Lieferung ist zu SPAET!"},
+                {text: "Vor der Zusage zur Lieferung", correct: true, feedback: "Richtig!"},
+                {text: "Vor Abgabe eines Angebots", correct: true, feedback: "Richtig!"},
+                {text: "Vor Annahme eines Auftrags", correct: true, feedback: "Richtig!"}
+            ]},
+            {q: "Das Kapitel 8.3 (Entwicklung) darf ausgeschlossen werden, wenn...", answers: [
+                {text: "das Unternehmen es wuenscht", correct: false, feedback: "FALSCH: Wunsch allein reicht nicht!"},
+                {text: "die Organisation keine eigene Entwicklung durchfuehrt", correct: true, feedback: "Richtig!"},
+                {text: "der Ausschluss die Konformitaet nicht beeintraechtigt", correct: true, feedback: "Richtig!"},
+                {text: "der Zertifizierer es genehmigt", correct: false, feedback: "FALSCH: Der Zertifizierer genehmigt keine Ausschluesse - er prueft nur deren Begruendung."}
+            ]},
+            {q: "Was ist der normative Unterschied zwischen Verifizierung und Validierung?", answers: [
+                {text: "Verifizierung: Wurden die Eingabeanforderungen erfuellt?", correct: true, feedback: "Richtig!"},
+                {text: "Validierung: Erfuellt das Ergebnis den Verwendungszweck?", correct: true, feedback: "Richtig!"},
+                {text: "Beide Begriffe sind identisch", correct: false, feedback: "FALSCH: Die Begriffe sind NICHT identisch!"},
+                {text: "Validierung erfolgt oft beim oder mit dem Kunden", correct: true, feedback: "Richtig!"}
+            ]},
+            {q: "Externe Anbieter muessen nach Kapitel 8.4 gesteuert werden. Welche Aussage ist NICHT korrekt?", answers: [
+                {text: "Kriterien fuer Auswahl und Bewertung muessen festgelegt werden", correct: true, feedback: "Richtig!"},
+                {text: "Der guenstigste Preis ist das einzige Auswahlkriterium", correct: false, feedback: "FALSCH: Preis allein ist KEIN ausreichendes Kriterium!"},
+                {text: "Die Leistung externer Anbieter muss ueberwacht werden", correct: true, feedback: "Richtig!"},
+                {text: "Ergebnisse der Bewertung muessen dokumentiert werden", correct: true, feedback: "Richtig!"}
+            ]},
+            {q: "Kundeneigentum nach 8.5.3 umfasst...", answers: [
+                {text: "nur Material, das der Kunde beistellt", correct: false, feedback: "FALSCH: NICHT nur Material! Kundeneigentum umfasst auch geistiges Eigentum und Daten."},
+                {text: "geistiges Eigentum des Kunden", correct: true, feedback: "Richtig!"},
+                {text: "personenbezogene Daten", correct: true, feedback: "Richtig!"},
+                {text: "Werkzeuge des Kunden", correct: true, feedback: "Richtig!"}
+            ]},
+            {q: "Rueckverfolgbarkeit ist normativ gefordert, wenn...", answers: [
+                {text: "es immer bei allen Produkten gilt", correct: false, feedback: "FALSCH: NICHT immer bei allen!"},
+                {text: "es eine Kundenanforderung ist", correct: true, feedback: "Richtig!"},
+                {text: "es eine gesetzliche Anforderung ist", correct: true, feedback: "Richtig!"},
+                {text: "die Organisation es als notwendig erachtet", correct: true, feedback: "Richtig!"}
+            ]},
+            {q: "Welche Aussage zur Freigabe von Produkten (8.6) ist normativ korrekt?", answers: [
+                {text: "Freigabe erfolgt automatisch nach Produktionsende", correct: false, feedback: "FALSCH: Freigabe ist NICHT automatisch! Sie erfordert eine aktive Entscheidung."},
+                {text: "Freigabe erfordert Nachweis der Erfuellung der Abnahmekriterien", correct: true, feedback: "Richtig!"},
+                {text: "Die freigebende Person muss rueckverfolgbar sein", correct: true, feedback: "Richtig!"},
+                {text: "Eine Sonderfreigabe erfordert Genehmigung durch befugte Stelle", correct: true, feedback: "Richtig!"}
+            ]},
+            {q: "Bei nichtkonformen Ergebnissen (8.7) muss die Organisation...", answers: [
+                {text: "diese kennzeichnen und steuern", correct: true, feedback: "Richtig!"},
+                {text: "unbeabsichtigte Verwendung verhindern", correct: true, feedback: "Richtig!"},
+                {text: "diese sofort verschrotten", correct: false, feedback: "FALSCH: Sofortige Verschrottung ist NICHT gefordert! Es gibt mehrere Optionen."},
+                {text: "dokumentierte Information aufbewahren", correct: true, feedback: "Richtig!"}
+            ]},
+            {q: "Ein 'spezieller Prozess' (Prozessvalidierung nach 8.5.1) ist ein Prozess, dessen...", answers: [
+                {text: "Ergebnis durch nachfolgende Ueberwachung/Messung nicht verifiziert werden kann", correct: true, feedback: "Richtig!"},
+                {text: "Ergebnis erst beim Kunden sichtbar wird", correct: true, feedback: "Richtig!"},
+                {text: "Durchfuehrung besonders teuer ist", correct: false, feedback: "FALSCH: Kosten sind KEIN Kriterium!"},
+                {text: "Beispiele: Schweissen, Loeten, Sterilisieren", correct: true, feedback: "Richtig!"}
+            ]},
+            {q: "Bei Entwicklungsaenderungen (8.3.6) muessen diese...", answers: [
+                {text: "gekennzeichnet werden", correct: true, feedback: "Richtig!"},
+                {text: "bewertet, verifiziert und validiert werden", correct: true, feedback: "Richtig!"},
+                {text: "automatisch genehmigt werden", correct: false, feedback: "FALSCH: NICHT automatisch! Aenderungen erfordern Bewertung und Genehmigung VOR der Umsetzung."},
+                {text: "genehmigt werden, bevor sie umgesetzt werden", correct: true, feedback: "Richtig!"}
+            ]},
+            {q: "Interne Audits muessen in 'geplanten Abstaenden' durchgefuehrt werden. Welche Aussage ist normativ korrekt?", answers: [
+                {text: "Die Norm schreibt jaehrliche Audits vor", correct: false, feedback: "FALSCH: 'Jaehrlich' steht NICHT in der Norm!"},
+                {text: "Die Organisation legt die Intervalle selbst fest", correct: true, feedback: "Richtig!"},
+                {text: "Kritische Bereiche koennen haeufiger auditiert werden", correct: true, feedback: "Richtig!"},
+                {text: "Alle Bereiche muessen gleich oft auditiert werden", correct: false, feedback: "FALSCH: Nicht alle Bereiche gleich oft - kritische Prozesse sollten haeufiger geprueft werden."}
+            ]},
+            {q: "Ein Auditor darf seinen eigenen Arbeitsbereich auditieren. Diese Aussage ist...", answers: [
+                {text: "korrekt, wenn er kompetent ist", correct: false, feedback: "FALSCH: Kompetenz aendert nichts daran!"},
+                {text: "falsch, da Objektivitaet und Unparteilichkeit gefordert sind", correct: true, feedback: "Richtig!"},
+                {text: "korrekt bei kleinen Unternehmen", correct: false, feedback: "FALSCH: Unternehmensgroesse aendert nichts daran!"},
+                {text: "falsch, da man eigene Fehler nicht objektiv sieht", correct: true, feedback: "Richtig!"}
+            ]},
+            {q: "Die Managementbewertung muss durch wen durchgefuehrt werden?", answers: [
+                {text: "Den Qualitaetsbeauftragten", correct: false, feedback: "FALSCH: Der QMB kann vorbereiten, aber nicht durchfuehren!"},
+                {text: "Die oberste Leitung", correct: true, feedback: "Richtig!"},
+                {text: "Das mittlere Management (delegierbar)", correct: false, feedback: "FALSCH: Die Managementbewertung kann NICHT delegiert werden!"},
+                {text: "Einen externen Berater", correct: false, feedback: "FALSCH: Die Managementbewertung ist Aufgabe der OBERSTEN LEITUNG!"}
+            ]},
+            {q: "Welche sind Eingaben fuer die Managementbewertung nach Kapitel 9.3.2?", answers: [
+                {text: "Status von Massnahmen frueherer Managementbewertungen", correct: true, feedback: "Richtig!"},
+                {text: "Auditergebnisse", correct: true, feedback: "Richtig!"},
+                {text: "Das Jahreshoroskop", correct: false, feedback: "FALSCH: Das Horoskop ist KEIN Norminhalt!"},
+                {text: "Kundenzufriedenheit", correct: true, feedback: "Richtig!"}
+            ]},
+            {q: "Die Ergebnisse der Managementbewertung muessen Entscheidungen zu welchen Aspekten enthalten?", answers: [
+                {text: "Verbesserungsmoeglichkeiten", correct: true, feedback: "Richtig!"},
+                {text: "Aenderungsbedarf am QMS", correct: true, feedback: "Richtig!"},
+                {text: "Ressourcenbedarf", correct: true, feedback: "Richtig!"},
+                {text: "Kuendigung von Mitarbeitern", correct: false, feedback: "FALSCH: Personalentscheidungen wie Kuendigungen sind KEIN Norminhalt!"}
+            ]},
+            {q: "Muessen die Ergebnisse der Managementbewertung dokumentiert werden?", answers: [
+                {text: "Nein, muendliche Absprachen reichen", correct: false, feedback: "FALSCH: Muendlich reicht NICHT!"},
+                {text: "Ja, als dokumentierte Information aufbewahren", correct: true, feedback: "Richtig!"},
+                {text: "Nur die Teilnehmerliste", correct: false, feedback: "FALSCH: Nur Teilnehmerliste reicht nicht - die ERGEBNISSE muessen dokumentiert sein."},
+                {text: "Die Norm fordert den Nachweis der Ergebnisse", correct: true, feedback: "Richtig!"}
+            ]},
+            {q: "Was ist eine Nichtkonformitaet im Sinne des internen Audits?", answers: [
+                {text: "Jede Verbesserungsmoeglichkeit", correct: false, feedback: "FALSCH: Nicht JEDE Verbesserungsmoeglichkeit ist eine NK!"},
+                {text: "Nichterfuellung einer Anforderung", correct: true, feedback: "Richtig!"},
+                {text: "Eine durch objektiven Nachweis belegbare Abweichung", correct: true, feedback: "Richtig!"},
+                {text: "Eine persoenliche Meinung des Auditors", correct: false, feedback: "FALSCH: Persoenliche Meinung ist kein Kriterium - es braucht objektiven NACHWEIS."}
+            ]},
+            {q: "Was ist der normative Unterschied zwischen Korrektur und Korrekturmassnahme?", answers: [
+                {text: "Korrektur beseitigt den Fehler (Symptom)", correct: true, feedback: "Richtig!"},
+                {text: "Korrekturmassnahme beseitigt die Ursache", correct: true, feedback: "Richtig!"},
+                {text: "Beide Begriffe sind identisch", correct: false, feedback: "FALSCH: Die Begriffe sind NICHT identisch!"},
+                {text: "Korrekturmassnahme verhindert Wiederholung", correct: true, feedback: "Richtig!"}
+            ]},
+            {q: "Nach Umsetzung einer Korrekturmassnahme muss die Organisation...", answers: [
+                {text: "nichts weiter tun", correct: false, feedback: "FALSCH: Es ist NICHT erledigt nach Umsetzung! Man muss pruefen, ob die Massnahme WIRKT."},
+                {text: "die Wirksamkeit der Massnahme ueberpruefen", correct: true, feedback: "Richtig!"},
+                {text: "dokumentieren, ob die Massnahme erfolgreich war", correct: true, feedback: "Richtig!"},
+                {text: "ggf. Risiken und Chancen aktualisieren", correct: true, feedback: "Richtig!"}
+            ]},
+            {q: "Fortlaufende Verbesserung (10.3) bedeutet normativ...", answers: [
+                {text: "einmalige Verbesserungsprojekte", correct: false, feedback: "FALSCH: Nicht EINMALIG - fortlaufend bedeutet WIEDERKEHREND!"},
+                {text: "wiederkehrende Taetigkeit zur Leistungssteigerung", correct: true, feedback: "Richtig!"},
+                {text: "Verbesserung nur bei Kundenbeschwerden", correct: false, feedback: "FALSCH: Nicht nur bei Beschwerden - Verbesserung ist PROAKTIV!"},
+                {text: "Beruecksichtigung der Ergebnisse aus Analyse und Managementbewertung", correct: true, feedback: "Richtig!"}
+            ]},
+            {q: "Welche dokumentierte Information ist fuer Nichtkonformitaeten und Korrekturmassnahmen nach 10.2.2 gefordert?", answers: [
+                {text: "Art der Nichtkonformitaet", correct: true, feedback: "Richtig!"},
+                {text: "Ergriffene Massnahmen", correct: true, feedback: "Richtig!"},
+                {text: "Alle E-Mails zum Thema", correct: false, feedback: "FALSCH: ALLE E-Mails aufzubewahren ist NICHT gefordert!"},
+                {text: "Ergebnisse von Korrekturmassnahmen", correct: true, feedback: "Richtig!"}
+            ]}
+        ]
+    }
+};
