@@ -287,6 +287,63 @@
         }
         .clear-history:hover { border-color: #ff5252; color: #ff5252; }
         .no-history { color: #666; font-style: italic; text-align: center; padding: 20px; }
+        .chapter-analysis {
+            margin-bottom: 20px;
+        }
+        .chapter-analysis h4 {
+            color: #aaa;
+            font-size: 0.9em;
+            margin-bottom: 12px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .chapter-bar {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 8px;
+            padding: 8px 12px;
+            background: rgba(255,255,255,0.03);
+            border-radius: 8px;
+        }
+        .chapter-bar-name {
+            flex: 1;
+            font-size: 0.85em;
+            color: #ccc;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        .chapter-bar-progress {
+            width: 100px;
+            height: 8px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 4px;
+            overflow: hidden;
+        }
+        .chapter-bar-fill {
+            height: 100%;
+            border-radius: 4px;
+            transition: width 0.3s;
+        }
+        .chapter-bar-fill.strong { background: linear-gradient(90deg, #00e676, #69f0ae); }
+        .chapter-bar-fill.medium { background: linear-gradient(90deg, #ffd54f, #ffecb3); }
+        .chapter-bar-fill.weak { background: linear-gradient(90deg, #ff5252, #ff8a80); }
+        .chapter-bar-percent {
+            font-size: 0.85em;
+            font-weight: bold;
+            width: 45px;
+            text-align: right;
+        }
+        .chapter-bar-percent.strong { color: #69f0ae; }
+        .chapter-bar-percent.medium { color: #ffd54f; }
+        .chapter-bar-percent.weak { color: #ff8a80; }
+        .analysis-hint {
+            font-size: 0.75em;
+            color: #666;
+            margin-top: 10px;
+            text-align: center;
+        }
         .stats-row { display: flex; gap: 15px; margin-bottom: 20px; flex-wrap: wrap; }
         .stat-box {
             flex: 1;
@@ -315,10 +372,11 @@
             <div class="chapter-grid" id="chapter-grid"></div>
             <div class="history-section" id="history-section">
                 <h3>
-                    <span>Dein Verlauf</span>
+                    <span>Dein Fortschritt</span>
                     <button class="clear-history" onclick="clearHistory()">Verlauf loeschen</button>
                 </h3>
                 <div class="stats-row" id="stats-row"></div>
+                <div class="chapter-analysis" id="chapter-analysis"></div>
                 <div class="history-list" id="history-list"></div>
             </div>
         </div>
@@ -379,10 +437,12 @@
         const history = getHistory();
         const listEl = document.getElementById('history-list');
         const statsEl = document.getElementById('stats-row');
+        const analysisEl = document.getElementById('chapter-analysis');
 
         if (history.length === 0) {
             listEl.innerHTML = '<div class="no-history">Noch keine Versuche. Starte ein Quiz!</div>';
             statsEl.innerHTML = '';
+            analysisEl.innerHTML = '';
             return;
         }
 
@@ -398,12 +458,56 @@
             <div class="stat-box"><div class="stat-value" style="color: #ffd54f">${bestResult}%</div><div class="stat-label">Bestwert</div></div>
         `;
 
-        listEl.innerHTML = history.slice(0, 20).map(h => {
+        // Kapitel-Analyse: Gruppiere nach Kapitel und berechne Durchschnitt
+        const chapterStats = {};
+        history.forEach(h => {
+            if (!chapterStats[h.chapter]) {
+                chapterStats[h.chapter] = { title: h.chapterTitle, attempts: [], best: 0 };
+            }
+            chapterStats[h.chapter].attempts.push(h.percentage);
+            if (h.percentage > chapterStats[h.chapter].best) {
+                chapterStats[h.chapter].best = h.percentage;
+            }
+        });
+
+        // Sortiere nach Bestwert (Staerken oben, Schwaechen unten)
+        const sortedChapters = Object.entries(chapterStats)
+            .map(([key, data]) => ({
+                key,
+                title: data.title,
+                best: data.best,
+                avg: Math.round(data.attempts.reduce((a,b) => a+b, 0) / data.attempts.length),
+                attempts: data.attempts.length
+            }))
+            .sort((a, b) => b.best - a.best);
+
+        const getStrengthClass = (pct) => pct >= 70 ? 'strong' : pct >= 50 ? 'medium' : 'weak';
+
+        analysisEl.innerHTML = `
+            <h4>Kapitel-Sicherheit (Bestwert)</h4>
+            ${sortedChapters.map(ch => `
+                <div class="chapter-bar">
+                    <span class="chapter-bar-name">${ch.title.replace('Kapitel ', 'Kap. ').replace(' - ', ': ')}</span>
+                    <div class="chapter-bar-progress">
+                        <div class="chapter-bar-fill ${getStrengthClass(ch.best)}" style="width: ${ch.best}%"></div>
+                    </div>
+                    <span class="chapter-bar-percent ${getStrengthClass(ch.best)}">${ch.best}%</span>
+                </div>
+            `).join('')}
+            <div class="analysis-hint">
+                <span style="color:#69f0ae">■</span> Stark (≥70%) &nbsp;
+                <span style="color:#ffd54f">■</span> Mittel (50-69%) &nbsp;
+                <span style="color:#ff8a80">■</span> Schwach (<50%)
+            </div>
+        `;
+
+        listEl.innerHTML = '<h4 style="color:#aaa;font-size:0.9em;margin:15px 0 10px;text-transform:uppercase;letter-spacing:1px;">Letzte Versuche</h4>' +
+            history.slice(0, 10).map(h => {
             const date = new Date(h.date);
             const dateStr = date.toLocaleDateString('de-DE') + ' ' + date.toLocaleTimeString('de-DE', {hour: '2-digit', minute: '2-digit'});
             const passClass = h.passed ? 'passed' : 'failed';
             const icon = h.passed ? '✓' : '✗';
-            return `<div class="history-item"><span class="history-date">${dateStr}</span><span class="history-chapter">${h.chapterTitle}</span><span class="history-score ${passClass}">${icon} ${h.percentage}% (${h.score}/${h.maxScore})</span></div>`;
+            return `<div class="history-item"><span class="history-date">${dateStr}</span><span class="history-chapter">${h.chapterTitle.replace('Kapitel ', 'Kap. ')}</span><span class="history-score ${passClass}">${icon} ${h.percentage}%</span></div>`;
         }).join('');
     }
 
