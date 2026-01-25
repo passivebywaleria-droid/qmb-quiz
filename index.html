@@ -396,6 +396,51 @@
             border-radius: 12px;
             padding: 10px;
         }
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0,0,0,0.8);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 1000;
+            padding: 20px;
+        }
+        .modal {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            border-radius: 16px;
+            padding: 24px;
+            max-width: 350px;
+            width: 100%;
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+        .modal h3 {
+            color: #4fc3f7;
+            margin-bottom: 12px;
+            font-size: 1.2em;
+        }
+        .modal p {
+            color: #ccc;
+            margin-bottom: 20px;
+            font-size: 0.95em;
+            line-height: 1.4;
+        }
+        .modal .btn-row {
+            flex-direction: column;
+            gap: 10px;
+        }
+        .progress-badge {
+            display: inline-block;
+            background: rgba(79, 195, 247, 0.2);
+            color: #4fc3f7;
+            padding: 4px 10px;
+            border-radius: 8px;
+            font-size: 0.85em;
+            margin-bottom: 8px;
+        }
     </style>
 </head>
 <body>
@@ -560,22 +605,93 @@
     }
 
     function showChapters() {
+        // Fortschritt speichern wenn Quiz aktiv war
+        if (currentChapter && currentQuestion > 0 && currentQuestion < currentChapter.questions.length) {
+            saveProgress();
+        }
         document.getElementById('chapter-selection').classList.remove('hidden');
         document.getElementById('quiz-area').classList.remove('active');
         document.body.classList.remove('quiz-mode');
         renderHistory();
     }
 
-    function startQuiz(chapterKey) {
+    function getProgress(chapterKey) {
+        const data = localStorage.getItem('qmb_quiz_progress_' + chapterKey);
+        return data ? JSON.parse(data) : null;
+    }
+
+    function saveProgress() {
+        if (!currentChapter) return;
+        const progress = {
+            question: currentQuestion,
+            score: score,
+            timestamp: new Date().toISOString()
+        };
+        localStorage.setItem('qmb_quiz_progress_' + currentChapter.key, JSON.stringify(progress));
+    }
+
+    function clearProgress(chapterKey) {
+        localStorage.removeItem('qmb_quiz_progress_' + chapterKey);
+    }
+
+    function showResumeModal(chapterKey, progress) {
+        const chapter = chapters[chapterKey];
+        const modal = document.createElement('div');
+        modal.className = 'modal-overlay';
+        modal.innerHTML = `
+            <div class="modal">
+                <h3>Fortsetzen?</h3>
+                <div class="progress-badge">Frage ${progress.question + 1} von ${chapter.questions.length}</div>
+                <p>Du hast einen laufenden Versuch in "${chapter.title}". Möchtest du fortsetzen oder neu beginnen?</p>
+                <div class="btn-row">
+                    <button class="btn btn-primary" onclick="resumeQuiz('${chapterKey}')">Fortsetzen</button>
+                    <button class="btn btn-secondary" onclick="startFreshQuiz('${chapterKey}')">Neu beginnen</button>
+                </div>
+            </div>
+        `;
+        document.body.appendChild(modal);
+    }
+
+    function closeModal() {
+        const modal = document.querySelector('.modal-overlay');
+        if (modal) modal.remove();
+    }
+
+    function resumeQuiz(chapterKey) {
+        closeModal();
+        const progress = getProgress(chapterKey);
         currentChapter = chapters[chapterKey];
         currentChapter.key = chapterKey;
-        currentQuestion = 0;
-        score = 0;
-        maxScore = currentChapter.questions.length; // Anzahl der Fragen = max Punkte
+        currentQuestion = progress.question;
+        score = progress.score;
+        maxScore = currentChapter.questions.length;
         document.getElementById('chapter-selection').classList.add('hidden');
         document.getElementById('quiz-area').classList.add('active');
         document.body.classList.add('quiz-mode');
         renderQuestion();
+    }
+
+    function startFreshQuiz(chapterKey) {
+        closeModal();
+        clearProgress(chapterKey);
+        currentChapter = chapters[chapterKey];
+        currentChapter.key = chapterKey;
+        currentQuestion = 0;
+        score = 0;
+        maxScore = currentChapter.questions.length;
+        document.getElementById('chapter-selection').classList.add('hidden');
+        document.getElementById('quiz-area').classList.add('active');
+        document.body.classList.add('quiz-mode');
+        renderQuestion();
+    }
+
+    function startQuiz(chapterKey) {
+        const progress = getProgress(chapterKey);
+        if (progress && progress.question > 0) {
+            showResumeModal(chapterKey, progress);
+        } else {
+            startFreshQuiz(chapterKey);
+        }
     }
 
     function renderQuestion() {
@@ -675,6 +791,7 @@
     function nextQuestion() {
         currentQuestion++;
         if (currentQuestion < currentChapter.questions.length) {
+            saveProgress(); // Fortschritt speichern
             renderQuestion();
         } else {
             showResults();
@@ -686,6 +803,7 @@
         const passed = percentage >= PASS_THRESHOLD;
         const passClass = passed ? 'passed' : 'failed';
         const passText = passed ? 'BESTANDEN!' : 'NICHT BESTANDEN';
+        clearProgress(currentChapter.key); // Fortschritt löschen wenn fertig
         saveAttempt(currentChapter.key, currentChapter.title, score, maxScore, percentage, passed);
         document.getElementById('question-container').innerHTML = `
             <div class="question-card results">
