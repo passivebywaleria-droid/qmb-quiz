@@ -430,10 +430,7 @@
         currentChapter.key = chapterKey;
         currentQuestion = 0;
         score = 0;
-        maxScore = 0;
-        currentChapter.questions.forEach(q => {
-            maxScore += q.answers.filter(a => a.correct).length;
-        });
+        maxScore = currentChapter.questions.length; // Anzahl der Fragen = max Punkte
         document.getElementById('chapter-selection').style.display = 'none';
         document.getElementById('quiz-area').style.display = 'block';
         renderQuestion();
@@ -526,9 +523,9 @@
             }
         });
 
-        // Punkte nur bei perfekter Antwort
+        // 1 Punkt pro Frage nur bei perfekter Antwort
         if (isPerfect) {
-            score += correctIndices.length;
+            score += 1;
         }
 
         document.getElementById('check-btn').style.display = 'none';
@@ -554,13 +551,13 @@
             <div class="question-card results">
                 <h2>Quiz beendet!</h2>
                 <div class="score ${passClass}">${percentage}%</div>
-                <p class="score-label">${score} von ${maxScore} Punkten</p>
+                <p class="score-label">${score} von ${maxScore} Fragen richtig</p>
                 <div class="pass-status ${passClass}">${passText}</div>
                 <p class="threshold-info">Bestehensgrenze: ${PASS_THRESHOLD}% (TUEV-Standard)</p>
                 <div class="scoring-info">
                     <strong>Bewertung nach TUEV-Schema:</strong><br>
-                    Volle Punktzahl nur bei ALLEN richtigen Antworten UND KEINER falschen.<br>
-                    Fehlt eine richtige oder ist eine falsche dabei = 0 Punkte fuer die Frage.
+                    1 Punkt pro Frage nur wenn ALLE richtigen UND KEINE falschen Antworten gewaehlt.<br>
+                    70% der Fragen muessen korrekt beantwortet werden.
                 </div>
                 <div class="btn-row" style="justify-content: center;">
                     <button class="btn btn-primary" onclick="startQuiz('${currentChapter.key}')">Wiederholen</button>
