@@ -6,32 +6,37 @@
     <title>QMB Prüfungsfragen - ISO 9001:2015</title>
     <style>
         * { box-sizing: border-box; margin: 0; padding: 0; }
+        html, body { height: 100%; }
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
             background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
             min-height: 100vh;
             color: #fff;
+            overflow-y: auto;
         }
-        .container { max-width: 900px; margin: 0 auto; padding: 20px; }
+        body.quiz-mode { overflow: hidden; }
+        body.quiz-mode .container { height: 100vh; height: 100dvh; }
+        .container { max-width: 900px; margin: 0 auto; padding: 8px; display: flex; flex-direction: column; min-height: 100%; }
         header {
             text-align: center;
-            padding: 40px 20px;
+            padding: 15px 10px;
             background: rgba(255,255,255,0.05);
-            border-radius: 20px;
-            margin-bottom: 30px;
+            border-radius: 12px;
+            margin-bottom: 10px;
         }
-        header h1 { font-size: 2.5em; margin-bottom: 10px; }
-        header p { color: #aaa; font-size: 1.1em; }
+        header h1 { font-size: 1.4em; margin-bottom: 3px; }
+        header p { color: #aaa; font-size: 0.85em; }
+        .quiz-mode header { display: none; }
         .chapter-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 20px;
-            margin-bottom: 30px;
+            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+            gap: 8px;
+            margin-bottom: 10px;
         }
         .chapter-card {
             background: rgba(255,255,255,0.08);
-            border-radius: 15px;
-            padding: 25px;
+            border-radius: 10px;
+            padding: 12px;
             cursor: pointer;
             transition: all 0.3s ease;
             border: 2px solid transparent;
@@ -39,86 +44,90 @@
         .chapter-card:hover {
             background: rgba(255,255,255,0.12);
             border-color: #4fc3f7;
-            transform: translateY(-5px);
+            transform: translateY(-2px);
         }
-        .chapter-card h3 { color: #4fc3f7; margin-bottom: 10px; }
-        .chapter-card p { color: #aaa; font-size: 0.95em; }
+        .chapter-card h3 { color: #4fc3f7; margin-bottom: 4px; font-size: 0.9em; }
+        .chapter-card p { color: #aaa; font-size: 0.75em; display: none; }
         .chapter-card .count {
             display: inline-block;
             background: #4fc3f7;
             color: #1a1a2e;
-            padding: 5px 12px;
-            border-radius: 20px;
+            padding: 2px 8px;
+            border-radius: 10px;
             font-weight: bold;
-            margin-top: 15px;
+            font-size: 0.75em;
+            margin-top: 5px;
         }
-        #quiz-area { display: none; }
+        #quiz-area { display: none; flex: 1; flex-direction: column; }
+        #quiz-area.active { display: flex; }
         .quiz-header {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            margin-bottom: 20px;
-            flex-wrap: wrap;
-            gap: 10px;
+            margin-bottom: 6px;
+            gap: 8px;
         }
         .back-btn {
             background: rgba(255,255,255,0.1);
             border: none;
             color: #fff;
-            padding: 10px 20px;
-            border-radius: 10px;
+            padding: 6px 12px;
+            border-radius: 6px;
             cursor: pointer;
-            font-size: 1em;
+            font-size: 0.85em;
         }
         .back-btn:hover { background: rgba(255,255,255,0.2); }
-        .progress-info { color: #aaa; }
+        .progress-info { color: #aaa; font-size: 0.85em; }
         .progress-bar {
             width: 100%;
-            height: 8px;
+            height: 4px;
             background: rgba(255,255,255,0.1);
-            border-radius: 10px;
-            margin-bottom: 30px;
+            border-radius: 4px;
+            margin-bottom: 8px;
             overflow: hidden;
         }
         .progress-fill {
             height: 100%;
             background: linear-gradient(90deg, #4fc3f7, #00e676);
-            border-radius: 10px;
+            border-radius: 4px;
             transition: width 0.3s ease;
         }
         .question-card {
             background: rgba(255,255,255,0.08);
-            border-radius: 20px;
-            padding: 30px;
-            margin-bottom: 20px;
+            border-radius: 12px;
+            padding: 12px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
         }
         .question-type {
             display: inline-block;
             background: #ff9800;
             color: #000;
-            padding: 5px 15px;
-            border-radius: 20px;
-            font-size: 0.85em;
+            padding: 2px 8px;
+            border-radius: 10px;
+            font-size: 0.7em;
             font-weight: bold;
-            margin-bottom: 15px;
+            margin-bottom: 6px;
         }
         .question-type.single { background: #4fc3f7; }
         .question-text {
-            font-size: 1.3em;
-            line-height: 1.5;
-            margin-bottom: 25px;
+            font-size: 0.95em;
+            line-height: 1.35;
+            margin-bottom: 10px;
         }
-        .answers { display: flex; flex-direction: column; gap: 12px; }
+        .answers { display: flex; flex-direction: column; gap: 6px; flex: 1; overflow-y: auto; }
         .answer {
             background: rgba(255,255,255,0.05);
             border: 2px solid rgba(255,255,255,0.1);
-            border-radius: 12px;
-            padding: 15px 20px;
+            border-radius: 8px;
+            padding: 8px 10px;
             cursor: pointer;
             transition: all 0.2s ease;
             display: flex;
             align-items: flex-start;
-            gap: 15px;
+            gap: 8px;
         }
         .answer:hover:not(.disabled) {
             background: rgba(255,255,255,0.1);
@@ -144,28 +153,29 @@
         }
         .answer.disabled { cursor: default; }
         .checkbox {
-            width: 24px;
-            height: 24px;
+            width: 18px;
+            height: 18px;
             border: 2px solid rgba(255,255,255,0.3);
-            border-radius: 6px;
+            border-radius: 4px;
             flex-shrink: 0;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 14px;
+            font-size: 11px;
         }
         .answer.selected .checkbox { border-color: #4fc3f7; background: #4fc3f7; color: #000; }
         .answer.correct .checkbox { border-color: #00e676; background: #00e676; color: #000; }
         .answer.correct.missed .checkbox { border-color: #ffd54f; background: transparent; color: #ffd54f; border-style: dashed; }
         .answer.wrong .checkbox { border-color: #ff5252; background: #ff5252; color: #fff; }
         .answer-content { flex: 1; }
-        .answer-text { font-size: 1.05em; }
+        .answer-text { font-size: 0.85em; line-height: 1.3; }
         .answer-feedback {
-            margin-top: 10px;
-            padding: 10px 15px;
-            border-radius: 8px;
-            font-size: 0.95em;
+            margin-top: 4px;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 0.75em;
             display: none;
+            line-height: 1.3;
         }
         .answer.correct .answer-feedback {
             display: block;
@@ -184,18 +194,19 @@
         }
         .btn-row {
             display: flex;
-            gap: 15px;
-            margin-top: 25px;
-            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 10px;
+            flex-shrink: 0;
         }
         .btn {
-            padding: 15px 30px;
+            padding: 10px 20px;
             border: none;
-            border-radius: 12px;
-            font-size: 1.1em;
+            border-radius: 8px;
+            font-size: 0.9em;
             cursor: pointer;
             transition: all 0.2s ease;
             font-weight: 600;
+            flex: 1;
         }
         .btn-primary {
             background: linear-gradient(135deg, #4fc3f7, #29b6f6);
@@ -213,153 +224,186 @@
             color: #fff;
         }
         .btn-secondary:hover { background: rgba(255,255,255,0.2); }
-        .results { text-align: center; padding: 40px; }
-        .results h2 { font-size: 2em; margin-bottom: 20px; }
+        .results { text-align: center; padding: 15px; }
+        .results h2 { font-size: 1.3em; margin-bottom: 8px; }
         .score {
-            font-size: 4em;
+            font-size: 2.5em;
             font-weight: bold;
             background: linear-gradient(135deg, #4fc3f7, #00e676);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
         }
-        .score-label { color: #aaa; margin-bottom: 15px; }
+        .score-label { color: #aaa; margin-bottom: 8px; font-size: 0.85em; }
         .score.passed { background: linear-gradient(135deg, #00e676, #69f0ae); -webkit-background-clip: text; background-clip: text; }
         .score.failed { background: linear-gradient(135deg, #ff5252, #ff8a80); -webkit-background-clip: text; background-clip: text; }
         .pass-status {
-            font-size: 1.5em;
+            font-size: 1.1em;
             font-weight: bold;
-            padding: 15px 30px;
-            border-radius: 15px;
-            margin: 20px 0;
+            padding: 8px 16px;
+            border-radius: 10px;
+            margin: 10px 0;
+            display: inline-block;
         }
         .pass-status.passed { background: rgba(0, 230, 118, 0.2); color: #69f0ae; }
         .pass-status.failed { background: rgba(255, 82, 82, 0.2); color: #ff8a80; }
-        .threshold-info { color: #888; font-size: 0.9em; margin-bottom: 20px; }
+        .threshold-info { color: #888; font-size: 0.75em; margin-bottom: 10px; }
         .scoring-info {
             background: rgba(255,255,255,0.05);
-            padding: 15px 20px;
-            border-radius: 10px;
-            font-size: 0.85em;
+            padding: 8px 12px;
+            border-radius: 8px;
+            font-size: 0.7em;
             color: #aaa;
-            margin-bottom: 25px;
+            margin-bottom: 12px;
             text-align: left;
-            line-height: 1.8;
+            line-height: 1.5;
         }
         .history-section {
-            margin-top: 30px;
-            padding: 20px;
+            margin-top: 10px;
+            padding: 10px;
             background: rgba(255,255,255,0.05);
-            border-radius: 15px;
+            border-radius: 10px;
+            flex: 1;
+            overflow-y: auto;
         }
         .history-section h3 {
             color: #4fc3f7;
-            margin-bottom: 15px;
+            margin-bottom: 8px;
             display: flex;
             justify-content: space-between;
             align-items: center;
+            font-size: 0.9em;
         }
-        .history-list { max-height: 300px; overflow-y: auto; }
+        .history-list { max-height: 150px; overflow-y: auto; }
         .history-item {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 12px 15px;
+            padding: 6px 8px;
             background: rgba(255,255,255,0.03);
-            border-radius: 8px;
-            margin-bottom: 8px;
-            font-size: 0.9em;
+            border-radius: 6px;
+            margin-bottom: 4px;
+            font-size: 0.75em;
         }
         .history-item:hover { background: rgba(255,255,255,0.08); }
         .history-date { color: #888; }
         .history-score { font-weight: bold; }
         .history-score.passed { color: #69f0ae; }
         .history-score.failed { color: #ff8a80; }
-        .history-chapter { color: #aaa; flex: 1; margin: 0 15px; }
+        .history-chapter { color: #aaa; flex: 1; margin: 0 8px; }
         .clear-history {
             background: transparent;
             border: 1px solid rgba(255,255,255,0.2);
             color: #888;
-            padding: 5px 12px;
-            border-radius: 5px;
+            padding: 3px 8px;
+            border-radius: 4px;
             cursor: pointer;
-            font-size: 0.8em;
+            font-size: 0.7em;
         }
         .clear-history:hover { border-color: #ff5252; color: #ff5252; }
-        .no-history { color: #666; font-style: italic; text-align: center; padding: 20px; }
+        .no-history { color: #666; font-style: italic; text-align: center; padding: 10px; font-size: 0.8em; }
         .chapter-analysis {
-            margin-bottom: 20px;
+            margin-bottom: 8px;
         }
         .chapter-analysis h4 {
             color: #aaa;
-            font-size: 0.9em;
-            margin-bottom: 12px;
+            font-size: 0.75em;
+            margin-bottom: 6px;
             text-transform: uppercase;
             letter-spacing: 1px;
         }
         .chapter-bar {
             display: flex;
             align-items: center;
-            gap: 10px;
-            margin-bottom: 8px;
-            padding: 8px 12px;
+            gap: 6px;
+            margin-bottom: 4px;
+            padding: 4px 8px;
             background: rgba(255,255,255,0.03);
-            border-radius: 8px;
+            border-radius: 6px;
         }
         .chapter-bar-name {
             flex: 1;
-            font-size: 0.85em;
+            font-size: 0.7em;
             color: #ccc;
             white-space: nowrap;
             overflow: hidden;
             text-overflow: ellipsis;
         }
         .chapter-bar-progress {
-            width: 100px;
-            height: 8px;
+            width: 60px;
+            height: 6px;
             background: rgba(255,255,255,0.1);
-            border-radius: 4px;
+            border-radius: 3px;
             overflow: hidden;
         }
         .chapter-bar-fill {
             height: 100%;
-            border-radius: 4px;
+            border-radius: 3px;
             transition: width 0.3s;
         }
         .chapter-bar-fill.strong { background: linear-gradient(90deg, #00e676, #69f0ae); }
         .chapter-bar-fill.medium { background: linear-gradient(90deg, #ffd54f, #ffecb3); }
         .chapter-bar-fill.weak { background: linear-gradient(90deg, #ff5252, #ff8a80); }
         .chapter-bar-percent {
-            font-size: 0.85em;
+            font-size: 0.7em;
             font-weight: bold;
-            width: 45px;
+            width: 35px;
             text-align: right;
         }
         .chapter-bar-percent.strong { color: #69f0ae; }
         .chapter-bar-percent.medium { color: #ffd54f; }
         .chapter-bar-percent.weak { color: #ff8a80; }
         .analysis-hint {
-            font-size: 0.75em;
+            font-size: 0.65em;
             color: #666;
-            margin-top: 10px;
+            margin-top: 6px;
             text-align: center;
         }
-        .stats-row { display: flex; gap: 15px; margin-bottom: 20px; flex-wrap: wrap; }
+        .analysis-section {
+            margin-bottom: 8px;
+        }
+        .analysis-section-title {
+            font-size: 0.7em;
+            font-weight: bold;
+            margin-bottom: 4px;
+            padding: 3px 6px;
+            border-radius: 4px;
+            display: inline-block;
+        }
+        .analysis-section-title.focus {
+            background: rgba(255, 82, 82, 0.2);
+            color: #ff8a80;
+        }
+        .analysis-section-title.strong {
+            background: rgba(0, 230, 118, 0.2);
+            color: #69f0ae;
+        }
+        .chapter-bar.not-attempted {
+            opacity: 0.7;
+            border: 1px dashed rgba(255,255,255,0.2);
+        }
+        .chapter-bar-fill.not-attempted {
+            background: rgba(255,255,255,0.2);
+        }
+        .chapter-bar-percent.not-attempted {
+            color: #888;
+        }
+        .stats-row { display: flex; gap: 6px; margin-bottom: 8px; flex-wrap: wrap; }
         .stat-box {
             flex: 1;
-            min-width: 120px;
+            min-width: 70px;
             background: rgba(255,255,255,0.05);
-            padding: 15px;
-            border-radius: 10px;
+            padding: 6px;
+            border-radius: 6px;
             text-align: center;
         }
-        .stat-value { font-size: 1.8em; font-weight: bold; color: #4fc3f7; }
-        .stat-label { font-size: 0.8em; color: #888; margin-top: 5px; }
-        @media (max-width: 600px) {
-            header h1 { font-size: 1.8em; }
-            .question-text { font-size: 1.1em; }
-            .btn { width: 100%; }
-        }
+        .stat-value { font-size: 1.2em; font-weight: bold; color: #4fc3f7; }
+        .stat-label { font-size: 0.65em; color: #888; margin-top: 2px; }
+        #chapter-selection { flex: 1; display: flex; flex-direction: column; overflow: hidden; }
+        #chapter-selection.hidden { display: none; }
+        #question-container { flex: 1; display: flex; flex-direction: column; overflow: hidden; }
+        #question-container .question-card { flex: 1; overflow: hidden; }
+        #question-container .question-card .answers { max-height: none; }
     </style>
 </head>
 <body>
@@ -524,8 +568,9 @@
     }
 
     function showChapters() {
-        document.getElementById('chapter-selection').style.display = 'block';
-        document.getElementById('quiz-area').style.display = 'none';
+        document.getElementById('chapter-selection').classList.remove('hidden');
+        document.getElementById('quiz-area').classList.remove('active');
+        document.body.classList.remove('quiz-mode');
         renderHistory();
     }
 
@@ -535,8 +580,9 @@
         currentQuestion = 0;
         score = 0;
         maxScore = currentChapter.questions.length; // Anzahl der Fragen = max Punkte
-        document.getElementById('chapter-selection').style.display = 'none';
-        document.getElementById('quiz-area').style.display = 'block';
+        document.getElementById('chapter-selection').classList.add('hidden');
+        document.getElementById('quiz-area').classList.add('active');
+        document.body.classList.add('quiz-mode');
         renderQuestion();
     }
 
