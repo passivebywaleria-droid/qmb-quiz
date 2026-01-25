@@ -105,21 +105,21 @@
         }
         .question-type.single { background: #4fc3f7; }
         .question-text {
-            font-size: 1.05em;
-            line-height: 1.4;
-            margin-bottom: 10px;
+            font-size: 1.15em;
+            line-height: 1.45;
+            margin-bottom: 12px;
         }
         .answers { display: flex; flex-direction: column; gap: 5px; }
         .answer {
             background: rgba(255,255,255,0.05);
             border: 2px solid rgba(255,255,255,0.1);
-            border-radius: 10px;
-            padding: 10px 12px;
+            border-radius: 12px;
+            padding: 12px 14px;
             cursor: pointer;
             transition: all 0.2s ease;
             display: flex;
             align-items: flex-start;
-            gap: 10px;
+            gap: 12px;
         }
         .answer:hover:not(.disabled) {
             background: rgba(255,255,255,0.1);
@@ -145,22 +145,22 @@
         }
         .answer.disabled { cursor: default; }
         .checkbox {
-            width: 22px;
-            height: 22px;
+            width: 26px;
+            height: 26px;
             border: 2px solid rgba(255,255,255,0.3);
-            border-radius: 5px;
+            border-radius: 6px;
             flex-shrink: 0;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 13px;
+            font-size: 15px;
         }
         .answer.selected .checkbox { border-color: #4fc3f7; background: #4fc3f7; color: #000; }
         .answer.correct .checkbox { border-color: #00e676; background: #00e676; color: #000; }
         .answer.correct.missed .checkbox { border-color: #ffd54f; background: transparent; color: #ffd54f; border-style: dashed; }
         .answer.wrong .checkbox { border-color: #ff5252; background: #ff5252; color: #fff; }
         .answer-content { flex: 1; }
-        .answer-text { font-size: 0.95em; line-height: 1.35; }
+        .answer-text { font-size: 1.05em; line-height: 1.4; }
         .answer-feedback {
             margin-top: 3px;
             padding: 3px 6px;
@@ -192,10 +192,10 @@
             padding-bottom: env(safe-area-inset-bottom, 0);
         }
         .btn {
-            padding: 12px 20px;
+            padding: 14px 24px;
             border: none;
-            border-radius: 10px;
-            font-size: 1em;
+            border-radius: 12px;
+            font-size: 1.1em;
             cursor: pointer;
             transition: all 0.2s ease;
             font-weight: 600;
