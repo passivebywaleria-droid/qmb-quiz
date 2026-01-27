@@ -2329,5 +2329,280 @@ const chapters = {
                 {text: "Kundenzufriedenheit ersetzt die Prozessueberwachung", correct: false, feedback: "FALSCH: Sie ERSETZT nicht die Prozessueberwachung!"}
             ]}
         ]
+    },
+    "pruefungsblock3": {
+        title: "Pruefungsblock 3 - TUeV-Niveau +10% Schwierigkeit",
+        questions: [
+            {q: "Ein Unternehmen hat den Kontext bestimmt. Aenderungen externer Themen werden nur dann beruecksichtigt, wenn Abweichungen im Audit auftreten. Wie ist dies normativ zu bewerten?", topic: "Kontext", answers: [
+                {text: "Konform, da Audits die Wirksamkeit bestaetigen", correct: false, feedback: "FALSCH: Audits allein reichen nicht - der Kontext muss UNABHAENGIG ueberwacht werden!"},
+                {text: "Nicht konform, da Kontext unabhaengig von Auditergebnissen zu ueberwachen ist", correct: true, feedback: "Richtig!"},
+                {text: "Konform, sofern keine Risiken identifiziert wurden", correct: false, feedback: "FALSCH: Kontext-Ueberwachung ist IMMER erforderlich!"},
+                {text: "Nicht konform, da ein fester Ueberpruefungszyklus vorgeschrieben ist", correct: false, feedback: "FALSCH: Kein FESTER Zyklus vorgeschrieben - aber regelmaessige Ueberpruefung ist noetig!"}
+            ]},
+            {q: "Welche Aussage zur Bestimmung relevanter interessierter Parteien trifft zu?", topic: "Interessierte Parteien", answers: [
+                {text: "Relevanz ergibt sich aus Einfluss auf die Faehigkeit, konforme Produkte bereitzustellen", correct: true, feedback: "Richtig!"},
+                {text: "Alle Stakeholder sind als relevant einzustufen", correct: false, feedback: "FALSCH: Nur RELEVANTE interessierte Parteien!"},
+                {text: "Relevante Anforderungen muessen bestimmt werden", correct: true, feedback: "Richtig!"},
+                {text: "Relevanz ist ausschliesslich gesetzlich definiert", correct: false, feedback: "FALSCH: Die Organisation bestimmt selbst die Relevanz!"}
+            ]},
+            {q: "Der Anwendungsbereich schliesst Entwicklung aus. Welche Kombination ist normativ erforderlich?", topic: "Anwendungsbereich", answers: [
+                {text: "Begruendung des Ausschlusses", correct: true, feedback: "Richtig!"},
+                {text: "Nachweis, dass Produktkonformitaet nicht beeintraechtigt wird", correct: true, feedback: "Richtig!"},
+                {text: "Freigabe durch die Zertifizierungsstelle", correct: false, feedback: "FALSCH: Der Zertifizierer GENEHMIGT keine Ausschluesse!"},
+                {text: "Dokumentierte Information zum Anwendungsbereich", correct: true, feedback: "Richtig!"}
+            ]},
+            {q: "Welche Aussagen ergeben sich unmittelbar aus ISO 9001, Kapitel 4.4?", topic: "Prozesse", answers: [
+                {text: "Prozesse sind festzulegen", correct: true, feedback: "Richtig!"},
+                {text: "Wechselwirkungen sind zu bestimmen", correct: true, feedback: "Richtig!"},
+                {text: "Jeder Prozess ist messbar zu machen", correct: false, feedback: "FALSCH: Nicht JEDER Prozess muss messbar sein!"},
+                {text: "Kriterien und Methoden zur Steuerung sind festzulegen", correct: true, feedback: "Richtig!"}
+            ]},
+            {q: "Im Prozessansatz fordert die Norm unter anderem, dass ...", topic: "Prozesse", answers: [
+                {text: "Risiken und Chancen beruecksichtigt werden", correct: true, feedback: "Richtig!"},
+                {text: "Prozesse unabhaengig voneinander gesteuert werden", correct: false, feedback: "FALSCH: Prozesse sind NICHT unabhaengig - Wechselwirkungen sind wichtig!"},
+                {text: "erforderliche Ressourcen bestimmt werden", correct: true, feedback: "Richtig!"},
+                {text: "Prozessbeschreibungen verpflichtend dokumentiert sind", correct: false, feedback: "FALSCH: NICHT verpflichtend dokumentiert!"}
+            ]},
+            {q: "Die oberste Leitung delegiert operative QM-Aufgaben. Welche Aussage ist korrekt?", topic: "Fuehrung", answers: [
+                {text: "Verantwortung fuer Wirksamkeit bleibt bei der obersten Leitung", correct: true, feedback: "Richtig!"},
+                {text: "Verantwortung kann vollstaendig delegiert werden", correct: false, feedback: "FALSCH: RECHENSCHAFTSPFLICHT kann NICHT delegiert werden!"},
+                {text: "Mit Benennung eines QMB entfaellt die Leitungsverantwortung", correct: false, feedback: "FALSCH: Die Verantwortung bleibt IMMER bei der obersten Leitung!"},
+                {text: "Audits sind zwingend durch die Leitung durchzufuehren", correct: false, feedback: "FALSCH: Die Leitung muss NICHT selbst auditieren!"}
+            ]},
+            {q: "Welche Anforderungen an die Qualitaetspolitik sind normativ zutreffend?", topic: "Qualitaetspolitik", answers: [
+                {text: "Sie passt zur strategischen Ausrichtung", correct: true, feedback: "Richtig!"},
+                {text: "Sie ist als dokumentierte Information verfuegbar", correct: true, feedback: "Richtig!"},
+                {text: "Sie ist jaehrlich zu aktualisieren", correct: false, feedback: "FALSCH: NICHT jaehrlich - nur bei Bedarf!"},
+                {text: "Sie ist zu kommunizieren und verstanden zu machen", correct: true, feedback: "Richtig!"}
+            ]},
+            {q: "Welche Aussagen zur Kundenorientierung sind korrekt?", topic: "Fuehrung", answers: [
+                {text: "Kundenanforderungen sind zu bestimmen und zu erfuellen", correct: true, feedback: "Richtig!"},
+                {text: "Kundenzufriedenheit ist allein Aufgabe des Vertriebs", correct: false, feedback: "FALSCH: Kundenorientierung betrifft die GESAMTE Organisation!"},
+                {text: "Risiken und Chancen im Hinblick auf Produkte sind zu beruecksichtigen", correct: true, feedback: "Richtig!"},
+                {text: "Kundenorientierung ersetzt Prozessueberwachung", correct: false, feedback: "FALSCH: Sie ERSETZT nicht die Prozessueberwachung!"}
+            ]},
+            {q: "Welche Aussagen zu Risiken und Chancen treffen zu?", topic: "Risiken und Chancen", answers: [
+                {text: "Risiken und Chancen sind zu bestimmen", correct: true, feedback: "Richtig!"},
+                {text: "Die Norm fordert eine formale Risikomethode", correct: false, feedback: "FALSCH: Keine formale Methode gefordert!"},
+                {text: "Massnahmen sind zu planen", correct: true, feedback: "Richtig!"},
+                {text: "Alle Risiken sind zu dokumentieren", correct: false, feedback: "FALSCH: Keine pauschale Dokumentationspflicht!"}
+            ]},
+            {q: "Qualitaetsziele muessen ...", topic: "Qualitaetsziele", answers: [
+                {text: "messbar sein", correct: true, feedback: "Richtig!"},
+                {text: "ueberwacht werden", correct: true, feedback: "Richtig!"},
+                {text: "mit der Qualitaetspolitik uebereinstimmen", correct: true, feedback: "Richtig!"},
+                {text: "jaehrlich angepasst werden", correct: false, feedback: "FALSCH: NICHT jaehrlich - nur bei Bedarf!"}
+            ]},
+            {q: "Welche Ressourcen nennt ISO 9001 explizit?", topic: "Ressourcen", answers: [
+                {text: "Personen", correct: true, feedback: "Richtig!"},
+                {text: "Infrastruktur", correct: true, feedback: "Richtig!"},
+                {text: "Wissen der Organisation", correct: true, feedback: "Richtig!"},
+                {text: "Motivation der Mitarbeitenden", correct: false, feedback: "FALSCH: Motivation ist NICHT explizit als Ressource genannt!"}
+            ]},
+            {q: "Im Kontext von Kompetenz fordert die Norm, dass ...", topic: "Kompetenz", answers: [
+                {text: "erforderliche Kompetenzen bestimmt werden", correct: true, feedback: "Richtig!"},
+                {text: "Massnahmen zur Kompetenzentwicklung umgesetzt werden", correct: true, feedback: "Richtig!"},
+                {text: "Wirksamkeit der Massnahmen bewertet wird", correct: true, feedback: "Richtig!"},
+                {text: "jede Schulungsmassnahme dokumentiert ist", correct: false, feedback: "FALSCH: NICHT jede Schulung - nur geeignete Nachweise!"}
+            ]},
+            {q: "Welche Aussage zur dokumentierten Information ist NICHT normkonform?", topic: "Dokumentation", answers: [
+                {text: "Dokumentierte Information ist zu lenken", correct: false, feedback: "FALSCH: Das IST normkonform - sie muss gelenkt werden!"},
+                {text: "Eine feste Dokumentationsstruktur ist vorgeschrieben", correct: true, feedback: "Richtig! Eine feste Struktur ist NICHT vorgeschrieben!"},
+                {text: "Schutz vor unbeabsichtigter Aenderung ist sicherzustellen", correct: false, feedback: "FALSCH: Das IST normkonform!"},
+                {text: "Verfuegbarkeit und Eignung sind sicherzustellen", correct: false, feedback: "FALSCH: Das IST normkonform!"}
+            ]},
+            {q: "Welche Taetigkeiten sind Kapitel 8 zuzuordnen?", topic: "Betriebliche Planung", answers: [
+                {text: "Planung der Leistungserbringung", correct: true, feedback: "Richtig!"},
+                {text: "Managementbewertung", correct: false, feedback: "FALSCH: Managementbewertung ist Kapitel 9!"},
+                {text: "Lenkung externer Anbieter", correct: true, feedback: "Richtig!"},
+                {text: "Kennzeichnung und Rueckverfolgbarkeit", correct: true, feedback: "Richtig!"}
+            ]},
+            {q: "Ein externer Anbieter wird genutzt. Welche Aussagen sind normkonform?", topic: "Externe Anbieter", answers: [
+                {text: "Art und Umfang der Lenkung sind festzulegen", correct: true, feedback: "Richtig!"},
+                {text: "Der Anbieter muss zertifiziert sein", correct: false, feedback: "FALSCH: Zertifizierung ist NICHT gefordert!"},
+                {text: "Anforderungen sind zu kommunizieren", correct: true, feedback: "Richtig!"},
+                {text: "Verantwortung geht auf den Anbieter ueber", correct: false, feedback: "FALSCH: Verantwortung BLEIBT bei der Organisation!"}
+            ]},
+            {q: "Welche Aussagen zur Ueberwachung und Messung sind korrekt?", topic: "Ueberwachung", answers: [
+                {text: "Alle Prozesse muessen gemessen werden", correct: false, feedback: "FALSCH: NICHT alle Prozesse!"},
+                {text: "Die Organisation legt fest, was ueberwacht wird", correct: true, feedback: "Richtig!"},
+                {text: "Geeignete Methoden sind festzulegen", correct: true, feedback: "Richtig!"},
+                {text: "Kundenzufriedenheit ist zu bewerten", correct: true, feedback: "Richtig!"}
+            ]},
+            {q: "Interne Audits ...", topic: "Internes Audit", answers: [
+                {text: "sind geplant durchzufuehren", correct: true, feedback: "Richtig!"},
+                {text: "muessen unabhaengig erfolgen", correct: true, feedback: "Richtig!"},
+                {text: "sind optional bei kleinen Organisationen", correct: false, feedback: "FALSCH: Interne Audits sind NICHT optional!"},
+                {text: "liefern Informationen zur Wirksamkeit des QMS", correct: true, feedback: "Richtig!"}
+            ]},
+            {q: "Welche Inhalte gehoeren zu den Eingaben der Managementbewertung?", topic: "Managementbewertung", answers: [
+                {text: "Ergebnisse interner Audits", correct: true, feedback: "Richtig!"},
+                {text: "Kundenzufriedenheit", correct: true, feedback: "Richtig!"},
+                {text: "Aenderungen interner und externer Themen", correct: true, feedback: "Richtig!"},
+                {text: "Personalgespraeche", correct: false, feedback: "FALSCH: Personalgespraeche sind KEINE explizite Normforderung!"}
+            ]},
+            {q: "Was beschreibt 'Wirksamkeit' im Sinne der ISO 9001?", topic: "Prozesse", answers: [
+                {text: "Einhaltung interner Vorgaben", correct: false, feedback: "FALSCH: Das ist Konformitaet!"},
+                {text: "Erreichen beabsichtigter Ergebnisse", correct: true, feedback: "Richtig!"},
+                {text: "Wirtschaftlicher Erfolg", correct: false, feedback: "FALSCH: Das ist Effizienz!"},
+                {text: "Gesetzeskonformitaet", correct: false, feedback: "FALSCH: Das ist Compliance!"}
+            ]},
+            {q: "Eine Nichtkonformitaet liegt vor, wenn ...", topic: "Nichtkonformitaet", answers: [
+                {text: "eine Anforderung nicht erfuellt ist", correct: true, feedback: "Richtig!"},
+                {text: "ein Kunde unzufrieden ist", correct: false, feedback: "FALSCH: Unzufriedenheit bedeutet nicht automatisch Nichtkonformitaet!"},
+                {text: "eine normative Forderung nicht erfuellt ist", correct: true, feedback: "Richtig!"},
+                {text: "ein internes Ziel verfehlt wird", correct: false, feedback: "FALSCH: Zielverfehlung ist nicht unbedingt eine Nichtkonformitaet!"}
+            ]},
+            {q: "Welche Aussagen zu Korrekturmassnahmen sind korrekt?", topic: "Korrekturmassnahmen", answers: [
+                {text: "Ursachen sind zu ermitteln", correct: true, feedback: "Richtig!"},
+                {text: "Sie ersetzen Vorbeugungsmassnahmen", correct: false, feedback: "FALSCH: Risikobasiertes Denken ersetzt Vorbeugungsmassnahmen!"},
+                {text: "Wirksamkeit ist zu bewerten", correct: true, feedback: "Richtig!"},
+                {text: "Jede Massnahme bedarf externer Freigabe", correct: false, feedback: "FALSCH: Keine externe Freigabe erforderlich!"}
+            ]},
+            {q: "Verbesserung im Sinne der ISO 9001 bedeutet ...", topic: "Verbesserung", answers: [
+                {text: "fortlaufende Erhoehung der Leistungsfaehigkeit des QMS", correct: true, feedback: "Richtig!"},
+                {text: "ausschliessliche Reaktion auf Abweichungen", correct: false, feedback: "FALSCH: Verbesserung ist PROAKTIV!"},
+                {text: "optionale Aktivitaet", correct: false, feedback: "FALSCH: Verbesserung ist VERPFLICHTEND!"},
+                {text: "Aufgabe der Qualitaetsabteilung", correct: false, feedback: "FALSCH: Verbesserung ist Aufgabe ALLER!"}
+            ]},
+            {q: "Welche Aussagen zur internen Kommunikation sind normativ zutreffend?", topic: "Kommunikation", answers: [
+                {text: "Relevante Inhalte sind festzulegen", correct: true, feedback: "Richtig!"},
+                {text: "Kommunikation ist entbehrlich", correct: false, feedback: "FALSCH: Kommunikation ist NICHT entbehrlich!"},
+                {text: "Verantwortlichkeiten sind zu bestimmen", correct: true, feedback: "Richtig!"},
+                {text: "Kommunikation ist nur schriftlich zulaessig", correct: false, feedback: "FALSCH: Die Form ist NICHT vorgeschrieben!"}
+            ]},
+            {q: "Das Wissen der Organisation ...", topic: "Wissen", answers: [
+                {text: "ist zu bestimmen", correct: true, feedback: "Richtig!"},
+                {text: "ist zu erhalten", correct: true, feedback: "Richtig!"},
+                {text: "muss vollstaendig dokumentiert sein", correct: false, feedback: "FALSCH: NICHT vollstaendig dokumentiert!"},
+                {text: "muss bei Bedarf verfuegbar sein", correct: true, feedback: "Richtig!"}
+            ]},
+            {q: "Kennzeichnung und Rueckverfolgbarkeit sind umzusetzen, wenn ...", topic: "Kennzeichnung", answers: [
+                {text: "Anforderungen dies verlangen", correct: true, feedback: "Richtig!"},
+                {text: "die Produktkonformitaet betroffen ist", correct: true, feedback: "Richtig!"},
+                {text: "Rueckverfolgbarkeit immer gefordert ist", correct: false, feedback: "FALSCH: NICHT immer gefordert!"},
+                {text: "vertragliche oder gesetzliche Vorgaben bestehen", correct: true, feedback: "Richtig!"}
+            ]},
+            {q: "Eigentum von Kunden oder externen Anbietern ist ...", topic: "Kennzeichnung", answers: [
+                {text: "zu identifizieren", correct: true, feedback: "Richtig!"},
+                {text: "zu schuetzen", correct: true, feedback: "Richtig!"},
+                {text: "bei Verlust oder Beschaedigung zu melden", correct: true, feedback: "Richtig!"},
+                {text: "Eigentum der Organisation", correct: false, feedback: "FALSCH: Es bleibt Eigentum des Kunden/Anbieters!"}
+            ]},
+            {q: "Eine Produktfreigabe setzt voraus, dass ...", topic: "Freigabe", answers: [
+                {text: "Anforderungen erfuellt sind", correct: true, feedback: "Richtig!"},
+                {text: "befugte Personen freigeben", correct: true, feedback: "Richtig!"},
+                {text: "die Freigabe dokumentiert ist", correct: true, feedback: "Richtig!"},
+                {text: "Pruefungen entfallen duerfen", correct: false, feedback: "FALSCH: Pruefungen duerfen NICHT entfallen!"}
+            ]},
+            {q: "Nichtkonforme Outputs muessen ...", topic: "Nichtkonformitaet", answers: [
+                {text: "gelenkt werden", correct: true, feedback: "Richtig!"},
+                {text: "gekennzeichnet sein", correct: true, feedback: "Richtig!"},
+                {text: "freigegeben werden", correct: false, feedback: "FALSCH: Nichtkonformes wird NICHT einfach freigegeben!"},
+                {text: "korrigiert werden", correct: true, feedback: "Richtig!"}
+            ]},
+            {q: "Welche Aussagen zur Aufbewahrung dokumentierter Information sind korrekt?", topic: "Dokumentation", answers: [
+                {text: "Aufbewahrungsfristen sind festzulegen", correct: true, feedback: "Richtig!"},
+                {text: "Dokumente sind unbegrenzt aenderbar", correct: false, feedback: "FALSCH: Aenderungen muessen GELENKT werden!"},
+                {text: "Schutz vor Verlust ist sicherzustellen", correct: true, feedback: "Richtig!"},
+                {text: "Dokumente und Aufzeichnungen sind identisch", correct: false, feedback: "FALSCH: Dokumente (aufrechterhalten) und Aufzeichnungen (aufbewahren) sind unterschiedlich!"}
+            ]},
+            {q: "Welche Rolle spielt der PDCA-Zyklus?", topic: "Prozesse", answers: [
+                {text: "Unterstuetzung des Prozessansatzes", correct: true, feedback: "Richtig!"},
+                {text: "Foerderung kontinuierlicher Verbesserung", correct: true, feedback: "Richtig!"},
+                {text: "Ersatz des QMS", correct: false, feedback: "FALSCH: PDCA ERSETZT nicht das QMS!"},
+                {text: "Beschraenkung auf Kapitel 8", correct: false, feedback: "FALSCH: PDCA gilt fuer das GESAMTE QMS!"}
+            ]},
+            {q: "Welche Aussagen zur Bewertung der Leistung sind korrekt?", topic: "Analyse", answers: [
+                {text: "Sie umfasst Ueberwachung, Messung, Analyse und Bewertung", correct: true, feedback: "Richtig!"},
+                {text: "Sie ersetzt interne Audits", correct: false, feedback: "FALSCH: Sie ERSETZT Audits nicht!"},
+                {text: "Sie dient als Entscheidungsgrundlage", correct: true, feedback: "Richtig!"},
+                {text: "Sie ist allein Aufgabe der Geschaeftsfuehrung", correct: false, feedback: "FALSCH: NICHT allein Aufgabe der GF!"}
+            ]},
+            {q: "Ein Prozess wird geaendert. Was fordert die Norm?", topic: "Aenderungsplanung", answers: [
+                {text: "Planung der Aenderungen", correct: true, feedback: "Richtig!"},
+                {text: "Beruecksichtigung der Risiken", correct: true, feedback: "Richtig!"},
+                {text: "Externe Genehmigung", correct: false, feedback: "FALSCH: Keine externe Genehmigung erforderlich!"},
+                {text: "Zwingende Dokumentation jeder Aenderung", correct: false, feedback: "FALSCH: Nicht JEDE Aenderung muss dokumentiert werden!"}
+            ]},
+            {q: "Welche Aussagen zu Rollen, Verantwortlichkeiten und Befugnissen sind korrekt?", topic: "Verantwortlichkeiten", answers: [
+                {text: "Sie sind festzulegen", correct: true, feedback: "Richtig!"},
+                {text: "Sie sind bekannt zu machen", correct: true, feedback: "Richtig!"},
+                {text: "Sie bleiben ausschliesslich bei der Leitung", correct: false, feedback: "FALSCH: Sie werden DELEGIERT!"},
+                {text: "Sie wechseln turnusmaessig", correct: false, feedback: "FALSCH: Kein turnusmaessiger Wechsel gefordert!"}
+            ]},
+            {q: "Welche Aussage zur kundenbezogenen Kommunikation ist korrekt?", topic: "Kundenanforderungen", answers: [
+                {text: "Sie ist festzulegen", correct: true, feedback: "Richtig!"},
+                {text: "Sie ist optional", correct: false, feedback: "FALSCH: Sie ist NICHT optional!"},
+                {text: "Sie beschraenkt sich auf Reklamationen", correct: false, feedback: "FALSCH: NICHT nur Reklamationen!"},
+                {text: "Sie ist Aufgabe des Marketings", correct: false, feedback: "FALSCH: NICHT nur Marketing!"}
+            ]},
+            {q: "Ein Audit stellt Abweichungen fest. Welche Schritte sind normkonform?", topic: "Internes Audit", answers: [
+                {text: "Ursachenanalyse", correct: true, feedback: "Richtig!"},
+                {text: "Festlegung von Korrekturmassnahmen", correct: true, feedback: "Richtig!"},
+                {text: "Sanktionierung Verantwortlicher", correct: false, feedback: "FALSCH: Sanktionierung ist KEIN Norminhalt!"},
+                {text: "Bewertung der Wirksamkeit", correct: true, feedback: "Richtig!"}
+            ]},
+            {q: "Welche Aussage zur kontinuierlichen Verbesserung ist korrekt?", topic: "Verbesserung", answers: [
+                {text: "Sie ist Bestandteil des QMS", correct: true, feedback: "Richtig!"},
+                {text: "Sie ist einmalig", correct: false, feedback: "FALSCH: KONTINUIERLICH bedeutet fortlaufend!"},
+                {text: "Sie ist optional", correct: false, feedback: "FALSCH: Sie ist NICHT optional!"},
+                {text: "Sie beschraenkt sich auf Prozesse", correct: false, feedback: "FALSCH: Sie betrifft das GESAMTE QMS!"}
+            ]},
+            {q: "Welche Aussagen zu extern bereitgestellten Prozessen sind richtig?", topic: "Externe Anbieter", answers: [
+                {text: "Sie sind zu lenken", correct: true, feedback: "Richtig!"},
+                {text: "Verantwortung verbleibt bei der Organisation", correct: true, feedback: "Richtig!"},
+                {text: "Normverantwortung geht auf den Anbieter ueber", correct: false, feedback: "FALSCH: Verantwortung BLEIBT bei der Organisation!"},
+                {text: "Anforderungen sind festzulegen", correct: true, feedback: "Richtig!"}
+            ]},
+            {q: "Welche Aussage zum Anwendungsbereich ist korrekt?", topic: "Anwendungsbereich", answers: [
+                {text: "Er ist als dokumentierte Information verfuegbar", correct: true, feedback: "Richtig!"},
+                {text: "Er ist unver aenderlich", correct: false, feedback: "FALSCH: Er KANN bei Bedarf angepasst werden!"},
+                {text: "Er ersetzt ein QM-Handbuch", correct: false, feedback: "FALSCH: Er ERSETZT kein QM-Handbuch!"},
+                {text: "Er muss alle Normkapitel enthalten", correct: false, feedback: "FALSCH: Ausschluesse sind moeglich!"}
+            ]},
+            {q: "Welche Aussage zur HLS-Struktur ist korrekt?", topic: "Kontext", answers: [
+                {text: "Harmonisierung von Managementsystemnormen", correct: true, feedback: "Richtig!"},
+                {text: "Exklusiv fuer ISO 9001", correct: false, feedback: "FALSCH: HLS gilt fuer ALLE ISO-Managementsystemnormen!"},
+                {text: "Vorgabe konkreter Inhalte", correct: false, feedback: "FALSCH: HLS gibt die STRUKTUR vor, nicht konkrete Inhalte!"},
+                {text: "Einschraenkung von Ausschluessen", correct: false, feedback: "FALSCH: HLS hat keinen Einfluss auf Ausschluesse!"}
+            ]},
+            {q: "Welche Aussagen zur Bewertung externer Anbieter sind normkonform?", topic: "Externe Anbieter", answers: [
+                {text: "Kriterien sind festzulegen", correct: true, feedback: "Richtig!"},
+                {text: "Jaehrliche Audits sind verpflichtend", correct: false, feedback: "FALSCH: NICHT jaehrlich gefordert!"},
+                {text: "Bewertung ist optional", correct: false, feedback: "FALSCH: Bewertung ist NICHT optional!"},
+                {text: "Ergebnisse sind zu beruecksichtigen", correct: true, feedback: "Richtig!"}
+            ]},
+            {q: "Welche Aussage beschreibt die Zielsetzung der ISO 9001 zutreffend?", topic: "Kontext", answers: [
+                {text: "Erhoehung der Kundenzufriedenheit durch ein wirksames QMS", correct: true, feedback: "Richtig!"},
+                {text: "Einfuehrung eines QM-Handbuchs", correct: false, feedback: "FALSCH: QM-Handbuch ist NICHT mehr gefordert!"},
+                {text: "Erfuellung aller gesetzlichen Anforderungen", correct: false, feedback: "FALSCH: ISO 9001 ist eine QUALITAETSNORM, keine Rechtsnorm!"},
+                {text: "Standardisierung aller Prozesse", correct: false, feedback: "FALSCH: NICHT Standardisierung aller Prozesse!"}
+            ]},
+            {q: "Welche Aussagen zur Prozesswirksamkeit sind korrekt?", topic: "Prozesse", answers: [
+                {text: "Erreichen beabsichtigter Ergebnisse", correct: true, feedback: "Richtig!"},
+                {text: "Gleichbedeutend mit Konformitaet", correct: false, feedback: "FALSCH: Wirksamkeit und Konformitaet sind NICHT identisch!"},
+                {text: "Wirksamkeit ist zu bewerten", correct: true, feedback: "Richtig!"},
+                {text: "Ersetzt Ueberwachung", correct: false, feedback: "FALSCH: Wirksamkeit ERSETZT nicht Ueberwachung!"}
+            ]},
+            {q: "Welche Aussage zur Dokumentenlenkung ist korrekt?", topic: "Dokumentation", answers: [
+                {text: "Aenderungen sind zu lenken", correct: true, feedback: "Richtig!"},
+                {text: "Dokumente duerfen frei geaendert werden", correct: false, feedback: "FALSCH: Aenderungen muessen GELENKT werden!"},
+                {text: "Schutz vor unbeabsichtigter Nutzung ist sicherzustellen", correct: true, feedback: "Richtig!"},
+                {text: "Dokumente sind unbegrenzt aufzubewahren", correct: false, feedback: "FALSCH: Die Organisation legt Aufbewahrungsfristen fest!"}
+            ]},
+            {q: "Welche Aussagen zur Managementbewertung sind korrekt?", topic: "Managementbewertung", answers: [
+                {text: "Sie ist geplant durchzufuehren", correct: true, feedback: "Richtig!"},
+                {text: "Sie bewertet fortdauernde Eignung", correct: true, feedback: "Richtig!"},
+                {text: "Sie ersetzt interne Audits", correct: false, feedback: "FALSCH: Sie ERSETZT Audits nicht!"},
+                {text: "Sie liefert Eingaben fuer Verbesserungen", correct: true, feedback: "Richtig!"}
+            ]},
+            {q: "Welche Aussage ist normativ korrekt?", topic: "Kundenzufriedenheit", answers: [
+                {text: "Kundenzufriedenheit ist ein Leistungsindikator", correct: true, feedback: "Richtig!"},
+                {text: "Kundenzufriedenheit ist identisch mit Kundenorientierung", correct: false, feedback: "FALSCH: Kundenzufriedenheit und Kundenorientierung sind NICHT identisch!"},
+                {text: "Kundenzufriedenheit ist optional", correct: false, feedback: "FALSCH: Sie ist NICHT optional!"},
+                {text: "Kundenzufriedenheit ersetzt Prozessueberwachung", correct: false, feedback: "FALSCH: Sie ERSETZT nicht die Prozessueberwachung!"}
+            ]}
+        ]
     }
 };
