@@ -1790,10 +1790,10 @@ const chapters = {
                 {text: "Die Anforderungen relevanter interessierter Parteien muessen bestimmt werden", correct: true, feedback: "Richtig!"}
             ]},
             {q: "Der Anwendungsbereich des QMS muss als dokumentierte Information verfuegbar sein. Welche Anforderung ist dabei NICHT zutreffend?", answers: [
-                {text: "Die Produkte und Dienstleistungen muessen genannt werden", correct: true, feedback: "Richtig!"},
-                {text: "Begruendungen fuer nicht anwendbare Anforderungen muessen enthalten sein", correct: true, feedback: "Richtig!"},
-                {text: "Die Anzahl der Mitarbeiter muss dokumentiert sein", correct: false, feedback: "FALSCH: Die Mitarbeiterzahl ist KEINE Normforderung fuer den Anwendungsbereich!"},
-                {text: "Der Anwendungsbereich muss die Grenzen des QMS beschreiben", correct: true, feedback: "Richtig!"}
+                {text: "Die Produkte und Dienstleistungen muessen genannt werden", correct: false, feedback: "FALSCH: Das IST eine Normforderung!"},
+                {text: "Begruendungen fuer nicht anwendbare Anforderungen muessen enthalten sein", correct: false, feedback: "FALSCH: Das IST eine Normforderung!"},
+                {text: "Die Anzahl der Mitarbeiter muss dokumentiert sein", correct: true, feedback: "Richtig! Die Mitarbeiterzahl ist KEINE Normforderung fuer den Anwendungsbereich!"},
+                {text: "Der Anwendungsbereich muss die Grenzen des QMS beschreiben", correct: false, feedback: "FALSCH: Das IST eine Normforderung!"}
             ]},
             {q: "Kapitel 4.4 fordert, dass die Organisation ihr QMS einschliesslich der Prozesse festlegen muss. Welche Aussagen sind normativ korrekt?", answers: [
                 {text: "Die Abfolge und Wechselwirkung der Prozesse muessen bestimmt werden", correct: true, feedback: "Richtig!"},
@@ -1820,10 +1820,10 @@ const chapters = {
                 {text: "Die Rechenschaftspflicht ist nicht delegierbar", correct: true, feedback: "Richtig!"}
             ]},
             {q: "Die Qualitaetspolitik muss bestimmte Anforderungen erfuellen. Welche Aussage ist NICHT korrekt?", answers: [
-                {text: "Sie muss als dokumentierte Information verfuegbar sein", correct: true, feedback: "Richtig!"},
-                {text: "Sie muss jaehrlich komplett neu erstellt werden", correct: false, feedback: "FALSCH: Jaehrliche Neuerstellung ist NICHT gefordert! Die Q-Politik wird bei Bedarf angepasst."},
-                {text: "Sie muss eine Verpflichtung zur fortlaufenden Verbesserung enthalten", correct: true, feedback: "Richtig!"},
-                {text: "Sie muss fuer interessierte Parteien verfuegbar sein", correct: true, feedback: "Richtig!"}
+                {text: "Sie muss als dokumentierte Information verfuegbar sein", correct: false, feedback: "FALSCH: Das IST korrekt - sie muss dokumentiert sein!"},
+                {text: "Sie muss jaehrlich komplett neu erstellt werden", correct: true, feedback: "Richtig! Jaehrliche Neuerstellung ist NICHT gefordert! Die Q-Politik wird bei Bedarf angepasst."},
+                {text: "Sie muss eine Verpflichtung zur fortlaufenden Verbesserung enthalten", correct: false, feedback: "FALSCH: Das IST korrekt - sie muss diese Verpflichtung enthalten!"},
+                {text: "Sie muss fuer interessierte Parteien verfuegbar sein", correct: false, feedback: "FALSCH: Das IST korrekt - sie muss verfuegbar sein!"}
             ]},
             {q: "Kapitel 5.3 fordert die Zuweisung von Verantwortlichkeiten und Befugnissen. Welche Aussage zur Rolle des QMB ist normativ korrekt?", answers: [
                 {text: "Der QMB muss Mitglied der obersten Leitung sein", correct: false, feedback: "FALSCH: Keine Vorgabe mehr zur Person!"},
@@ -1850,10 +1850,10 @@ const chapters = {
                 {text: "Risikobasiertes Denken ersetzt die frueheren Vorbeugungsmassnahmen", correct: true, feedback: "Richtig!"}
             ]},
             {q: "Qualitaetsziele muessen bestimmte Eigenschaften haben. Welche Eigenschaft ist NICHT normativ gefordert?", answers: [
-                {text: "Messbar", correct: true, feedback: "Richtig!"},
-                {text: "Ueberwacht", correct: true, feedback: "Richtig!"},
-                {text: "Jaehrlich neu festgelegt", correct: false, feedback: "FALSCH: 'Jaehrlich' steht NICHT in der Norm! Q-Ziele werden bei Bedarf aktualisiert."},
-                {text: "Im Einklang mit der Qualitaetspolitik", correct: true, feedback: "Richtig!"}
+                {text: "Messbar", correct: false, feedback: "FALSCH: Messbar IST gefordert!"},
+                {text: "Ueberwacht", correct: false, feedback: "FALSCH: Ueberwacht IST gefordert!"},
+                {text: "Jaehrlich neu festgelegt", correct: true, feedback: "Richtig! 'Jaehrlich' steht NICHT in der Norm! Q-Ziele werden bei Bedarf aktualisiert."},
+                {text: "Im Einklang mit der Qualitaetspolitik", correct: false, feedback: "FALSCH: Das IST gefordert!"}
             ]},
             {q: "Fuer Qualitaetsziele muss die Planung bestimmte Aspekte umfassen. Welche sind normativ gefordert?", answers: [
                 {text: "Was getan wird", correct: true, feedback: "Richtig!"},
@@ -1868,10 +1868,10 @@ const chapters = {
                 {text: "Risiken und Chancen werden getrennt in unterschiedlichen Kapiteln behandelt", correct: false, feedback: "FALSCH: Risiken und Chancen werden GEMEINSAM in Kap. 6.1 behandelt."}
             ]},
             {q: "Bei geplanten Aenderungen am QMS muss die Organisation bestimmte Aspekte beruecksichtigen. Welcher gehoert NICHT dazu?", answers: [
-                {text: "Zweck der Aenderung", correct: true, feedback: "Richtig!"},
-                {text: "Moegliche Konsequenzen", correct: true, feedback: "Richtig!"},
-                {text: "Vorab-Genehmigung durch die Zertifizierungsstelle", correct: false, feedback: "FALSCH: Der Zertifizierer muss Aenderungen NICHT vorab genehmigen!"},
-                {text: "Verfuegbarkeit von Ressourcen", correct: true, feedback: "Richtig!"}
+                {text: "Zweck der Aenderung", correct: false, feedback: "FALSCH: Zweck IST zu beruecksichtigen!"},
+                {text: "Moegliche Konsequenzen", correct: false, feedback: "FALSCH: Konsequenzen SIND zu beruecksichtigen!"},
+                {text: "Vorab-Genehmigung durch die Zertifizierungsstelle", correct: true, feedback: "Richtig! Der Zertifizierer muss Aenderungen NICHT vorab genehmigen!"},
+                {text: "Verfuegbarkeit von Ressourcen", correct: false, feedback: "FALSCH: Ressourcen SIND zu beruecksichtigen!"}
             ]},
             {q: "Die dokumentierte Information ueber Qualitaetsziele muss...", answers: [
                 {text: "aufrechterhalten werden", correct: true, feedback: "Richtig!"},
@@ -1880,10 +1880,10 @@ const chapters = {
                 {text: "vom Zertifizierer freigegeben werden", correct: false, feedback: "FALSCH: Der Zertifizierer gibt Q-Ziele nicht frei."}
             ]},
             {q: "Die Norm fordert die Bestimmung und Bereitstellung von Ressourcen. Welche gehoeren NICHT zu den in Kapitel 7.1 genannten Ressourcenarten?", answers: [
-                {text: "Personen", correct: true, feedback: "Richtig!"},
-                {text: "Finanzielle Mittel", correct: false, feedback: "FALSCH: Finanzielle Mittel werden in Kap. 7.1 NICHT explizit genannt!"},
-                {text: "Infrastruktur", correct: true, feedback: "Richtig!"},
-                {text: "Wissen der Organisation", correct: true, feedback: "Richtig!"}
+                {text: "Personen", correct: false, feedback: "FALSCH: Personen SIND in Kap. 7.1 genannt!"},
+                {text: "Finanzielle Mittel", correct: true, feedback: "Richtig! Finanzielle Mittel werden in Kap. 7.1 NICHT explizit genannt!"},
+                {text: "Infrastruktur", correct: false, feedback: "FALSCH: Infrastruktur IST in Kap. 7.1 genannt!"},
+                {text: "Wissen der Organisation", correct: false, feedback: "FALSCH: Wissen der Organisation IST in Kap. 7.1 genannt!"}
             ]},
             {q: "Metrologische Rueckfuehrbarkeit von Messmitteln ist gefordert, wenn...", answers: [
                 {text: "es immer fuer alle Messmittel gilt", correct: false, feedback: "FALSCH: NICHT immer fuer alle!"},
@@ -1892,10 +1892,10 @@ const chapters = {
                 {text: "der Zertifizierer es verlangt", correct: false, feedback: "FALSCH: Der Zertifizierer bestimmt nicht die Anforderungen."}
             ]},
             {q: "Wissen der Organisation (7.1.6) ist eine neue Anforderung seit ISO 9001:2015. Welche Aussage ist NICHT korrekt?", answers: [
-                {text: "Wissen muss bestimmt werden", correct: true, feedback: "Richtig!"},
-                {text: "Wissen muss vollstaendig in einem Wiki dokumentiert werden", correct: false, feedback: "FALSCH: Ein Wiki ist NICHT vorgeschrieben! Die Dokumentationsform ist freigestellt."},
-                {text: "Wissen muss aufrechterhalten werden", correct: true, feedback: "Richtig!"},
-                {text: "Bei Aenderungsbedarf muss zusaetzliches Wissen erworben werden", correct: true, feedback: "Richtig!"}
+                {text: "Wissen muss bestimmt werden", correct: false, feedback: "FALSCH: Das IST korrekt - Wissen muss bestimmt werden!"},
+                {text: "Wissen muss vollstaendig in einem Wiki dokumentiert werden", correct: true, feedback: "Richtig! Ein Wiki ist NICHT vorgeschrieben! Die Dokumentationsform ist freigestellt."},
+                {text: "Wissen muss aufrechterhalten werden", correct: false, feedback: "FALSCH: Das IST korrekt - Wissen muss aufrechterhalten werden!"},
+                {text: "Bei Aenderungsbedarf muss zusaetzliches Wissen erworben werden", correct: false, feedback: "FALSCH: Das IST korrekt!"}
             ]},
             {q: "Kompetenz kann durch verschiedene Wege erworben werden. Welche nennt die Norm?", answers: [
                 {text: "Ausbildung", correct: true, feedback: "Richtig!"},
@@ -1904,10 +1904,10 @@ const chapters = {
                 {text: "Erfahrung", correct: true, feedback: "Richtig!"}
             ]},
             {q: "Das Bewusstsein der Mitarbeiter (7.3) muss sich auf bestimmte Aspekte erstrecken. Welcher gehoert NICHT dazu?", answers: [
-                {text: "Die Qualitaetspolitik", correct: true, feedback: "Richtig!"},
-                {text: "Relevante Qualitaetsziele", correct: true, feedback: "Richtig!"},
-                {text: "Die Gehaelter der Kollegen", correct: false, feedback: "FALSCH: Gehaelter sind KEIN QMS-Thema!"},
-                {text: "Die Folgen bei Nichterfuellung von QMS-Anforderungen", correct: true, feedback: "Richtig!"}
+                {text: "Die Qualitaetspolitik", correct: false, feedback: "FALSCH: Qualitaetspolitik GEHOERT dazu!"},
+                {text: "Relevante Qualitaetsziele", correct: false, feedback: "FALSCH: Qualitaetsziele GEHOEREN dazu!"},
+                {text: "Die Gehaelter der Kollegen", correct: true, feedback: "Richtig! Gehaelter sind KEIN QMS-Thema!"},
+                {text: "Die Folgen bei Nichterfuellung von QMS-Anforderungen", correct: false, feedback: "FALSCH: Folgen GEHOEREN dazu!"}
             ]},
             {q: "Der Begriff 'dokumentierte Information' ersetzt in der ISO 9001:2015...", answers: [
                 {text: "nur den Begriff 'Dokumente'", correct: false, feedback: "FALSCH: Unvollstaendig!"},
@@ -1946,10 +1946,10 @@ const chapters = {
                 {text: "Validierung erfolgt oft beim oder mit dem Kunden", correct: true, feedback: "Richtig!"}
             ]},
             {q: "Externe Anbieter muessen nach Kapitel 8.4 gesteuert werden. Welche Aussage ist NICHT korrekt?", answers: [
-                {text: "Kriterien fuer Auswahl und Bewertung muessen festgelegt werden", correct: true, feedback: "Richtig!"},
-                {text: "Der guenstigste Preis ist das einzige Auswahlkriterium", correct: false, feedback: "FALSCH: Preis allein ist KEIN ausreichendes Kriterium!"},
-                {text: "Die Leistung externer Anbieter muss ueberwacht werden", correct: true, feedback: "Richtig!"},
-                {text: "Ergebnisse der Bewertung muessen dokumentiert werden", correct: true, feedback: "Richtig!"}
+                {text: "Kriterien fuer Auswahl und Bewertung muessen festgelegt werden", correct: false, feedback: "FALSCH: Das IST korrekt - Kriterien muessen festgelegt werden!"},
+                {text: "Der guenstigste Preis ist das einzige Auswahlkriterium", correct: true, feedback: "Richtig! Preis allein ist KEIN ausreichendes Kriterium!"},
+                {text: "Die Leistung externer Anbieter muss ueberwacht werden", correct: false, feedback: "FALSCH: Das IST korrekt - Leistung muss ueberwacht werden!"},
+                {text: "Ergebnisse der Bewertung muessen dokumentiert werden", correct: false, feedback: "FALSCH: Das IST korrekt - Ergebnisse muessen dokumentiert werden!"}
             ]},
             {q: "Kundeneigentum nach 8.5.3 umfasst...", answers: [
                 {text: "nur Material, das der Kunde beistellt", correct: false, feedback: "FALSCH: NICHT nur Material! Kundeneigentum umfasst auch geistiges Eigentum und Daten."},
@@ -2131,10 +2131,10 @@ const chapters = {
                 {text: "jede Schulung dokumentiert wird", correct: false, feedback: "FALSCH: NICHT jede Schulung - nur geeignete Nachweise!"}
             ]},
             {q: "Welche Aussage zur dokumentierten Information ist NICHT korrekt?", topic: "Dokumentation", answers: [
-                {text: "Dokumentierte Information muss gelenkt werden", correct: true, feedback: "Richtig!"},
-                {text: "Die Norm fordert eine feste Dokumentationsstruktur", correct: false, feedback: "FALSCH: Die Norm fordert KEINE feste Dokumentationsstruktur!"},
-                {text: "Dokumentierte Information muss geschuetzt werden", correct: true, feedback: "Richtig!"},
-                {text: "Dokumentierte Information muss verfuegbar sein", correct: true, feedback: "Richtig!"}
+                {text: "Dokumentierte Information muss gelenkt werden", correct: false, feedback: "FALSCH: Das IST korrekt - dokumentierte Information muss gelenkt werden!"},
+                {text: "Die Norm fordert eine feste Dokumentationsstruktur", correct: true, feedback: "Richtig! Die Norm fordert KEINE feste Dokumentationsstruktur!"},
+                {text: "Dokumentierte Information muss geschuetzt werden", correct: false, feedback: "FALSCH: Das IST korrekt - sie muss geschuetzt werden!"},
+                {text: "Dokumentierte Information muss verfuegbar sein", correct: false, feedback: "FALSCH: Das IST korrekt - sie muss verfuegbar sein!"}
             ]},
             {q: "Welche Taetigkeiten sind Kapitel 8 'Betrieb' zuzuordnen?", topic: "Betriebliche Planung", answers: [
                 {text: "Planung der Leistungserbringung", correct: true, feedback: "Richtig!"},
