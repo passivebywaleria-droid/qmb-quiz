@@ -480,6 +480,7 @@
     let score = 0;
     let maxScore = 0;
     let answered = false;
+    let topicResults = {}; // Themen-Tracking: {topic: {correct: 0, total: 0}}
     const PASS_THRESHOLD = 70;
 
     function init() {
@@ -501,7 +502,8 @@
             score: score,
             maxScore: maxScore,
             percentage: percentage,
-            passed: passed
+            passed: passed,
+            topics: JSON.parse(JSON.stringify(topicResults)) // Themen-Ergebnisse speichern
         });
         if (history.length > 50) history.pop();
         localStorage.setItem('qmb_quiz_history', JSON.stringify(history));
@@ -564,8 +566,66 @@
 
         const getStrengthClass = (pct) => pct >= 70 ? 'strong' : pct >= 50 ? 'medium' : 'weak';
 
-        analysisEl.innerHTML = `
-            <h4>Kapitel-Sicherheit (Bestwert)</h4>
+        // Themen-Analyse: Aggregiere alle Themen aus allen Versuchen
+        const topicStats = {};
+        history.forEach(h => {
+            if (h.topics) {
+                Object.entries(h.topics).forEach(([topic, data]) => {
+                    if (!topicStats[topic]) {
+                        topicStats[topic] = { correct: 0, total: 0 };
+                    }
+                    topicStats[topic].correct += data.correct;
+                    topicStats[topic].total += data.total;
+                });
+            }
+        });
+
+        // Sortiere Themen nach Erfolgsquote
+        const sortedTopics = Object.entries(topicStats)
+            .map(([topic, data]) => ({
+                topic,
+                correct: data.correct,
+                total: data.total,
+                pct: data.total > 0 ? Math.round((data.correct / data.total) * 100) : 0
+            }))
+            .filter(t => t.total >= 2) // Nur Themen mit mind. 2 Fragen
+            .sort((a, b) => a.pct - b.pct);
+
+        // Schwache Themen (< 70%)
+        const weakTopics = sortedTopics.filter(t => t.pct < 70).slice(0, 5);
+        // Starke Themen (>= 70%)
+        const strongTopics = sortedTopics.filter(t => t.pct >= 70).sort((a, b) => b.pct - a.pct).slice(0, 3);
+
+        let topicHtml = '';
+        if (weakTopics.length > 0) {
+            topicHtml += `<div class="analysis-section"><div class="analysis-section-title focus">Übung benötigt</div>`;
+            topicHtml += weakTopics.map(t => `
+                <div class="chapter-bar">
+                    <span class="chapter-bar-name">${t.topic}</span>
+                    <div class="chapter-bar-progress">
+                        <div class="chapter-bar-fill ${getStrengthClass(t.pct)}" style="width: ${t.pct}%"></div>
+                    </div>
+                    <span class="chapter-bar-percent ${getStrengthClass(t.pct)}">${t.pct}%</span>
+                </div>
+            `).join('');
+            topicHtml += '</div>';
+        }
+        if (strongTopics.length > 0) {
+            topicHtml += `<div class="analysis-section"><div class="analysis-section-title strong">Stärken</div>`;
+            topicHtml += strongTopics.map(t => `
+                <div class="chapter-bar">
+                    <span class="chapter-bar-name">${t.topic}</span>
+                    <div class="chapter-bar-progress">
+                        <div class="chapter-bar-fill ${getStrengthClass(t.pct)}" style="width: ${t.pct}%"></div>
+                    </div>
+                    <span class="chapter-bar-percent ${getStrengthClass(t.pct)}">${t.pct}%</span>
+                </div>
+            `).join('');
+            topicHtml += '</div>';
+        }
+
+        analysisEl.innerHTML = topicHtml + `
+            <h4 style="margin-top:12px;">Kapitel-Sicherheit</h4>
             ${sortedChapters.map(ch => `
                 <div class="chapter-bar">
                     <span class="chapter-bar-name">${ch.title.replace('Kapitel ', 'Kap. ').replace(' - ', ': ')}</span>
@@ -625,6 +685,7 @@
         const progress = {
             question: currentQuestion,
             score: score,
+            topicResults: topicResults,
             timestamp: new Date().toISOString()
         };
         localStorage.setItem('qmb_quiz_progress_' + currentChapter.key, JSON.stringify(progress));
@@ -664,6 +725,7 @@
         currentChapter.key = chapterKey;
         currentQuestion = progress.question;
         score = progress.score;
+        topicResults = progress.topicResults || {}; // Themen-Tracking wiederherstellen
         maxScore = currentChapter.questions.length;
         document.getElementById('chapter-selection').classList.add('hidden');
         document.getElementById('quiz-area').classList.add('active');
@@ -678,6 +740,7 @@
         currentChapter.key = chapterKey;
         currentQuestion = 0;
         score = 0;
+        topicResults = {}; // Themen-Tracking zurücksetzen
         maxScore = currentChapter.questions.length;
         document.getElementById('chapter-selection').classList.add('hidden');
         document.getElementById('quiz-area').classList.add('active');
@@ -782,6 +845,16 @@
         // 1 Punkt pro Frage nur bei perfekter Antwort
         if (isPerfect) {
             score += 1;
+        }
+
+        // Themen-Tracking
+        const topic = q.topic || 'Allgemein';
+        if (!topicResults[topic]) {
+            topicResults[topic] = { correct: 0, total: 0 };
+        }
+        topicResults[topic].total += 1;
+        if (isPerfect) {
+            topicResults[topic].correct += 1;
         }
 
         document.getElementById('check-btn').style.display = 'none';
