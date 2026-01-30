@@ -3484,5 +3484,1105 @@ const chapters = {
                 {text: "reicht es, den Fehler nur zu beheben", correct: false, feedback: "FALSCH: Fehlerbehebung allein ist KEINE Korrekturmassnahme - die URSACHE muss behoben werden."}
             ]}
         ]
+    },
+    "pruefung_simulation_1": {
+        title: "Pruefungssimulation 1 - Komplette Pruefung (45 Fragen)",
+        questions: [
+            {q: "1. Wie viele Grundsaetze des Qualitaetsmanagements sind in der ISO 9000 definiert?", topic: "Grundlagen", answers: [
+                {text: "Sieben Grundsaetze", correct: true, feedback: "Richtig! Die ISO 9000 definiert sieben QM-Grundsaetze."},
+                {text: "Fuenf Grundsaetze", correct: false, feedback: "FALSCH: Es sind SIEBEN Grundsaetze."},
+                {text: "Acht Grundsaetze", correct: false, feedback: "FALSCH: Seit 2015 sind es sieben (frueher acht)."},
+                {text: "Zehn Grundsaetze", correct: false, feedback: "FALSCH: Es sind SIEBEN Grundsaetze."}
+            ]},
+            {q: "2. Welche der folgenden sind QM-Grundsaetze nach ISO 9000?", topic: "Grundlagen", answers: [
+                {text: "Kundenorientierung", correct: true, feedback: "Richtig! Kundenorientierung ist der erste QM-Grundsatz."},
+                {text: "Fuehrung", correct: true, feedback: "Richtig! Fuehrung ist der zweite QM-Grundsatz."},
+                {text: "Prozessorientierter Ansatz", correct: true, feedback: "Richtig! Der prozessorientierte Ansatz ist ein QM-Grundsatz."},
+                {text: "Gewinnmaximierung", correct: false, feedback: "FALSCH: Gewinnmaximierung ist KEIN QM-Grundsatz."}
+            ]},
+            {q: "3. Was versteht die ISO 9001 unter dem Kontext der Organisation?", topic: "Kapitel 4", answers: [
+                {text: "Interne und externe Themen, die die strategische Ausrichtung beeinflussen", correct: true, feedback: "Richtig! Der Kontext umfasst interne und externe Themen."},
+                {text: "Faktoren, die die Faehigkeit beeinflussen, beabsichtigte Ergebnisse zu erzielen", correct: true, feedback: "Richtig! Der Kontext beeinflusst die Zielerreichung."},
+                {text: "Nur die Marktposition des Unternehmens", correct: false, feedback: "FALSCH: Marktposition ist nur EIN Teilaspekt."},
+                {text: "Ausschliesslich finanzielle Faktoren", correct: false, feedback: "FALSCH: Kontext umfasst viel mehr als nur Finanzen."}
+            ]},
+            {q: "4. Welche Aussagen zu interessierten Parteien sind normkonform?", topic: "Kapitel 4", answers: [
+                {text: "Relevante interessierte Parteien muessen bestimmt werden", correct: true, feedback: "Richtig! Die Organisation muss relevante Parteien bestimmen."},
+                {text: "Deren relevante Anforderungen muessen bestimmt werden", correct: true, feedback: "Richtig! Die Anforderungen muessen ermittelt werden."},
+                {text: "Anforderungen muessen ueberwacht werden", correct: true, feedback: "Richtig! Regelmaessige Ueberpruefung ist gefordert."},
+                {text: "ALLE Stakeholder muessen beruecksichtigt werden", correct: false, feedback: "FALSCH: Nur RELEVANTE Parteien, nicht alle."}
+            ]},
+            {q: "5. Der Anwendungsbereich des QMS ...", topic: "Kapitel 4", answers: [
+                {text: "muss als dokumentierte Information verfuegbar sein", correct: true, feedback: "Richtig! Der Anwendungsbereich muss dokumentiert sein."},
+                {text: "muss Grenzen und Anwendbarkeit beschreiben", correct: true, feedback: "Richtig! Grenzen und Anwendbarkeit sind zu beschreiben."},
+                {text: "kann begruendete Ausschluesse enthalten", correct: true, feedback: "Richtig! Begruendete Ausschluesse sind moeglich."},
+                {text: "muss exakt der Normstruktur folgen", correct: false, feedback: "FALSCH: Die Struktur ist FREI waehlbar."}
+            ]},
+            {q: "6. Wer traegt die Gesamtverantwortung fuer die Wirksamkeit des QMS?", topic: "Kapitel 5", answers: [
+                {text: "Die oberste Leitung", correct: true, feedback: "Richtig! Die oberste Leitung traegt die Gesamtverantwortung."},
+                {text: "Der Qualitaetsbeauftragte", correct: false, feedback: "FALSCH: Der QMB unterstuetzt, traegt aber nicht die Gesamtverantwortung."},
+                {text: "Die Qualitaetsabteilung", correct: false, feedback: "FALSCH: Die Abteilung unterstuetzt nur."},
+                {text: "Der externe Auditor", correct: false, feedback: "FALSCH: Der Auditor prueft nur."}
+            ]},
+            {q: "7. Die Qualitaetspolitik muss ...", topic: "Kapitel 5", answers: [
+                {text: "fuer den Zweck und Kontext angemessen sein", correct: true, feedback: "Richtig! Die Politik muss zum Kontext passen."},
+                {text: "einen Rahmen fuer Qualitaetsziele bieten", correct: true, feedback: "Richtig! Sie gibt den Rahmen fuer Ziele vor."},
+                {text: "als dokumentierte Information verfuegbar sein", correct: true, feedback: "Richtig! Die Politik muss dokumentiert sein."},
+                {text: "alle Qualitaetsziele explizit enthalten", correct: false, feedback: "FALSCH: Sie gibt den RAHMEN vor, enthaelt nicht alle Ziele."}
+            ]},
+            {q: "8. Was fordert die Norm bezueglich Risiken und Chancen?", topic: "Kapitel 6", answers: [
+                {text: "Sie muessen bestimmt werden", correct: true, feedback: "Richtig! Risiken und Chancen sind zu bestimmen."},
+                {text: "Massnahmen muessen geplant werden", correct: true, feedback: "Richtig! Massnahmen zum Umgang sind zu planen."},
+                {text: "Sie sind in QMS-Prozesse zu integrieren", correct: true, feedback: "Richtig! Integration in Prozesse ist gefordert."},
+                {text: "Ein formelles Risikomanagement ist vorgeschrieben", correct: false, feedback: "FALSCH: Kein FORMELLES Risikomanagement gefordert."}
+            ]},
+            {q: "9. Qualitaetsziele muessen ...", topic: "Kapitel 6", answers: [
+                {text: "messbar sein", correct: true, feedback: "Richtig! Messbarkeit ist gefordert."},
+                {text: "mit der Qualitaetspolitik vereinbar sein", correct: true, feedback: "Richtig! Vereinbarkeit mit der Politik ist erforderlich."},
+                {text: "ueberwacht werden", correct: true, feedback: "Richtig! Ueberwachung ist gefordert."},
+                {text: "jaehrlich geaendert werden", correct: false, feedback: "FALSCH: Keine jaehrliche Aenderung vorgeschrieben."}
+            ]},
+            {q: "10. Welche Ressourcen nennt die ISO 9001 explizit?", topic: "Kapitel 7", answers: [
+                {text: "Personen", correct: true, feedback: "Richtig! Personen sind in 7.1.2 genannt."},
+                {text: "Infrastruktur", correct: true, feedback: "Richtig! Infrastruktur ist in 7.1.3 genannt."},
+                {text: "Wissen der Organisation", correct: true, feedback: "Richtig! Wissen ist in 7.1.6 genannt."},
+                {text: "Finanzmittel", correct: false, feedback: "FALSCH: Finanzmittel werden NICHT explizit genannt."}
+            ]},
+            {q: "11. Was ist Kompetenz im Sinne der ISO 9001?", topic: "Kapitel 7", answers: [
+                {text: "Die Faehigkeit, Wissen und Fertigkeiten anzuwenden", correct: true, feedback: "Richtig! Kompetenz = Anwendung von Wissen und Fertigkeiten."},
+                {text: "Kann durch Ausbildung erworben werden", correct: true, feedback: "Richtig! Ausbildung ist ein Weg zur Kompetenz."},
+                {text: "Kann durch Erfahrung erworben werden", correct: true, feedback: "Richtig! Erfahrung fuehrt auch zu Kompetenz."},
+                {text: "Ist identisch mit Schulungsteilnahme", correct: false, feedback: "FALSCH: Schulungsteilnahme allein ist keine Kompetenz."}
+            ]},
+            {q: "12. 'Dokumentierte Information aufrechterhalten' bedeutet ...", topic: "Kapitel 7", answers: [
+                {text: "Vorgabedokumente aktuell halten", correct: true, feedback: "Richtig! Aufrechterhalten = Vorgaben aktuell halten."},
+                {text: "z.B. Anweisungen und Richtlinien pflegen", correct: true, feedback: "Richtig! Arbeitsanweisungen sind Beispiele."},
+                {text: "Prozessbeschreibungen aktualisieren", correct: true, feedback: "Richtig! Auch Prozessbeschreibungen gehoeren dazu."},
+                {text: "Pruefprotokolle archivieren", correct: false, feedback: "FALSCH: Das ist AUFBEWAHREN, nicht aufrechterhalten."}
+            ]},
+            {q: "13. 'Dokumentierte Information aufbewahren' bedeutet ...", topic: "Kapitel 7", answers: [
+                {text: "Nachweise und Aufzeichnungen archivieren", correct: true, feedback: "Richtig! Aufbewahren = Nachweise archivieren."},
+                {text: "z.B. Pruefprotokolle aufbewahren", correct: true, feedback: "Richtig! Pruefprotokolle sind Beispiele."},
+                {text: "Auditberichte archivieren", correct: true, feedback: "Richtig! Auditberichte werden aufbewahrt."},
+                {text: "Arbeitsanweisungen erstellen", correct: false, feedback: "FALSCH: Das gehoert zu AUFRECHTERHALTEN."}
+            ]},
+            {q: "14. Welche Anforderungen gelten fuer externe Anbieter?", topic: "Kapitel 8", answers: [
+                {text: "Art und Umfang der Steuerung festlegen", correct: true, feedback: "Richtig! Steuerungsmassnahmen sind festzulegen."},
+                {text: "Kriterien fuer Auswahl und Bewertung festlegen", correct: true, feedback: "Richtig! Auswahlkriterien sind erforderlich."},
+                {text: "Anforderungen kommunizieren", correct: true, feedback: "Richtig! Anforderungen muessen kommuniziert werden."},
+                {text: "Alle Lieferanten muessen zertifiziert sein", correct: false, feedback: "FALSCH: Zertifizierung ist NICHT gefordert."}
+            ]},
+            {q: "15. Was umfasst die Erhaltung von Produkten (8.5.4)?", topic: "Kapitel 8", answers: [
+                {text: "Kennzeichnung und Handhabung", correct: true, feedback: "Richtig! Kennzeichnung und Handhabung gehoeren dazu."},
+                {text: "Verpackung und Lagerung", correct: true, feedback: "Richtig! Verpackung und Lagerung sind Aspekte."},
+                {text: "Transport und Schutz", correct: true, feedback: "Richtig! Transport und Schutz gehoeren zur Erhaltung."},
+                {text: "Preiskalkulation", correct: false, feedback: "FALSCH: Preiskalkulation hat nichts mit Erhaltung zu tun."}
+            ]},
+            {q: "16. Interne Audits muessen ...", topic: "Kapitel 9", answers: [
+                {text: "in geplanten Abstaenden durchgefuehrt werden", correct: true, feedback: "Richtig! Geplante Abstaende sind gefordert."},
+                {text: "Normkonformitaet pruefen", correct: true, feedback: "Richtig! Normkonformitaet wird geprueft."},
+                {text: "wirksame Umsetzung pruefen", correct: true, feedback: "Richtig! Wirksamkeit wird geprueft."},
+                {text: "nur bei Problemen durchgefuehrt werden", correct: false, feedback: "FALSCH: Sie sind REGELMAESSIG durchzufuehren."}
+            ]},
+            {q: "17. Die Managementbewertung ...", topic: "Kapitel 9", answers: [
+                {text: "wird von der obersten Leitung durchgefuehrt", correct: true, feedback: "Richtig! Die Leitung fuehrt sie durch."},
+                {text: "bewertet Eignung, Angemessenheit und Wirksamkeit", correct: true, feedback: "Richtig! Diese drei Aspekte werden bewertet."},
+                {text: "liefert Eingaben fuer Verbesserungen", correct: true, feedback: "Richtig! Verbesserungsinput ist ein Ergebnis."},
+                {text: "ersetzt interne Audits", correct: false, feedback: "FALSCH: Sie ERSETZT Audits nicht."}
+            ]},
+            {q: "18. Bei Nichtkonformitaeten muss die Organisation ...", topic: "Kapitel 10", answers: [
+                {text: "reagieren und Massnahmen ergreifen", correct: true, feedback: "Richtig! Reaktion ist erforderlich."},
+                {text: "die Ursache ermitteln", correct: true, feedback: "Richtig! Ursachenanalyse ist gefordert."},
+                {text: "Korrekturmassnahmen umsetzen", correct: true, feedback: "Richtig! Korrekturmassnahmen sind umzusetzen."},
+                {text: "nur dokumentieren ohne Massnahmen", correct: false, feedback: "FALSCH: Massnahmen sind VERPFLICHTEND."}
+            ]},
+            {q: "19. Das Kano-Modell unterscheidet ...", topic: "Grundlagen", answers: [
+                {text: "Basismerkmale", correct: true, feedback: "Richtig! Basismerkmale sind eine Kategorie."},
+                {text: "Leistungsmerkmale", correct: true, feedback: "Richtig! Leistungsmerkmale sind eine Kategorie."},
+                {text: "Begeisterungsmerkmale", correct: true, feedback: "Richtig! Begeisterungsmerkmale sind die dritte Kategorie."},
+                {text: "Kostenmerkmale", correct: false, feedback: "FALSCH: Kostenmerkmale gibt es im Kano-Modell nicht."}
+            ]},
+            {q: "20. Basismerkmale im Kano-Modell ...", topic: "Grundlagen", answers: [
+                {text: "werden vom Kunden als selbstverstaendlich vorausgesetzt", correct: true, feedback: "Richtig! Basismerkmale sind Selbstverstaendlichkeiten."},
+                {text: "fuehren bei Nichterfuellung zu Unzufriedenheit", correct: true, feedback: "Richtig! Nichterfuellung erzeugt Unzufriedenheit."},
+                {text: "erzeugen bei Erfuellung keine Zufriedenheit", correct: true, feedback: "Richtig! Erfuellung fuehrt nur zu Neutralitaet."},
+                {text: "werden immer explizit genannt", correct: false, feedback: "FALSCH: Sie werden oft NICHT explizit genannt."}
+            ]},
+            {q: "21. Die FMEA dient der ...", topic: "Methoden", answers: [
+                {text: "vorausschauenden Fehlervermeidung", correct: true, feedback: "Richtig! Praevention ist das Hauptziel."},
+                {text: "systematischen Risikoanalyse", correct: true, feedback: "Richtig! FMEA ist eine Risikoanalysemethode."},
+                {text: "Ermittlung potenzieller Fehler", correct: true, feedback: "Richtig! Potenzielle Fehler werden identifiziert."},
+                {text: "nachtraeglichen Fehlerbehebung", correct: false, feedback: "FALSCH: FMEA ist VORBEUGEND, nicht nachtraeglich."}
+            ]},
+            {q: "22. Die Risikoprioritaetszahl (RPZ) berechnet sich aus ...", topic: "Methoden", answers: [
+                {text: "Bedeutung (B)", correct: true, feedback: "Richtig! B ist ein Faktor."},
+                {text: "Auftreten (A)", correct: true, feedback: "Richtig! A ist ein Faktor."},
+                {text: "Entdeckung (E)", correct: true, feedback: "Richtig! E ist ein Faktor. RPZ = B x A x E."},
+                {text: "Kosten (K)", correct: false, feedback: "FALSCH: Kosten sind KEIN Faktor der RPZ."}
+            ]},
+            {q: "23. Der 8D-Report ...", topic: "Methoden", answers: [
+                {text: "umfasst 8 Disziplinen/Prozessschritte", correct: true, feedback: "Richtig! 8D = 8 Disziplinen."},
+                {text: "ist ein Werkzeug des Beschwerdemanagements", correct: true, feedback: "Richtig! Er wird bei Reklamationen eingesetzt."},
+                {text: "wird zwischen Lieferant und Kunde ausgetauscht", correct: true, feedback: "Richtig! Er dient der Kommunikation."},
+                {text: "besteht aus 8 Dokumenten", correct: false, feedback: "FALSCH: 8D = 8 DISZIPLINEN, nicht Dokumente."}
+            ]},
+            {q: "24. Die ersten 8D-Schritte sind ...", topic: "Methoden", answers: [
+                {text: "D1: Teamarbeit", correct: true, feedback: "Richtig! Zuerst wird das Team gebildet."},
+                {text: "D2: Problembeschreibung", correct: true, feedback: "Richtig! Dann wird das Problem beschrieben."},
+                {text: "D3: Schadensbegrenzung", correct: true, feedback: "Richtig! Sofortmassnahmen folgen."},
+                {text: "D1: Kostenanalyse", correct: false, feedback: "FALSCH: D1 ist TEAMARBEIT, nicht Kostenanalyse."}
+            ]},
+            {q: "25. Welche Auditarten gibt es nach dem Auditor?", topic: "Audit", answers: [
+                {text: "1st party audit (intern)", correct: true, feedback: "Richtig! Internes Audit durch eigene Organisation."},
+                {text: "2nd party audit (Lieferantenaudit)", correct: true, feedback: "Richtig! Audit durch Kunden beim Lieferanten."},
+                {text: "3rd party audit (Zertifizierungsaudit)", correct: true, feedback: "Richtig! Audit durch unabhaengige Stelle."},
+                {text: "4th party audit", correct: false, feedback: "FALSCH: Es gibt kein 4th party audit."}
+            ]},
+            {q: "26. Das Systemaudit ...", topic: "Audit", answers: [
+                {text: "bewertet das gesamte QMS", correct: true, feedback: "Richtig! Das gesamte System wird bewertet."},
+                {text: "prueft Aufbau- und Ablauforganisation", correct: true, feedback: "Richtig! Organisation wird geprueft."},
+                {text: "ist die anspruchsvollste Auditform", correct: true, feedback: "Richtig! Es ist am umfassendsten."},
+                {text: "prueft nur einzelne Produkte", correct: false, feedback: "FALSCH: Das waere ein PRODUKTaudit."}
+            ]},
+            {q: "27. ISO 19011 ...", topic: "Audit", answers: [
+                {text: "ist der Leitfaden zur Auditierung", correct: true, feedback: "Richtig! ISO 19011 = Auditleitfaden."},
+                {text: "enthaelt Auditprinzipien", correct: true, feedback: "Richtig! Grundsaetzliche Prinzipien sind enthalten."},
+                {text: "beschreibt Auditorenkompetenz", correct: true, feedback: "Richtig! Anforderungen an Auditoren sind beschrieben."},
+                {text: "ist eine Anforderungsnorm wie ISO 9001", correct: false, feedback: "FALSCH: ISO 19011 ist ein LEITFADEN, keine Anforderungsnorm."}
+            ]},
+            {q: "28. Das Zertifizierungsaudit ...", topic: "Audit", answers: [
+                {text: "findet in zwei Stufen statt", correct: true, feedback: "Richtig! Stufe 1 und Stufe 2."},
+                {text: "Stufe 1 prueft die Dokumentation", correct: true, feedback: "Richtig! Dokumentenpruefung in Stufe 1."},
+                {text: "Stufe 2 ist das Vor-Ort-Audit", correct: true, feedback: "Richtig! Vor-Ort-Pruefung in Stufe 2."},
+                {text: "besteht aus drei Stufen", correct: false, feedback: "FALSCH: Es sind ZWEI Stufen."}
+            ]},
+            {q: "29. Das ISO 9001 Zertifikat ...", topic: "Audit", answers: [
+                {text: "ist 3 Jahre gueltig", correct: true, feedback: "Richtig! Gueltigkeit von 3 Jahren."},
+                {text: "erfordert jaehrliche Ueberwachungsaudits", correct: true, feedback: "Richtig! Jaehrliche Ueberwachung."},
+                {text: "muss durch Rezertifizierung erneuert werden", correct: true, feedback: "Richtig! Rezertifizierung nach 3 Jahren."},
+                {text: "gilt unbegrenzt", correct: false, feedback: "FALSCH: Begrenzt auf 3 Jahre."}
+            ]},
+            {q: "30. Das Eisbergmodell zeigt ...", topic: "Kommunikation", answers: [
+                {text: "Sachebene und Beziehungsebene", correct: true, feedback: "Richtig! Zwei Ebenen der Kommunikation."},
+                {text: "der groesste Teil liegt unter der Oberflaeche", correct: true, feedback: "Richtig! Wie beim Eisberg."},
+                {text: "Emotionen beeinflussen Kommunikation", correct: true, feedback: "Richtig! Emotionale Faktoren sind wichtig."},
+                {text: "nur die Sachebene ist relevant", correct: false, feedback: "FALSCH: Beide Ebenen sind relevant."}
+            ]},
+            {q: "31. Das Vier-Ohren-Modell beschreibt ...", topic: "Kommunikation", answers: [
+                {text: "Sachinhalt einer Nachricht", correct: true, feedback: "Richtig! Eine der vier Seiten."},
+                {text: "Selbstoffenbarung", correct: true, feedback: "Richtig! Eine der vier Seiten."},
+                {text: "Beziehung und Appell", correct: true, feedback: "Richtig! Die weiteren zwei Seiten."},
+                {text: "nur sachliche Information", correct: false, feedback: "FALSCH: Alle VIER Seiten sind relevant."}
+            ]},
+            {q: "32. Aktives Zuhoeren bedeutet ...", topic: "Kommunikation", answers: [
+                {text: "Bereitschaft, den Partner zu verstehen", correct: true, feedback: "Richtig! Verstehen wollen ist zentral."},
+                {text: "Paraphrasieren des Gehoerten", correct: true, feedback: "Richtig! Zusammenfassen zeigt Verstaendnis."},
+                {text: "Blickkontakt und Zuhoerbestaetigung", correct: true, feedback: "Richtig! Nonverbale Signale gehoeren dazu."},
+                {text: "dem anderen ins Wort fallen", correct: false, feedback: "FALSCH: Das Gegenteil von aktivem Zuhoeren."}
+            ]},
+            {q: "33. Maslows Beduerfnispyramide ...", topic: "Motivation", answers: [
+                {text: "zeigt eine hierarchische Ordnung von Beduerfnissen", correct: true, feedback: "Richtig! Hierarchische Struktur."},
+                {text: "hat Grundbeduerfnisse an der Basis", correct: true, feedback: "Richtig! Physiologische Beduerfnisse unten."},
+                {text: "hat Selbstverwirklichung an der Spitze", correct: true, feedback: "Richtig! Hoechste Stufe."},
+                {text: "alle Beduerfnisse sind gleichzeitig aktiv", correct: false, feedback: "FALSCH: Hierarchisch aktiviert."}
+            ]},
+            {q: "34. Intrinsische Motivation ...", topic: "Motivation", answers: [
+                {text: "kommt aus der Taetigkeit selbst", correct: true, feedback: "Richtig! Innere Motivation."},
+                {text: "die Handlung wird als sinnvoll erkannt", correct: true, feedback: "Richtig! Eigener Sinn wird gesehen."},
+                {text: "ist oft nachhaltiger als extrinsische", correct: true, feedback: "Richtig! Langfristig wirksamer."},
+                {text: "wird durch Belohnung ausgeloest", correct: false, feedback: "FALSCH: Das ist EXTRINSISCHE Motivation."}
+            ]},
+            {q: "35. Die High Level Structure (HLS) ...", topic: "Grundlagen", answers: [
+                {text: "ist eine einheitliche Grundstruktur", correct: true, feedback: "Richtig! Einheitliche Struktur fuer ISO-Normen."},
+                {text: "erleichtert die Integration von Managementsystemen", correct: true, feedback: "Richtig! Integration wird vereinfacht."},
+                {text: "umfasst 10 Kapitel", correct: true, feedback: "Richtig! Kapitel 0-10."},
+                {text: "gilt nur fuer ISO 9001", correct: false, feedback: "FALSCH: Gilt fuer alle ISO-MS-Normen."}
+            ]},
+            {q: "36. Der Prozessansatz nach ISO 9001 ...", topic: "Kapitel 4", answers: [
+                {text: "betrachtet Prozesse im Zusammenhang", correct: true, feedback: "Richtig! Wechselwirkungen beachten."},
+                {text: "erfordert Bestimmung von Eingaben und Ergebnissen", correct: true, feedback: "Richtig! Ein- und Ausgaben definieren."},
+                {text: "fordert Festlegung von Verantwortlichkeiten", correct: true, feedback: "Richtig! Verantwortliche benennen."},
+                {text: "optimiert Prozesse isoliert", correct: false, feedback: "FALSCH: Im ZUSAMMENHANG, nicht isoliert."}
+            ]},
+            {q: "37. Ein Unternehmen hat Risiken bestimmt, aber keine Massnahmen geplant. Dies ist ...", topic: "Kapitel 6", answers: [
+                {text: "nicht normkonform", correct: true, feedback: "Richtig! Massnahmen sind zu planen."},
+                {text: "eine Abweichung gegen Kapitel 6.1", correct: true, feedback: "Richtig! 6.1 fordert Massnahmenplanung."},
+                {text: "bei einem Audit feststellbar", correct: true, feedback: "Richtig! Auditoren wuerden das feststellen."},
+                {text: "akzeptabel, wenn die Risiken dokumentiert sind", correct: false, feedback: "FALSCH: Dokumentation allein reicht nicht."}
+            ]},
+            {q: "38. Verantwortlichkeiten und Befugnisse muessen ...", topic: "Kapitel 5", answers: [
+                {text: "zugewiesen werden", correct: true, feedback: "Richtig! Zuweisung ist erforderlich."},
+                {text: "kommuniziert werden", correct: true, feedback: "Richtig! Kommunikation ist gefordert."},
+                {text: "in der Organisation verstanden werden", correct: true, feedback: "Richtig! Verstaendnis ist wichtig."},
+                {text: "von einer externen Stelle genehmigt werden", correct: false, feedback: "FALSCH: Keine externe Genehmigung noetig."}
+            ]},
+            {q: "39. Das Lieferkettensorgfaltspflichtengesetz (LkSG) ...", topic: "Kapitel 8", answers: [
+                {text: "regelt menschenrechtliche Sorgfaltspflichten", correct: true, feedback: "Richtig! Menschenrechte in der Lieferkette."},
+                {text: "gilt fuer Unternehmen ab 1.000 Mitarbeitern", correct: true, feedback: "Richtig! Ab 1.000 Arbeitnehmer."},
+                {text: "erstreckt sich auf die Lieferkette", correct: true, feedback: "Richtig! Gesamte Lieferkette betroffen."},
+                {text: "gilt nur im Ausland", correct: false, feedback: "FALSCH: Auch fuer deutsche Unternehmen."}
+            ]},
+            {q: "40. Taetigkeiten nach der Lieferung (8.5.5) koennen sein ...", topic: "Kapitel 8", answers: [
+                {text: "Gewaehrleistungsleistungen", correct: true, feedback: "Richtig! Garantieleistungen gehoeren dazu."},
+                {text: "Wartung und Instandhaltung", correct: true, feedback: "Richtig! Service nach der Lieferung."},
+                {text: "Wiederverwertung oder Entsorgung", correct: true, feedback: "Richtig! Ende des Lebenszyklus."},
+                {text: "nur Rechnungsstellung", correct: false, feedback: "FALSCH: Viel mehr als nur Rechnungen."}
+            ]},
+            {q: "41. Die Kundenzufriedenheit nach ISO 9001 ...", topic: "Kapitel 9", answers: [
+                {text: "muss ueberwacht werden", correct: true, feedback: "Richtig! Ueberwachung ist gefordert."},
+                {text: "ist ein Leistungsindikator", correct: true, feedback: "Richtig! Wichtiger KPI."},
+                {text: "Methoden zur Ermittlung sind festzulegen", correct: true, feedback: "Richtig! Methoden muessen definiert sein."},
+                {text: "ist optional", correct: false, feedback: "FALSCH: Sie ist VERPFLICHTEND."}
+            ]},
+            {q: "42. Die fortlaufende Verbesserung ...", topic: "Kapitel 10", answers: [
+                {text: "ist eine Normforderung", correct: true, feedback: "Richtig! Kapitel 10.3 fordert Verbesserung."},
+                {text: "betrifft Eignung, Angemessenheit und Wirksamkeit", correct: true, feedback: "Richtig! Diese drei Aspekte verbessern."},
+                {text: "nutzt Auditergebnisse und Datenanalyse", correct: true, feedback: "Richtig! Verschiedene Eingaben nutzen."},
+                {text: "ist nur bei Problemen erforderlich", correct: false, feedback: "FALSCH: FORTLAUFEND, nicht nur bei Problemen."}
+            ]},
+            {q: "43. Ein internes Audit stellt Abweichungen fest. Normkonform ist ...", topic: "Audit", answers: [
+                {text: "Dokumentation der Abweichungen", correct: true, feedback: "Richtig! Feststellungen dokumentieren."},
+                {text: "Einleitung von Korrekturmassnahmen", correct: true, feedback: "Richtig! Massnahmen ergreifen."},
+                {text: "Pruefung der Wirksamkeit der Massnahmen", correct: true, feedback: "Richtig! Wirksamkeit verifizieren."},
+                {text: "Ignorieren der Feststellungen", correct: false, feedback: "FALSCH: Massnahmen sind VERPFLICHTEND."}
+            ]},
+            {q: "44. Wissen der Organisation (7.1.6) ...", topic: "Kapitel 7", answers: [
+                {text: "muss bestimmt werden", correct: true, feedback: "Richtig! Wissen ist zu bestimmen."},
+                {text: "muss aufrechterhalten werden", correct: true, feedback: "Richtig! Aufrechterhaltung ist gefordert."},
+                {text: "muss verfuegbar gemacht werden", correct: true, feedback: "Richtig! Verfuegbarkeit sicherstellen."},
+                {text: "ist seit 2015 nicht mehr relevant", correct: false, feedback: "FALSCH: Seit 2015 NEU in der Norm."}
+            ]},
+            {q: "45. Eine Organisation schliesst Entwicklung (8.3) aus. Dies ist zulaessig, wenn ...", topic: "Kapitel 4", answers: [
+                {text: "die Organisation keine Entwicklung durchfuehrt", correct: true, feedback: "Richtig! Wenn nicht anwendbar."},
+                {text: "der Ausschluss begruendet ist", correct: true, feedback: "Richtig! Begruendung erforderlich."},
+                {text: "Konformitaet nicht beeintraechtigt wird", correct: true, feedback: "Richtig! Produktkonformitaet darf nicht leiden."},
+                {text: "der Zertifizierer es anordnet", correct: false, feedback: "FALSCH: Die Organisation entscheidet selbst."}
+            ]}
+        ]
+    },
+    "pruefung_simulation_2": {
+        title: "Pruefungssimulation 2 - Komplette Pruefung (45 Fragen)",
+        questions: [
+            {q: "1. Welche Aussage zur ISO 9000 ist korrekt?", topic: "Grundlagen", answers: [
+                {text: "Sie enthaelt Begriffe und Grundlagen des QM", correct: true, feedback: "Richtig! ISO 9000 definiert Begriffe."},
+                {text: "Sie ist keine Anforderungsnorm", correct: true, feedback: "Richtig! ISO 9001 ist die Anforderungsnorm."},
+                {text: "Sie definiert die sieben Grundsaetze des QM", correct: true, feedback: "Richtig! Die Grundsaetze sind darin definiert."},
+                {text: "Sie ist Grundlage fuer Zertifizierungen", correct: false, feedback: "FALSCH: ISO 9001 ist die Zertifizierungsgrundlage."}
+            ]},
+            {q: "2. Der PDCA-Zyklus ...", topic: "Grundlagen", answers: [
+                {text: "besteht aus Plan-Do-Check-Act", correct: true, feedback: "Richtig! Die vier Phasen."},
+                {text: "ist ein Werkzeug zur fortlaufenden Verbesserung", correct: true, feedback: "Richtig! Kontinuierliche Verbesserung."},
+                {text: "ist in der ISO 9001 verankert", correct: true, feedback: "Richtig! Grundprinzip der Norm."},
+                {text: "ist nur fuer Produktionsprozesse geeignet", correct: false, feedback: "FALSCH: Fuer ALLE Prozesse anwendbar."}
+            ]},
+            {q: "3. Die Begeisterungsmerkmale im Kano-Modell ...", topic: "Grundlagen", answers: [
+                {text: "werden vom Kunden nicht erwartet", correct: true, feedback: "Richtig! Sie ueberraschen positiv."},
+                {text: "fuehren zu hoher Zufriedenheit", correct: true, feedback: "Richtig! Sie begeistern den Kunden."},
+                {text: "werden mit der Zeit zu Basismerkmalen", correct: true, feedback: "Richtig! Sie werden selbstverstaendlich."},
+                {text: "muessen vertraglich vereinbart sein", correct: false, feedback: "FALSCH: Sie gehen UEBER Vereinbartes hinaus."}
+            ]},
+            {q: "4. Eine interessierte Partei ist ...", topic: "Kapitel 4", answers: [
+                {text: "eine Person oder Organisation mit Interesse an QMS-Entscheidungen", correct: true, feedback: "Richtig! Betroffene oder Beeinflusser."},
+                {text: "ein Kunde oder Lieferant", correct: true, feedback: "Richtig! Typische interessierte Parteien."},
+                {text: "eine Behoerde mit rechtlichen Anforderungen", correct: true, feedback: "Richtig! Gesetzgeber und Behoerden."},
+                {text: "ausschliesslich der Eigentuemer", correct: false, feedback: "FALSCH: AUSSCHLIESSLICH ist falsch - viele Parteien."}
+            ]},
+            {q: "5. Bei der Festlegung des Anwendungsbereichs ...", topic: "Kapitel 4", answers: [
+                {text: "sind externe und interne Themen zu beruecksichtigen", correct: true, feedback: "Richtig! Kontext einbeziehen."},
+                {text: "sind Anforderungen interessierter Parteien relevant", correct: true, feedback: "Richtig! Stakeholder-Anforderungen."},
+                {text: "sind Produkte und Dienstleistungen zu benennen", correct: true, feedback: "Richtig! Was wird abgedeckt."},
+                {text: "muss die gesamte Organisation einbezogen werden", correct: false, feedback: "FALSCH: Ausschluesse sind MOEGLICH."}
+            ]},
+            {q: "6. Ein Prozess nach ISO 9001 hat ...", topic: "Kapitel 4", answers: [
+                {text: "Eingaben und Ergebnisse", correct: true, feedback: "Richtig! Input und Output."},
+                {text: "Wechselwirkungen mit anderen Prozessen", correct: true, feedback: "Richtig! Prozesse haengen zusammen."},
+                {text: "erforderliche Ressourcen", correct: true, feedback: "Richtig! Personal, Infrastruktur etc."},
+                {text: "immer eine schriftliche Arbeitsanweisung", correct: false, feedback: "FALSCH: Nicht IMMER gefordert."}
+            ]},
+            {q: "7. Die oberste Leitung muss ...", topic: "Kapitel 5", answers: [
+                {text: "Rechenschaftspflicht fuer die Wirksamkeit uebernehmen", correct: true, feedback: "Richtig! Verantwortung tragen."},
+                {text: "die Qualitaetspolitik festlegen", correct: true, feedback: "Richtig! Politik bestimmen."},
+                {text: "Ressourcen bereitstellen", correct: true, feedback: "Richtig! Ressourcen sichern."},
+                {text: "operative Taetigkeiten selbst durchfuehren", correct: false, feedback: "FALSCH: Delegieren ist moeglich."}
+            ]},
+            {q: "8. Die Qualitaetspolitik muss ...", topic: "Kapitel 5", answers: [
+                {text: "als dokumentierte Information verfuegbar sein", correct: true, feedback: "Richtig! Dokumentation gefordert."},
+                {text: "kommuniziert und verstanden werden", correct: true, feedback: "Richtig! Allen bekannt sein."},
+                {text: "fuer interessierte Parteien verfuegbar sein", correct: true, feedback: "Richtig! Bei Bedarf zugaenglich."},
+                {text: "jaehrlich komplett neu erstellt werden", correct: false, feedback: "FALSCH: Anpassen ja, komplett neu nein."}
+            ]},
+            {q: "9. Qualitaetsziele muessen ...", topic: "Kapitel 6", answers: [
+                {text: "messbar sein", correct: true, feedback: "Richtig! Messbarkeit ist gefordert."},
+                {text: "mit der Qualitaetspolitik konsistent sein", correct: true, feedback: "Richtig! Zur Politik passen."},
+                {text: "ueberwacht werden", correct: true, feedback: "Richtig! Fortschritt verfolgen."},
+                {text: "identisch mit Unternehmenszielen sein", correct: false, feedback: "FALSCH: Konsistent, nicht IDENTISCH."}
+            ]},
+            {q: "10. Bei der Planung von Aenderungen ...", topic: "Kapitel 6", answers: [
+                {text: "ist der Zweck der Aenderung zu beruecksichtigen", correct: true, feedback: "Richtig! Warum die Aenderung."},
+                {text: "sind moegliche Auswirkungen zu bedenken", correct: true, feedback: "Richtig! Konsequenzen abschaetzen."},
+                {text: "ist die Verfuegbarkeit von Ressourcen zu pruefen", correct: true, feedback: "Richtig! Ressourcen einplanen."},
+                {text: "muss jede Aenderung vom Zertifizierer genehmigt werden", correct: false, feedback: "FALSCH: Interne Verantwortung."}
+            ]},
+            {q: "11. Kompetenz der Personen umfasst ...", topic: "Kapitel 7", answers: [
+                {text: "Ausbildung und Schulung", correct: true, feedback: "Richtig! Formale Qualifikation."},
+                {text: "Fertigkeiten und Erfahrung", correct: true, feedback: "Richtig! Praktische Faehigkeiten."},
+                {text: "Nachweise der Kompetenz aufbewahren", correct: true, feedback: "Richtig! Dokumentation erforderlich."},
+                {text: "nur akademische Abschluesse", correct: false, feedback: "FALSCH: Auch Erfahrung zaehlt."}
+            ]},
+            {q: "12. Das Bewusstsein der Personen bezieht sich auf ...", topic: "Kapitel 7", answers: [
+                {text: "die Qualitaetspolitik", correct: true, feedback: "Richtig! Politik kennen."},
+                {text: "relevante Qualitaetsziele", correct: true, feedback: "Richtig! Ziele verstehen."},
+                {text: "den Beitrag zur QMS-Wirksamkeit", correct: true, feedback: "Richtig! Eigene Rolle kennen."},
+                {text: "ausschliesslich Fehlerquoten", correct: false, feedback: "FALSCH: Viel mehr als nur Fehler."}
+            ]},
+            {q: "13. Dokumentierte Information muss ...", topic: "Kapitel 7", answers: [
+                {text: "identifiziert und beschrieben sein", correct: true, feedback: "Richtig! Eindeutig erkennbar."},
+                {text: "in geeignetem Format vorliegen", correct: true, feedback: "Richtig! Format angemessen."},
+                {text: "auf Eignung geprueft und genehmigt werden", correct: true, feedback: "Richtig! Freigabeprozess."},
+                {text: "ausschliesslich in Papierform gefuehrt werden", correct: false, feedback: "FALSCH: Elektronisch ist erlaubt."}
+            ]},
+            {q: "14. Die Lenkung dokumentierter Information beinhaltet ...", topic: "Kapitel 7", answers: [
+                {text: "Verteilung und Zugriff", correct: true, feedback: "Richtig! Verfuegbarkeit sichern."},
+                {text: "Ablage und Aufbewahrung", correct: true, feedback: "Richtig! Archivierung regeln."},
+                {text: "Schutz vor unbeabsichtigter Aenderung", correct: true, feedback: "Richtig! Integritaet schuetzen."},
+                {text: "Vernichtung nach 6 Monaten", correct: false, feedback: "FALSCH: Aufbewahrungsfristen individuell."}
+            ]},
+            {q: "15. Bei der operativen Planung und Steuerung (8.1) ...", topic: "Kapitel 8", answers: [
+                {text: "werden Kriterien fuer Prozesse festgelegt", correct: true, feedback: "Richtig! Prozesskriterien definieren."},
+                {text: "wird die Steuerung der Prozesse umgesetzt", correct: true, feedback: "Richtig! Prozesse steuern."},
+                {text: "werden dokumentierte Informationen aufbewahrt", correct: true, feedback: "Richtig! Nachweise fuehren."},
+                {text: "entfaellt die Ressourcenplanung", correct: false, feedback: "FALSCH: Ressourcen sind einzuplanen."}
+            ]},
+            {q: "16. Kundenanforderungen muessen ...", topic: "Kapitel 8", answers: [
+                {text: "ermittelt werden", correct: true, feedback: "Richtig! Was will der Kunde."},
+                {text: "bewertet werden", correct: true, feedback: "Richtig! Machbarkeitspruefung."},
+                {text: "bestaetigt werden, bevor sie angenommen werden", correct: true, feedback: "Richtig! Auftragsbestaetigung."},
+                {text: "immer muendlich vereinbart werden", correct: false, feedback: "FALSCH: Form ist nicht vorgeschrieben."}
+            ]},
+            {q: "17. Bei extern bereitgestellten Prozessen ...", topic: "Kapitel 8", answers: [
+                {text: "muessen Steuerungsmassnahmen festgelegt werden", correct: true, feedback: "Richtig! Steuerung erforderlich."},
+                {text: "sind Kriterien fuer Auswahl und Bewertung anzuwenden", correct: true, feedback: "Richtig! Lieferantenbewertung."},
+                {text: "bleibt die Organisation verantwortlich", correct: true, feedback: "Richtig! Verantwortung nicht abgebbar."},
+                {text: "entfaellt die Qualitaetspruefung", correct: false, feedback: "FALSCH: Pruefung bleibt wichtig."}
+            ]},
+            {q: "18. Die Kennzeichnung und Rueckverfolgbarkeit ...", topic: "Kapitel 8", answers: [
+                {text: "dient der Identifikation des Produktstatus", correct: true, feedback: "Richtig! Status erkennen."},
+                {text: "ermoeglicht Rueckrufaktionen", correct: true, feedback: "Richtig! Bei Fehlern zurueckverfolgen."},
+                {text: "ist bei Kundenforderung umzusetzen", correct: true, feedback: "Richtig! Wenn gefordert."},
+                {text: "ist immer fuer alle Produkte erforderlich", correct: false, feedback: "FALSCH: Nur wenn anwendbar."}
+            ]},
+            {q: "19. Eigentum von Kunden oder externen Anbietern ...", topic: "Kapitel 8", answers: [
+                {text: "muss identifiziert werden", correct: true, feedback: "Richtig! Kennzeichnen."},
+                {text: "muss geschuetzt werden", correct: true, feedback: "Richtig! Schutz gewaehrleisten."},
+                {text: "bei Verlust ist der Kunde zu informieren", correct: true, feedback: "Richtig! Meldepflicht."},
+                {text: "darf beliebig verwendet werden", correct: false, feedback: "FALSCH: Nur bestimmungsgemaess."}
+            ]},
+            {q: "20. Die Freigabe von Produkten und Dienstleistungen ...", topic: "Kapitel 8", answers: [
+                {text: "erfolgt erst nach Erfuellung der Anforderungen", correct: true, feedback: "Richtig! Alle Pruefungen bestanden."},
+                {text: "benoetigt Nachweis der Konformitaet", correct: true, feedback: "Richtig! Dokumentation der Freigabe."},
+                {text: "muss rueckverfolgbar zur freigebenden Person sein", correct: true, feedback: "Richtig! Wer hat freigegeben."},
+                {text: "kann beliebig vorgezogen werden", correct: false, feedback: "FALSCH: Nur mit Kundengenehmigung."}
+            ]},
+            {q: "21. Die Steuerung nichtkonformer Ergebnisse ...", topic: "Kapitel 8", answers: [
+                {text: "verhindert unbeabsichtigte Verwendung", correct: true, feedback: "Richtig! Sperrung fehlerhafter Teile."},
+                {text: "umfasst Kennzeichnung und Absonderung", correct: true, feedback: "Richtig! Trennung von konformen Produkten."},
+                {text: "erfordert dokumentierte Information", correct: true, feedback: "Richtig! Nachweise fuehren."},
+                {text: "ist nur bei Reklamationen erforderlich", correct: false, feedback: "FALSCH: Bei ALLEN Nichtkonformitaeten."}
+            ]},
+            {q: "22. Ueberwachung und Messung (9.1) ...", topic: "Kapitel 9", answers: [
+                {text: "erfordert Bestimmung von Was, Wann und Wie", correct: true, feedback: "Richtig! Systematische Planung."},
+                {text: "dient der Bewertung der Leistung", correct: true, feedback: "Richtig! Performance messen."},
+                {text: "liefert Eingaben fuer die Verbesserung", correct: true, feedback: "Richtig! Basis fuer Optimierung."},
+                {text: "ist optional bei kleinen Organisationen", correct: false, feedback: "FALSCH: Fuer ALLE verpflichtend."}
+            ]},
+            {q: "23. Die Analyse und Bewertung umfasst ...", topic: "Kapitel 9", answers: [
+                {text: "Konformitaet von Produkten und Dienstleistungen", correct: true, feedback: "Richtig! Erfuellen wir Anforderungen."},
+                {text: "Kundenzufriedenheit", correct: true, feedback: "Richtig! Zufriedenheit auswerten."},
+                {text: "Wirksamkeit des QMS", correct: true, feedback: "Richtig! Funktioniert das System."},
+                {text: "nur finanzielle Kennzahlen", correct: false, feedback: "FALSCH: Viel mehr als nur Finanzen."}
+            ]},
+            {q: "24. Die Managementbewertung ...", topic: "Kapitel 9", answers: [
+                {text: "wird von der obersten Leitung durchgefuehrt", correct: true, feedback: "Richtig! Top-Management."},
+                {text: "beruecksichtigt Status von Massnahmen", correct: true, feedback: "Richtig! Was wurde umgesetzt."},
+                {text: "fuehrt zu Entscheidungen und Massnahmen", correct: true, feedback: "Richtig! Ergebnisse als Output."},
+                {text: "ist alle 5 Jahre durchzufuehren", correct: false, feedback: "FALSCH: In geplanten Abstaenden, meist jaehrlich."}
+            ]},
+            {q: "25. Eingaben fuer die Managementbewertung sind ...", topic: "Kapitel 9", answers: [
+                {text: "Ergebnisse von Audits", correct: true, feedback: "Richtig! Auditfeststellungen."},
+                {text: "Rueckmeldungen von Kunden", correct: true, feedback: "Richtig! Kundenfeedback."},
+                {text: "Leistung externer Anbieter", correct: true, feedback: "Richtig! Lieferantenbewertung."},
+                {text: "Protokolle von Teambuilding-Events", correct: false, feedback: "FALSCH: Nicht relevant fuer QMS."}
+            ]},
+            {q: "26. Nichtkonformitaet und Korrekturmassnahmen (10.2) ...", topic: "Kapitel 10", answers: [
+                {text: "erfordern Reaktion auf die Nichtkonformitaet", correct: true, feedback: "Richtig! Sofortmassnahme."},
+                {text: "erfordern Ursachenanalyse", correct: true, feedback: "Richtig! Warum ist es passiert."},
+                {text: "pruefen die Wirksamkeit der Massnahmen", correct: true, feedback: "Richtig! Hat es gewirkt."},
+                {text: "sind nur bei Kundenreklamationen noetig", correct: false, feedback: "FALSCH: Bei ALLEN Nichtkonformitaeten."}
+            ]},
+            {q: "27. Die FMEA ...", topic: "FMEA", answers: [
+                {text: "ist eine praeventive Methode", correct: true, feedback: "Richtig! Vorbeugend."},
+                {text: "bewertet potenzielle Fehler", correct: true, feedback: "Richtig! Moegliche Fehler analysieren."},
+                {text: "ermittelt die Risikoprioritaetszahl", correct: true, feedback: "Richtig! RPZ als Kennzahl."},
+                {text: "wird nur nach Schadensfaellen angewendet", correct: false, feedback: "FALSCH: PRAEVENTIV, nicht reaktiv."}
+            ]},
+            {q: "28. Die Risikoprioritaetszahl (RPZ) berechnet sich aus ...", topic: "FMEA", answers: [
+                {text: "Bedeutung (B)", correct: true, feedback: "Richtig! Schwere des Fehlers."},
+                {text: "Auftretenswahrscheinlichkeit (A)", correct: true, feedback: "Richtig! Wie oft tritt es auf."},
+                {text: "Entdeckungswahrscheinlichkeit (E)", correct: true, feedback: "Richtig! Wird der Fehler erkannt."},
+                {text: "B + A + E", correct: false, feedback: "FALSCH: Es ist B x A x E (Multiplikation)."}
+            ]},
+            {q: "29. Der 8D-Report ...", topic: "8D-Report", answers: [
+                {text: "hat 8 Disziplinen", correct: true, feedback: "Richtig! D1 bis D8."},
+                {text: "beginnt mit der Teambildung", correct: true, feedback: "Richtig! D1: Team zusammenstellen."},
+                {text: "endet mit der Wuerdigung des Teams", correct: true, feedback: "Richtig! D8: Erfolg anerkennen."},
+                {text: "ist nur fuer Automobilzulieferer", correct: false, feedback: "FALSCH: Branchenuebergreifend anwendbar."}
+            ]},
+            {q: "30. D3 im 8D-Report ...", topic: "8D-Report", answers: [
+                {text: "sind Sofortmassnahmen", correct: true, feedback: "Richtig! Containment Actions."},
+                {text: "schuetzen den Kunden sofort", correct: true, feedback: "Richtig! Schnelle Abhilfe."},
+                {text: "verhindern Ausbreitung des Problems", correct: true, feedback: "Richtig! Eindaemmung."},
+                {text: "beseitigen die Ursache dauerhaft", correct: false, feedback: "FALSCH: Das ist D5/D6."}
+            ]},
+            {q: "31. Ein internes Audit (1st party) ...", topic: "Audit", answers: [
+                {text: "wird von der Organisation selbst durchgefuehrt", correct: true, feedback: "Richtig! Eigene Mitarbeiter."},
+                {text: "dient der Selbstbewertung", correct: true, feedback: "Richtig! Eigene Leistung pruefen."},
+                {text: "ist Anforderung der ISO 9001", correct: true, feedback: "Richtig! Kapitel 9.2."},
+                {text: "fuehrt zur Zertifikatserteilung", correct: false, feedback: "FALSCH: Das macht das 3rd party Audit."}
+            ]},
+            {q: "32. Ein Lieferantenaudit (2nd party) ...", topic: "Audit", answers: [
+                {text: "wird beim Lieferanten durchgefuehrt", correct: true, feedback: "Richtig! Externe Pruefung."},
+                {text: "bewertet die Lieferantenleistung", correct: true, feedback: "Richtig! Qualitaetsfaehigkeit pruefen."},
+                {text: "dient der Lieferantenbewertung", correct: true, feedback: "Richtig! Auswahlkriterium."},
+                {text: "ersetzt die Wareneingangspruefung", correct: false, feedback: "FALSCH: Beides ist moeglich."}
+            ]},
+            {q: "33. Das Zertifizierungsaudit (3rd party) ...", topic: "Audit", answers: [
+                {text: "wird von unabhaengiger Stelle durchgefuehrt", correct: true, feedback: "Richtig! Zertifizierungsstelle."},
+                {text: "prueft die Konformitaet mit der Norm", correct: true, feedback: "Richtig! Normerfuellung."},
+                {text: "hat zwei Stufen (Stage 1 und 2)", correct: true, feedback: "Richtig! Zweistufiges Verfahren."},
+                {text: "ist freiwillig fuer alle Organisationen", correct: false, feedback: "FALSCH: Kann Kundenforderung sein."}
+            ]},
+            {q: "34. Stage 1 des Zertifizierungsaudits ...", topic: "Audit", answers: [
+                {text: "prueft die Dokumentation", correct: true, feedback: "Richtig! Dokumentationspruefung."},
+                {text: "bewertet die Auditbereitschaft", correct: true, feedback: "Richtig! Ist man bereit fuer Stage 2."},
+                {text: "identifiziert potenzielle Problembereiche", correct: true, feedback: "Richtig! Schwachstellen erkennen."},
+                {text: "fuehrt bei Erfolg sofort zum Zertifikat", correct: false, feedback: "FALSCH: Erst nach Stage 2."}
+            ]},
+            {q: "35. Die ISO 19011 ...", topic: "Audit", answers: [
+                {text: "ist ein Leitfaden fuer Audits", correct: true, feedback: "Richtig! Audit-Leitfaden."},
+                {text: "beschreibt Auditorenkompetenz", correct: true, feedback: "Richtig! Anforderungen an Auditoren."},
+                {text: "gilt fuer 1st, 2nd und 3rd party Audits", correct: true, feedback: "Richtig! Alle Auditarten."},
+                {text: "ist eine Zertifizierungsnorm", correct: false, feedback: "FALSCH: Leitfaden, keine Zertifizierungsnorm."}
+            ]},
+            {q: "36. Das Vier-Ohren-Modell nach Schulz von Thun ...", topic: "Kommunikation", answers: [
+                {text: "beschreibt vier Seiten einer Nachricht", correct: true, feedback: "Richtig! Vier Aspekte."},
+                {text: "umfasst Sachinhalt und Selbstoffenbarung", correct: true, feedback: "Richtig! Zwei der vier Seiten."},
+                {text: "umfasst Beziehung und Appell", correct: true, feedback: "Richtig! Die anderen zwei Seiten."},
+                {text: "gilt nur fuer schriftliche Kommunikation", correct: false, feedback: "FALSCH: Fuer ALLE Kommunikation."}
+            ]},
+            {q: "37. Das Eisbergmodell zeigt ...", topic: "Kommunikation", answers: [
+                {text: "sichtbare und unsichtbare Kommunikationsanteile", correct: true, feedback: "Richtig! Ober- und Unterflaeche."},
+                {text: "dass der groesste Teil unter der Oberflaeche liegt", correct: true, feedback: "Richtig! Wie beim Eisberg."},
+                {text: "die Bedeutung von Emotionen", correct: true, feedback: "Richtig! Gefuehle beeinflussen."},
+                {text: "dass nur Fakten zaehlen", correct: false, feedback: "FALSCH: Emotionen sind ebenso wichtig."}
+            ]},
+            {q: "38. Aktives Zuhoeren beinhaltet ...", topic: "Kommunikation", answers: [
+                {text: "Paraphrasieren", correct: true, feedback: "Richtig! Zusammenfassen des Gehoerten."},
+                {text: "Blickkontakt halten", correct: true, feedback: "Richtig! Nonverbale Aufmerksamkeit."},
+                {text: "Empathie zeigen", correct: true, feedback: "Richtig! Einfuehlen."},
+                {text: "schnell mit eigener Meinung antworten", correct: false, feedback: "FALSCH: Erst zuhoeren, dann antworten."}
+            ]},
+            {q: "39. Nach Maslows Beduerfnispyramide ...", topic: "Motivation", answers: [
+                {text: "stehen physiologische Beduerfnisse an der Basis", correct: true, feedback: "Richtig! Grundbeduerfnisse."},
+                {text: "folgen Sicherheitsbeduerfnisse", correct: true, feedback: "Richtig! Zweite Stufe."},
+                {text: "steht Selbstverwirklichung an der Spitze", correct: true, feedback: "Richtig! Hoechste Stufe."},
+                {text: "sind alle Stufen gleichzeitig aktiv", correct: false, feedback: "FALSCH: Hierarchische Aktivierung."}
+            ]},
+            {q: "40. Extrinsische Motivation ...", topic: "Motivation", answers: [
+                {text: "kommt von aussen", correct: true, feedback: "Richtig! Externe Anreize."},
+                {text: "kann durch Belohnungen entstehen", correct: true, feedback: "Richtig! Praemien, Lob."},
+                {text: "kann durch Sanktionen entstehen", correct: true, feedback: "Richtig! Strafen vermeiden."},
+                {text: "ist nachhaltiger als intrinsische", correct: false, feedback: "FALSCH: Meist WENIGER nachhaltig."}
+            ]},
+            {q: "41. Das Lieferkettensorgfaltspflichtengesetz ...", topic: "Kapitel 8", answers: [
+                {text: "verpflichtet zu menschenrechtlicher Sorgfalt", correct: true, feedback: "Richtig! Menschenrechte schuetzen."},
+                {text: "gilt fuer Unternehmen ab 1.000 Mitarbeitern", correct: true, feedback: "Richtig! Ab 1.000 Arbeitnehmer."},
+                {text: "betrifft die gesamte Lieferkette", correct: true, feedback: "Richtig! Vom Rohstoff bis zum Endprodukt."},
+                {text: "ist nur eine Empfehlung", correct: false, feedback: "FALSCH: Es ist ein GESETZ."}
+            ]},
+            {q: "42. Die Infrastruktur nach ISO 9001 umfasst ...", topic: "Kapitel 7", answers: [
+                {text: "Gebaeude und zugehoerige Versorgungseinrichtungen", correct: true, feedback: "Richtig! Arbeitsumgebung."},
+                {text: "Ausruestung einschliesslich Hard- und Software", correct: true, feedback: "Richtig! IT und Maschinen."},
+                {text: "Transportressourcen", correct: true, feedback: "Richtig! Logistik."},
+                {text: "ausschliesslich Produktionsmaschinen", correct: false, feedback: "FALSCH: Viel umfassender."}
+            ]},
+            {q: "43. Das Wissen der Organisation (7.1.6) ...", topic: "Kapitel 7", answers: [
+                {text: "ist fuer den Betrieb der Prozesse erforderlich", correct: true, feedback: "Richtig! Prozesswissen."},
+                {text: "muss aufrechterhalten werden", correct: true, feedback: "Richtig! Wissen bewahren."},
+                {text: "kann aus internen und externen Quellen stammen", correct: true, feedback: "Richtig! Verschiedene Quellen."},
+                {text: "ist nur das Wissen der Geschaeftsfuehrung", correct: false, feedback: "FALSCH: Wissen ALLER Ebenen."}
+            ]},
+            {q: "44. Bei der Entwicklung von Produkten (8.3) ...", topic: "Kapitel 8", answers: [
+                {text: "sind Entwicklungseingaben zu bestimmen", correct: true, feedback: "Richtig! Was wird benoetigt."},
+                {text: "sind Entwicklungsergebnisse zu verifizieren", correct: true, feedback: "Richtig! Pruefung der Ergebnisse."},
+                {text: "sind Entwicklungsaenderungen zu lenken", correct: true, feedback: "Richtig! Aenderungsmanagement."},
+                {text: "ist ein separates Entwicklungsteam vorgeschrieben", correct: false, feedback: "FALSCH: Organisation ist frei."}
+            ]},
+            {q: "45. Ein Systemaudit ...", topic: "Audit", answers: [
+                {text: "prueft das gesamte QMS", correct: true, feedback: "Richtig! Ganzheitliche Betrachtung."},
+                {text: "bewertet die Wirksamkeit des Systems", correct: true, feedback: "Richtig! Funktioniert es."},
+                {text: "kann intern oder extern durchgefuehrt werden", correct: true, feedback: "Richtig! Beide Varianten moeglich."},
+                {text: "betrachtet nur einzelne Produkte", correct: false, feedback: "FALSCH: Das waere ein PRODUKTaudit."}
+            ]}
+        ]
+    },
+    "pruefung_simulation_3": {
+        title: "Pruefungssimulation 3 - Komplette Pruefung (45 Fragen)",
+        questions: [
+            {q: "1. Die ISO 9001:2015 basiert auf ...", topic: "Grundlagen", answers: [
+                {text: "der High Level Structure", correct: true, feedback: "Richtig! HLS als Grundstruktur."},
+                {text: "dem PDCA-Zyklus", correct: true, feedback: "Richtig! Plan-Do-Check-Act."},
+                {text: "dem risikobasierten Denken", correct: true, feedback: "Richtig! Risiken beruecksichtigen."},
+                {text: "einer starren Vorgabe von Dokumenten", correct: false, feedback: "FALSCH: Die Norm ist FLEXIBEL."}
+            ]},
+            {q: "2. Die sieben Grundsaetze des Qualitaetsmanagements umfassen ...", topic: "Grundlagen", answers: [
+                {text: "Kundenorientierung", correct: true, feedback: "Richtig! Der Kunde steht im Mittelpunkt."},
+                {text: "Fuehrung", correct: true, feedback: "Richtig! Fuehrungskraefte sind verantwortlich."},
+                {text: "Prozessorientierter Ansatz", correct: true, feedback: "Richtig! Prozesse verstehen."},
+                {text: "Gewinnmaximierung", correct: false, feedback: "FALSCH: Kein QM-Grundsatz."}
+            ]},
+            {q: "3. Der Grundsatz 'Beziehungsmanagement' ...", topic: "Grundlagen", answers: [
+                {text: "bezieht sich auf interessierte Parteien", correct: true, feedback: "Richtig! Stakeholder einbeziehen."},
+                {text: "foerdert nachhaltigen Erfolg", correct: true, feedback: "Richtig! Langfristige Beziehungen."},
+                {text: "umfasst Lieferantenbeziehungen", correct: true, feedback: "Richtig! Lieferanten als Partner."},
+                {text: "gilt nur fuer Kundenbeziehungen", correct: false, feedback: "FALSCH: ALLE interessierte Parteien."}
+            ]},
+            {q: "4. Das Kano-Modell unterscheidet ...", topic: "Grundlagen", answers: [
+                {text: "Basismerkmale", correct: true, feedback: "Richtig! Selbstverstaendliche Anforderungen."},
+                {text: "Leistungsmerkmale", correct: true, feedback: "Richtig! Ausgesprochene Wuensche."},
+                {text: "Begeisterungsmerkmale", correct: true, feedback: "Richtig! Ueberraschende Extras."},
+                {text: "Kostenmerkmale", correct: false, feedback: "FALSCH: Kein Kano-Begriff."}
+            ]},
+            {q: "5. Basismerkmale im Kano-Modell ...", topic: "Grundlagen", answers: [
+                {text: "werden als selbstverstaendlich vorausgesetzt", correct: true, feedback: "Richtig! Nicht explizit gefordert."},
+                {text: "fuehren bei Nichterfuellung zu Unzufriedenheit", correct: true, feedback: "Richtig! Muss sein."},
+                {text: "steigern bei Erfuellung nicht die Zufriedenheit", correct: true, feedback: "Richtig! Werden erwartet."},
+                {text: "werden vom Kunden explizit gefordert", correct: false, feedback: "FALSCH: Meist nicht ausgesprochen."}
+            ]},
+            {q: "6. Bei der Bestimmung des Kontexts ...", topic: "Kapitel 4", answers: [
+                {text: "sind interne Themen zu beruecksichtigen", correct: true, feedback: "Richtig! Interne Faktoren."},
+                {text: "sind externe Themen zu beruecksichtigen", correct: true, feedback: "Richtig! Externe Faktoren."},
+                {text: "ist die strategische Ausrichtung relevant", correct: true, feedback: "Richtig! Strategie einbeziehen."},
+                {text: "ist nur die finanzielle Situation relevant", correct: false, feedback: "FALSCH: Viel mehr Aspekte."}
+            ]},
+            {q: "7. Externe Themen koennen sein ...", topic: "Kapitel 4", answers: [
+                {text: "rechtliche Anforderungen", correct: true, feedback: "Richtig! Gesetze und Vorschriften."},
+                {text: "technologische Entwicklungen", correct: true, feedback: "Richtig! Technischer Fortschritt."},
+                {text: "Wettbewerbssituation", correct: true, feedback: "Richtig! Marktsituation."},
+                {text: "Mitarbeiterqualifikation", correct: false, feedback: "FALSCH: Das ist INTERN."}
+            ]},
+            {q: "8. Ausschluesse von Normanforderungen ...", topic: "Kapitel 4", answers: [
+                {text: "muessen begruendet werden", correct: true, feedback: "Richtig! Begruendung erforderlich."},
+                {text: "duerfen die Konformitaet nicht beeintraechtigen", correct: true, feedback: "Richtig! Produktqualitaet sichern."},
+                {text: "sind im Anwendungsbereich anzugeben", correct: true, feedback: "Richtig! Dokumentieren."},
+                {text: "sind bei allen Kapiteln moeglich", correct: false, feedback: "FALSCH: Kapitel 4-6 nicht ausschliessbar."}
+            ]},
+            {q: "9. Die oberste Leitung muss bezueglich Fuehrung ...", topic: "Kapitel 5", answers: [
+                {text: "Rechenschaftspflicht fuer QMS-Wirksamkeit uebernehmen", correct: true, feedback: "Richtig! Verantwortung."},
+                {text: "Qualitaetspolitik und -ziele festlegen", correct: true, feedback: "Richtig! Richtung vorgeben."},
+                {text: "Integration des QMS in Geschaeftsprozesse sicherstellen", correct: true, feedback: "Richtig! QMS einbetten."},
+                {text: "alle operativen Taetigkeiten selbst ausfuehren", correct: false, feedback: "FALSCH: Delegation moeglich."}
+            ]},
+            {q: "10. Kundenorientierung nach Kapitel 5.1.2 bedeutet ...", topic: "Kapitel 5", answers: [
+                {text: "Kundenanforderungen zu ermitteln", correct: true, feedback: "Richtig! Was will der Kunde."},
+                {text: "Kundenzufriedenheit zu erhoehen", correct: true, feedback: "Richtig! Zufriedenheit steigern."},
+                {text: "Risiken zu beruecksichtigen, die Konformitaet beeinflussen", correct: true, feedback: "Richtig! Risiken einbeziehen."},
+                {text: "alle Kundenwuensche zu erfuellen", correct: false, feedback: "FALSCH: Nur RELEVANTE Anforderungen."}
+            ]},
+            {q: "11. Die Qualitaetspolitik muss ...", topic: "Kapitel 5", answers: [
+                {text: "fuer den Zweck der Organisation angemessen sein", correct: true, feedback: "Richtig! Passend zur Organisation."},
+                {text: "einen Rahmen fuer Qualitaetsziele bieten", correct: true, feedback: "Richtig! Ziele ableiten."},
+                {text: "eine Verpflichtung zur fortlaufenden Verbesserung enthalten", correct: true, feedback: "Richtig! KVP verankern."},
+                {text: "alle 6 Monate aktualisiert werden", correct: false, feedback: "FALSCH: Keine festen Intervalle."}
+            ]},
+            {q: "12. Rollen, Verantwortlichkeiten und Befugnisse ...", topic: "Kapitel 5", answers: [
+                {text: "muessen zugewiesen werden", correct: true, feedback: "Richtig! Festlegung erforderlich."},
+                {text: "muessen kommuniziert werden", correct: true, feedback: "Richtig! Allen bekannt machen."},
+                {text: "muessen in der Organisation verstanden werden", correct: true, feedback: "Richtig! Verstaendnis sichern."},
+                {text: "duerfen nur von externen Beratern festgelegt werden", correct: false, feedback: "FALSCH: Interne Aufgabe."}
+            ]},
+            {q: "13. Bei der Bestimmung von Risiken und Chancen ...", topic: "Kapitel 6", answers: [
+                {text: "sind erwuenschte Ergebnisse zu beruecksichtigen", correct: true, feedback: "Richtig! Ziele einbeziehen."},
+                {text: "sind unererwuenschte Auswirkungen zu verhindern", correct: true, feedback: "Richtig! Risiken minimieren."},
+                {text: "ist fortlaufende Verbesserung anzustreben", correct: true, feedback: "Richtig! KVP foerdern."},
+                {text: "ist eine vollstaendige Risikoliste vorgeschrieben", correct: false, feedback: "FALSCH: Nicht explizit gefordert."}
+            ]},
+            {q: "14. Qualitaetsziele muessen fuer relevante ...", topic: "Kapitel 6", answers: [
+                {text: "Funktionen festgelegt werden", correct: true, feedback: "Richtig! Bereiche einbeziehen."},
+                {text: "Ebenen festgelegt werden", correct: true, feedback: "Richtig! Hierarchie beruecksichtigen."},
+                {text: "Prozesse festgelegt werden", correct: true, feedback: "Richtig! Prozessbezogen."},
+                {text: "Mitarbeiter individuell festgelegt werden", correct: false, feedback: "FALSCH: Fuer Funktionen/Ebenen/Prozesse."}
+            ]},
+            {q: "15. Ressourcen nach Kapitel 7.1 umfassen ...", topic: "Kapitel 7", answers: [
+                {text: "Personen", correct: true, feedback: "Richtig! Mitarbeiter."},
+                {text: "Infrastruktur", correct: true, feedback: "Richtig! Gebaeude, Ausruestung."},
+                {text: "Umgebung fuer die Durchfuehrung von Prozessen", correct: true, feedback: "Richtig! Arbeitsumgebung."},
+                {text: "ausschliesslich finanzielle Mittel", correct: false, feedback: "FALSCH: Viel mehr als Geld."}
+            ]},
+            {q: "16. Die Umgebung fuer die Durchfuehrung von Prozessen kann ...", topic: "Kapitel 7", answers: [
+                {text: "soziale Faktoren umfassen", correct: true, feedback: "Richtig! Soziales Umfeld."},
+                {text: "psychologische Faktoren umfassen", correct: true, feedback: "Richtig! Arbeitsklima."},
+                {text: "physikalische Faktoren umfassen", correct: true, feedback: "Richtig! Temperatur, Licht etc."},
+                {text: "nur Temperatur und Beleuchtung betreffen", correct: false, feedback: "FALSCH: Auch soziale und psychologische."}
+            ]},
+            {q: "17. Rueckverfolgbarkeit von Messmitteln ...", topic: "Kapitel 7", answers: [
+                {text: "erfordert Kalibrierung oder Verifizierung", correct: true, feedback: "Richtig! Genauigkeit sicherstellen."},
+                {text: "erfordert Kennzeichnung des Kalibrierstatus", correct: true, feedback: "Richtig! Status erkennbar."},
+                {text: "schuetzt vor Anpassungen, die Ergebnisse ungueltig machen", correct: true, feedback: "Richtig! Manipulation verhindern."},
+                {text: "ist nur bei Produktion erforderlich", correct: false, feedback: "FALSCH: Bei ALLEN relevanten Messungen."}
+            ]},
+            {q: "18. Das Wissen der Organisation ...", topic: "Kapitel 7", answers: [
+                {text: "ist spezifisch fuer die Organisation", correct: true, feedback: "Richtig! Organisationseigenes Wissen."},
+                {text: "wird aus Erfahrung gewonnen", correct: true, feedback: "Richtig! Praxiswissen."},
+                {text: "muss bei veraenderten Anforderungen angepasst werden", correct: true, feedback: "Richtig! Aktualisierung noetig."},
+                {text: "umfasst nur technische Informationen", correct: false, feedback: "FALSCH: Auch Prozesswissen etc."}
+            ]},
+            {q: "19. Externe Kommunikation nach 7.4 ...", topic: "Kapitel 7", answers: [
+                {text: "erfordert Festlegung von Was kommuniziert wird", correct: true, feedback: "Richtig! Inhalt bestimmen."},
+                {text: "erfordert Festlegung von Wann kommuniziert wird", correct: true, feedback: "Richtig! Zeitpunkt."},
+                {text: "erfordert Festlegung von Mit wem kommuniziert wird", correct: true, feedback: "Richtig! Zielgruppe."},
+                {text: "ist nur bei Reklamationen noetig", correct: false, feedback: "FALSCH: Generell zu planen."}
+            ]},
+            {q: "20. Bei der Bewertung von Kundenanforderungen ...", topic: "Kapitel 8", answers: [
+                {text: "sind gesetzliche Anforderungen einzubeziehen", correct: true, feedback: "Richtig! Rechtliche Vorgaben."},
+                {text: "sind eigene Anforderungen der Organisation einzubeziehen", correct: true, feedback: "Richtig! Interne Standards."},
+                {text: "muss die Erfuellbarkeit geprueft werden", correct: true, feedback: "Richtig! Machbarkeit bewerten."},
+                {text: "sind nur schriftliche Anforderungen relevant", correct: false, feedback: "FALSCH: Auch muendliche und implizite."}
+            ]},
+            {q: "21. Die Entwicklungsplanung (8.3.2) beruecksichtigt ...", topic: "Kapitel 8", answers: [
+                {text: "Art, Dauer und Komplexitaet", correct: true, feedback: "Richtig! Entwicklungsumfang."},
+                {text: "erforderliche Prozessabschnitte", correct: true, feedback: "Richtig! Entwicklungsphasen."},
+                {text: "Verantwortlichkeiten und Befugnisse", correct: true, feedback: "Richtig! Zustaendigkeiten."},
+                {text: "nur zeitliche Aspekte", correct: false, feedback: "FALSCH: Viele weitere Aspekte."}
+            ]},
+            {q: "22. Entwicklungseingaben umfassen ...", topic: "Kapitel 8", answers: [
+                {text: "funktionale und Leistungsanforderungen", correct: true, feedback: "Richtig! Was muss es koennen."},
+                {text: "gesetzliche Anforderungen", correct: true, feedback: "Richtig! Rechtliche Vorgaben."},
+                {text: "fruehere Entwicklungstaetigkeiten", correct: true, feedback: "Richtig! Erfahrungen nutzen."},
+                {text: "nur Kundenvorgaben", correct: false, feedback: "FALSCH: Auch interne und rechtliche."}
+            ]},
+            {q: "23. Die Steuerung extern bereitgestellter Prozesse ...", topic: "Kapitel 8", answers: [
+                {text: "haengt von der Auswirkung auf die Konformitaet ab", correct: true, feedback: "Richtig! Risikobasiert."},
+                {text: "erfordert Kriterien fuer Bewertung und Auswahl", correct: true, feedback: "Richtig! Lieferantenbewertung."},
+                {text: "umfasst Pruefungen oder andere Taetigkeiten", correct: true, feedback: "Richtig! Wareneingangspruefung etc."},
+                {text: "kann vollstaendig an den Lieferanten uebertragen werden", correct: false, feedback: "FALSCH: Verantwortung bleibt."}
+            ]},
+            {q: "24. Art und Umfang der Steuerung von Lieferanten ...", topic: "Kapitel 8", answers: [
+                {text: "haengt von der Faehigkeit des Lieferanten ab", correct: true, feedback: "Richtig! Lieferantenleistung."},
+                {text: "haengt von der Auswirkung auf die Konformitaet ab", correct: true, feedback: "Richtig! Kritikalitaet."},
+                {text: "muss festgelegt werden", correct: true, feedback: "Richtig! Definierte Steuerung."},
+                {text: "ist bei allen Lieferanten identisch", correct: false, feedback: "FALSCH: Risikobasiert unterschiedlich."}
+            ]},
+            {q: "25. Produktion und Dienstleistungserbringung unter beherrschten Bedingungen ...", topic: "Kapitel 8", answers: [
+                {text: "erfordert dokumentierte Informationen", correct: true, feedback: "Richtig! Arbeitsanweisungen etc."},
+                {text: "erfordert geeignete Infrastruktur", correct: true, feedback: "Richtig! Ausruestung."},
+                {text: "erfordert kompetentes Personal", correct: true, feedback: "Richtig! Qualifizierte Mitarbeiter."},
+                {text: "muss nicht ueberwacht werden", correct: false, feedback: "FALSCH: Ueberwachung ist gefordert."}
+            ]},
+            {q: "26. Validierung von Prozessen ...", topic: "Kapitel 8", answers: [
+                {text: "ist erforderlich, wenn das Ergebnis nicht verifiziert werden kann", correct: true, feedback: "Richtig! Wenn Pruefung nicht moeglich."},
+                {text: "erfordert Kriterien fuer Bewertung", correct: true, feedback: "Richtig! Bewertungskriterien."},
+                {text: "erfordert Qualifikation der Personen", correct: true, feedback: "Richtig! Kompetente Durchfuehrung."},
+                {text: "ist bei allen Prozessen erforderlich", correct: false, feedback: "FALSCH: Nur wenn Verifizierung nicht moeglich."}
+            ]},
+            {q: "27. Umgang mit nichtkonformen Ergebnissen ...", topic: "Kapitel 8", answers: [
+                {text: "kann Korrektur beinhalten", correct: true, feedback: "Richtig! Fehler beheben."},
+                {text: "kann Absonderung beinhalten", correct: true, feedback: "Richtig! Trennung."},
+                {text: "kann Sonderfreigabe beinhalten", correct: true, feedback: "Richtig! Mit Genehmigung freigeben."},
+                {text: "muss immer zur Verschrottung fuehren", correct: false, feedback: "FALSCH: Verschiedene Moeglichkeiten."}
+            ]},
+            {q: "28. Bei Sonderfreigabe (Abweichungsgenehmigung) ...", topic: "Kapitel 8", answers: [
+                {text: "muss eine befugte Person genehmigen", correct: true, feedback: "Richtig! Autorisierung erforderlich."},
+                {text: "kann der Kunde einbezogen werden", correct: true, feedback: "Richtig! Falls relevant."},
+                {text: "ist die Nichtkonformitaet zu dokumentieren", correct: true, feedback: "Richtig! Nachweis fuehren."},
+                {text: "entfaellt jede Dokumentation", correct: false, feedback: "FALSCH: Dokumentation ist Pflicht."}
+            ]},
+            {q: "29. Die Methoden zur Ermittlung der Kundenzufriedenheit ...", topic: "Kapitel 9", answers: [
+                {text: "muessen festgelegt werden", correct: true, feedback: "Richtig! Methode bestimmen."},
+                {text: "koennen Umfragen beinhalten", correct: true, feedback: "Richtig! Kundenbefragung."},
+                {text: "koennen Reklamationsanalysen beinhalten", correct: true, feedback: "Richtig! Beschwerden auswerten."},
+                {text: "sind detailliert in der Norm beschrieben", correct: false, feedback: "FALSCH: Organisation waehlt selbst."}
+            ]},
+            {q: "30. Das interne Audit muss ...", topic: "Kapitel 9", answers: [
+                {text: "in geplanten Abstaenden durchgefuehrt werden", correct: true, feedback: "Richtig! Regelmaessig."},
+                {text: "Normkonformitaet pruefen", correct: true, feedback: "Richtig! ISO 9001 Erfuellung."},
+                {text: "eigene Anforderungen der Organisation pruefen", correct: true, feedback: "Richtig! Interne Vorgaben."},
+                {text: "von externen Auditoren durchgefuehrt werden", correct: false, feedback: "FALSCH: INTERNE Auditoren."}
+            ]},
+            {q: "31. Das Auditprogramm beruecksichtigt ...", topic: "Kapitel 9", answers: [
+                {text: "Wichtigkeit der betreffenden Prozesse", correct: true, feedback: "Richtig! Kritische Prozesse."},
+                {text: "Ergebnisse vorheriger Audits", correct: true, feedback: "Richtig! Auditerfahrung."},
+                {text: "Aenderungen mit Auswirkung auf die Organisation", correct: true, feedback: "Richtig! Veraenderungen."},
+                {text: "nur die Terminplanung", correct: false, feedback: "FALSCH: Viele weitere Faktoren."}
+            ]},
+            {q: "32. Auditorenauswahl muss ...", topic: "Kapitel 9", answers: [
+                {text: "Objektivitaet sicherstellen", correct: true, feedback: "Richtig! Unparteilichkeit."},
+                {text: "Unparteilichkeit sicherstellen", correct: true, feedback: "Richtig! Keine Interessenkonflikte."},
+                {text: "das Auditieren des eigenen Bereichs vermeiden", correct: true, feedback: "Richtig! Keine Selbstpruefung."},
+                {text: "nur externe Auditoren umfassen", correct: false, feedback: "FALSCH: Interne sind gefordert."}
+            ]},
+            {q: "33. Die Managementbewertung als Eingabe ...", topic: "Kapitel 9", answers: [
+                {text: "Status von Massnahmen aus vorherigen Bewertungen", correct: true, feedback: "Richtig! Fortschritt pruefen."},
+                {text: "Veraenderungen bei externen und internen Themen", correct: true, feedback: "Richtig! Kontextaenderungen."},
+                {text: "Informationen ueber QMS-Leistung", correct: true, feedback: "Richtig! Kennzahlen."},
+                {text: "Personalbeurteilungen", correct: false, feedback: "FALSCH: Nicht Teil der Bewertung."}
+            ]},
+            {q: "34. Ergebnisse der Managementbewertung umfassen ...", topic: "Kapitel 9", answers: [
+                {text: "Verbesserungsmoeglichkeiten", correct: true, feedback: "Richtig! KVP-Potenziale."},
+                {text: "Aenderungsbedarf am QMS", correct: true, feedback: "Richtig! Was muss angepasst werden."},
+                {text: "Ressourcenbedarf", correct: true, feedback: "Richtig! Was wird benoetigt."},
+                {text: "detaillierte Arbeitsanweisungen", correct: false, feedback: "FALSCH: Nicht Teil der Ergebnisse."}
+            ]},
+            {q: "35. Bei Nichtkonformitaet muss die Organisation ...", topic: "Kapitel 10", answers: [
+                {text: "darauf reagieren", correct: true, feedback: "Richtig! Sofortmassnahme."},
+                {text: "die Ursache bewerten", correct: true, feedback: "Richtig! Ursachenanalyse."},
+                {text: "aehnliche Nichtkonformitaeten pruefen", correct: true, feedback: "Richtig! Breitere Analyse."},
+                {text: "alle Produkte zurueckrufen", correct: false, feedback: "FALSCH: Nicht immer erforderlich."}
+            ]},
+            {q: "36. Korrekturmassnahmen muessen ...", topic: "Kapitel 10", answers: [
+                {text: "den Auswirkungen angemessen sein", correct: true, feedback: "Richtig! Verhaeltnismaessigkeit."},
+                {text: "auf Wirksamkeit geprueft werden", correct: true, feedback: "Richtig! Wirksamkeitspruefung."},
+                {text: "bei Bedarf das QMS aendern", correct: true, feedback: "Richtig! Systemanpassung."},
+                {text: "immer zu Dokumentationsaenderungen fuehren", correct: false, feedback: "FALSCH: Nicht zwingend."}
+            ]},
+            {q: "37. D4 im 8D-Report ...", topic: "8D-Report", answers: [
+                {text: "ist die Ursachenanalyse", correct: true, feedback: "Richtig! Root Cause Analysis."},
+                {text: "identifiziert die Grundursache", correct: true, feedback: "Richtig! Warum ist es passiert."},
+                {text: "nutzt Methoden wie 5-Why", correct: true, feedback: "Richtig! Analysetechniken."},
+                {text: "implementiert Dauermassnahmen", correct: false, feedback: "FALSCH: Das ist D5/D6."}
+            ]},
+            {q: "38. D5 und D6 im 8D-Report ...", topic: "8D-Report", answers: [
+                {text: "betreffen Dauermassnahmen", correct: true, feedback: "Richtig! Permanent Corrective Actions."},
+                {text: "D5 waehlt Massnahmen aus", correct: true, feedback: "Richtig! Auswahl treffen."},
+                {text: "D6 implementiert Massnahmen", correct: true, feedback: "Richtig! Umsetzung."},
+                {text: "ersetzen die Sofortmassnahmen nicht", correct: false, feedback: "FALSCH: Sie ERSETZEN D3 nach Verifizierung."}
+            ]},
+            {q: "39. D7 im 8D-Report ...", topic: "8D-Report", answers: [
+                {text: "sind Vorbeugungsmassnahmen", correct: true, feedback: "Richtig! Preventive Actions."},
+                {text: "verhindern Wiederholung aehnlicher Fehler", correct: true, feedback: "Richtig! Breitere Anwendung."},
+                {text: "koennen Systemanpassungen umfassen", correct: true, feedback: "Richtig! Prozessaenderungen."},
+                {text: "sind optional", correct: false, feedback: "FALSCH: Wichtiger Bestandteil."}
+            ]},
+            {q: "40. Ein Prozessaudit ...", topic: "Audit", answers: [
+                {text: "prueft einzelne Prozesse", correct: true, feedback: "Richtig! Prozessfokus."},
+                {text: "bewertet Prozesswirksamkeit", correct: true, feedback: "Richtig! Funktioniert der Prozess."},
+                {text: "kann Teil eines Systemaudits sein", correct: true, feedback: "Richtig! Integration moeglich."},
+                {text: "ist identisch mit dem Systemaudit", correct: false, feedback: "FALSCH: Unterschiedlicher Fokus."}
+            ]},
+            {q: "41. Ein Produktaudit ...", topic: "Audit", answers: [
+                {text: "prueft Produkte gegen Spezifikationen", correct: true, feedback: "Richtig! Produktkonformitaet."},
+                {text: "kann fertige Produkte betreffen", correct: true, feedback: "Richtig! Endprodukte."},
+                {text: "kann Zwischenprodukte betreffen", correct: true, feedback: "Richtig! Halbfertige Produkte."},
+                {text: "ersetzt die normale Qualitaetspruefung", correct: false, feedback: "FALSCH: Ergaenzend."}
+            ]},
+            {q: "42. Stufe 2 des Zertifizierungsaudits ...", topic: "Audit", answers: [
+                {text: "ist das Vor-Ort-Audit", correct: true, feedback: "Richtig! Im Unternehmen."},
+                {text: "prueft die Implementierung", correct: true, feedback: "Richtig! Ist das QMS umgesetzt."},
+                {text: "prueft die Wirksamkeit", correct: true, feedback: "Richtig! Funktioniert es."},
+                {text: "basiert nur auf Dokumentation", correct: false, feedback: "FALSCH: Vor-Ort-Pruefung."}
+            ]},
+            {q: "43. Ueberwachungsaudits ...", topic: "Audit", answers: [
+                {text: "finden jaehrlich statt", correct: true, feedback: "Richtig! Einmal pro Jahr."},
+                {text: "pruefen die fortlaufende Normkonformitaet", correct: true, feedback: "Richtig! Weiterhin konform."},
+                {text: "haben geringeren Umfang als Zertifizierungsaudits", correct: true, feedback: "Richtig! Stichprobenartig."},
+                {text: "ersetzen das Rezertifizierungsaudit", correct: false, feedback: "FALSCH: Zusaetzlich zum Rezertifizierungsaudit."}
+            ]},
+            {q: "44. Die Rezertifizierung ...", topic: "Audit", answers: [
+                {text: "findet alle 3 Jahre statt", correct: true, feedback: "Richtig! Nach Zertifikatslaufzeit."},
+                {text: "prueft das gesamte QMS", correct: true, feedback: "Richtig! Vollstaendige Pruefung."},
+                {text: "erneuert das Zertifikat", correct: true, feedback: "Richtig! Neues Zertifikat."},
+                {text: "ist ein verkuerztes Audit", correct: false, feedback: "FALSCH: Umfangreich wie Erstzertifizierung."}
+            ]},
+            {q: "45. Soziale Beduerfnisse nach Maslow ...", topic: "Motivation", answers: [
+                {text: "umfassen Zugehoerigkeit", correct: true, feedback: "Richtig! Teil einer Gruppe sein."},
+                {text: "umfassen Liebe und Freundschaft", correct: true, feedback: "Richtig! Zwischenmenschliche Beziehungen."},
+                {text: "stehen auf der dritten Stufe", correct: true, feedback: "Richtig! Nach Grund- und Sicherheitsbeduerfnissen."},
+                {text: "stehen an der Spitze der Pyramide", correct: false, feedback: "FALSCH: Selbstverwirklichung ist an der Spitze."}
+            ]}
+        ]
+    },
+    "pruefung_simulation_4": {
+        title: "Pruefungssimulation 4 - Komplette Pruefung (45 Fragen)",
+        questions: [
+            {q: "1. Die ISO 9001:2015 ersetzt ...", topic: "Grundlagen", answers: [
+                {text: "die ISO 9001:2008", correct: true, feedback: "Richtig! Vorheriger Standard."},
+                {text: "das QM-Handbuch als Pflichtdokument", correct: true, feedback: "Richtig! Nicht mehr explizit gefordert."},
+                {text: "den Begriff 'Beauftragter der obersten Leitung'", correct: true, feedback: "Richtig! Nicht mehr verwendet."},
+                {text: "alle anderen Managementnormen", correct: false, feedback: "FALSCH: Ergaenzend zu anderen Normen."}
+            ]},
+            {q: "2. Der Grundsatz 'Engagement von Personen' ...", topic: "Grundlagen", answers: [
+                {text: "betont die Einbeziehung aller Mitarbeiter", correct: true, feedback: "Richtig! Alle mitnehmen."},
+                {text: "foerdert Kompetenz und Befaehigung", correct: true, feedback: "Richtig! Mitarbeiter entwickeln."},
+                {text: "staerkt die Eigenverantwortung", correct: true, feedback: "Richtig! Verantwortung uebernehmen."},
+                {text: "gilt nur fuer Fuehrungskraefte", correct: false, feedback: "FALSCH: ALLE Ebenen."}
+            ]},
+            {q: "3. Der Grundsatz 'Faktenbezogene Entscheidungsfindung' ...", topic: "Grundlagen", answers: [
+                {text: "basiert auf Datenanalyse", correct: true, feedback: "Richtig! Daten nutzen."},
+                {text: "beruecksichtigt Ursache-Wirkungs-Beziehungen", correct: true, feedback: "Richtig! Zusammenhaenge verstehen."},
+                {text: "nutzt geeignete Methoden", correct: true, feedback: "Richtig! Analysemethoden."},
+                {text: "verlaesst sich auf Bauchgefuehl", correct: false, feedback: "FALSCH: FAKTEN, nicht Gefuehl."}
+            ]},
+            {q: "4. Leistungsmerkmale im Kano-Modell ...", topic: "Grundlagen", answers: [
+                {text: "werden vom Kunden explizit gefordert", correct: true, feedback: "Richtig! Ausgesprochene Anforderungen."},
+                {text: "fuehren proportional zur Zufriedenheit", correct: true, feedback: "Richtig! Je mehr, desto zufriedener."},
+                {text: "sind messbar und vergleichbar", correct: true, feedback: "Richtig! Benchmark-faehig."},
+                {text: "werden nicht kommuniziert", correct: false, feedback: "FALSCH: Sie WERDEN ausgesprochen."}
+            ]},
+            {q: "5. Der Prozessansatz ...", topic: "Grundlagen", answers: [
+                {text: "betrachtet Taetigkeiten als zusammenhaengende Prozesse", correct: true, feedback: "Richtig! Prozessdenken."},
+                {text: "ermoeglicht konsistente Ergebnisse", correct: true, feedback: "Richtig! Vorhersehbare Ergebnisse."},
+                {text: "optimiert die Gesamtleistung", correct: true, feedback: "Richtig! Systemoptimierung."},
+                {text: "arbeitet in isolierten Abteilungen", correct: false, feedback: "FALSCH: Uebergreifend."}
+            ]},
+            {q: "6. Interne Themen des Kontexts koennen sein ...", topic: "Kapitel 4", answers: [
+                {text: "Werte und Kultur", correct: true, feedback: "Richtig! Unternehmenskultur."},
+                {text: "Wissen der Organisation", correct: true, feedback: "Richtig! Know-how."},
+                {text: "Leistung der Organisation", correct: true, feedback: "Richtig! Performance."},
+                {text: "Wettbewerber", correct: false, feedback: "FALSCH: Wettbewerber sind EXTERN."}
+            ]},
+            {q: "7. Die Anforderungen interessierter Parteien ...", topic: "Kapitel 4", answers: [
+                {text: "muessen bestimmt werden", correct: true, feedback: "Richtig! Ermittlung erforderlich."},
+                {text: "muessen ueberwacht werden", correct: true, feedback: "Richtig! Regelmaessige Pruefung."},
+                {text: "koennen sich aendern", correct: true, feedback: "Richtig! Dynamisch."},
+                {text: "sind immer statisch", correct: false, feedback: "FALSCH: Sie VERAENDERN sich."}
+            ]},
+            {q: "8. Das QMS muss ...", topic: "Kapitel 4", answers: [
+                {text: "eingefuehrt werden", correct: true, feedback: "Richtig! Implementierung."},
+                {text: "verwirklicht werden", correct: true, feedback: "Richtig! Umsetzung."},
+                {text: "aufrechterhalten und verbessert werden", correct: true, feedback: "Richtig! Pflege und KVP."},
+                {text: "extern entwickelt werden", correct: false, feedback: "FALSCH: Intern entwickeln."}
+            ]},
+            {q: "9. Wechselwirkungen zwischen Prozessen ...", topic: "Kapitel 4", answers: [
+                {text: "muessen bestimmt werden", correct: true, feedback: "Richtig! Zusammenhaenge identifizieren."},
+                {text: "zeigen Abhaengigkeiten auf", correct: true, feedback: "Richtig! Verbindungen erkennen."},
+                {text: "sind fuer das QMS relevant", correct: true, feedback: "Richtig! Systembetrachtung."},
+                {text: "duerfen ignoriert werden", correct: false, feedback: "FALSCH: Muessen beruecksichtigt werden."}
+            ]},
+            {q: "10. Die oberste Leitung zeigt Fuehrung durch ...", topic: "Kapitel 5", answers: [
+                {text: "Foerderung des prozessorientierten Ansatzes", correct: true, feedback: "Richtig! Prozessdenken foerdern."},
+                {text: "Foerderung des risikobasierten Denkens", correct: true, feedback: "Richtig! Risikobewusstsein."},
+                {text: "Unterstuetzung anderer Fuehrungskraefte", correct: true, feedback: "Richtig! Delegation."},
+                {text: "Auslagerung aller QM-Aufgaben", correct: false, feedback: "FALSCH: Verantwortung nicht abgebbar."}
+            ]},
+            {q: "11. Die Qualitaetspolitik enthaelt ...", topic: "Kapitel 5", answers: [
+                {text: "Verpflichtung zur Erfuellung von Anforderungen", correct: true, feedback: "Richtig! Anforderungen erfuellen."},
+                {text: "Verpflichtung zur fortlaufenden Verbesserung", correct: true, feedback: "Richtig! KVP."},
+                {text: "Rahmen fuer Qualitaetsziele", correct: true, feedback: "Richtig! Zielableitung."},
+                {text: "detaillierte Arbeitsanweisungen", correct: false, feedback: "FALSCH: Strategische Ebene."}
+            ]},
+            {q: "12. Verantwortlichkeiten und Befugnisse werden zugewiesen fuer ...", topic: "Kapitel 5", answers: [
+                {text: "QMS-Konformitaet sicherstellen", correct: true, feedback: "Richtig! Normerfuellung."},
+                {text: "Prozessleistung berichten", correct: true, feedback: "Richtig! Berichterstattung."},
+                {text: "Kundenorientierung foerdern", correct: true, feedback: "Richtig! Kundenfokus."},
+                {text: "externe Audits durchfuehren", correct: false, feedback: "FALSCH: Externe Aufgabe."}
+            ]},
+            {q: "13. Massnahmen zum Umgang mit Risiken und Chancen ...", topic: "Kapitel 6", answers: [
+                {text: "muessen geplant werden", correct: true, feedback: "Richtig! Planung erforderlich."},
+                {text: "muessen umgesetzt werden", correct: true, feedback: "Richtig! Umsetzung."},
+                {text: "muessen auf Wirksamkeit bewertet werden", correct: true, feedback: "Richtig! Wirksamkeitspruefung."},
+                {text: "sind nur bei kritischen Prozessen noetig", correct: false, feedback: "FALSCH: Systematisch fuer alle."}
+            ]},
+            {q: "14. Bei der Planung von Qualitaetszielen ist festzulegen ...", topic: "Kapitel 6", answers: [
+                {text: "was getan wird", correct: true, feedback: "Richtig! Massnahmen."},
+                {text: "welche Ressourcen benoetigt werden", correct: true, feedback: "Richtig! Mittel."},
+                {text: "wie Ergebnisse bewertet werden", correct: true, feedback: "Richtig! Erfolgsmessung."},
+                {text: "wer das Ziel erreicht haben muss", correct: false, feedback: "FALSCH: WER verantwortlich ist."}
+            ]},
+            {q: "15. Personen muessen kompetent sein auf Grundlage ...", topic: "Kapitel 7", answers: [
+                {text: "angemessener Ausbildung", correct: true, feedback: "Richtig! Formale Qualifikation."},
+                {text: "Schulung", correct: true, feedback: "Richtig! Weiterbildung."},
+                {text: "Erfahrung", correct: true, feedback: "Richtig! Praxiserfahrung."},
+                {text: "Dienstalter", correct: false, feedback: "FALSCH: Kompetenz, nicht Dauer."}
+            ]},
+            {q: "16. Wenn erforderliche Kompetenz fehlt ...", topic: "Kapitel 7", answers: [
+                {text: "muss Schulung erfolgen", correct: true, feedback: "Richtig! Qualifizieren."},
+                {text: "kann Mentoring angeboten werden", correct: true, feedback: "Richtig! Begleitung."},
+                {text: "kann Personal versetzt werden", correct: true, feedback: "Richtig! Aufgabenwechsel."},
+                {text: "ist keine Massnahme erforderlich", correct: false, feedback: "FALSCH: Massnahme ist PFLICHT."}
+            ]},
+            {q: "17. Dokumentierte Information muss gelenkt werden hinsichtlich ...", topic: "Kapitel 7", answers: [
+                {text: "Verteilung und Zugriff", correct: true, feedback: "Richtig! Verfuegbarkeit."},
+                {text: "Abruf und Verwendung", correct: true, feedback: "Richtig! Nutzung."},
+                {text: "Ablage und Erhaltung", correct: true, feedback: "Richtig! Archivierung."},
+                {text: "nur elektronischer Speicherung", correct: false, feedback: "FALSCH: Alle Medien."}
+            ]},
+            {q: "18. Externe dokumentierte Information ...", topic: "Kapitel 7", answers: [
+                {text: "muss identifiziert werden", correct: true, feedback: "Richtig! Kennzeichnung."},
+                {text: "muss angemessen gesteuert werden", correct: true, feedback: "Richtig! Lenkung."},
+                {text: "kann Kundenspezifikationen umfassen", correct: true, feedback: "Richtig! Kundendokumente."},
+                {text: "ist nicht relevant fuer das QMS", correct: false, feedback: "FALSCH: Sehr relevant."}
+            ]},
+            {q: "19. Bei der Bewertung von Anforderungen ...", topic: "Kapitel 8", answers: [
+                {text: "sind Abweichungen zwischen Vertrag und Angebot zu klaeren", correct: true, feedback: "Richtig! Differenzen besprechen."},
+                {text: "ist die Faehigkeit zur Erfuellung zu pruefen", correct: true, feedback: "Richtig! Machbarkeit."},
+                {text: "muessen Ergebnisse dokumentiert werden", correct: true, feedback: "Richtig! Nachweis."},
+                {text: "genuegt eine muendliche Zusage", correct: false, feedback: "FALSCH: Dokumentation gefordert."}
+            ]},
+            {q: "20. Aenderungen an Anforderungen ...", topic: "Kapitel 8", answers: [
+                {text: "muessen kommuniziert werden", correct: true, feedback: "Richtig! Information weitergeben."},
+                {text: "erfordern Anpassung dokumentierter Information", correct: true, feedback: "Richtig! Dokumentation aktualisieren."},
+                {text: "muessen bewertet werden", correct: true, feedback: "Richtig! Auswirkungen pruefen."},
+                {text: "sind nicht zu dokumentieren", correct: false, feedback: "FALSCH: Dokumentation erforderlich."}
+            ]},
+            {q: "21. Entwicklungsergebnisse muessen ...", topic: "Kapitel 8", answers: [
+                {text: "Eingabeanforderungen erfuellen", correct: true, feedback: "Richtig! Anforderungen umsetzen."},
+                {text: "fuer nachfolgende Prozesse geeignet sein", correct: true, feedback: "Richtig! Umsetzbarkeit."},
+                {text: "Ueberwachungs- und Messkritierien enthalten", correct: true, feedback: "Richtig! Pruefkriterien."},
+                {text: "nur muendlich weitergegeben werden", correct: false, feedback: "FALSCH: Dokumentation noetig."}
+            ]},
+            {q: "22. Entwicklungsaenderungen ...", topic: "Kapitel 8", answers: [
+                {text: "muessen identifiziert werden", correct: true, feedback: "Richtig! Erfassen."},
+                {text: "muessen geprueft und verifiziert werden", correct: true, feedback: "Richtig! Kontrolle."},
+                {text: "benoetigen Genehmigung vor Umsetzung", correct: true, feedback: "Richtig! Freigabe."},
+                {text: "duerfen jederzeit ohne Pruefung erfolgen", correct: false, feedback: "FALSCH: Pruefung ist Pflicht."}
+            ]},
+            {q: "23. Informationen an externe Anbieter umfassen ...", topic: "Kapitel 8", answers: [
+                {text: "Anforderungen an Produkte und Dienstleistungen", correct: true, feedback: "Richtig! Was wird erwartet."},
+                {text: "Anforderungen an Qualifikation von Personen", correct: true, feedback: "Richtig! Kompetenz."},
+                {text: "Interaktion mit dem QMS der Organisation", correct: true, feedback: "Richtig! Schnittstellen."},
+                {text: "nur Preisverhandlungen", correct: false, feedback: "FALSCH: Viel mehr Informationen."}
+            ]},
+            {q: "24. Die Erhaltung von Produkten (8.5.4) ...", topic: "Kapitel 8", answers: [
+                {text: "umfasst Kennzeichnung", correct: true, feedback: "Richtig! Identifikation."},
+                {text: "umfasst Handhabung", correct: true, feedback: "Richtig! Umgang."},
+                {text: "umfasst Verpackung und Lagerung", correct: true, feedback: "Richtig! Schutz."},
+                {text: "gilt nur fuer fertige Produkte", correct: false, feedback: "FALSCH: Auch Zwischenprodukte."}
+            ]},
+            {q: "25. Nach der Lieferung kann erforderlich sein ...", topic: "Kapitel 8", answers: [
+                {text: "Gewaehrleistungsleistungen", correct: true, feedback: "Richtig! Garantie."},
+                {text: "Wartung und Instandhaltung", correct: true, feedback: "Richtig! Service."},
+                {text: "Recycling und Entsorgung", correct: true, feedback: "Richtig! End-of-Life."},
+                {text: "keine weiteren Taetigkeiten", correct: false, feedback: "FALSCH: Oft noch Aufgaben."}
+            ]},
+            {q: "26. Aenderungen an Produktion oder Dienstleistung ...", topic: "Kapitel 8", answers: [
+                {text: "muessen bewertet werden", correct: true, feedback: "Richtig! Auswirkungen pruefen."},
+                {text: "muessen genehmigt werden", correct: true, feedback: "Richtig! Freigabe."},
+                {text: "erfordern Massnahmen zur Konformitaetssicherung", correct: true, feedback: "Richtig! Qualitaet sichern."},
+                {text: "duerfen ohne Dokumentation erfolgen", correct: false, feedback: "FALSCH: Dokumentation erforderlich."}
+            ]},
+            {q: "27. Die FMEA bewertet Fehler nach ...", topic: "FMEA", answers: [
+                {text: "Bedeutung fuer den Kunden", correct: true, feedback: "Richtig! Schwere."},
+                {text: "Wahrscheinlichkeit des Auftretens", correct: true, feedback: "Richtig! Haeufigkeit."},
+                {text: "Wahrscheinlichkeit der Entdeckung", correct: true, feedback: "Richtig! Erkennung."},
+                {text: "Kosten der Behebung", correct: false, feedback: "FALSCH: Nicht in RPZ-Berechnung."}
+            ]},
+            {q: "28. Bei hoher RPZ ...", topic: "FMEA", answers: [
+                {text: "sind Massnahmen erforderlich", correct: true, feedback: "Richtig! Handlungsbedarf."},
+                {text: "hat die Risikominderung Prioritaet", correct: true, feedback: "Richtig! Vorrang."},
+                {text: "wird nach Massnahmen die RPZ neu berechnet", correct: true, feedback: "Richtig! Neuberechnung."},
+                {text: "ist keine Aktion noetig", correct: false, feedback: "FALSCH: Massnahmen sind Pflicht."}
+            ]},
+            {q: "29. D1 im 8D-Report ...", topic: "8D-Report", answers: [
+                {text: "ist die Teambildung", correct: true, feedback: "Richtig! Team zusammenstellen."},
+                {text: "waehlt kompetente Teammitglieder", correct: true, feedback: "Richtig! Richtige Leute."},
+                {text: "definiert Rollen im Team", correct: true, feedback: "Richtig! Aufgabenverteilung."},
+                {text: "loest das Problem sofort", correct: false, feedback: "FALSCH: Das ist D3."}
+            ]},
+            {q: "30. D2 im 8D-Report ...", topic: "8D-Report", answers: [
+                {text: "beschreibt das Problem", correct: true, feedback: "Richtig! Problembeschreibung."},
+                {text: "nutzt W-Fragen (Wer, Was, Wann, Wo)", correct: true, feedback: "Richtig! Systematische Erfassung."},
+                {text: "quantifiziert das Problem", correct: true, feedback: "Richtig! Ausmass bestimmen."},
+                {text: "implementiert Korrekturmassnahmen", correct: false, feedback: "FALSCH: Das ist D5/D6."}
+            ]},
+            {q: "31. Der Auditbericht ...", topic: "Audit", answers: [
+                {text: "dokumentiert Auditfeststellungen", correct: true, feedback: "Richtig! Ergebnisse festhalten."},
+                {text: "enthaelt Auditschlussfolgerungen", correct: true, feedback: "Richtig! Fazit."},
+                {text: "wird dem Auditauftraggeber bereitgestellt", correct: true, feedback: "Richtig! Berichterstattung."},
+                {text: "bleibt vertraulich gegenueber der auditierten Organisation", correct: false, feedback: "FALSCH: Auditierter erhaelt Bericht."}
+            ]},
+            {q: "32. Auditfeststellungen koennen sein ...", topic: "Audit", answers: [
+                {text: "Konformitaeten", correct: true, feedback: "Richtig! Positive Feststellungen."},
+                {text: "Nichtkonformitaeten", correct: true, feedback: "Richtig! Abweichungen."},
+                {text: "Verbesserungsmoeglichkeiten", correct: true, feedback: "Richtig! Empfehlungen."},
+                {text: "nur Fehler", correct: false, feedback: "FALSCH: Auch positive Aspekte."}
+            ]},
+            {q: "33. Die Auditorenkompetenz nach ISO 19011 umfasst ...", topic: "Audit", answers: [
+                {text: "persoenliches Verhalten", correct: true, feedback: "Richtig! Auftreten."},
+                {text: "Wissen und Fertigkeiten", correct: true, feedback: "Richtig! Know-how."},
+                {text: "Ausbildung und Erfahrung", correct: true, feedback: "Richtig! Qualifikation."},
+                {text: "nur technisches Fachwissen", correct: false, feedback: "FALSCH: Auch Soft Skills."}
+            ]},
+            {q: "34. Grundsaetze des Auditierens nach ISO 19011 ...", topic: "Audit", answers: [
+                {text: "Integritaet", correct: true, feedback: "Richtig! Ehrlichkeit."},
+                {text: "Sachliche Darstellung", correct: true, feedback: "Richtig! Objektivitaet."},
+                {text: "Vertraulichkeit", correct: true, feedback: "Richtig! Diskretion."},
+                {text: "Schnelligkeit", correct: false, feedback: "FALSCH: Kein Auditgrundsatz."}
+            ]},
+            {q: "35. Akkreditierung bedeutet ...", topic: "Audit", answers: [
+                {text: "formelle Anerkennung der Kompetenz", correct: true, feedback: "Richtig! Kompetenzbestaetigung."},
+                {text: "Zertifizierungsstellen werden akkreditiert", correct: true, feedback: "Richtig! CB-Anerkennung."},
+                {text: "nationale Akkreditierungsstellen sind zustaendig", correct: true, feedback: "Richtig! DAkkS in Deutschland."},
+                {text: "ist dasselbe wie Zertifizierung", correct: false, feedback: "FALSCH: Verschiedene Ebenen."}
+            ]},
+            {q: "36. Nonverbale Kommunikation ...", topic: "Kommunikation", answers: [
+                {text: "umfasst Koerpersprache", correct: true, feedback: "Richtig! Gestik, Mimik."},
+                {text: "macht einen grossen Teil der Kommunikation aus", correct: true, feedback: "Richtig! Oft ueber 50%."},
+                {text: "ist Teil des Eisbergmodells", correct: true, feedback: "Richtig! Unter der Oberflaeche."},
+                {text: "ist unwichtig", correct: false, feedback: "FALSCH: Sehr wichtig."}
+            ]},
+            {q: "37. Ich-Botschaften ...", topic: "Kommunikation", answers: [
+                {text: "druecken eigene Gefuehle aus", correct: true, feedback: "Richtig! Persoenliche Perspektive."},
+                {text: "vermeiden Schuldzuweisungen", correct: true, feedback: "Richtig! Nicht anklagen."},
+                {text: "foerdern konstruktive Kommunikation", correct: true, feedback: "Richtig! Offener Dialog."},
+                {text: "beginnen mit 'Du hast...'", correct: false, feedback: "FALSCH: Das sind DU-Botschaften."}
+            ]},
+            {q: "38. Wertschaetzende Anerkennung ...", topic: "Motivation", answers: [
+                {text: "nach Maslow ein Beduerfnis", correct: true, feedback: "Richtig! Vierte Stufe."},
+                {text: "foerdert die Motivation", correct: true, feedback: "Richtig! Anerkennung motiviert."},
+                {text: "kann durch Lob erfolgen", correct: true, feedback: "Richtig! Wertschaetzung zeigen."},
+                {text: "ist unwichtig fuer Mitarbeiter", correct: false, feedback: "FALSCH: Sehr wichtig."}
+            ]},
+            {q: "39. Selbstverwirklichung nach Maslow ...", topic: "Motivation", answers: [
+                {text: "steht an der Spitze der Pyramide", correct: true, feedback: "Richtig! Hoechste Stufe."},
+                {text: "ist das Streben nach Entfaltung", correct: true, feedback: "Richtig! Potenzial ausschoepfen."},
+                {text: "wird nach Erfuellung niedrigerer Beduerfnisse aktiviert", correct: true, feedback: "Richtig! Hierarchisch."},
+                {text: "ist das Grundbeduerfnis", correct: false, feedback: "FALSCH: Physiologische Beduerfnisse sind Grund."}
+            ]},
+            {q: "40. Das QM-Handbuch ...", topic: "Grundlagen", answers: [
+                {text: "ist seit 2015 nicht mehr explizit gefordert", correct: true, feedback: "Richtig! Keine Pflicht mehr."},
+                {text: "kann weiterhin verwendet werden", correct: true, feedback: "Richtig! Optional nuetzlich."},
+                {text: "wurde durch 'dokumentierte Information' ersetzt", correct: true, feedback: "Richtig! Neuer Begriff."},
+                {text: "ist verboten", correct: false, feedback: "FALSCH: Weiterhin erlaubt."}
+            ]},
+            {q: "41. Der Prozessowner ...", topic: "Kapitel 4", answers: [
+                {text: "ist fuer den Prozess verantwortlich", correct: true, feedback: "Richtig! Prozessverantwortung."},
+                {text: "ueberwacht die Prozessleistung", correct: true, feedback: "Richtig! Performance verfolgen."},
+                {text: "initiiert Verbesserungen", correct: true, feedback: "Richtig! KVP antreiben."},
+                {text: "ist immer der Geschaeftsfuehrer", correct: false, feedback: "FALSCH: Auf verschiedenen Ebenen."}
+            ]},
+            {q: "42. Die Bewertung der QMS-Leistung ...", topic: "Kapitel 9", answers: [
+                {text: "nutzt Analyse und Bewertung", correct: true, feedback: "Richtig! Datenauswertung."},
+                {text: "nutzt interne Audits", correct: true, feedback: "Richtig! Auditierung."},
+                {text: "nutzt die Managementbewertung", correct: true, feedback: "Richtig! Top-Management Review."},
+                {text: "erfolgt nur bei Problemen", correct: false, feedback: "FALSCH: Systematisch und regelmaessig."}
+            ]},
+            {q: "43. Trends bei der Datenanalyse koennen zeigen ...", topic: "Kapitel 9", answers: [
+                {text: "Moeglichkeiten fuer Verbesserung", correct: true, feedback: "Richtig! KVP-Potenziale."},
+                {text: "Verschlechterung der Leistung", correct: true, feedback: "Richtig! Warnsignale."},
+                {text: "Wirksamkeit von Massnahmen", correct: true, feedback: "Richtig! Erfolgskontrolle."},
+                {text: "keine nuetzlichen Informationen", correct: false, feedback: "FALSCH: Sehr nuetzlich."}
+            ]},
+            {q: "44. Die fortlaufende Verbesserung (10.3) ...", topic: "Kapitel 10", answers: [
+                {text: "nutzt Analyseergebnisse", correct: true, feedback: "Richtig! Daten verwenden."},
+                {text: "nutzt Managementbewertungsergebnisse", correct: true, feedback: "Richtig! Review-Outputs."},
+                {text: "verbessert Eignung, Angemessenheit und Wirksamkeit", correct: true, feedback: "Richtig! Die drei Aspekte."},
+                {text: "ist optional fuer kleine Organisationen", correct: false, feedback: "FALSCH: Fuer ALLE verpflichtend."}
+            ]},
+            {q: "45. Die ISO 9004 ...", topic: "Grundlagen", answers: [
+                {text: "ist ein Leitfaden fuer nachhaltigen Erfolg", correct: true, feedback: "Richtig! Sustainable Success."},
+                {text: "geht ueber ISO 9001 hinaus", correct: true, feedback: "Richtig! Umfassender."},
+                {text: "ist keine Zertifizierungsnorm", correct: true, feedback: "Richtig! Nur Leitfaden."},
+                {text: "ersetzt die ISO 9001", correct: false, feedback: "FALSCH: Ergaenzt sie."}
+            ]}
+        ]
     }
 };
