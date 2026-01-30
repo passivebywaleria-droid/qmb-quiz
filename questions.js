@@ -2879,5 +2879,610 @@ const chapters = {
                 {text: "Ersatz fuer Prozessueberwachung", correct: false, feedback: "FALSCH: Kundenzufriedenheit ersetzt NICHT die Prozessueberwachung. Beide sind separate Anforderungen."}
             ]}
         ]
+    },
+    "grundlagen": {
+        title: "QM-Grundlagen - Sieben Grundsaetze, Normen & Zertifizierung",
+        questions: [
+            {q: "Wie viele Grundsaetze des Qualitaetsmanagements definiert die ISO 9000?", topic: "Sieben Grundsaetze", answers: [
+                {text: "Sieben Grundsaetze", correct: true, feedback: "Richtig! Laut TUeV-Unterlagen wurden in der ISO 9000 sieben Grundsaetze formuliert, die die wesentlichen Bestandteile eines modernen QM widerspiegeln."},
+                {text: "Fuenf Grundsaetze", correct: false, feedback: "FALSCH: Es sind SIEBEN Grundsaetze, nicht fuenf."},
+                {text: "Zehn Grundsaetze", correct: false, feedback: "FALSCH: Es sind SIEBEN Grundsaetze, nicht zehn."},
+                {text: "Acht Grundsaetze", correct: false, feedback: "FALSCH: Seit der Revision 2015 sind es SIEBEN Grundsaetze (frueher acht)."}
+            ]},
+            {q: "Welche der folgenden sind Grundsaetze des Qualitaetsmanagements nach ISO 9000?", topic: "Sieben Grundsaetze", answers: [
+                {text: "Kundenorientierung", correct: true, feedback: "Richtig! Kundenorientierung ist der erste und wichtigste QM-Grundsatz."},
+                {text: "Fuehrung", correct: true, feedback: "Richtig! Fuehrung ist der zweite QM-Grundsatz."},
+                {text: "Engagement von Personen", correct: true, feedback: "Richtig! Engagement von Personen ist der dritte QM-Grundsatz."},
+                {text: "Kostensenkung", correct: false, feedback: "FALSCH: Kostensenkung ist KEIN QM-Grundsatz nach ISO 9000."}
+            ]},
+            {q: "Welche weiteren Grundsaetze gehoeren zum QM nach ISO 9000?", topic: "Sieben Grundsaetze", answers: [
+                {text: "Prozessorientierter Ansatz", correct: true, feedback: "Richtig! Der prozessorientierte Ansatz ist der vierte QM-Grundsatz."},
+                {text: "Verbesserung", correct: true, feedback: "Richtig! Verbesserung ist der fuenfte QM-Grundsatz."},
+                {text: "Faktengestuetzte Entscheidungsfindung", correct: true, feedback: "Richtig! Faktengestuetzte Entscheidungsfindung ist der sechste QM-Grundsatz."},
+                {text: "Beziehungsmanagement", correct: true, feedback: "Richtig! Beziehungsmanagement ist der siebte QM-Grundsatz. ALLE vier Antworten sind korrekt!"}
+            ]},
+            {q: "Was bedeutet der QM-Grundsatz 'Kundenorientierung'?", topic: "Sieben Grundsaetze", answers: [
+                {text: "Der Hauptschwerpunkt liegt in der Erfuellung der Kundenanforderungen", correct: true, feedback: "Richtig! Laut TUeV-Unterlagen liegt der Hauptschwerpunkt in der Erfuellung der Kundenanforderungen."},
+                {text: "Das Bestreben, Kundenerwartungen zu uebertreffen", correct: true, feedback: "Richtig! Kundenorientierung umfasst auch das Bestreben, Kundenerwartungen zu uebertreffen."},
+                {text: "Das Gewinnen und Beibehalten von Kundenvertrauen", correct: true, feedback: "Richtig! Nachhaltiger Erfolg wird durch Vertrauen von Kunden und interessierten Parteien erreicht."},
+                {text: "Kunden muessen alle Entscheidungen genehmigen", correct: false, feedback: "FALSCH: Kundenorientierung bedeutet NICHT, dass Kunden Entscheidungen genehmigen muessen."}
+            ]},
+            {q: "Was bedeutet der QM-Grundsatz 'Faktengestuetzte Entscheidungsfindung'?", topic: "Sieben Grundsaetze", answers: [
+                {text: "Entscheidungen basieren auf Analyse und Auswertung von Daten", correct: true, feedback: "Richtig! Laut TUeV-Unterlagen fuehren Entscheidungen auf Basis von Datenanalyse eher zu gewuenschten Ergebnissen."},
+                {text: "Tatsachen und Datenanalyse fuehren zu groesserer Objektivitaet", correct: true, feedback: "Richtig! Tatsachen, Nachweise und Datenanalyse fuehren zu groesserer Objektivitaet und Vertrauen."},
+                {text: "Entscheidungsfindung kann komplex sein und weist Unsicherheit auf", correct: true, feedback: "Richtig! Die TUeV-Unterlagen betonen, dass Entscheidungsfindung immer eine gewisse Unsicherheit aufweist."},
+                {text: "Nur quantitative Daten duerfen verwendet werden", correct: false, feedback: "FALSCH: Auch qualitative Informationen koennen fuer Entscheidungen relevant sein."}
+            ]},
+            {q: "Was bedeutet der QM-Grundsatz 'Beziehungsmanagement'?", topic: "Sieben Grundsaetze", answers: [
+                {text: "Organisationen leiten und lenken Beziehungen mit interessierten Parteien", correct: true, feedback: "Richtig! Fuer nachhaltigen Erfolg muessen Beziehungen zu interessierten Parteien gelenkt werden."},
+                {text: "Interessierte Parteien beeinflussen die Leistung einer Organisation", correct: true, feedback: "Richtig! Die TUeV-Unterlagen betonen, dass interessierte Parteien die Leistung beeinflussen."},
+                {text: "Beziehungsmanagement mit Lieferanten ist besonders wichtig", correct: true, feedback: "Richtig! Beziehungsmanagement mit Lieferanten und Partnernetzwerken ist oftmals von besonderer Bedeutung."},
+                {text: "Beziehungsmanagement betrifft nur externe Partner", correct: false, feedback: "FALSCH: Auch interne Parteien wie Mitarbeiter sind Teil des Beziehungsmanagements."}
+            ]},
+            {q: "Was beschreibt das Kano-Modell?", topic: "Kano-Modell", answers: [
+                {text: "Den Zusammenhang zwischen Erfuellungsgrad und Kundenzufriedenheit", correct: true, feedback: "Richtig! Das Kano-Modell nach seinem Entwickler zeigt die Beziehung zwischen Anforderungserfuellung und Zufriedenheit."},
+                {text: "Unterschiedliche Arten von Kundenanforderungen", correct: true, feedback: "Richtig! Das Modell unterscheidet Basis-, Leistungs- und Begeisterungsmerkmale."},
+                {text: "Die Komplexitaet der Kundenzufriedenheit", correct: true, feedback: "Richtig! Laut TUeV-Unterlagen zeigt das Modell, dass der Zusammenhang zwischen Anforderungserfuellung und Zufriedenheit komplex ist."},
+                {text: "Eine Methode zur Kostenkalkulation", correct: false, feedback: "FALSCH: Das Kano-Modell hat NICHTS mit Kostenkalkulation zu tun."}
+            ]},
+            {q: "Was sind Basismerkmale im Kano-Modell?", topic: "Kano-Modell", answers: [
+                {text: "Anforderungen, die bei Nichterfuellung zu Unzufriedenheit fuehren", correct: true, feedback: "Richtig! Werden Basismerkmale nicht erfuellt, entsteht Unzufriedenheit."},
+                {text: "Anforderungen, die bei Erfuellung keine Zufriedenheit erzeugen", correct: true, feedback: "Richtig! Laut TUeV-Unterlagen entsteht bei Erfuellung von Basismerkmalen KEINE Zufriedenheit - nur Neutralitaet."},
+                {text: "So selbstverstaendlich, dass sie Kunden erst bei Nichterfuellung bewusst werden", correct: true, feedback: "Richtig! Basismerkmale sind Selbstverstaendlichkeiten, die oft erst bei Fehlen auffallen."},
+                {text: "Anforderungen, die immer explizit genannt werden", correct: false, feedback: "FALSCH: Basismerkmale werden oft NICHT explizit genannt, weil sie als selbstverstaendlich gelten."}
+            ]},
+            {q: "Was sind Leistungsmerkmale im Kano-Modell?", topic: "Kano-Modell", answers: [
+                {text: "Zusatzleistungen, die der Kunde explizit erfragt", correct: true, feedback: "Richtig! Laut TUeV-Unterlagen beschreiben Leistungsmerkmale Zusatzleistungen, die explizit erfragt werden."},
+                {text: "Bei Erfuellung steigt die Zufriedenheit proportional", correct: true, feedback: "Richtig! Je besser Leistungsmerkmale erfuellt werden, desto zufriedener ist der Kunde."},
+                {text: "Bei Nichterfuellung schlaegt Zufriedenheit in Unzufriedenheit um", correct: true, feedback: "Richtig! Die TUeV-Unterlagen warnen: Bei Nichterfuellung entsteht schnell Unzufriedenheit."},
+                {text: "Werden vom Kunden nie ausgesprochen", correct: false, feedback: "FALSCH: Leistungsmerkmale werden vom Kunden EXPLIZIT erfragt und ausgesprochen."}
+            ]},
+            {q: "Was sind Begeisterungsmerkmale im Kano-Modell?", topic: "Kano-Modell", answers: [
+                {text: "Nicht vorausgesetzte und nicht explizit erfragte Leistungen", correct: true, feedback: "Richtig! Begeisterungsmerkmale sind ueberraschende Zusatzleistungen, die nicht erwartet werden."},
+                {text: "Fuehren zu hoechster Kundenzufriedenheit", correct: true, feedback: "Richtig! Diese Merkmale fuehren laut TUeV-Unterlagen in den Bereich groesster Zufriedenheit."},
+                {text: "Muessen einen zusaetzlichen Nutzen bringen", correct: true, feedback: "Richtig! Begeisterungsmerkmale muessen fuer den Kunden einen zusaetzlichen Nutzen haben."},
+                {text: "Werden mit der Zeit zu Basismerkmalen", correct: true, feedback: "Richtig! ALLE vier sind korrekt! Laut TUeV-Unterlagen tritt ein Gewoehnungseffekt ein."}
+            ]},
+            {q: "Welche Normen gehoeren zur Normenreihe ISO 9000 ff.?", topic: "Normenreihe", answers: [
+                {text: "ISO 9000 - Grundlagen und Begriffe", correct: true, feedback: "Richtig! ISO 9000 beschreibt Grundlagen und Begriffe des Qualitaetsmanagements."},
+                {text: "ISO 9001 - Anforderungen an QMS", correct: true, feedback: "Richtig! ISO 9001 enthaelt die Anforderungen an ein Qualitaetsmanagementsystem."},
+                {text: "ISO 9004 - Anleitung zum nachhaltigen Erfolg", correct: true, feedback: "Richtig! ISO 9004 gibt Anleitungen zum Erreichen nachhaltigen Erfolgs."},
+                {text: "ISO 9005 - Umweltmanagement", correct: false, feedback: "FALSCH: Es gibt keine ISO 9005. Umweltmanagement ist ISO 14001."}
+            ]},
+            {q: "Welche Norm enthaelt Leitlinien zur Auditierung von Managementsystemen?", topic: "Normenreihe", answers: [
+                {text: "ISO 19011", correct: true, feedback: "Richtig! Laut TUeV-Unterlagen ist ISO 19011 der Leitfaden zur Auditierung von Managementsystemen."},
+                {text: "ISO 9001", correct: false, feedback: "FALSCH: ISO 9001 enthaelt die Anforderungen, nicht die Auditleitlinien."},
+                {text: "ISO 9004", correct: false, feedback: "FALSCH: ISO 9004 behandelt nachhaltigen Erfolg, nicht Auditierung."},
+                {text: "ISO 14001", correct: false, feedback: "FALSCH: ISO 14001 behandelt Umweltmanagement."}
+            ]},
+            {q: "Was ist der Unterschied zwischen Zertifizierung und Akkreditierung?", topic: "Zertifizierung", answers: [
+                {text: "Zertifizierung bestaetigt die Normkonformitaet eines QMS", correct: true, feedback: "Richtig! Bei der Zertifizierung wird geprueft, ob das QMS die Normanforderungen erfuellt."},
+                {text: "Akkreditierung bestaetigt die Kompetenz einer Zertifizierungsstelle", correct: true, feedback: "Richtig! Akkreditierung bestaetigt, dass eine Zertifizierungsstelle kompetent ist."},
+                {text: "DAkkS ist die nationale Akkreditierungsstelle in Deutschland", correct: true, feedback: "Richtig! Die Deutsche Akkreditierungsstelle (DAkkS) akkreditiert Zertifizierungsstellen."},
+                {text: "Zertifizierung und Akkreditierung sind identisch", correct: false, feedback: "FALSCH: Sie sind NICHT identisch - Zertifizierung betrifft Unternehmen, Akkreditierung betrifft Zertifizierer."}
+            ]},
+            {q: "Welche branchenspezifischen Normen gibt es?", topic: "Branchennormen", answers: [
+                {text: "IATF 16949 fuer die Automobilindustrie", correct: true, feedback: "Richtig! Laut TUeV-Unterlagen gibt es branchenspezifische Normen wie IATF 16949."},
+                {text: "ISO 13485 fuer Medizinprodukte", correct: true, feedback: "Richtig! ISO 13485 ist die QM-Norm fuer Medizinproduktehersteller."},
+                {text: "AS9100 fuer die Luft- und Raumfahrt", correct: true, feedback: "Richtig! AS9100 ist die QM-Norm fuer die Luft- und Raumfahrtindustrie."},
+                {text: "Diese Normen ersetzen die ISO 9001 vollstaendig", correct: false, feedback: "FALSCH: Branchenspezifische Normen ERGAENZEN die ISO 9001, ersetzen sie aber nicht."}
+            ]},
+            {q: "Was ist ein Integriertes Managementsystem (IMS)?", topic: "IMS", answers: [
+                {text: "Ein System, das mehrere Managementsysteme zusammenfuehrt", correct: true, feedback: "Richtig! Laut TUeV-Unterlagen werden im IMS verschiedene Managementsysteme integriert."},
+                {text: "Kann ISO 9001, ISO 14001 und ISO 45001 kombinieren", correct: true, feedback: "Richtig! Typischerweise werden Qualitaet (9001), Umwelt (14001) und Arbeitsschutz (45001) integriert."},
+                {text: "Die High Level Structure (HLS) erleichtert die Integration", correct: true, feedback: "Richtig! Die einheitliche Struktur HLS erleichtert die Integration verschiedener Managementsysteme."},
+                {text: "Erfordert separate Dokumentation fuer jedes System", correct: false, feedback: "FALSCH: Ein IMS nutzt gemeinsame Dokumentation und vermeidet Redundanzen."}
+            ]},
+            {q: "Die High Level Structure (HLS) ...", topic: "HLS", answers: [
+                {text: "ist eine einheitliche Grundstruktur fuer ISO-Managementsystem-Normen", correct: true, feedback: "Richtig! Die HLS gibt allen ISO-Managementsystem-Normen die gleiche Kapitelstruktur."},
+                {text: "erleichtert die Integration verschiedener Managementsysteme", correct: true, feedback: "Richtig! Durch die einheitliche Struktur lassen sich QMS, UMS und AMS einfacher integrieren."},
+                {text: "umfasst 10 Kapitel", correct: true, feedback: "Richtig! Die HLS hat 10 Kapitel (0-10), wobei Kapitel 1-3 einfuehrend sind."},
+                {text: "gilt nur fuer ISO 9001", correct: false, feedback: "FALSCH: Die HLS gilt fuer ALLE ISO-Managementsystem-Normen (9001, 14001, 45001, etc.)."}
+            ]},
+            {q: "Wofuer steht ISO?", topic: "Normenreihe", answers: [
+                {text: "International Organization for Standardization", correct: true, feedback: "Richtig! ISO steht fuer International Organization for Standardization."},
+                {text: "Internationale Standardisierungsorganisation", correct: true, feedback: "Richtig! Dies ist die deutsche Uebersetzung."},
+                {text: "Die ISO hat ihren Sitz in Genf", correct: true, feedback: "Richtig! Die ISO hat ihren Sitz in Genf, Schweiz."},
+                {text: "Industrial Standards Organization", correct: false, feedback: "FALSCH: ISO steht NICHT fuer Industrial Standards Organization."}
+            ]},
+            {q: "Was sind typische Anlaesse fuer die Einfuehrung eines QMS?", topic: "QMS Grundlagen", answers: [
+                {text: "Kundenanforderungen", correct: true, feedback: "Richtig! Kunden fordern oft ein zertifiziertes QMS von ihren Lieferanten."},
+                {text: "Gesetzliche Anforderungen", correct: true, feedback: "Richtig! In manchen Branchen ist ein QMS gesetzlich vorgeschrieben."},
+                {text: "Wettbewerbsvorteile", correct: true, feedback: "Richtig! Ein zertifiziertes QMS kann Wettbewerbsvorteile bieten."},
+                {text: "QMS ist immer gesetzlich vorgeschrieben", correct: false, feedback: "FALSCH: Ein QMS nach ISO 9001 ist in den meisten Branchen FREIWILLIG, nicht vorgeschrieben."}
+            ]},
+            {q: "Genormte Anforderungen bedeuten ...", topic: "QMS Grundlagen", answers: [
+                {text: "Die Anforderungen an das QMS sind standardisiert", correct: true, feedback: "Richtig! Die Norm gibt einheitliche Anforderungen vor."},
+                {text: "Das QMS selbst ist NICHT genormt", correct: true, feedback: "Richtig! Laut TUeV-Unterlagen: Genormte Anforderungen, aber kein genormtes System."},
+                {text: "Jede Organisation kann ihr QMS individuell gestalten", correct: true, feedback: "Richtig! Die Umsetzung ist flexibel und organisationsspezifisch."},
+                {text: "Alle QMS muessen identisch aufgebaut sein", correct: false, feedback: "FALSCH: Die ANFORDERUNGEN sind gleich, aber die UMSETZUNG ist individuell."}
+            ]}
+        ]
+    },
+    "motivation": {
+        title: "Motivation - Maslow & Motivationstheorie",
+        questions: [
+            {q: "Was beschreibt Maslows Beduerfnispyramide?", topic: "Maslow", answers: [
+                {text: "Eine hierarchische Ordnung menschlicher Beduerfnisse", correct: true, feedback: "Richtig! Laut TUeV-Unterlagen stellt die Pyramide eine hierarchische Ordnung der Beduerfnisse dar."},
+                {text: "Das naechsthoehere Beduerfnis wird erst relevant, wenn das niedrigere befriedigt ist", correct: true, feedback: "Richtig! Maslow geht davon aus, dass erst nach Befriedigung niedrigerer Beduerfnisse hoehere relevant werden."},
+                {text: "Das Verhalten ist durch das niedrigste unbefriedigte Beduerfnis motiviert", correct: true, feedback: "Richtig! Das Verhalten ist immer durch das niedrigste, unbefriedigte Beduerfnis motiviert."},
+                {text: "Alle Beduerfnisse sind gleichzeitig aktiv", correct: false, feedback: "FALSCH: Nach Maslow werden Beduerfnisse HIERARCHISCH aktiviert, nicht gleichzeitig."}
+            ]},
+            {q: "Welche Stufen hat Maslows Beduerfnispyramide (von unten nach oben)?", topic: "Maslow", answers: [
+                {text: "Grundbeduerfnisse (physiologisch)", correct: true, feedback: "Richtig! Die unterste Stufe sind Grundbeduerfnisse wie Nahrung, Schlaf, etc."},
+                {text: "Sicherheitsbeduerfnisse", correct: true, feedback: "Richtig! Die zweite Stufe sind Sicherheitsbeduerfnisse."},
+                {text: "Soziale Beduerfnisse", correct: true, feedback: "Richtig! Die dritte Stufe sind soziale Beduerfnisse (Zugehoerigkeit)."},
+                {text: "Gewinnmaximierung", correct: false, feedback: "FALSCH: Gewinnmaximierung ist KEIN Beduerfnis in Maslows Pyramide."}
+            ]},
+            {q: "Welche weiteren Stufen hat Maslows Pyramide?", topic: "Maslow", answers: [
+                {text: "Wertschaetzung (Anerkennung)", correct: true, feedback: "Richtig! Die vierte Stufe ist das Beduerfnis nach Wertschaetzung und Anerkennung."},
+                {text: "Selbstverwirklichung", correct: true, feedback: "Richtig! Die Spitze der Pyramide ist Selbstverwirklichung."},
+                {text: "Diese Beduerfnisse bauen aufeinander auf", correct: true, feedback: "Richtig! Die Stufen bauen hierarchisch aufeinander auf."},
+                {text: "Materielle Beduerfnisse stehen an der Spitze", correct: false, feedback: "FALSCH: Selbstverwirklichung steht an der Spitze, nicht materielle Beduerfnisse."}
+            ]},
+            {q: "Was ist intrinsische Motivation?", topic: "Motivation", answers: [
+                {text: "Motivation aus der Taetigkeit selbst heraus", correct: true, feedback: "Richtig! Intrinsisch motiviert ist eine Handlung, die selbst als zweckmaessig erkannt wird."},
+                {text: "Die Handlung wird gewollt, weil sie selbst als sinnvoll erkannt wird", correct: true, feedback: "Richtig! Laut TUeV-Unterlagen wird intrinsisch motivierte Handlung deshalb gewollt, weil sie selbst sinnvoll ist."},
+                {text: "Beispiel: Freude an der Arbeit selbst", correct: true, feedback: "Richtig! Wenn jemand arbeitet, weil ihm die Arbeit Freude macht, ist das intrinsische Motivation."},
+                {text: "Motivation durch externe Belohnung", correct: false, feedback: "FALSCH: Das ist EXTRINSISCHE Motivation, nicht intrinsische."}
+            ]},
+            {q: "Was ist extrinsische Motivation?", topic: "Motivation", answers: [
+                {text: "Das Motiv zu einer Handlung ist aeusserlich", correct: true, feedback: "Richtig! Laut TUeV-Unterlagen ist extrinsische Motivation aeusserlich begruendet."},
+                {text: "Die Handlung erfolgt um eines aeusseren Zweckes willen", correct: true, feedback: "Richtig! Die Handlung wird ausgefuehrt fuer einen Zweck, der mit der Handlung selbst nichts zu tun hat."},
+                {text: "Beispiel: Arbeiten fuer Gehalt oder Belohnung", correct: true, feedback: "Richtig! Wenn jemand nur wegen des Geldes arbeitet, ist das extrinsische Motivation."},
+                {text: "Extrinsische Motivation ist langfristig wirksamer", correct: false, feedback: "FALSCH: Intrinsische Motivation gilt oft als nachhaltiger und wirksamer."}
+            ]},
+            {q: "Welche Bedeutung hat Maslows Theorie fuer das QM?", topic: "Motivation", answers: [
+                {text: "Mitarbeiter muessen auf der richtigen Beduerfnisstufe motiviert werden", correct: true, feedback: "Richtig! Es macht keinen Sinn, auf einer Stufe zu motivieren, die aktuell nicht relevant ist."},
+                {text: "Vorherige Beduerfnisse muessen befriedigt sein", correct: true, feedback: "Richtig! Die TUeV-Unterlagen betonen: Vorherige Beduerfnisse muessen erfuellt sein, bevor hoehere relevant werden."},
+                {text: "Qualitaetsziele muessen fuer Mitarbeiter attraktiv sein", correct: true, feedback: "Richtig! Die Frage ist, ob angestrebte Kundenorientierung fuer Mitarbeiter tatsaechlich attraktiv ist."},
+                {text: "Alle Mitarbeiter haben dieselben Beduerfnisse", correct: false, feedback: "FALSCH: Mitarbeiter befinden sich auf UNTERSCHIEDLICHEN Beduerfnisstufen."}
+            ]},
+            {q: "Fuer die Qualitaetsorientierung der Mitarbeiter ist wichtig, dass ...", topic: "Motivation", answers: [
+                {text: "sie sich die Ziele des QMS zu eigen machen", correct: true, feedback: "Richtig! Laut TUeV-Unterlagen: Gelingt es, dass Mitarbeiter die QMS-Ziele als ihre eigenen sehen?"},
+                {text: "Kundenorientierung fuer sie attraktiv ist", correct: true, feedback: "Richtig! Die angestrebte Kundenorientierung muss fuer Mitarbeiter attraktiv sein."},
+                {text: "Grundbeduerfnisse befriedigt sind", correct: true, feedback: "Richtig! Ohne befriedigte Grundbeduerfnisse fehlt die Basis fuer hoeheres Engagement."},
+                {text: "nur extrinsische Anreize verwendet werden", correct: false, feedback: "FALSCH: Intrinsische Motivation ist oft nachhaltiger und sollte gefoeerdert werden."}
+            ]},
+            {q: "Der QM-Grundsatz 'Engagement von Personen' bedeutet ...", topic: "Motivation", answers: [
+                {text: "Kompetente, befaehigte und engagierte Personen sind notwendig", correct: true, feedback: "Richtig! Laut TUeV-Unterlagen braucht eine Organisation kompetente, befaehigte und engagierte Personen."},
+                {text: "Sämtliche Personen auf allen Ebenen einbeziehen", correct: true, feedback: "Richtig! Es ist wichtig, alle Personen auf allen Ebenen einzubeziehen."},
+                {text: "Anerkennung und Befaehigung von Faehigkeiten", correct: true, feedback: "Richtig! Anerkennung, Befaehigung und Foerderung erleichtern die Einbeziehung zum Erreichen der Qualitaetsziele."},
+                {text: "Nur Fuehrungskraefte muessen engagiert sein", correct: false, feedback: "FALSCH: ALLE Personen auf allen Ebenen sollen einbezogen werden, nicht nur Fuehrungskraefte."}
+            ]}
+        ]
+    },
+    "audit": {
+        title: "Auditierung - Auditarten, ISO 19011 & Zertifizierung",
+        questions: [
+            {q: "Welche Auditarten werden unterschieden nach dem Auditor?", topic: "Auditarten", answers: [
+                {text: "1st party audit (internes Audit)", correct: true, feedback: "Richtig! Beim internen Audit auditiert die Organisation sich selbst."},
+                {text: "2nd party audit (Lieferantenaudit)", correct: true, feedback: "Richtig! Beim Lieferantenaudit prueft ein Kunde seinen Lieferanten."},
+                {text: "3rd party audit (Zertifizierungsaudit)", correct: true, feedback: "Richtig! Das Zertifizierungsaudit wird von einer unabhaengigen Stelle durchgefuehrt."},
+                {text: "4th party audit (Behoerdenaudit)", correct: false, feedback: "FALSCH: Es gibt keine 4th party audits in der gaengigen Terminologie."}
+            ]},
+            {q: "Welche Auditarten werden nach dem Gegenstand unterschieden?", topic: "Auditarten", answers: [
+                {text: "Systemaudit", correct: true, feedback: "Richtig! Das Systemaudit bewertet das gesamte Managementsystem."},
+                {text: "Prozessaudit", correct: true, feedback: "Richtig! Das Prozessaudit prueft einzelne Prozesse und Ablaeufe."},
+                {text: "Produktaudit", correct: true, feedback: "Richtig! Das Produktaudit prueft, ob Produktmerkmale erreicht werden."},
+                {text: "Mitarbeiteraudit", correct: false, feedback: "FALSCH: 'Mitarbeiteraudit' ist keine gaengige Auditart nach ISO-Terminologie."}
+            ]},
+            {q: "Was ist ein Systemaudit?", topic: "Systemaudit", answers: [
+                {text: "Bewertet das gesamte Qualitaetsmanagementsystem", correct: true, feedback: "Richtig! Laut TUeV-Unterlagen bewertet das Systemaudit das gesamte QMS."},
+                {text: "Prueft Aufbau- und Ablauforganisation", correct: true, feedback: "Richtig! Das Systemaudit prueft die Aufbau- und Ablauforganisation des Unternehmens."},
+                {text: "Ist die anspruchsvollste Form eines Audits", correct: true, feedback: "Richtig! Laut TUeV-Unterlagen ist das Systemaudit die anspruchsvollste Auditform."},
+                {text: "Beschraenkt sich auf die Produktqualitaet", correct: false, feedback: "FALSCH: Das Systemaudit geht UEBER die reine Produktqualitaet hinaus."}
+            ]},
+            {q: "Was ist ein Prozessaudit?", topic: "Prozessaudit", answers: [
+                {text: "Beurteilt Arbeitsbereiche, Taetigkeiten und Ablaeufe", correct: true, feedback: "Richtig! Mit dem Prozessaudit werden Arbeitsbereiche und Ablaeufe begutachtet."},
+                {text: "Prueft, ob festgelegte Taetigkeiten zweckmaessig sind", correct: true, feedback: "Richtig! Ein Prozessaudit beurteilt, ob Taetigkeiten zweckmaessig sind und eingehalten werden."},
+                {text: "Grundlage sind Prozessbeschreibungen und Arbeitsanweisungen", correct: true, feedback: "Richtig! Die Vorgaben sind in Prozessbeschreibungen und Arbeitsanweisungen geregelt."},
+                {text: "Betrifft nur Fertigungsprozesse", correct: false, feedback: "FALSCH: Prozessaudits betreffen ALLE Prozesse, nicht nur Fertigungsprozesse."}
+            ]},
+            {q: "Was ist ein Produktaudit?", topic: "Produktaudit", answers: [
+                {text: "Prueft, ob spezifizierte Produktmerkmale erreicht werden", correct: true, feedback: "Richtig! Das Produktaudit prueft, ob festgelegte Produktmerkmale erreicht werden."},
+                {text: "Ist eine nachtraeglich feststellende Ueberpruefung", correct: true, feedback: "Richtig! Laut TUeV-Unterlagen ist es eine nachtraeglich feststellende Pruefung."},
+                {text: "Erfolgt aus Sicht des Auftraggebers, Kunden oder Anwenders", correct: true, feedback: "Richtig! Die Pruefung erfolgt aus der Sicht des Kunden oder Anwenders."},
+                {text: "Ersetzt das Systemaudit", correct: false, feedback: "FALSCH: Produktaudit und Systemaudit sind VERSCHIEDENE Auditformen, die sich ergaenzen."}
+            ]},
+            {q: "Was beschreibt die ISO 19011?", topic: "ISO 19011", answers: [
+                {text: "Einen Leitfaden zur Auditierung von Managementsystemen", correct: true, feedback: "Richtig! ISO 19011 ist der Leitfaden zur Auditierung von Managementsystemen."},
+                {text: "Grundsaetzliche Auditprinzipien", correct: true, feedback: "Richtig! In der ISO 19011 sind grundsaetzliche Auditprinzipien festgelegt."},
+                {text: "Empfehlungen zur Festlegung und Steuerung eines Auditprogramms", correct: true, feedback: "Richtig! Die Norm enthaelt Empfehlungen fuer Auditprogramme."},
+                {text: "Verbindliche Anforderungen fuer die Zertifizierung", correct: false, feedback: "FALSCH: ISO 19011 ist ein LEITFADEN, keine verbindliche Anforderungsnorm."}
+            ]},
+            {q: "Das Auditprogramm nach ISO 19011 umfasst ...", topic: "ISO 19011", answers: [
+                {text: "Einen oder mehrere Audits fuer einen spezifischen Zeitraum", correct: true, feedback: "Richtig! Ein Auditprogramm umfasst geplante Audits fuer einen bestimmten Zeitraum."},
+                {text: "Anforderungen an die Kompetenz von Auditoren", correct: true, feedback: "Richtig! ISO 19011 beschreibt auch Anforderungen an die Auditorenkompetenz."},
+                {text: "Anleitungen zur Durchfuehrung von Audits", correct: true, feedback: "Richtig! Die Norm enthaelt Anleitungen zur Auditdurchfuehrung."},
+                {text: "Nur Zertifizierungsaudits", correct: false, feedback: "FALSCH: ISO 19011 deckt 1st und 2nd party audits ab, besonders interne Audits."}
+            ]},
+            {q: "Der Auditablauf folgt dem Drei-Phasen-Konzept. Welche Phasen sind das?", topic: "Auditablauf", answers: [
+                {text: "Vorbereitung", correct: true, feedback: "Richtig! Die erste Phase ist die Auditvorbereitung."},
+                {text: "Durchfuehrung", correct: true, feedback: "Richtig! Die zweite Phase ist die Auditdurchfuehrung."},
+                {text: "Nachbereitung", correct: true, feedback: "Richtig! Die dritte Phase ist die Auditnachbereitung."},
+                {text: "Zertifizierung", correct: false, feedback: "FALSCH: Zertifizierung ist KEINE Phase des Auditablaufs, sondern ein moegliches Ergebnis."}
+            ]},
+            {q: "Was gehoert zur Auditvorbereitung?", topic: "Auditablauf", answers: [
+                {text: "Auditplan erstellen", correct: true, feedback: "Richtig! Die Erstellung des Auditplans ist Teil der Vorbereitung."},
+                {text: "Checklisten und Fragenkataloge vorbereiten", correct: true, feedback: "Richtig! Auditfragen und Checklisten werden vorbereitet."},
+                {text: "Auditteam festlegen", correct: true, feedback: "Richtig! Das Auditteam muss zusammengestellt werden."},
+                {text: "Korrekturmassnahmen umsetzen", correct: false, feedback: "FALSCH: Korrekturmassnahmen gehoeren zur NACHBEREITUNG, nicht zur Vorbereitung."}
+            ]},
+            {q: "Was gehoert zur Auditnachbereitung?", topic: "Auditablauf", answers: [
+                {text: "Auditbericht erstellen", correct: true, feedback: "Richtig! Nach dem Audit wird ein Auditbericht erstellt."},
+                {text: "Feststellungen dokumentieren", correct: true, feedback: "Richtig! Alle Feststellungen werden dokumentiert."},
+                {text: "Korrekturmassnahmen verfolgen", correct: true, feedback: "Richtig! Korrekturmassnahmen werden verfolgt und deren Wirksamkeit geprueft."},
+                {text: "Auditfragen formulieren", correct: false, feedback: "FALSCH: Auditfragen werden in der VORBEREITUNG formuliert, nicht in der Nachbereitung."}
+            ]},
+            {q: "Welche Phasen hat ein Zertifizierungsverfahren?", topic: "Zertifizierungsphasen", answers: [
+                {text: "Audit Stufe 1 (Dokumentenpruefung)", correct: true, feedback: "Richtig! In Stufe 1 wird das Dokumentierte geprueft (Bereitschaftsbewertung)."},
+                {text: "Audit Stufe 2 (Vor-Ort-Audit)", correct: true, feedback: "Richtig! In Stufe 2 erfolgt die Vor-Ort-Ueberpruefung der Umsetzung."},
+                {text: "Ueberwachungsaudits", correct: true, feedback: "Richtig! Nach der Zertifizierung erfolgen regelmaessige Ueberwachungsaudits."},
+                {text: "Vorabgenehmigung durch Behoerden", correct: false, feedback: "FALSCH: Eine Behoerdengenehmigung ist NICHT Teil des Zertifizierungsverfahrens."}
+            ]},
+            {q: "Was wird im Audit Stufe 1 geprueft?", topic: "Zertifizierungsphasen", answers: [
+                {text: "Die QMS-Dokumentation", correct: true, feedback: "Richtig! Stufe 1 prueft die Dokumentation des QMS."},
+                {text: "Die Bereitschaft fuer Stufe 2", correct: true, feedback: "Richtig! Es wird geprueft, ob das Unternehmen bereit fuer das Hauptaudit ist."},
+                {text: "Ob die Grundvoraussetzungen erfuellt sind", correct: true, feedback: "Richtig! Es wird geprueft, ob die Grundvoraussetzungen fuer Stufe 2 vorliegen."},
+                {text: "Nur die Produktqualitaet", correct: false, feedback: "FALSCH: Stufe 1 prueft die DOKUMENTATION, nicht primaer die Produktqualitaet."}
+            ]},
+            {q: "Wie lange ist ein ISO 9001 Zertifikat gueltig?", topic: "Zertifizierungsphasen", answers: [
+                {text: "3 Jahre", correct: true, feedback: "Richtig! Das Zertifikat ist 3 Jahre gueltig."},
+                {text: "Jaehrliche Ueberwachungsaudits sind erforderlich", correct: true, feedback: "Richtig! Ueberwachungsaudits finden in der Regel jaehrlich statt."},
+                {text: "Nach 3 Jahren erfolgt ein Rezertifizierungsaudit", correct: true, feedback: "Richtig! Zur Verlaengerung ist ein Rezertifizierungsaudit erforderlich."},
+                {text: "Unbegrenzt gueltig", correct: false, feedback: "FALSCH: Das Zertifikat ist auf 3 Jahre BEGRENZT und muss erneuert werden."}
+            ]},
+            {q: "Interne Audits nach ISO 9001 ...", topic: "Internes Audit", answers: [
+                {text: "muessen in geplanten Abstaenden durchgefuehrt werden", correct: true, feedback: "Richtig! Interne Audits sind in geplanten Abstaenden durchzufuehren."},
+                {text: "pruefen, ob das QMS normkonform ist", correct: true, feedback: "Richtig! Es wird geprueft, ob das QMS die Normanforderungen erfuellt."},
+                {text: "pruefen, ob das QMS wirksam eingefuehrt ist", correct: true, feedback: "Richtig! Auch die wirksame Einfuehrung und Aufrechterhaltung wird geprueft."},
+                {text: "sind optional, wenn ein Zertifikat vorliegt", correct: false, feedback: "FALSCH: Interne Audits sind NICHT optional - sie sind eine Normforderung (9.2)."}
+            ]},
+            {q: "Was muss bei internen Audits nach ISO 9001 geplant werden?", topic: "Internes Audit", answers: [
+                {text: "Audithaeufigkeit", correct: true, feedback: "Richtig! Die Haeufigkeit der Audits muss geplant werden."},
+                {text: "Auditmethoden", correct: true, feedback: "Richtig! Die Methoden fuer die Audits muessen festgelegt werden."},
+                {text: "Verantwortlichkeiten und Berichterstattung", correct: true, feedback: "Richtig! Verantwortlichkeiten muessen zugewiesen werden."},
+                {text: "Ein externes Auditteam", correct: false, feedback: "FALSCH: Fuer INTERNE Audits sind keine externen Auditoren erforderlich."}
+            ]},
+            {q: "Auditoren muessen ...", topic: "Auditorkompetenz", answers: [
+                {text: "objektiv und unparteilich sein", correct: true, feedback: "Richtig! Objektivitaet und Unparteilichkeit sind wichtige Auditoranforderungen."},
+                {text: "unabhaengig vom auditierten Bereich sein", correct: true, feedback: "Richtig! Auditoren duerfen nicht ihre eigene Arbeit auditieren."},
+                {text: "ueber ausreichende Kompetenz verfuegen", correct: true, feedback: "Richtig! Auditoren muessen fuer ihre Aufgabe kompetent sein."},
+                {text: "externe Berater sein", correct: false, feedback: "FALSCH: Auditoren koennen auch INTERNE Mitarbeiter sein, solange sie unabhaengig sind."}
+            ]}
+        ]
+    },
+    "kommunikation": {
+        title: "Kommunikation - Vier-Ohren-Modell, Eisberg & Fragetechniken",
+        questions: [
+            {q: "Das Eisbergmodell der Kommunikation beschreibt ...", topic: "Eisbergmodell", answers: [
+                {text: "Sachebene und Beziehungsebene", correct: true, feedback: "Richtig! Das Eisbergmodell unterscheidet Sach- und Beziehungsebene."},
+                {text: "Der groesste Teil der Kommunikation ist unsichtbar", correct: true, feedback: "Richtig! Wie beim Eisberg liegt der groesste Teil unter der Oberflaeche."},
+                {text: "Emotionale Faktoren beeinflussen die Kommunikation", correct: true, feedback: "Richtig! Unter der Oberflaeche liegen Emotionen, Einstellungen, Wuensche."},
+                {text: "Nur die Sachebene ist relevant", correct: false, feedback: "FALSCH: Die Beziehungsebene ist mindestens ebenso wichtig wie die Sachebene."}
+            ]},
+            {q: "Was gehoert zur Sachebene der Kommunikation?", topic: "Eisbergmodell", answers: [
+                {text: "Inhalte und Fakten", correct: true, feedback: "Richtig! Auf der Sachebene werden Inhalte und Fakten ausgetauscht."},
+                {text: "Argumente und Zahlen", correct: true, feedback: "Richtig! Zahlen, Daten, Fakten gehoeren zur Sachebene."},
+                {text: "Das Thema des Gespraechs", correct: true, feedback: "Richtig! Laut TUeV-Unterlagen bestimmt die Thematik die Sachebene."},
+                {text: "Sympathie und Antipathie", correct: false, feedback: "FALSCH: Sympathie/Antipathie gehoeren zur BEZIEHUNGSEBENE, nicht zur Sachebene."}
+            ]},
+            {q: "Was gehoert zur Beziehungsebene der Kommunikation?", topic: "Eisbergmodell", answers: [
+                {text: "Einstellungen und Erwartungen", correct: true, feedback: "Richtig! Persoenliche Einstellungen und Erwartungen gehoeren zur Beziehungsebene."},
+                {text: "Sympathie und Antipathie", correct: true, feedback: "Richtig! Sympathie oder Antipathie beeinflussen die Beziehungsebene."},
+                {text: "Aengste und Wuensche", correct: true, feedback: "Richtig! Auch Aengste und Wuensche liegen auf der Beziehungsebene."},
+                {text: "Produktspezifikationen", correct: false, feedback: "FALSCH: Produktspezifikationen gehoeren zur SACHEBENE, nicht zur Beziehungsebene."}
+            ]},
+            {q: "Das Vier-Ohren-Modell (Schulz von Thun) beschreibt ...", topic: "Vier-Ohren-Modell", answers: [
+                {text: "Jede Nachricht hat vier Komponenten", correct: true, feedback: "Richtig! Laut TUeV-Unterlagen besteht jede Nachricht aus vier Komponenten."},
+                {text: "Der Empfaenger hat vier Empfangsantennen", correct: true, feedback: "Richtig! Der Empfaenger hat gewissermassen vier Ohren fuer die vier Seiten."},
+                {text: "Sachinhalt, Selbstoffenbarung, Beziehung, Appell", correct: true, feedback: "Richtig! Dies sind die vier Seiten einer Nachricht."},
+                {text: "Kommunikation ist immer eindeutig", correct: false, feedback: "FALSCH: Das Modell zeigt gerade, dass Kommunikation MEHRDEUTIG sein kann."}
+            ]},
+            {q: "Welche Seiten hat eine Nachricht nach dem Vier-Ohren-Modell?", topic: "Vier-Ohren-Modell", answers: [
+                {text: "Sachinhalt (Worueber ich informiere)", correct: true, feedback: "Richtig! Der Sachinhalt gibt Informationen ueber den Gespraechsinhalt."},
+                {text: "Selbstoffenbarung (Was ich ueber mich preisgebe)", correct: true, feedback: "Richtig! Jede Aussage sagt auch etwas ueber den Sender aus."},
+                {text: "Beziehung (Wie ich zu dir stehe)", correct: true, feedback: "Richtig! Die Beziehungsseite zeigt, wie der Sender zum Empfaenger steht."},
+                {text: "Appell (Was ich von dir moechte)", correct: true, feedback: "Richtig! ALLE vier sind korrekt! Der Appell zeigt, was der Sender vom Empfaenger will."}
+            ]},
+            {q: "Was ist verbale Kommunikation?", topic: "Kommunikationsarten", answers: [
+                {text: "Sprachliche Kommunikation", correct: true, feedback: "Richtig! Verbal bedeutet sprachlich - gesprochene oder geschriebene Worte."},
+                {text: "Kommunikation durch Worte und Symbole", correct: true, feedback: "Richtig! Laut TUeV-Unterlagen sind Symbole wie Worte Zeichen verbaler Kommunikation."},
+                {text: "Kann muendlich oder schriftlich erfolgen", correct: true, feedback: "Richtig! Verbale Kommunikation umfasst Sprechen und Schreiben."},
+                {text: "Koerperhaltung und Gestik", correct: false, feedback: "FALSCH: Das ist NONVERBALE Kommunikation, nicht verbale."}
+            ]},
+            {q: "Was ist nonverbale Kommunikation?", topic: "Kommunikationsarten", answers: [
+                {text: "Nichtsprachliche Kommunikation", correct: true, feedback: "Richtig! Nonverbal bedeutet nichtsprachlich."},
+                {text: "Gestik und Mimik", correct: true, feedback: "Richtig! Gestik und Mimik sind wichtige nonverbale Signale."},
+                {text: "Koerpersprache und Haltung", correct: true, feedback: "Richtig! Auch Koerperhaltung kommuniziert nonverbal."},
+                {text: "E-Mails und Briefe", correct: false, feedback: "FALSCH: E-Mails und Briefe sind SCHRIFTLICHE, also verbale Kommunikation."}
+            ]},
+            {q: "Was ist aktives Zuhoeren?", topic: "Aktives Zuhoeren", answers: [
+                {text: "Bereitschaft, den Gespraechspartner zu verstehen", correct: true, feedback: "Richtig! Aktives Zuhoeren zeigt die Bereitschaft, den Partner zu verstehen."},
+                {text: "Bewusst erkennen, was mitgeteilt werden soll", correct: true, feedback: "Richtig! Laut TUeV-Unterlagen geht es darum, bewusst zu erkennen, was mitgeteilt wird."},
+                {text: "Hilft Missverstaendnisse zu vermeiden", correct: true, feedback: "Richtig! Aktives Zuhoeren hilft, Missverstaendnisse zu vermeiden und Konflikte zu klaeren."},
+                {text: "Bedeutet, dem anderen ins Wort zu fallen", correct: false, feedback: "FALSCH: Ins-Wort-Fallen ist das GEGENTEIL von aktivem Zuhoeren."}
+            ]},
+            {q: "Elemente des aktiven Zuhoerens sind ...", topic: "Aktives Zuhoeren", answers: [
+                {text: "Kurze Zusammenfassungen (Paraphrasieren)", correct: true, feedback: "Richtig! Paraphrasieren zeigt, dass man den Inhalt verstanden hat."},
+                {text: "Zuhoerbestaetigung ('ja', 'ok')", correct: true, feedback: "Richtig! Verbale Signale wie 'ja' oder 'ok' zeigen Aufmerksamkeit."},
+                {text: "Blickkontakt und Kopfnicken", correct: true, feedback: "Richtig! Nonverbale Signale wie Nicken bestaetigen das Zuhoeren."},
+                {text: "Sofort die eigene Meinung sagen", correct: false, feedback: "FALSCH: Aktives Zuhoeren bedeutet ERST zuhoeren, dann antworten."}
+            ]},
+            {q: "Welche Fragearten gibt es?", topic: "Fragetechniken", answers: [
+                {text: "Offene Fragen (W-Fragen)", correct: true, feedback: "Richtig! Offene Fragen beginnen mit Wer, Was, Wann, Wo, Wie, Warum."},
+                {text: "Geschlossene Fragen (Ja/Nein)", correct: true, feedback: "Richtig! Geschlossene Fragen koennen mit Ja oder Nein beantwortet werden."},
+                {text: "Beide Fragearten haben ihre Berechtigung", correct: true, feedback: "Richtig! Je nach Situation sind offene oder geschlossene Fragen geeigneter."},
+                {text: "Nur offene Fragen sind erlaubt", correct: false, feedback: "FALSCH: Beide Fragearten sind ERLAUBT und nuetzlich."}
+            ]},
+            {q: "Offene Fragen ...", topic: "Fragetechniken", answers: [
+                {text: "beginnen mit W-Woertern (Wer, Was, Wann, Wo, Wie, Warum)", correct: true, feedback: "Richtig! W-Fragen sind typische offene Fragen."},
+                {text: "erfordern ausfuehrlichere Antworten", correct: true, feedback: "Richtig! Offene Fragen laden zu laengeren Antworten ein."},
+                {text: "sind nuetzlich um Informationen zu sammeln", correct: true, feedback: "Richtig! In Audits helfen offene Fragen, Informationen zu gewinnen."},
+                {text: "koennen mit Ja oder Nein beantwortet werden", correct: false, feedback: "FALSCH: Das sind GESCHLOSSENE Fragen, nicht offene."}
+            ]},
+            {q: "Fuer Auditoren ist wichtig ...", topic: "Kommunikation Audit", answers: [
+                {text: "Verbale und nonverbale Kommunikation beachten", correct: true, feedback: "Richtig! Laut TUeV-Unterlagen muessen Auditoren beide Kommunikationsformen beachten."},
+                {text: "Die eigene Gestik und Mimik kontrollieren", correct: true, feedback: "Richtig! Die eigene Koerpersprache beeinflusst den Auditerfolg."},
+                {text: "Aktives Zuhoeren praktizieren", correct: true, feedback: "Richtig! Aktives Zuhoeren ist eine wichtige Auditorenkompetenz."},
+                {text: "Auditierte unter Druck setzen", correct: false, feedback: "FALSCH: Auditoren sollten eine POSITIVE Atmosphaere schaffen, nicht Druck ausueben."}
+            ]}
+        ]
+    },
+    "methoden": {
+        title: "QM-Methoden - FMEA & 8D-Report",
+        questions: [
+            {q: "Wofuer steht FMEA?", topic: "FMEA", answers: [
+                {text: "Failure Mode and Effect Analysis", correct: true, feedback: "Richtig! FMEA steht fuer Failure Mode and Effect Analysis."},
+                {text: "Fehlermoeglichkeits- und Einflussanalyse", correct: true, feedback: "Richtig! Das ist die deutsche Bezeichnung fuer FMEA."},
+                {text: "Eine Methode zur Risikoanalyse", correct: true, feedback: "Richtig! Laut TUeV-Unterlagen ist FMEA ein Hilfsmittel, um Risiken aufzudecken."},
+                {text: "Eine Methode zur Kostenkalkulation", correct: false, feedback: "FALSCH: FMEA dient der RISIKOANALYSE, nicht der Kostenkalkulation."}
+            ]},
+            {q: "Was ist das Hauptziel der FMEA?", topic: "FMEA", answers: [
+                {text: "Vorausschauende Fehlervermeidung", correct: true, feedback: "Richtig! Laut TUeV-Unterlagen ist das Hauptziel der FMEA die vorausschauende Fehlervermeidung."},
+                {text: "Systematisches vorbeugendes Planen", correct: true, feedback: "Richtig! Die Vorgehensweise wird als systematisches vorbeugendes Planen bezeichnet."},
+                {text: "Potenzielle Fehler und deren Ursachen ermitteln", correct: true, feedback: "Richtig! Potenzielle Fehler und deren Ursachen werden systematisch ermittelt."},
+                {text: "Nachtraegliche Fehlerbehebung", correct: false, feedback: "FALSCH: FMEA ist VORBEUGEND, nicht nachtraeglich. Fehlervermeidung statt Behebung."}
+            ]},
+            {q: "Die FMEA wurde urspruenglich entwickelt von ...", topic: "FMEA", answers: [
+                {text: "NASA (US-Raumfahrtbehoerde)", correct: true, feedback: "Richtig! Laut TUeV-Unterlagen wurde die FMEA urspruenglich fuer die NASA entwickelt."},
+                {text: "Die Automobilindustrie griff sie spaeter auf", correct: true, feedback: "Richtig! Die Automobilindustrie uebernahm die Methode und fordert sie von Lieferanten."},
+                {text: "Wird heute in vielen Branchen eingesetzt", correct: true, feedback: "Richtig! FMEA ist heute branchenuebgreifend verbreitet."},
+                {text: "ISO-Organisation", correct: false, feedback: "FALSCH: Die FMEA wurde von der NASA entwickelt, nicht von ISO."}
+            ]},
+            {q: "Welche FMEA-Arten gibt es?", topic: "FMEA", answers: [
+                {text: "Design-FMEA (Produkt-FMEA)", correct: true, feedback: "Richtig! Die Design-FMEA analysiert Produktrisiken."},
+                {text: "Prozess-FMEA", correct: true, feedback: "Richtig! Die Prozess-FMEA analysiert Fertigungsprozessrisiken."},
+                {text: "Beide analysieren potenzielle Schwachstellen", correct: true, feedback: "Richtig! Beide FMEA-Arten dienen der Schwachstellenanalyse."},
+                {text: "Marketing-FMEA", correct: false, feedback: "FALSCH: Es gibt keine 'Marketing-FMEA' als Standardmethode."}
+            ]},
+            {q: "Die Risikoprioritaetszahl (RPZ) berechnet sich aus ...", topic: "FMEA", answers: [
+                {text: "Bedeutung (B)", correct: true, feedback: "Richtig! B steht fuer die Bedeutung/Schwere der Fehlerfolge."},
+                {text: "Auftreten (A)", correct: true, feedback: "Richtig! A steht fuer die Auftretenswahrscheinlichkeit."},
+                {text: "Entdeckung (E)", correct: true, feedback: "Richtig! E steht fuer die Entdeckungswahrscheinlichkeit."},
+                {text: "Kosten (K)", correct: false, feedback: "FALSCH: Kosten sind KEIN Faktor der RPZ. Die Formel ist RPZ = B x A x E."}
+            ]},
+            {q: "Die RPZ-Formel lautet ...", topic: "FMEA", answers: [
+                {text: "RPZ = B x A x E", correct: true, feedback: "Richtig! RPZ = Bedeutung x Auftreten x Entdeckung."},
+                {text: "Hohe RPZ zeigt hohes Risiko an", correct: true, feedback: "Richtig! Je hoeher die RPZ, desto hoeher das Risiko."},
+                {text: "Massnahmen werden nach RPZ priorisiert", correct: true, feedback: "Richtig! Die RPZ hilft bei der Priorisierung von Massnahmen."},
+                {text: "Maximale RPZ ist 100", correct: false, feedback: "FALSCH: Bei Skalen von 1-10 ist die maximale RPZ = 10 x 10 x 10 = 1000."}
+            ]},
+            {q: "Wann muessen FMEA-Massnahmen ergriffen werden? (nach TUeV)", topic: "FMEA", answers: [
+                {text: "Wenn die Bedeutung (B) eines Fehlers >= 5", correct: true, feedback: "Richtig! Laut TUeV-Unterlagen: Massnahmen wenn B >= 5."},
+                {text: "Wenn die RPZ >= 100", correct: true, feedback: "Richtig! Oder wenn die RPZ >= 100 ist."},
+                {text: "Nach Massnahmen sollte die RPZ um 50% niedriger sein", correct: true, feedback: "Richtig! Die ermittelte RPZ sollte nach Massnahmen um 50% niedriger sein."},
+                {text: "Nur bei Bedeutung = 10", correct: false, feedback: "FALSCH: Massnahmen sind NICHT nur bei B=10 erforderlich, sondern schon ab B >= 5."}
+            ]},
+            {q: "Wofuer steht 8D?", topic: "8D-Report", answers: [
+                {text: "8 Disziplinen", correct: true, feedback: "Richtig! 8D beschreibt acht obligatorische Disziplinen bzw. Prozessschritte."},
+                {text: "8 Prozessschritte im Rahmen der Fehlerbearbeitung", correct: true, feedback: "Richtig! Der 8D-Report umfasst acht Prozessschritte."},
+                {text: "Ein Werkzeug des Beschwerdemanagements", correct: true, feedback: "Richtig! Laut TUeV-Unterlagen ist der 8D-Report ein Werkzeug des Beschwerdemanagements."},
+                {text: "8 Dokumente", correct: false, feedback: "FALSCH: 8D steht fuer 8 DISZIPLINEN, nicht fuer 8 Dokumente."}
+            ]},
+            {q: "Welche Schritte umfasst der 8D-Report?", topic: "8D-Report", answers: [
+                {text: "D1: Teamarbeit - Team zusammenstellen", correct: true, feedback: "Richtig! Im ersten Schritt wird ein Team fuer die Problemloesung zusammengestellt."},
+                {text: "D2: Problembeschreibung - Problem definieren", correct: true, feedback: "Richtig! Das Problem muss so genau wie moeglich beschrieben werden."},
+                {text: "D3: Schadensbegrenzung - Sofortmassnahmen", correct: true, feedback: "Richtig! Sofortmassnahmen zur Schadensbegrenzung werden eingeleitet."},
+                {text: "D1: Kostenanalyse", correct: false, feedback: "FALSCH: D1 ist TEAMARBEIT, nicht Kostenanalyse."}
+            ]},
+            {q: "Welche weiteren 8D-Schritte gibt es?", topic: "8D-Report", answers: [
+                {text: "D4: Ursachenerkennung - Grundursachen identifizieren", correct: true, feedback: "Richtig! Die wahrscheinlichsten Grundursachen werden identifiziert und verifiziert."},
+                {text: "D5: Massnahmen waehlen - Loesungen auswaehlen", correct: true, feedback: "Richtig! Das Team ermittelt Massnahmen zur Ursachenbeseitigung."},
+                {text: "D6: Massnahmen umsetzen - Implementierung", correct: true, feedback: "Richtig! Die gewaehlten Massnahmen werden umgesetzt."},
+                {text: "D4: Zertifizierung", correct: false, feedback: "FALSCH: D4 ist URSACHENERKENNUNG, nicht Zertifizierung."}
+            ]},
+            {q: "Die letzten 8D-Schritte sind ...", topic: "8D-Report", answers: [
+                {text: "D7: Wiederauftreten verhindern - Vorbeugung", correct: true, feedback: "Richtig! Vorbeugungsmassnahmen verhindern zukuenftiges Wiederauftreten."},
+                {text: "D8: Abschluss - Erfahrungen verdichten", correct: true, feedback: "Richtig! In der Abschlussphase werden alle Erfahrungen bewertet und verdichtet."},
+                {text: "Ziel ist die Ueberwindung der Ursachen einer Nichtkonformitaet", correct: true, feedback: "Richtig! Laut TUeV-Unterlagen ist das Ziel die Ueberwindung der Ursachen."},
+                {text: "D7: Feierliche Abnahme", correct: false, feedback: "FALSCH: D7 ist WIEDERAUFTRETEN VERHINDERN, keine feierliche Abnahme."}
+            ]},
+            {q: "Der 8D-Report wird typischerweise eingesetzt bei ...", topic: "8D-Report", answers: [
+                {text: "Kundenreklamationen", correct: true, feedback: "Richtig! Der 8D-Report wird haeufig bei Reklamationen eingesetzt."},
+                {text: "Lieferant-Kunden-Kommunikation", correct: true, feedback: "Richtig! Der Report wird zwischen Lieferant und Kunde ausgetauscht."},
+                {text: "Systematischer Fehlerbearbeitung", correct: true, feedback: "Richtig! Er dient der systematischen Fehlerbearbeitung."},
+                {text: "Nur bei internen Problemen", correct: false, feedback: "FALSCH: Der 8D-Report wird gerade im EXTERNEN Beschwerdemanagement eingesetzt."}
+            ]},
+            {q: "Bei der Ursachenanalyse (D4) sollte ...", topic: "8D-Report", answers: [
+                {text: "Die technische Ursache ermittelt werden", correct: true, feedback: "Richtig! Die technischen Grundursachen werden identifiziert."},
+                {text: "Auch die organisatorische Ebene betrachtet werden", correct: true, feedback: "Richtig! Laut TUeV-Unterlagen sollte auch die organisatorische Ebene betrachtet werden."},
+                {text: "Ursachen durch Tests und Vergleiche verifiziert werden", correct: true, feedback: "Richtig! Die Ursachen werden durch Pruefungen, Tests und Vergleiche verifiziert."},
+                {text: "Nur offensichtliche Fehler betrachtet werden", correct: false, feedback: "FALSCH: Es sollen die GRUNDURSACHEN ermittelt werden, nicht nur Symptome."}
+            ]},
+            {q: "Bei D5 (Massnahmen waehlen) gilt ...", topic: "8D-Report", answers: [
+                {text: "Massnahmen sollen das Problem effektiv loesen", correct: true, feedback: "Richtig! Die Massnahmen sollten das Problem effektiv und effizient loesen."},
+                {text: "Keine unerwuenschten Nebenwirkungen", correct: true, feedback: "Richtig! Es sollen keine unerwuenschten Nebenwirkungen entstehen."},
+                {text: "Fehlervermeidung vor Fehlerentdeckung", correct: true, feedback: "Richtig! Laut TUeV-Unterlagen sollte Fehlervermeidung, nicht Fehlerentdeckung im Vordergrund stehen."},
+                {text: "Immer die teuerste Loesung waehlen", correct: false, feedback: "FALSCH: Nicht die teuerste, sondern die WIRKSAMSTE Loesung waehlen."}
+            ]}
+        ]
+    },
+    "betrieb_erweitert": {
+        title: "Kapitel 8 Erweiterung - Erhaltung, Taetigkeiten nach Lieferung & Lieferkette",
+        questions: [
+            {q: "Was umfasst die Erhaltung (8.5.4) von Produkten?", topic: "Erhaltung", answers: [
+                {text: "Handhabung", correct: true, feedback: "Richtig! Die richtige Handhabung der Produkte muss sichergestellt werden."},
+                {text: "Verpackung", correct: true, feedback: "Richtig! Produkte muessen so verpackt werden, dass die Qualitaet geschuetzt wird."},
+                {text: "Lagerung", correct: true, feedback: "Richtig! Die Lagerung muss die Qualitaet bis zur Verwendung erhalten."},
+                {text: "Verkaufspreis", correct: false, feedback: "FALSCH: Der Verkaufspreis hat NICHTS mit Erhaltung im Sinne von 8.5.4 zu tun."}
+            ]},
+            {q: "Welche weiteren Aspekte gehoeren zur Erhaltung?", topic: "Erhaltung", answers: [
+                {text: "Transport", correct: true, feedback: "Richtig! Der Transport muss die Produktqualitaet erhalten."},
+                {text: "Schutz", correct: true, feedback: "Richtig! Produkte muessen vor qualitaetsmindernden Einwirkungen geschuetzt werden."},
+                {text: "Reinhaltung", correct: true, feedback: "Richtig! Die Reinhaltung der Produkte muss sichergestellt werden."},
+                {text: "Gewinnmarge", correct: false, feedback: "FALSCH: Gewinnmarge ist KEIN Aspekt der Erhaltung nach 8.5.4."}
+            ]},
+            {q: "Bei der Verpackung ist zu beachten ...", topic: "Erhaltung", answers: [
+                {text: "Schutz vor Beschaedigung", correct: true, feedback: "Richtig! Die Verpackung muss das Produkt vor Beschaedigungen schuetzen."},
+                {text: "Eindeutige Kennzeichnung", correct: true, feedback: "Richtig! Verpackungen muessen eindeutig gekennzeichnet sein."},
+                {text: "Kundenspezifische Verpackungsvorschriften", correct: true, feedback: "Richtig! Laut TUeV-Unterlagen kann die Verpackung durch Kunden vorgegeben werden."},
+                {text: "Nur Einwegverpackungen verwenden", correct: false, feedback: "FALSCH: Die Norm schreibt NICHT vor, nur Einwegverpackungen zu verwenden."}
+            ]},
+            {q: "Bei der Lagerung ist zu beachten ...", topic: "Erhaltung", answers: [
+                {text: "Qualitaet darf nicht beeintraechtigt werden", correct: true, feedback: "Richtig! Die Lagerung darf die Produktqualitaet nicht negativ beeinflussen."},
+                {text: "Bei laengerer Lagerzeit regelmaessige Pruefung", correct: true, feedback: "Richtig! Bei laengerer Lagerzeit muss der Zustand regelmaessig geprueft werden."},
+                {text: "Schutz vor Umwelteinfluessen (Feuchtigkeit, Temperatur)", correct: true, feedback: "Richtig! Produkte muessen vor schaedlichen Umwelteinfluessen geschuetzt werden."},
+                {text: "Nur Kuehllagerung ist zulaessig", correct: false, feedback: "FALSCH: Die Lagerart haengt vom PRODUKT ab, nicht von einer pauschalen Vorschrift."}
+            ]},
+            {q: "Beim Transport ist zu beachten ...", topic: "Erhaltung", answers: [
+                {text: "Sachgemaesser Versand", correct: true, feedback: "Richtig! Ein sachgemaesser Versand muss gewaehrleisten, dass die Qualitaet erhalten bleibt."},
+                {text: "Logistikkette des Spediteurs ueberwachen", correct: true, feedback: "Richtig! Auch die Logistik des Spediteurs muss ueberwacht werden."},
+                {text: "Gesetzliche Auflagen bei Gefahrgut beachten", correct: true, feedback: "Richtig! Bei Gefahrgut sind gesetzliche Auflagen zu beachten."},
+                {text: "Transportart ist immer frei waehlbar", correct: false, feedback: "FALSCH: Je nach Produkt und Vertrag kann die Transportart VORGEGEBEN sein."}
+            ]},
+            {q: "Was sind Taetigkeiten nach der Lieferung (8.5.5)?", topic: "Taetigkeiten nach Lieferung", answers: [
+                {text: "Taetigkeiten aufgrund von Gewaehrleistungsbestimmungen", correct: true, feedback: "Richtig! Gewaehrleistungsleistungen sind Taetigkeiten nach der Lieferung."},
+                {text: "Wartung und Instandhaltung", correct: true, feedback: "Richtig! Wartungsleistungen gehoeren zu den Taetigkeiten nach der Lieferung."},
+                {text: "Wiederverwertung oder Entsorgung", correct: true, feedback: "Richtig! Laut TUeV-Unterlagen gehoert auch die Entsorgung dazu."},
+                {text: "Nur Rechnungsstellung", correct: false, feedback: "FALSCH: Rechnungsstellung ist keine 'Taetigkeit nach der Lieferung' im Normsinne."}
+            ]},
+            {q: "Anforderungen an Taetigkeiten nach der Lieferung ...", topic: "Taetigkeiten nach Lieferung", answers: [
+                {text: "muessen ermittelt werden", correct: true, feedback: "Richtig! Die Organisation muss diese Anforderungen ermitteln."},
+                {text: "muessen erfuellt werden", correct: true, feedback: "Richtig! Die ermittelten Anforderungen muessen erfuellt werden."},
+                {text: "koennen von Kunden oder Gesetzen stammen", correct: true, feedback: "Richtig! Anforderungen koennen von Kunden oder aus Gesetzen stammen."},
+                {text: "sind immer optional", correct: false, feedback: "FALSCH: Diese Anforderungen sind NICHT optional, sondern muessen ermittelt und erfuellt werden."}
+            ]},
+            {q: "Das Lieferkettensorgfaltspflichtengesetz (LkSG) ...", topic: "Lieferkette", answers: [
+                {text: "regelt menschenrechtliche Sorgfaltspflichten", correct: true, feedback: "Richtig! Das LkSG regelt menschenrechtliche und umweltbezogene Sorgfaltspflichten."},
+                {text: "gilt fuer Unternehmen mit mehr als 1.000 Mitarbeitern", correct: true, feedback: "Richtig! Das Gesetz gilt fuer Unternehmen mit in der Regel mehr als 1.000 Arbeitnehmern."},
+                {text: "erstreckt sich auf die gesamte Lieferkette", correct: true, feedback: "Richtig! Die Verantwortung erstreckt sich auf die gesamte Lieferkette."},
+                {text: "betrifft nur auslaendische Unternehmen", correct: false, feedback: "FALSCH: Das Gesetz gilt auch fuer DEUTSCHE Lieferanten und Unternehmen."}
+            ]},
+            {q: "Das LkSG verbietet unter anderem ...", topic: "Lieferkette", answers: [
+                {text: "Kinderarbeit", correct: true, feedback: "Richtig! Verbot der Beschaeftigung von Kindern unter dem Mindestalter."},
+                {text: "Zwangsarbeit", correct: true, feedback: "Richtig! Verbot aller Formen der Sklaverei und Zwangsarbeit."},
+                {text: "Missachtung des Arbeitsschutzes", correct: true, feedback: "Richtig! Verbot der Missachtung geltender Pflichten des Arbeitsschutzes."},
+                {text: "Guenstige Preise", correct: false, feedback: "FALSCH: Guenstige Preise sind NICHT verboten - es geht um Menschenrechte und Umwelt."}
+            ]},
+            {q: "Die EU CSDDD-Richtlinie (Sorgfaltspflicht Nachhaltigkeit) ...", topic: "Lieferkette", answers: [
+                {text: "verpflichtet zur Achtung von Menschenrechten und Umwelt", correct: true, feedback: "Richtig! Die Richtlinie fordert Respekt fuer Menschenrechte und Umwelt."},
+                {text: "betrifft die gesamte Wertschoepfungskette", correct: true, feedback: "Richtig! Die Sorgfaltspflicht erstreckt sich auf die gesamte Wertschoepfungskette."},
+                {text: "fuehrt einen zivilrechtlichen Haftungstatbestand ein", correct: true, feedback: "Richtig! Laut TUeV-Unterlagen fuehrt die Richtlinie neue Haftungstatbestaende ein."},
+                {text: "gilt nur fuer Kleinunternehmen", correct: false, feedback: "FALSCH: Die Richtlinie gilt primaer fuer GROSSE Unternehmen (ab 1.000 MA, 450 Mio. EUR)."}
+            ]},
+            {q: "Zur Ueberpruefung der Lieferanten-Compliance koennen ...", topic: "Lieferkette", answers: [
+                {text: "Lieferantenselbstauskuenfte eingeholt werden", correct: true, feedback: "Richtig! Selbstauskuenfte sind ein Instrument zur Ueberpruefung."},
+                {text: "Dokumente angefordert werden", correct: true, feedback: "Richtig! Relevante Dokumente koennen angefordert werden."},
+                {text: "Audits vor Ort durchgefuehrt werden", correct: true, feedback: "Richtig! Laut TUeV-Unterlagen sind Audits bei Lieferanten vor Ort moeglich."},
+                {text: "Nur muendliche Zusicherungen akzeptiert werden", correct: false, feedback: "FALSCH: Muendliche Zusicherungen reichen NICHT aus - Nachweise sind erforderlich."}
+            ]}
+        ]
+    },
+    "pruefungsblock_komplett": {
+        title: "Kompletter Pruefungsblock - Alle Themen gemischt",
+        questions: [
+            {q: "Welche Aussagen sind normativ korrekt?", topic: "Gemischt", answers: [
+                {text: "Die sieben QM-Grundsaetze sind in ISO 9000 definiert", correct: true, feedback: "Richtig! Die sieben Grundsaetze sind in ISO 9000 festgelegt."},
+                {text: "ISO 9001 enthaelt Anforderungen an ein QMS", correct: true, feedback: "Richtig! ISO 9001 ist die Anforderungsnorm."},
+                {text: "ISO 19011 ist der Leitfaden zur Auditierung", correct: true, feedback: "Richtig! ISO 19011 beschreibt die Auditierung von Managementsystemen."},
+                {text: "ISO 9001 ersetzt alle anderen Normen", correct: false, feedback: "FALSCH: ISO 9001 ersetzt NICHT andere Normen wie ISO 14001 oder branchenspezifische Normen."}
+            ]},
+            {q: "Ein Unternehmen fuehrt ein QMS ein. Welche Aussagen sind richtig?", topic: "Gemischt", answers: [
+                {text: "Der Kontext der Organisation muss bestimmt werden", correct: true, feedback: "Richtig! Kapitel 4 fordert die Bestimmung des Kontexts."},
+                {text: "Die oberste Leitung traegt die Gesamtverantwortung", correct: true, feedback: "Richtig! Die Fuehrung traegt die Verantwortung fuer das QMS (Kapitel 5)."},
+                {text: "Risiken und Chancen muessen beruecksichtigt werden", correct: true, feedback: "Richtig! Kapitel 6 fordert den Umgang mit Risiken und Chancen."},
+                {text: "Ein QM-Handbuch ist zwingend erforderlich", correct: false, feedback: "FALSCH: Seit ISO 9001:2015 ist ein QM-Handbuch NICHT mehr gefordert."}
+            ]},
+            {q: "Bei einem internen Audit stellt der Auditor Abweichungen fest. Was ist korrekt?", topic: "Gemischt", answers: [
+                {text: "Die Abweichungen muessen dokumentiert werden", correct: true, feedback: "Richtig! Auditfeststellungen muessen dokumentiert werden."},
+                {text: "Korrekturmassnahmen muessen eingeleitet werden", correct: true, feedback: "Richtig! Bei Abweichungen sind Korrekturmassnahmen erforderlich."},
+                {text: "Die Wirksamkeit der Massnahmen muss geprueft werden", correct: true, feedback: "Richtig! Die Wirksamkeit der Korrekturmassnahmen muss verifiziert werden."},
+                {text: "Der Auditor muss die Massnahmen selbst umsetzen", correct: false, feedback: "FALSCH: Der Auditor DOKUMENTIERT, die Umsetzung erfolgt durch die Verantwortlichen."}
+            ]},
+            {q: "Im Kano-Modell gilt: Welche Aussagen sind richtig?", topic: "Gemischt", answers: [
+                {text: "Basismerkmale fuehren bei Erfuellung nicht zu Zufriedenheit", correct: true, feedback: "Richtig! Erfuellte Basismerkmale erzeugen nur Neutralitaet, keine Zufriedenheit."},
+                {text: "Leistungsmerkmale werden explizit erfragt", correct: true, feedback: "Richtig! Leistungsmerkmale sind Zusatzleistungen, die Kunden explizit erfragen."},
+                {text: "Begeisterungsmerkmale sind unerwartete Zusatzleistungen", correct: true, feedback: "Richtig! Begeisterungsmerkmale ueberraschen den Kunden positiv."},
+                {text: "Alle drei Merkmalarten sind gleich wichtig", correct: false, feedback: "FALSCH: Die Merkmalarten haben UNTERSCHIEDLICHE Auswirkungen auf die Zufriedenheit."}
+            ]},
+            {q: "Ein Zertifizierungsaudit wird durchgefuehrt. Was ist korrekt?", topic: "Gemischt", answers: [
+                {text: "Es findet in zwei Stufen statt", correct: true, feedback: "Richtig! Das Zertifizierungsaudit umfasst Stufe 1 und Stufe 2."},
+                {text: "Das Zertifikat gilt 3 Jahre", correct: true, feedback: "Richtig! Ein ISO 9001-Zertifikat ist 3 Jahre gueltig."},
+                {text: "Jaehrliche Ueberwachungsaudits sind erforderlich", correct: true, feedback: "Richtig! In der Regel finden jaehrliche Ueberwachungsaudits statt."},
+                {text: "Nach der Zertifizierung sind keine Audits mehr noetig", correct: false, feedback: "FALSCH: Nach der Zertifizierung sind REGELMAESSIGE Ueberwachungsaudits erforderlich."}
+            ]},
+            {q: "Ein 8D-Report wird erstellt. In welcher Reihenfolge sind die ersten Schritte?", topic: "Gemischt", answers: [
+                {text: "D1: Teamarbeit - Team zusammenstellen", correct: true, feedback: "Richtig! Der erste Schritt ist die Teamzusammenstellung."},
+                {text: "D2: Problembeschreibung - Problem definieren", correct: true, feedback: "Richtig! Danach wird das Problem genau beschrieben."},
+                {text: "D3: Schadensbegrenzung - Sofortmassnahmen", correct: true, feedback: "Richtig! Dann folgen Sofortmassnahmen zur Schadensbegrenzung."},
+                {text: "D1: Zuerst die Ursachen analysieren", correct: false, feedback: "FALSCH: Ursachenanalyse (D4) kommt NACH Teambildung, Problembeschreibung und Schadensbegrenzung."}
+            ]},
+            {q: "Maslows Beduerfnispyramide zeigt ...", topic: "Gemischt", answers: [
+                {text: "Grundbeduerfnisse bilden die Basis", correct: true, feedback: "Richtig! Physiologische Grundbeduerfnisse sind die unterste Stufe."},
+                {text: "Selbstverwirklichung steht an der Spitze", correct: true, feedback: "Richtig! Selbstverwirklichung ist das hoechste Beduerfnis."},
+                {text: "Niedrigere Beduerfnisse muessen erst befriedigt sein", correct: true, feedback: "Richtig! Hoehere Beduerfnisse werden erst relevant, wenn niedrigere befriedigt sind."},
+                {text: "Alle Menschen haben identische Beduerfnisse", correct: false, feedback: "FALSCH: Menschen befinden sich auf UNTERSCHIEDLICHEN Stufen je nach Situation."}
+            ]},
+            {q: "Bei der FMEA ...", topic: "Gemischt", answers: [
+                {text: "wird die RPZ aus B x A x E berechnet", correct: true, feedback: "Richtig! RPZ = Bedeutung x Auftreten x Entdeckung."},
+                {text: "ist das Ziel die vorausschauende Fehlervermeidung", correct: true, feedback: "Richtig! FMEA dient der praventiven Fehlervermeidung."},
+                {text: "gibt es Design-FMEA und Prozess-FMEA", correct: true, feedback: "Richtig! Dies sind die zwei Hauptarten der FMEA."},
+                {text: "muessen alle Fehler mit RPZ < 100 ignoriert werden", correct: false, feedback: "FALSCH: Auch bei B >= 5 sind Massnahmen erforderlich, unabhaengig von der RPZ."}
+            ]},
+            {q: "Welche Aussagen zur Dokumentation sind richtig?", topic: "Gemischt", answers: [
+                {text: "'Aufrechterhalten' bedeutet Vorgaben aktuell halten", correct: true, feedback: "Richtig! Dokumentierte Information aufrechterhalten = Vorgabedokumente aktuell halten."},
+                {text: "'Aufbewahren' bedeutet Nachweise archivieren", correct: true, feedback: "Richtig! Dokumentierte Information aufbewahren = Nachweise/Aufzeichnungen archivieren."},
+                {text: "Nicht alle Prozesse muessen dokumentiert werden", correct: true, feedback: "Richtig! Die Norm fordert Dokumentation nur 'soweit erforderlich'."},
+                {text: "Ein QM-Handbuch ist seit 2015 vorgeschrieben", correct: false, feedback: "FALSCH: Das QM-Handbuch wurde 2015 aus den Anforderungen GESTRICHEN."}
+            ]},
+            {q: "Das Eisbergmodell der Kommunikation zeigt ...", topic: "Gemischt", answers: [
+                {text: "Es gibt eine Sach- und eine Beziehungsebene", correct: true, feedback: "Richtig! Das Modell unterscheidet diese beiden Ebenen."},
+                {text: "Der groessere Teil liegt unter der Oberflaeche", correct: true, feedback: "Richtig! Wie beim Eisberg ist der groesste Teil unsichtbar."},
+                {text: "Emotionen beeinflussen die Kommunikation stark", correct: true, feedback: "Richtig! Unter der Oberflaeche liegen Emotionen, Aengste, Wuensche."},
+                {text: "Nur die Sachebene ist fuer Audits relevant", correct: false, feedback: "FALSCH: In Audits ist auch die Beziehungsebene WICHTIG fuer den Erfolg."}
+            ]},
+            {q: "Ein Unternehmen hat einen Lieferantenausfall. Welcher QM-Grundsatz ist besonders relevant?", topic: "Gemischt", answers: [
+                {text: "Beziehungsmanagement", correct: true, feedback: "Richtig! Beziehungsmanagement mit Lieferanten ist besonders wichtig."},
+                {text: "Risikobasiertes Denken (aus Verbesserung)", correct: true, feedback: "Richtig! Risiken wie Lieferantenausfall sollten vorher erkannt werden."},
+                {text: "Prozessorientierter Ansatz", correct: true, feedback: "Richtig! Die Beschaffungsprozesse muessen gelenkt werden."},
+                {text: "Alle Lieferanten sofort kuendigen", correct: false, feedback: "FALSCH: Das ist KEINE angemessene QM-Massnahme."}
+            ]},
+            {q: "Internes Audit nach ISO 9001:2015 ...", topic: "Gemischt", answers: [
+                {text: "muss in geplanten Abstaenden durchgefuehrt werden", correct: true, feedback: "Richtig! Interne Audits sind in geplanten Abstaenden durchzufuehren."},
+                {text: "Auditoren muessen objektiv und unparteilich sein", correct: true, feedback: "Richtig! Objektivitaet und Unparteilichkeit sind Grundanforderungen."},
+                {text: "Auditoren duerfen nicht die eigene Arbeit auditieren", correct: true, feedback: "Richtig! Auditoren muessen unabhaengig vom auditierten Bereich sein."},
+                {text: "ist nur alle 3 Jahre erforderlich", correct: false, feedback: "FALSCH: Interne Audits sind HAEUFIGER erforderlich, nicht nur alle 3 Jahre."}
+            ]},
+            {q: "Zur Erhaltung von Produkten (8.5.4) gehoeren ...", topic: "Gemischt", answers: [
+                {text: "Handhabung und Kennzeichnung", correct: true, feedback: "Richtig! Richtige Handhabung und Kennzeichnung sind Teil der Erhaltung."},
+                {text: "Verpackung und Lagerung", correct: true, feedback: "Richtig! Verpackung und Lagerung gehoeren zur Erhaltung."},
+                {text: "Transport und Schutz", correct: true, feedback: "Richtig! Transport und Schutz vor Umwelteinfluessen sind Teil der Erhaltung."},
+                {text: "Werbung und Marketing", correct: false, feedback: "FALSCH: Werbung und Marketing haben NICHTS mit Produkterhaltung zu tun."}
+            ]},
+            {q: "Das Vier-Ohren-Modell beschreibt ...", topic: "Gemischt", answers: [
+                {text: "Jede Nachricht hat vier Seiten", correct: true, feedback: "Richtig! Sachinhalt, Selbstoffenbarung, Beziehung, Appell."},
+                {text: "Kommunikation kann mehrdeutig sein", correct: true, feedback: "Richtig! Das Modell zeigt, warum Missverstaendnisse entstehen koennen."},
+                {text: "Empfaenger haben vier 'Ohren'", correct: true, feedback: "Richtig! Der Empfaenger kann eine Nachricht auf vier verschiedene Arten hoeren."},
+                {text: "Nur der Sachinhalt zaehlt", correct: false, feedback: "FALSCH: Alle VIER Seiten der Nachricht sind relevant."}
+            ]},
+            {q: "Bei Korrekturmassnahmen nach ISO 9001 ...", topic: "Gemischt", answers: [
+                {text: "muss die Ursache der Nichtkonformitaet ermittelt werden", correct: true, feedback: "Richtig! Die Ursache muss analysiert werden."},
+                {text: "muessen Massnahmen ergriffen werden, damit sie nicht erneut auftritt", correct: true, feedback: "Richtig! Wiederholung muss verhindert werden."},
+                {text: "muss die Wirksamkeit der Massnahmen bewertet werden", correct: true, feedback: "Richtig! Die Wirksamkeit der Korrekturmassnahmen muss geprueft werden."},
+                {text: "reicht es, den Fehler nur zu beheben", correct: false, feedback: "FALSCH: Fehlerbehebung allein ist KEINE Korrekturmassnahme - die URSACHE muss behoben werden."}
+            ]}
+        ]
     }
 };
