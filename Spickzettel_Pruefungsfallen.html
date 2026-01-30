@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>QMB Pruefung - Haeufige Fallen & Tricks</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: Arial, sans-serif; font-size: 9pt; padding: 10px; max-width: 210mm; }
+        h1 { font-size: 14pt; text-align: center; background: #c0392b; color: white; padding: 8px; margin-bottom: 10px; }
+        h2 { font-size: 11pt; background: #e74c3c; color: white; padding: 5px 10px; margin: 10px 0 5px 0; }
+        .falle { border: 1px solid #c0392b; margin-bottom: 8px; }
+        .falle-header { background: #fadbd8; padding: 5px 10px; font-weight: bold; color: #c0392b; }
+        .falle-content { padding: 8px 10px; display: flex; gap: 15px; }
+        .falsch { flex: 1; background: #ffebee; padding: 5px; border-left: 3px solid #c0392b; }
+        .richtig { flex: 1; background: #e8f5e9; padding: 5px; border-left: 3px solid #27ae60; }
+        .falsch h4 { color: #c0392b; font-size: 8pt; margin-bottom: 3px; }
+        .richtig h4 { color: #27ae60; font-size: 8pt; margin-bottom: 3px; }
+        ul { margin-left: 15px; }
+        li { margin: 3px 0; }
+        .tipp { background: #fff3cd; border: 1px solid #ffc107; padding: 8px; margin: 10px 0; }
+        .tipp-header { font-weight: bold; color: #856404; }
+        table { width: 100%; border-collapse: collapse; margin: 5px 0; }
+        td, th { border: 1px solid #ddd; padding: 4px 6px; font-size: 8pt; }
+        th { background: #f5f5f5; }
+        .rot { color: #c0392b; font-weight: bold; }
+        .gruen { color: #27ae60; font-weight: bold; }
+        @media print { body { padding: 5mm; } }
+    </style>
+</head>
+<body>
+
+<h1>HAEUFIGE PRUEFUNGSFALLEN & TRICKS</h1>
+
+<h2>1. ABSOLUTE BEGRIFFE = MEIST FALSCH!</h2>
+
+<div class="falle">
+    <div class="falle-header">Achte auf diese Woerter:</div>
+    <div class="falle-content">
+        <div class="falsch">
+            <h4>FALSCH (zu absolut)</h4>
+            <ul>
+                <li><span class="rot">alle</span> Prozesse muessen...</li>
+                <li><span class="rot">immer</span> dokumentieren...</li>
+                <li><span class="rot">niemals</span> ausschliessen...</li>
+                <li><span class="rot">ausschliesslich</span> der Kunde...</li>
+                <li><span class="rot">nur</span> schriftlich...</li>
+                <li><span class="rot">jeder</span> Mitarbeiter muss...</li>
+                <li><span class="rot">komplett</span> dokumentiert...</li>
+                <li><span class="rot">permanent</span> ueberwachen...</li>
+            </ul>
+        </div>
+        <div class="richtig">
+            <h4>RICHTIG (flexibel)</h4>
+            <ul>
+                <li><span class="gruen">relevante</span> Prozesse...</li>
+                <li><span class="gruen">soweit erforderlich</span>...</li>
+                <li><span class="gruen">angemessen</span>...</li>
+                <li><span class="gruen">geeignet</span>...</li>
+                <li><span class="gruen">bei Bedarf</span>...</li>
+                <li><span class="gruen">in geplanten Abstaenden</span>...</li>
+                <li><span class="gruen">sofern anwendbar</span>...</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<h2>2. FESTE ZEITINTERVALLE = MEIST FALSCH!</h2>
+
+<div class="falle">
+    <div class="falle-content">
+        <div class="falsch">
+            <h4>FALSCH</h4>
+            <ul>
+                <li>"<span class="rot">jaehrlich</span> aktualisieren"</li>
+                <li>"<span class="rot">monatlich</span> pruefen"</li>
+                <li>"<span class="rot">alle 6 Monate</span>"</li>
+                <li>"<span class="rot">woechentlich</span> dokumentieren"</li>
+            </ul>
+        </div>
+        <div class="richtig">
+            <h4>RICHTIG</h4>
+            <ul>
+                <li>"in <span class="gruen">geplanten Abstaenden</span>"</li>
+                <li>"<span class="gruen">regelmaessig</span> ueberpruefen"</li>
+                <li>"bei <span class="gruen">Bedarf</span>"</li>
+                <li>Die Organisation legt Intervalle selbst fest!</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="tipp">
+    <span class="tipp-header">AUSNAHME:</span> Zertifizierung hat FESTE Intervalle: Zertifikat 3 Jahre gueltig, Ueberwachungsaudits jaehrlich!
+</div>
+
+<h2>3. DOKUMENTATIONSPFLICHT - NICHT ALLES MUSS DOKUMENTIERT WERDEN!</h2>
+
+<table>
+    <tr><th>MUSS dokumentiert sein</th><th>MUSS NICHT dokumentiert sein</th></tr>
+    <tr><td>Anwendungsbereich (4.3)</td><td>Kontext der Organisation (4.1)</td></tr>
+    <tr><td>Qualitaetspolitik (5.2)</td><td>Interessierte Parteien (Liste)</td></tr>
+    <tr><td>Qualitaetsziele (6.2)</td><td>Risiken und Chancen (keine Liste gefordert!)</td></tr>
+    <tr><td>Kompetenznachweise (7.2)</td><td>Prozessbeschreibungen (nur "soweit erforderlich")</td></tr>
+    <tr><td>Auditergebnisse (9.2)</td><td>QM-Handbuch (seit 2015 NICHT mehr Pflicht!)</td></tr>
+    <tr><td>Managementbewertung (9.3)</td><td>Arbeitsanweisungen (nur wenn noetig)</td></tr>
+    <tr><td>Nichtkonformitaeten (10.2)</td><td></td></tr>
+</table>
+
+<h2>4. BEGRIFFE DIE SEIT 2015 NICHT MEHR GELTEN!</h2>
+
+<div class="falle">
+    <div class="falle-content">
+        <div class="falsch">
+            <h4>ALTE BEGRIFFE (vor 2015)</h4>
+            <ul>
+                <li>"Beauftragter der obersten Leitung"</li>
+                <li>"QM-Handbuch" (als Pflicht)</li>
+                <li>"Qualitaetsaufzeichnungen"</li>
+                <li>"Dokumente und Aufzeichnungen"</li>
+                <li>"Vorbeugende Massnahmen" (eigenes Kapitel)</li>
+            </ul>
+        </div>
+        <div class="richtig">
+            <h4>NEUE BEGRIFFE (seit 2015)</h4>
+            <ul>
+                <li>Verantwortlichkeiten zuweisen (keine spezielle Rolle)</li>
+                <li>Dokumentierte Information (optional)</li>
+                <li>Dokumentierte Information</li>
+                <li>Nur noch "Dokumentierte Information"</li>
+                <li>Integriert in "Risiken und Chancen" (Kap. 6.1)</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<h2>5. WER IST VERANTWORTLICH?</h2>
+
+<div class="falle">
+    <div class="falle-content">
+        <div class="falsch">
+            <h4>FALSCH</h4>
+            <ul>
+                <li>"Der Zertifizierer entscheidet..."</li>
+                <li>"Externe Berater muessen..."</li>
+                <li>"Der Auditor genehmigt..."</li>
+                <li>"Behoerden legen fest..."</li>
+            </ul>
+        </div>
+        <div class="richtig">
+            <h4>RICHTIG</h4>
+            <ul>
+                <li>Die <span class="gruen">Organisation selbst</span> entscheidet!</li>
+                <li>Die <span class="gruen">oberste Leitung</span> ist verantwortlich!</li>
+                <li>Ausschluesse: Organisation begruendet selbst</li>
+                <li>Methoden: Organisation waehlt selbst</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<h2>6. AUSSCHLUESSE - WAS DARF (NICHT) AUSGESCHLOSSEN WERDEN?</h2>
+
+<table>
+    <tr><th>NIEMALS ausschliessbar</th><th>Ausschliessbar (wenn begruendet)</th></tr>
+    <tr><td>Kapitel 4 (Kontext)</td><td>8.3 Entwicklung</td></tr>
+    <tr><td>Kapitel 5 (Fuehrung)</td><td>8.5.2 Rueckverfolgbarkeit (teilweise)</td></tr>
+    <tr><td>Kapitel 6 (Planung)</td><td>Andere Kap. 8 Anforderungen</td></tr>
+    <tr><td colspan="2"><b>Bedingung:</b> Ausschluss darf Konformitaet NICHT beeintraechtigen!</td></tr>
+</table>
+
+<h2>7. INTERNE VS. EXTERNE THEMEN</h2>
+
+<div class="falle">
+    <div class="falle-content">
+        <div class="falsch">
+            <h4>INTERN (innerhalb der Organisation)</h4>
+            <ul>
+                <li>Unternehmenskultur</li>
+                <li>Mitarbeiterqualifikation</li>
+                <li>Organisationsstruktur</li>
+                <li>Wissen der Organisation</li>
+                <li>Verfuegbare Ressourcen</li>
+                <li>Interne Prozesse</li>
+            </ul>
+        </div>
+        <div class="richtig">
+            <h4>EXTERN (ausserhalb der Organisation)</h4>
+            <ul>
+                <li>Gesetzliche Anforderungen</li>
+                <li>Wettbewerber</li>
+                <li>Technologische Entwicklungen</li>
+                <li>Marktbedingungen</li>
+                <li>Behoerden</li>
+                <li>Wirtschaftliche Lage</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<h2>8. AUDIT-FALLEN</h2>
+
+<table>
+    <tr><th>FALSCH</th><th>RICHTIG</th></tr>
+    <tr><td>ISO 19011 ist eine Anforderungsnorm</td><td>ISO 19011 ist ein <span class="gruen">LEITFADEN</span></td></tr>
+    <tr><td>Internes Audit fuehrt zum Zertifikat</td><td>Nur <span class="gruen">3rd party Audit</span> fuehrt zum Zertifikat</td></tr>
+    <tr><td>Auditor darf eigenen Bereich auditieren</td><td><span class="gruen">NICHT</span> eigenen Bereich (Objektivitaet!)</td></tr>
+    <tr><td>Zertifizierungsaudit hat 3 Stufen</td><td><span class="gruen">2 Stufen</span> (Stage 1 + Stage 2)</td></tr>
+    <tr><td>Ueberwachungsaudit ersetzt Rezertifizierung</td><td>Beides erforderlich (jaehrlich + alle 3 Jahre)</td></tr>
+</table>
+
+<h2>9. FMEA & 8D-FALLEN</h2>
+
+<table>
+    <tr><th>FALSCH</th><th>RICHTIG</th></tr>
+    <tr><td>FMEA wird nach Schadensfaellen angewendet</td><td>FMEA ist <span class="gruen">PRAEVENTIV</span> (vorbeugend!)</td></tr>
+    <tr><td>RPZ = B + A + E</td><td>RPZ = B <span class="gruen">x</span> A <span class="gruen">x</span> E (Multiplikation!)</td></tr>
+    <tr><td>D3 beseitigt die Ursache dauerhaft</td><td>D3 = <span class="gruen">Sofortmassnahmen</span> (Containment)</td></tr>
+    <tr><td>D4 implementiert Massnahmen</td><td>D4 = <span class="gruen">Ursachenanalyse</span> (Root Cause)</td></tr>
+    <tr><td>8D-Report ist nur fuer Automotive</td><td><span class="gruen">Branchenuebergreifend</span> anwendbar</td></tr>
+</table>
+
+<div class="tipp">
+    <span class="tipp-header">GOLDENE REGEL:</span> Wenn eine Antwort zu absolut, zu einfach oder zu einschraenkend klingt, ist sie wahrscheinlich FALSCH. Die ISO 9001 ist flexibel und gibt der Organisation Spielraum!
+</div>
+
+</body>
+</html>

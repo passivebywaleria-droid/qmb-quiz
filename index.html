@@ -44,6 +44,40 @@
         }
         .chapter-card h3 { color: #4fc3f7; margin-bottom: 4px; font-size: 0.9em; }
         .chapter-card p { color: #aaa; font-size: 0.75em; display: none; }
+
+        /* Spickzettel Section */
+        .spickzettel-section {
+            background: rgba(255, 152, 0, 0.1);
+            border: 2px solid rgba(255, 152, 0, 0.3);
+            border-radius: 12px;
+            padding: 12px;
+            margin-bottom: 12px;
+        }
+        .spickzettel-links {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 10px;
+        }
+        .spickzettel-link {
+            display: flex;
+            flex-direction: column;
+            background: rgba(255,255,255,0.08);
+            border-radius: 10px;
+            padding: 12px;
+            text-decoration: none;
+            color: #fff;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+        .spickzettel-link:hover {
+            background: rgba(255,255,255,0.15);
+            border-color: #ff9800;
+            transform: translateY(-2px);
+        }
+        .spickzettel-icon { font-size: 1.5em; margin-bottom: 5px; }
+        .spickzettel-text { font-weight: bold; color: #ff9800; font-size: 0.9em; }
+        .spickzettel-desc { color: #aaa; font-size: 0.75em; margin-top: 3px; }
+
         .chapter-card .count {
             display: inline-block;
             background: #4fc3f7;
@@ -449,6 +483,23 @@
             <h1>QMB Prüfungsfragen</h1>
             <p>ISO 9001:2015 - Qualitätsmanagementbeauftragter</p>
         </header>
+
+        <div class="spickzettel-section">
+            <h3 style="color: #4fc3f7; margin-bottom: 8px; font-size: 0.95em;">Pruefungshilfen zum Ausdrucken</h3>
+            <div class="spickzettel-links">
+                <a href="Spickzettel_Uebersicht.html" target="_blank" class="spickzettel-link">
+                    <span class="spickzettel-icon">📋</span>
+                    <span class="spickzettel-text">Kompakte Uebersicht</span>
+                    <span class="spickzettel-desc">Formeln, Zahlen, Listen - 1 Seite</span>
+                </a>
+                <a href="Spickzettel_Pruefungsfallen.html" target="_blank" class="spickzettel-link">
+                    <span class="spickzettel-icon">⚠️</span>
+                    <span class="spickzettel-text">Pruefungsfallen & Tricks</span>
+                    <span class="spickzettel-desc">Typische Fehler vermeiden</span>
+                </a>
+            </div>
+        </div>
+
         <div id="chapter-selection">
             <div class="chapter-grid" id="chapter-grid"></div>
             <div class="history-section" id="history-section">

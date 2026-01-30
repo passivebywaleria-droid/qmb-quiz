@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>QMB Pruefung - Kompakte Uebersicht</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: Arial, sans-serif;
+            font-size: 9pt;
+            padding: 10px;
+            max-width: 210mm;
+        }
+        h1 { font-size: 14pt; text-align: center; margin-bottom: 8px; background: #333; color: white; padding: 5px; }
+        h2 { font-size: 10pt; background: #ddd; padding: 3px 5px; margin: 8px 0 4px 0; }
+        .container { display: flex; flex-wrap: wrap; gap: 10px; }
+        .box { border: 1px solid #333; padding: 5px; flex: 1; min-width: 45%; }
+        .box h3 { font-size: 9pt; background: #f0f0f0; padding: 2px 5px; margin-bottom: 4px; }
+        ul { margin-left: 15px; }
+        li { margin: 2px 0; }
+        table { width: 100%; border-collapse: collapse; font-size: 8pt; }
+        td, th { border: 1px solid #999; padding: 2px 4px; text-align: left; }
+        th { background: #e0e0e0; }
+        .formel { background: #ffffcc; padding: 3px; font-weight: bold; text-align: center; margin: 3px 0; }
+        .wichtig { background: #ffcccc; padding: 2px; }
+        .merke { background: #ccffcc; padding: 2px; }
+        .klein { font-size: 7pt; }
+        @media print { body { padding: 5mm; } }
+    </style>
+</head>
+<body>
+
+<h1>QMB PRUEFUNG - KOMPAKTE UEBERSICHT</h1>
+
+<div class="container">
+    <div class="box">
+        <h3>ISO 9001:2015 KAPITELSTRUKTUR</h3>
+        <table>
+            <tr><th>Kap.</th><th>Titel</th><th>Inhalt</th></tr>
+            <tr><td>4</td><td>Kontext</td><td>Interessierte Parteien, Anwendungsbereich</td></tr>
+            <tr><td>5</td><td>Fuehrung</td><td>Politik, Verantwortlichkeiten</td></tr>
+            <tr><td>6</td><td>Planung</td><td>Risiken/Chancen, Ziele, Aenderungen</td></tr>
+            <tr><td>7</td><td>Unterstuetzung</td><td>Ressourcen, Kompetenz, Dokumentation</td></tr>
+            <tr><td>8</td><td>Betrieb</td><td>Produktion, Lieferanten, Entwicklung</td></tr>
+            <tr><td>9</td><td>Bewertung</td><td>Audit, Analyse, Managementbewertung</td></tr>
+            <tr><td>10</td><td>Verbesserung</td><td>Nichtkonformitaet, KVP</td></tr>
+        </table>
+        <p class="wichtig klein">Kap. 4, 5, 6 NIEMALS ausschliessbar!</p>
+    </div>
+
+    <div class="box">
+        <h3>7 GRUNDSAETZE DES QM</h3>
+        <ol>
+            <li>Kundenorientierung</li>
+            <li>Fuehrung</li>
+            <li>Engagement von Personen</li>
+            <li>Prozessorientierter Ansatz</li>
+            <li>Verbesserung</li>
+            <li>Faktengestuetzte Entscheidungsfindung</li>
+            <li>Beziehungsmanagement</li>
+        </ol>
+    </div>
+</div>
+
+<div class="container">
+    <div class="box">
+        <h3>FMEA - FORMEL</h3>
+        <div class="formel">RPZ = B x A x E</div>
+        <table>
+            <tr><td><b>B</b></td><td>Bedeutung (Schwere des Fehlers)</td><td>1-10</td></tr>
+            <tr><td><b>A</b></td><td>Auftretenswahrscheinlichkeit</td><td>1-10</td></tr>
+            <tr><td><b>E</b></td><td>Entdeckungswahrscheinlichkeit</td><td>1-10</td></tr>
+        </table>
+        <p class="merke klein">RPZ max = 1000 | Hohe RPZ = Massnahmen erforderlich</p>
+        <p class="klein">FMEA = Failure Mode and Effect Analysis (praeventiv!)</p>
+    </div>
+
+    <div class="box">
+        <h3>8D-REPORT</h3>
+        <table>
+            <tr><td><b>D1</b></td><td>Team bilden</td></tr>
+            <tr><td><b>D2</b></td><td>Problem beschreiben (W-Fragen)</td></tr>
+            <tr><td><b>D3</b></td><td>Sofortmassnahmen (Containment)</td></tr>
+            <tr><td><b>D4</b></td><td>Ursachenanalyse (Root Cause)</td></tr>
+            <tr><td><b>D5</b></td><td>Abstellmassnahmen waehlen</td></tr>
+            <tr><td><b>D6</b></td><td>Abstellmassnahmen umsetzen</td></tr>
+            <tr><td><b>D7</b></td><td>Vorbeugungsmassnahmen</td></tr>
+            <tr><td><b>D8</b></td><td>Team wuerdigen</td></tr>
+        </table>
+    </div>
+</div>
+
+<div class="container">
+    <div class="box">
+        <h3>AUDITARTEN</h3>
+        <table>
+            <tr><th>Art</th><th>Wer auditiert?</th><th>Zweck</th></tr>
+            <tr><td>1st Party</td><td>Eigene MA (intern)</td><td>Selbstbewertung</td></tr>
+            <tr><td>2nd Party</td><td>Kunde</td><td>Lieferantenbewertung</td></tr>
+            <tr><td>3rd Party</td><td>Zertifizierer</td><td>Zertifizierung</td></tr>
+        </table>
+        <table>
+            <tr><th>Typ</th><th>Gegenstand</th></tr>
+            <tr><td>Systemaudit</td><td>Gesamtes QMS</td></tr>
+            <tr><td>Prozessaudit</td><td>Einzelne Prozesse</td></tr>
+            <tr><td>Produktaudit</td><td>Produkte gegen Spezifikation</td></tr>
+        </table>
+    </div>
+
+    <div class="box">
+        <h3>ZERTIFIZIERUNG</h3>
+        <table>
+            <tr><td>Zertifikat gueltig</td><td><b>3 Jahre</b></td></tr>
+            <tr><td>Ueberwachungsaudits</td><td><b>jaehrlich</b></td></tr>
+            <tr><td>Rezertifizierung</td><td>nach 3 Jahren</td></tr>
+        </table>
+        <p><b>Stufe 1:</b> Dokumentationspruefung</p>
+        <p><b>Stufe 2:</b> Vor-Ort-Audit (Implementierung)</p>
+        <p class="klein">ISO 19011 = Leitfaden fuer Audits (KEINE Anforderungsnorm!)</p>
+    </div>
+</div>
+
+<div class="container">
+    <div class="box">
+        <h3>KANO-MODELL</h3>
+        <table>
+            <tr><th>Merkmal</th><th>Beschreibung</th><th>Wirkung</th></tr>
+            <tr><td>Basis</td><td>Selbstverstaendlich, nicht ausgesprochen</td><td>Nichterfuellung = Unzufriedenheit</td></tr>
+            <tr><td>Leistung</td><td>Explizit gefordert, messbar</td><td>Proportionale Zufriedenheit</td></tr>
+            <tr><td>Begeisterung</td><td>Nicht erwartet, ueberrascht</td><td>Hohe Zufriedenheit</td></tr>
+        </table>
+        <p class="klein merke">Begeisterungsmerkmale werden mit der Zeit zu Basismerkmalen!</p>
+    </div>
+
+    <div class="box">
+        <h3>MASLOW PYRAMIDE (von unten nach oben)</h3>
+        <ol>
+            <li>Physiologische Beduerfnisse (Essen, Trinken)</li>
+            <li>Sicherheitsbeduerfnisse (Schutz, Stabilitaet)</li>
+            <li>Soziale Beduerfnisse (Zugehoerigkeit)</li>
+            <li>Wertschaetzung (Anerkennung)</li>
+            <li>Selbstverwirklichung (Spitze!)</li>
+        </ol>
+        <p class="klein">Intrinsisch = von innen (Sinn) | Extrinsisch = von aussen (Belohnung)</p>
+    </div>
+</div>
+
+<div class="container">
+    <div class="box">
+        <h3>KOMMUNIKATION</h3>
+        <p><b>Vier-Ohren-Modell (Schulz von Thun):</b></p>
+        <ol>
+            <li>Sachinhalt (Was?)</li>
+            <li>Selbstoffenbarung (Ich)</li>
+            <li>Beziehung (Wir)</li>
+            <li>Appell (Du sollst)</li>
+        </ol>
+        <p><b>Eisbergmodell:</b> Sachebene (sichtbar) + Beziehungsebene (unsichtbar, groesster Teil!)</p>
+        <p><b>Aktives Zuhoeren:</b> Paraphrasieren, Blickkontakt, Empathie</p>
+    </div>
+
+    <div class="box">
+        <h3>WICHTIGE NORMEN</h3>
+        <table>
+            <tr><td><b>ISO 9000</b></td><td>Begriffe & Grundlagen</td></tr>
+            <tr><td><b>ISO 9001</b></td><td>Anforderungen (Zertifizierung!)</td></tr>
+            <tr><td><b>ISO 9004</b></td><td>Leitfaden nachhaltiger Erfolg</td></tr>
+            <tr><td><b>ISO 19011</b></td><td>Leitfaden Auditierung</td></tr>
+        </table>
+        <p class="merke klein">HLS = High Level Structure (einheitlich fuer alle ISO-MS-Normen)</p>
+        <p class="klein">PDCA = Plan-Do-Check-Act (Deming-Zyklus)</p>
+    </div>
+</div>
+
+<h2>HAEUFIGE TRICK-WOERTER IN PRUEFUNGSFRAGEN</h2>
+<table>
+    <tr>
+        <th>FALSCH wenn...</th>
+        <th>RICHTIG ist meist...</th>
+    </tr>
+    <tr><td>"alle", "immer", "niemals", "ausschliesslich", "nur"</td><td>"relevante", "angemessene", "soweit erforderlich"</td></tr>
+    <tr><td>"muss dokumentiert werden" (pauschal)</td><td>"soweit erforderlich dokumentieren"</td></tr>
+    <tr><td>"jaehrlich", "monatlich" (feste Intervalle)</td><td>"in geplanten Abstaenden"</td></tr>
+    <tr><td>"QM-Handbuch ist Pflicht"</td><td>Seit 2015 NICHT mehr explizit gefordert</td></tr>
+    <tr><td>"Beauftragter der obersten Leitung"</td><td>Begriff seit 2015 NICHT mehr verwendet</td></tr>
+</table>
+
+</body>
+</html>
